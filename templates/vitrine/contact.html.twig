@@ -1,0 +1,42 @@
+{% extends ('base.html.twig') %}
+
+{% block stylesheets %}
+    <link href="{{ asset ('assets/css/vitrine/contact.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+    {% block main %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+
+                    <h1 class="bigtitle">NOUS CONTACTER</h1>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="mail">Email</label>
+                            <input class="form-control" type="email" id="mail" name="mail" placeholder="Votre Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pseudo">Username</label>
+                            <input  class="form-control" type="text" id="pseudo" name="pseudo" placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="titre">Titre du mail</label><br>
+                            <input class="form-control" type="text" id="titre" name="titre" placeholder="Titre de votre mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="mailcontent">Contenu de votre Email</label><br>
+                            <textarea class="form-control" rows="5" id="mailcontent" name="mailcontent" placeholder="Ecriver votre demande/remarque" style="width: 100%;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Envoyer</button>
+                    </form>
+
+
+                </div>
+                <div class="offset-md-1 col-md-5 col-12 mt-3">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.5909340516955!2d-0.7345560488431175!3d46.5359959790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4806e73faa2891c9%3A0x9446fbf7d12eed92!2sCamping+de+la+Jamoni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1563906386289!5m2!1sfr!2sfr" width="400" height="600" frameborder="0" style="border:0;width: 100%; height: 100%" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    {% endblock %}

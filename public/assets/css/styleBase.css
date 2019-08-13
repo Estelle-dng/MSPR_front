@@ -1,0 +1,179 @@
+/* GLOBAL CSS */
+
+*{font-family: 'Poppins', sans-serif;} /* Typo importée avec google font et appelée dans le document */
+
+body{box-sizing:border-box; /* Évite les espaces natifs de la page */
+    padding: 0;
+    margin: 0;
+    overflow-X: hidden;}
+
+a{color: white;}
+
+/* FIN DU GLOBAL CSS*/
+
+/* HEADER */
+
+    header{margin-bottom: 250px;} /* Laisse l'espace nécéssaire à l'angle du header */
+
+    @media screen and (max-width: 1000px) { /* SUPPRIME LA MARGE DU HEADER EN RESPONSIVE*/
+        header {margin-bottom:50px;}
+    }
+
+    .imgNavbarbase{ /* FORME DU HEADER */
+        border-bottom-right-radius: 10%;
+        transform: rotate(82deg);
+        height: 2000px;
+        position: absolute;
+        left: -147px;
+        top: -1841px;
+        width: 2000px;
+        overflow: hidden;
+        box-shadow: 0 12px 0 0 rgb(230, 186, 172);
+    }
+
+    .imgbase { /* IMAGE DU HEADER */
+        width: 2500px;
+        transform: rotate(-82deg);
+        position: absolute;
+        top: 780px;
+        left: 270px;
+    }
+
+    .whiteveilbase{ /* VOILE SUR L'IMAGE DU HEADER */
+        background-color: rgba(108 ,167, 89, 0.3);
+        border-bottom-right-radius: 10%;
+        transform: rotate(82deg);
+        height: 2000px;
+        position: absolute;
+        left: -147px;
+        top: -1841px;
+        width: 2000px;
+
+    }
+
+    .btn-default{ /* BOUTON RÉSERVER DE LA NAVBAR */
+        background-color: darkgreen;
+    }
+
+    .bienvenue{margin-top:300px;} /* PLACE LE LOGO ET LE TEXTE DE L'ACCUEIL CORRECTEMENT SOUS LE HEADER*/
+
+    @media screen and (max-width: 1000px) { /* ENLÈVE CETTE MARGE SUR BIENVENUE EN RESPONSIVE*/
+        .bienvenue{margin-top: 5px;}
+    }
+
+
+    /* BACKGROUND DE LA NAVBAR*/
+
+    @media screen and (max-width: 1000px){ /* VERT FONCÉ EN XS */
+        .gradientnavbar{background: darkgreen;}
+    }
+
+    @media screen and (min-width: 1000px){  /* DÉGRADÉ EN NORMAL */
+        .gradientnavbar{
+            background: rgb(108 ,167, 89);
+            background: linear-gradient(0deg, rgba(108 ,167, 89, 0) 0%,
+            rgba(108 ,167, 89, 0.25) 22%, rgba(108 ,167, 89, 0.35) 46%,
+            rgba(108 ,167, 89, 0.5) 100%);
+        }
+    }
+    /* BACKGROUND DE LA NAVBAR*/
+
+    .logomain{ /* LOGO DU HEADER */
+        padding-left: 95px;
+    }
+
+    @media  screen  and (max-width: 1000px){
+        .logomain{padding-left: 0;}
+    }
+
+/* FIN DU /HEADER */
+
+
+
+/* TITLE DU MAIN */
+
+.hgroupaccueil{  /* GROUPE DE TITRE DE L'ACCUEIL*/
+    left: 170px;
+    top: 150px;
+    position: absolute;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) { /* CACHE LES TITRES EN RESPONSIVE*/
+    .hgroupaccueil{display: none;}
+}
+
+.smalltitle{ /* TITRES DES INFOS GÉNÉRALES DU CAMPING */
+    color: #565656;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* FIN DU MAIN*/
+
+
+
+/* FOOTER */
+
+footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
+    background-size: cover;
+    background-image: url("../img/footer.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1000px){ /* DONNE UNE HEIGHT CORRECTE À L'ANGLE VERT*/
+    footer{height: 600px;}
+}
+
+@media screen and (max-width: 1000px) { /* CACHE L'ANGLE VERT ET MET UN BG-GREEN*/
+    footer{background-image: none; background-color: #0A5524;}
+}
+
+.buttonresa{ /* Bouton "Reservez dès maintenant" */
+    padding: 6px;
+    font-size: 20px;
+    color: rgb(230, 186, 172);
+    border-radius: 50px;
+    border: rgb(230, 186, 172) solid 2px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
+    .buttonresa{font-size: 14px;}
+    .buttonresa:hover{color: white;}
+}
+
+.resa{font-size: 21px;} /* Texte "resa en ligne et cheques acceptés" */
+
+
+@media screen and (max-width: 1000px){ /* RÉDUIT LE TEXTE RÉSA EN RESPONSIVE*/
+    .resa{font-size: small; margin-top: 5px; color: white; font-weight: normal;}
+}
+
+
+.pinksquare{ /* CARRÉ ROSE DÉCORATIF */
+    background-color: rgba(230, 186, 172, 0.5);
+    width: 500px;
+    height: 500px;
+    border-radius: 25%;
+    transform: rotate(39deg);
+    position: absolute;
+    left: -30%;
+}
+
+.navbot{ /* CONTIENT LES LIENS DU FOOTER*/
+    text-align: center;
+}
+
+/* MEDIAS QUERYS */
+
+@media screen and (max-width: 1000px){ /* CACHE CES ÉLÉMENTS EN RESPONSIVE*/
+
+    .imgNavbarbase, .whiteveilbase, .whiteveil, .imgNavbar,
+    .pinksquare, .greensquare, .pinksquaremain, .imgSide,
+    .whiteveilside, .newsletter, .botlogoinfos, .newsletterdnone {display: none;}
+}
+
+
