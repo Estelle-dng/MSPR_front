@@ -123,9 +123,9 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
         // line 20
         echo "
         <hgroup class=\"hgroupaccueil\">
-            <h1 style=\"font-weight: bold; font-size: 70px\">CAMPING <br> LA  JAMONIÈRE</h1>
+            <h1 style=\"font-weight: bold; font-size: 60px\">CAMPING <br> LA  JAMONIÈRE</h1>
             <h2 style=\"font-weight: lighter; font-size: 3rem;\">MERVENT</h2>
-            <h3 style=\"font-size: 25px;\">Mobil-homes, chalets, tentes, camping-car</h3>
+            <h3 style=\"font-size: 25px; font-weight:lighter;\">Mobil-homes, chalets, tentes, camping-car</h3>
             <h4 style=\"font-weight: bolder\">V  e  n  d  é  e</h4>
         </hgroup>
 
@@ -366,9 +366,9 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
         {#HEADER ACCUEIL - HEADER ACCUEIL - HEADER ACCUEIL#}
 
         <hgroup class=\"hgroupaccueil\">
-            <h1 style=\"font-weight: bold; font-size: 70px\">CAMPING <br> LA  JAMONIÈRE</h1>
+            <h1 style=\"font-weight: bold; font-size: 60px\">CAMPING <br> LA  JAMONIÈRE</h1>
             <h2 style=\"font-weight: lighter; font-size: 3rem;\">MERVENT</h2>
-            <h3 style=\"font-size: 25px;\">Mobil-homes, chalets, tentes, camping-car</h3>
+            <h3 style=\"font-size: 25px; font-weight:lighter;\">Mobil-homes, chalets, tentes, camping-car</h3>
             <h4 style=\"font-weight: bolder\">V  e  n  d  é  e</h4>
         </hgroup>
 
@@ -535,6 +535,6 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
             </section>
             {#/MAIN#}
         </main>
-    {% endblock %}", "vitrine/accueil.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/templates/vitrine/accueil.html.twig");
+    {% endblock %}", "vitrine/accueil.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/vitrine/accueil.html.twig");
     }
 }

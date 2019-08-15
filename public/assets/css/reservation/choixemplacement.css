@@ -1,6 +1,173 @@
-.header{
+.headerAccueil{
     background-image: url("../../img/emplacement_header-01.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+main{
+    background-image: url("../../img/bg_main-01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 990px){
+    main{background: none;}
+}
+
+.relative{position: relative;}
+
+.absolutenavbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px){
+    .absolutenavbar{position: initial;}
+}
+
+.absolutebienvenue{
+    position: absolute;
+    left: 0;
+    top: 370px;
+}
+@media screen and (min-width: 1700px ){
+    .absolutebienvenue{top: 430px;}
+}
+@media screen and (min-width: 1024px) and (max-width: 1325px){
+    .absolutebienvenue{top: 300px;}
+}
+
+@media screen and (max-width: 1024px){
+    .absolutebienvenue{top: 20%;}
+}
+
+@media screen and (max-width: 767px){
+    .absolutebienvenue{position: initial;}
+}
+
+@media screen and (max-width: 576px){
+    .text{font-size: 0.7em;margin-top: 20px;}
+}
+
+@media screen and (max-width: 768px){
+    .text{margin-top: 10%;font-size: 13px;}
+}
+
+.absolutemain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.absolutefooter{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+
+/*Ajouts*/
+
+.bigtitle{
+    color: #0A5524;
+    font-size: 21px;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+.cadrebarre{width: 100%;}
+
+.barrerose{
+    margin:  10px auto;
+    border-bottom: rgb(230, 186, 172) solid 3px;
+    width: 60%;
+    margin-top: 20px;
+}
+
+
+.imgarticle{
+    border-radius: 5%;
+}
+
+.article1{
+    width: 95%;
+    display: flex;
+    margin-top: 30px;}
+
+.infos{
+    color: rgb(230, 186, 172);
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-around;
+}
+
+.listinfo{margin-top: 20px;}
+
+.cadreimg1{
+    height: 250px;
+    position: absolute;
+    text-align: right;
+}
+
+.cadreimg2{
+    height: 250px;
+    position: absolute;
+    text-align: left;
+}
+
+.section1{margin-top: 50px;}
+
+.gradient1{
+    padding: 3% 3% 0 0;
+    height: 60px;
+    font-size: 20px;
+    top: -15%;
+    text-align: right;
+    position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.87718837535014) 20%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 100%);}
+
+.gradient2 {
+    padding: 2% 0 0 2%;
+    height: 60px;
+    top: -17%;
+    position: relative;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0.87718837535014) 78%, rgba(2, 0, 36, 0) 100%);
+}
+
+.etang {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;}
+
+.barrerosebot{
+    margin:  50px;
+    border-bottom: rgb(230, 186, 172) solid 3px;
+    width: 60%;
+}
+
+@media screen and (max-width: 1000px){
+    .barrerosebot{
+        margin: 0 auto;
+    }
+}
+
+.contact{
+    margin: 30px;
+    padding: 0;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 576px){
+    .parc, .etang{font-size: 17px;}
+}
+
+@media screen and (min-width: 768px){
+    .picline{margin-top: 100px}
 }

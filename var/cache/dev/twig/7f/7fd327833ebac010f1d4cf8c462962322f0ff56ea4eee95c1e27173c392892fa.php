@@ -79,8 +79,8 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         // line 19
         echo "
     </head>
-    <body>
-        <header>
+    <body >
+        <header class=\"relative\">
             ";
         // line 24
         echo "            ";
@@ -89,9 +89,11 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         echo "
             ";
         // line 32
-        echo "            <nav class=\"navbar navbar-expand-lg navbar-dark gradientnavbar\" id=\"mainNav\">
+        echo "            <nav class=\"navbar navbar-expand-md navbar-dark gradientnavbar absolutenavbar textnav\" id=\"mainNav\">
 
-                <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\"><img src=\"../public/assets/img/logo-02.png\" alt=\"logo\" class=\"img-fluid\" style=\"height: 50px;\">Camping la Jamonière</a>
+                <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">";
+        // line 34
+        echo "Camping la Jamonière</a>
                 <button class=\"navbar-toggler navbar-toggler-right text-white\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     Menu
                     <i class=\"fas fa-bars\"></i>
@@ -139,7 +141,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         echo "\">Contact</a>
                         </li>
                         <li class=\"nav-item\">
-                            <button type=\"button\" class=\"btn p-0\" style=\"background-color: darkgreen;\"><a class=\"nav-link js-scroll-trigger text-white\" href=\"";
+                            <button type=\"button\" class=\"btn p-0 btn-default\"><a class=\"nav-link js-scroll-trigger text-white\" href=\"";
         // line 67
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Choix");
         echo "\">RÉSERVATION</a></button>
@@ -161,85 +163,76 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
         ";
         // line 80
-        echo "        <footer>
-            <div>
-                <div class=\"pinksquare\"></div>
-            </div>
+        echo "
 
-            <div class=\"container mt-5\">
-                <div class=\"row\">
-                    <h1 class=\"resa col-md-6 offset-md-1 col-6 offset-0\">Réservation et paiement en ligne ou sur place. CB, chèques et chèques
-                        vacances acceptés.
-                    </h1>
-                    <div class=\"col-6 offset-0 col-md-5 offset-md-2 mt-3\">
-                        <a class=\"buttonresa\" href=\"";
-        // line 91
+        <footer>
+                    <div class=\"container mt-5 mb-2\">
+                        <div class=\"row\">
+                            <h1 class=\"resa col-md-5 offset-md-1 col-6 offset-0 mt-3\">Réservation et paiement en ligne ou sur
+                                place. CB, chèques et chèques
+                                vacances acceptés.
+                            </h1>
+                            <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5\">
+                                <a class=\"buttonresa\" href=\"";
+        // line 90
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Choix");
         echo "\">RÉSERVEZ DÈS MAINTENANT</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class=\"container-fluid botlogoinfos\">
-                <div class=\"row\">
-                    <div class=\"col-md-2 offset-md-10\">
-                        <img class=\"img-fluid\" src=\"../public/assets/img/logo-02.png\" alt=\"logo\">
-                    </div>
-                    <p class=\"col-md-6 offset-md-6\" style=\"color: white; text-align: right\">
-                        Camping la Jamonière - Mervent - Vendée
-                        <br>
-                        Mobil-homes, chalets, tentes, camping-cars
-                    </p>
-                </div>
-            </div>
-
-            <div class=\"container-fluid navbot mt-md-5 mt-0\">
-                <div class=\"row\">
-                    <div class=\"offset-md-5 col-md-2 col-5 offset-1\">
-                        <nav>
-                            <a href=\"";
-        // line 113
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Accueil");
-        echo "\">Accueil</a>
-                            <br>
-                            <a href=\"";
-        // line 115
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Photos");
-        echo "\">Photos</a>
-                            <br>
-                            <a href=\"";
-        // line 117
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Proximité");
-        echo "\">À proximité</a>
-                        </nav>
-                    </div>
-                    <div class=\"col-md-2 col-5\">
-                        <nav>
-                            <a href=\"#\">Tarifs</a>
-                            <br>
-                            <a href=\"";
-        // line 124
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("FAQ");
-        echo "\">FAQ</a>
-                            <br>
-                            <a href=\"";
-        // line 126
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Contact");
-        echo "\">Contact</a>
-                        </nav>
-                    </div>
-                    <div class=\"col-md-3 mb-5 newsletter text-white\">
-                        <p>
-                            Inscrivez vous à la new-letter pour connaître les
-                            dernières actualités du camping :
-                        </p>
-                        <div class=\"newsletterdnone\">
-                            <input class=\"button\" type=\"text\" placeholder=\"Votre Email\" style=\"font-weight: lighter; width: 265px;\">
-                            <button type=\"submit\" class=\"button new\">Submit</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                    <div class=\"container-fluid botlogoinfos\">
+                        <div class=\"row\">
+                            <div class=\"col-md-2 offset-md-10\">
+                                <img class=\"img-fluid\" src=\"../public/assets/img/logo-02.png\" alt=\"logo\">
+                            </div>
+                            <p class=\"col-md-6 offset-md-6\" style=\"color: white; text-align: right\">
+                                Camping la Jamonière - Mervent - Vendée
+                                <br>
+                                Mobil-homes, chalets, tentes, camping-cars
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class=\"container-fluid navbot mt-md-0 mt-lg-5 mt-0\">
+                        <div class=\"row justify-content-around\">
+                            <div class=\"col-md-2 col-5 offset-1 offset-lg-6 col-lg-3\">
+                                <nav>
+                                    <a href=\"";
+        // line 112
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Accueil");
+        echo "\">Accueil</a>
+                                    <br>
+                                    <a href=\"";
+        // line 114
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Photos");
+        echo "\">Photos</a>
+                                    <br>
+                                    <a href=\"";
+        // line 116
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Proximité");
+        echo "\">À proximité</a>
+                                </nav>
+                            </div>
+                            <div class=\"col-md-2 col-5 col-lg-3\">
+                                <nav>
+                                    <a href=\"#\">Tarifs</a>
+                                    <br>
+                                    <a href=\"";
+        // line 123
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("FAQ");
+        echo "\">FAQ</a>
+                                    <br>
+                                    <a href=\"";
+        // line 125
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Contact");
+        echo "\">Contact</a>
+                                </nav>
+                            </div>
+                            ";
+        // line 139
+        echo "                        </div>
+                    </div>
         </footer>
         ";
         // line 143
@@ -387,7 +380,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     public function getDebugInfo()
     {
-        return array (  361 => 147,  343 => 76,  329 => 26,  326 => 25,  316 => 24,  298 => 18,  279 => 10,  266 => 159,  254 => 148,  251 => 147,  246 => 143,  227 => 126,  222 => 124,  212 => 117,  207 => 115,  202 => 113,  177 => 91,  164 => 80,  160 => 77,  158 => 76,  155 => 75,  152 => 73,  144 => 67,  138 => 64,  132 => 61,  116 => 48,  110 => 45,  104 => 42,  92 => 32,  89 => 30,  86 => 24,  80 => 19,  78 => 18,  74 => 17,  70 => 15,  63 => 10,  58 => 9,  53 => 5,  48 => 1,);
+        return array (  354 => 147,  336 => 76,  322 => 26,  319 => 25,  309 => 24,  291 => 18,  272 => 10,  259 => 159,  247 => 148,  244 => 147,  239 => 143,  234 => 139,  228 => 125,  223 => 123,  213 => 116,  208 => 114,  203 => 112,  178 => 90,  166 => 80,  162 => 77,  160 => 76,  157 => 75,  154 => 73,  146 => 67,  140 => 64,  134 => 61,  118 => 48,  112 => 45,  106 => 42,  96 => 34,  92 => 32,  89 => 30,  86 => 24,  80 => 19,  78 => 18,  74 => 17,  70 => 15,  63 => 10,  58 => 9,  53 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -412,8 +405,8 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         {% block stylesheets %}{% endblock %}
 
     </head>
-    <body>
-        <header>
+    <body >
+        <header class=\"relative\">
             {#HEADER#}
             {% block header %}
                 <div class=\"imgNavbarbase\">
@@ -423,9 +416,9 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
             {% endblock %}
 
             {# Navbar #}
-            <nav class=\"navbar navbar-expand-lg navbar-dark gradientnavbar\" id=\"mainNav\">
+            <nav class=\"navbar navbar-expand-md navbar-dark gradientnavbar absolutenavbar textnav\" id=\"mainNav\">
 
-                <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\"><img src=\"../public/assets/img/logo-02.png\" alt=\"logo\" class=\"img-fluid\" style=\"height: 50px;\">Camping la Jamonière</a>
+                <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">{#<img src=\"../public/assets/img/logo-02.png\" alt=\"logo\" class=\"img-fluid\" style=\"height: 50px;\">#}Camping la Jamonière</a>
                 <button class=\"navbar-toggler navbar-toggler-right text-white\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     Menu
                     <i class=\"fas fa-bars\"></i>
@@ -458,7 +451,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                             <a class=\"nav-link js-scroll-trigger text-white\" href=\"{{ path ('Contact') }}\">Contact</a>
                         </li>
                         <li class=\"nav-item\">
-                            <button type=\"button\" class=\"btn p-0\" style=\"background-color: darkgreen;\"><a class=\"nav-link js-scroll-trigger text-white\" href=\"{{ path ('Choix') }}\">RÉSERVATION</a></button>
+                            <button type=\"button\" class=\"btn p-0 btn-default\"><a class=\"nav-link js-scroll-trigger text-white\" href=\"{{ path ('Choix') }}\">RÉSERVATION</a></button>
                         </li>
                     </ul>
                 </div>
@@ -471,67 +464,67 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
 
         {#FOOTER#}
+
+
         <footer>
-            <div>
-                <div class=\"pinksquare\"></div>
-            </div>
-
-            <div class=\"container mt-5\">
-                <div class=\"row\">
-                    <h1 class=\"resa col-md-6 offset-md-1 col-6 offset-0\">Réservation et paiement en ligne ou sur place. CB, chèques et chèques
-                        vacances acceptés.
-                    </h1>
-                    <div class=\"col-6 offset-0 col-md-5 offset-md-2 mt-3\">
-                        <a class=\"buttonresa\" href=\"{{ path ('Choix') }}\">RÉSERVEZ DÈS MAINTENANT</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class=\"container-fluid botlogoinfos\">
-                <div class=\"row\">
-                    <div class=\"col-md-2 offset-md-10\">
-                        <img class=\"img-fluid\" src=\"../public/assets/img/logo-02.png\" alt=\"logo\">
-                    </div>
-                    <p class=\"col-md-6 offset-md-6\" style=\"color: white; text-align: right\">
-                        Camping la Jamonière - Mervent - Vendée
-                        <br>
-                        Mobil-homes, chalets, tentes, camping-cars
-                    </p>
-                </div>
-            </div>
-
-            <div class=\"container-fluid navbot mt-md-5 mt-0\">
-                <div class=\"row\">
-                    <div class=\"offset-md-5 col-md-2 col-5 offset-1\">
-                        <nav>
-                            <a href=\"{{ path ('Accueil') }}\">Accueil</a>
-                            <br>
-                            <a href=\"{{ path ('Photos') }}\">Photos</a>
-                            <br>
-                            <a href=\"{{ path ('Proximité') }}\">À proximité</a>
-                        </nav>
-                    </div>
-                    <div class=\"col-md-2 col-5\">
-                        <nav>
-                            <a href=\"#\">Tarifs</a>
-                            <br>
-                            <a href=\"{{ path ('FAQ') }}\">FAQ</a>
-                            <br>
-                            <a href=\"{{ path ('Contact') }}\">Contact</a>
-                        </nav>
-                    </div>
-                    <div class=\"col-md-3 mb-5 newsletter text-white\">
-                        <p>
-                            Inscrivez vous à la new-letter pour connaître les
-                            dernières actualités du camping :
-                        </p>
-                        <div class=\"newsletterdnone\">
-                            <input class=\"button\" type=\"text\" placeholder=\"Votre Email\" style=\"font-weight: lighter; width: 265px;\">
-                            <button type=\"submit\" class=\"button new\">Submit</button>
+                    <div class=\"container mt-5 mb-2\">
+                        <div class=\"row\">
+                            <h1 class=\"resa col-md-5 offset-md-1 col-6 offset-0 mt-3\">Réservation et paiement en ligne ou sur
+                                place. CB, chèques et chèques
+                                vacances acceptés.
+                            </h1>
+                            <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5\">
+                                <a class=\"buttonresa\" href=\"{{ path ('Choix') }}\">RÉSERVEZ DÈS MAINTENANT</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                    <div class=\"container-fluid botlogoinfos\">
+                        <div class=\"row\">
+                            <div class=\"col-md-2 offset-md-10\">
+                                <img class=\"img-fluid\" src=\"../public/assets/img/logo-02.png\" alt=\"logo\">
+                            </div>
+                            <p class=\"col-md-6 offset-md-6\" style=\"color: white; text-align: right\">
+                                Camping la Jamonière - Mervent - Vendée
+                                <br>
+                                Mobil-homes, chalets, tentes, camping-cars
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class=\"container-fluid navbot mt-md-0 mt-lg-5 mt-0\">
+                        <div class=\"row justify-content-around\">
+                            <div class=\"col-md-2 col-5 offset-1 offset-lg-6 col-lg-3\">
+                                <nav>
+                                    <a href=\"{{ path ('Accueil') }}\">Accueil</a>
+                                    <br>
+                                    <a href=\"{{ path ('Photos') }}\">Photos</a>
+                                    <br>
+                                    <a href=\"{{ path ('Proximité') }}\">À proximité</a>
+                                </nav>
+                            </div>
+                            <div class=\"col-md-2 col-5 col-lg-3\">
+                                <nav>
+                                    <a href=\"#\">Tarifs</a>
+                                    <br>
+                                    <a href=\"{{ path ('FAQ') }}\">FAQ</a>
+                                    <br>
+                                    <a href=\"{{ path ('Contact') }}\">Contact</a>
+                                </nav>
+                            </div>
+                            {#<div class=\"col-md-3 mb-5 newsletter text-white\">
+                                <p>
+                                    Inscrivez vous à la new-letter pour connaître les
+                                    dernières actualités du camping :
+                                </p>
+                                <div class=\"newsletterdnone\">
+                                    <input class=\"button\" type=\"text\" placeholder=\"Votre Email\"
+                                           style=\"font-weight: lighter; width: 265px;\">
+                                    <button type=\"submit\" class=\"button new\">Submit</button>
+                                </div>
+                            </div>#}
+                        </div>
+                    </div>
         </footer>
         {#/FOOTER #}
 
@@ -553,6 +546,6 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     </body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/base.html.twig");
     }
 }

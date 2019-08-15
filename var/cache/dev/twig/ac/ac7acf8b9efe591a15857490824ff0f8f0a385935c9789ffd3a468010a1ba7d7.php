@@ -243,6 +243,6 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
         </script>
     {#/Script Dropdown#}
     {% endblock %}
-", "vitrine/faq.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/templates/vitrine/faq.html.twig");
+", "vitrine/faq.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/vitrine/faq.html.twig");
     }
 }
