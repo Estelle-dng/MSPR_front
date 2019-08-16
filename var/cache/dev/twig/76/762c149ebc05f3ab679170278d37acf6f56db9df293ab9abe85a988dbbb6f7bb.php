@@ -95,13 +95,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
         // line 9
         echo " ";
         // line 10
-        echo "            <svg class=\"mt-5\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1365 637.14\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f8a39d;}</style></defs>
-                <title>header</title><g id=\"Calque_blanc\"><path id=\"Tracé_blanc\" class=\"cls-1\" d=\"M958.65,49.27v561l-1365,1.68V13.52l177.08,355.2,27.1,45s15.46,34.89,62.85,61.12S-43.63,508-43.63,508l7,.45s55.31,7.85,112.39-20.4S958.65,49.27,958.65,49.27Z\" transform=\"translate(406.35 25.14)\"/></g>
-                <g id=\"Calque_rose\"><path id=\"Tracé_rose\" class=\"cls-2\" d=\"M-406.35-25.14-197,391.57s3.42,5.71,4.25,7c5.94,9.37,30.64,47.49,69.76,75.74,17.75,12.82,39.17,24.61,86.38,34.15L-59,507a144.55,144.55,0,0,1-32.93-6l-20.57-6.28s-38.73-14.11-76.33-57.46a252.87,252.87,0,0,1-20.88-27.74C-259.8,332.64-406.35,19.64-406.35,19.64Z\" transform=\"translate(406.35 25.14)\"/></g>
-            </svg>
-            ";
-        // line 15
-        echo "        </div>
+        echo "            <svg class=\"mt-5\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1365 637.14\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f8a39d;opacity:0.49;}</style></defs><title>test_svg_header</title><g id=\"Calque_blanc\"><path id=\"Tracé_blanc\" class=\"cls-1\" d=\"M1365,74.41v561L0,637.14V0L196.66,391.49l12.67,25.22s23.44,42.46,54.24,68.27c48,40.19,106.14,48.63,106.14,48.63h0s55.31,7.85,112.39-20.4S1365,74.41,1365,74.41Z\"/></g><g id=\"Calque_rose\"><path id=\"Tracé_rose\" class=\"cls-2\" d=\"M0,0,209.33,416.71s3.42,5.71,4.25,7c5.94,9.37,28.8,50.24,69.76,75.74,20.87,13,39.24,24,86.38,34.15l-22.36-1.44a144.55,144.55,0,0,1-32.93-6l-20.57-6.28s-38.73-14.11-76.33-57.46a252.87,252.87,0,0,1-20.88-27.74C146.55,357.78,0,44.78,0,44.78Z\"/></g></svg>        </div>
     ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -111,7 +105,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
 
     }
 
-    // line 19
+    // line 14
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -121,9 +115,9 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
-        // line 20
+        // line 15
         echo "    ";
-        // line 21
+        // line 16
         echo "    <div class=\"container-fluid\">
         <div class=\"row\">
             <hgroup class=\"hgroupaccueil d-md-block d-none col-md-5 offset-md-1 offset-xl-1\">
@@ -135,15 +129,15 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
         </div>
     </div>
     ";
-        // line 32
+        // line 27
         echo "    <main>
         ";
-        // line 34
+        // line 29
         echo "        <div class=\"bienvenue container-fluid absolutebienvenue\">
             <div class=\"row\">
                 <div class=\"col-5 offset-1 col-md-2 offset-md-8 pl-0\">
                     <img src=\"";
-        // line 37
+        // line 32
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/logo-02.png"), "html", null, true);
         echo "\" alt=\"logo\" class=\"img-fluid\">
                 </div>
@@ -157,6 +151,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
             </div>
         </div>
 
+        <div class=\"greensquare\"></div>
 
         <div class=\"relative\">
                 <div class=\"cadrebarre\">
@@ -164,7 +159,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                 </div>
 
                 ";
-        // line 56
+        // line 52
         echo "
                 <section>
                     <article class=\"container-fluid my-4\">
@@ -174,7 +169,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                             <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-1 cadreimg\">
                                 <img alt=\"pêcheurs\" class=\"img-fluid imgarticle\"
                                      src=\"";
-        // line 64
+        // line 60
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/pecheur.png"), "html", null, true);
         echo "\">
                                 <h2 class=\"gradient1 parc\">À 50 MIN DU PUY DU FOU</h2>
@@ -204,10 +199,10 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         <h1 class=\"bigtitle offset-2\" id=\"article1\"><b>7 HA DE SITE</b> dont:</h1>
 
                         <div class=\"row\">
-                            <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-1 cadreimg\">
+                            <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-2 cadreimg\">
                                 <img alt=\"lac\" class=\"img-fluid imgarticle\"
                                      src=\"";
-        // line 94
+        // line 90
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/lac_barques.jpg"), "html", null, true);
         echo "\">
                                 <div class=\"gradient2\">
@@ -230,7 +225,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                                     <li>L'éco-musée \"Les amis de la forêt\" avec visites guidées sur réservation</li>
                                 </ul>
                                 <a href=\"";
-        // line 114
+        // line 110
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Proximité");
         echo "\"><span class=\"infos\">Plus d'infos &#x2794;</span></a>
                             </div>
@@ -243,7 +238,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                 </div>
 
                 ";
-        // line 125
+        // line 121
         echo "
                 <section class=\"container mt-5\">
 
@@ -273,7 +268,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                             <div class=\"col-md-6\"></div>
 
                             ";
-        // line 158
+        // line 154
         echo "
                             <h2 class=\"bigtitle contact mt-0\" id=\"slide3\">E-mail :</h2>
                             <p class=\"mail\">contact@camping-jamoniere.com</p>
@@ -282,34 +277,34 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                 </section>
 
                 ";
-        // line 166
+        // line 162
         echo "
                 <section class=\"picline\">
                     <div class=\"container-fluid\">
                         <div class=\"row\">
                             <img src=\"";
-        // line 170
+        // line 166
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/lac2.png"), "html", null, true);
         echo "\" alt=\"lac\" class=\"imgfluid  p-0 col-3\">
                             <img src=\"";
-        // line 171
+        // line 167
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/mobilhome_interieur.png"), "html", null, true);
         echo "\" alt=\"interieur de mobil-home\"
                                  class=\"imgfluid p-0 col-3\">
                             <img src=\"";
-        // line 173
+        // line 169
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/sanitaires.png"), "html", null, true);
         echo "\" alt=\"sanitaires\"
                                  class=\"imgfluid  p-0 col-3\">
                             <img src=\"";
-        // line 175
+        // line 171
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tentes.png"), "html", null, true);
         echo "\" alt=\"tentes\" class=\"imgfluid  p-0 col-3\">
                         </div>
                     </div>
                 </section>
                 ";
-        // line 180
+        // line 176
         echo "            </div>
     </main>
 ";
@@ -333,7 +328,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
 
     public function getDebugInfo()
     {
-        return array (  313 => 180,  306 => 175,  301 => 173,  296 => 171,  292 => 170,  286 => 166,  277 => 158,  247 => 125,  234 => 114,  211 => 94,  178 => 64,  168 => 56,  147 => 37,  142 => 34,  139 => 32,  127 => 21,  125 => 20,  115 => 19,  104 => 15,  98 => 10,  96 => 9,  93 => 8,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  308 => 176,  301 => 171,  296 => 169,  291 => 167,  287 => 166,  281 => 162,  272 => 154,  242 => 121,  229 => 110,  206 => 90,  173 => 60,  163 => 52,  141 => 32,  136 => 29,  133 => 27,  121 => 16,  119 => 15,  109 => 14,  98 => 10,  96 => 9,  93 => 8,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -347,12 +342,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
     {% block header %}
         <div class=\"headerAccueil d-md-block d-none\">
             {# SVG #} {# CACHE POUR LA WAVE #}
-            <svg class=\"mt-5\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1365 637.14\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f8a39d;}</style></defs>
-                <title>header</title><g id=\"Calque_blanc\"><path id=\"Tracé_blanc\" class=\"cls-1\" d=\"M958.65,49.27v561l-1365,1.68V13.52l177.08,355.2,27.1,45s15.46,34.89,62.85,61.12S-43.63,508-43.63,508l7,.45s55.31,7.85,112.39-20.4S958.65,49.27,958.65,49.27Z\" transform=\"translate(406.35 25.14)\"/></g>
-                <g id=\"Calque_rose\"><path id=\"Tracé_rose\" class=\"cls-2\" d=\"M-406.35-25.14-197,391.57s3.42,5.71,4.25,7c5.94,9.37,30.64,47.49,69.76,75.74,17.75,12.82,39.17,24.61,86.38,34.15L-59,507a144.55,144.55,0,0,1-32.93-6l-20.57-6.28s-38.73-14.11-76.33-57.46a252.87,252.87,0,0,1-20.88-27.74C-259.8,332.64-406.35,19.64-406.35,19.64Z\" transform=\"translate(406.35 25.14)\"/></g>
-            </svg>
-            {# FIN SVG #}
-        </div>
+            <svg class=\"mt-5\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1365 637.14\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f8a39d;opacity:0.49;}</style></defs><title>test_svg_header</title><g id=\"Calque_blanc\"><path id=\"Tracé_blanc\" class=\"cls-1\" d=\"M1365,74.41v561L0,637.14V0L196.66,391.49l12.67,25.22s23.44,42.46,54.24,68.27c48,40.19,106.14,48.63,106.14,48.63h0s55.31,7.85,112.39-20.4S1365,74.41,1365,74.41Z\"/></g><g id=\"Calque_rose\"><path id=\"Tracé_rose\" class=\"cls-2\" d=\"M0,0,209.33,416.71s3.42,5.71,4.25,7c5.94,9.37,28.8,50.24,69.76,75.74,20.87,13,39.24,24,86.38,34.15l-22.36-1.44a144.55,144.55,0,0,1-32.93-6l-20.57-6.28s-38.73-14.11-76.33-57.46a252.87,252.87,0,0,1-20.88-27.74C146.55,357.78,0,44.78,0,44.78Z\"/></g></svg>        </div>
     {% endblock %}
 
 
@@ -386,6 +376,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
             </div>
         </div>
 
+        <div class=\"greensquare\"></div>
 
         <div class=\"relative\">
                 <div class=\"cadrebarre\">
@@ -429,7 +420,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         <h1 class=\"bigtitle offset-2\" id=\"article1\"><b>7 HA DE SITE</b> dont:</h1>
 
                         <div class=\"row\">
-                            <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-1 cadreimg\">
+                            <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-2 cadreimg\">
                                 <img alt=\"lac\" class=\"img-fluid imgarticle\"
                                      src=\"{{ asset ('assets/img/lac_barques.jpg') }}\">
                                 <div class=\"gradient2\">

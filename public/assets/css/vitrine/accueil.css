@@ -1,231 +1,177 @@
-/*
-main{margin-top: 200px;}
+/* HEADER - HEADER - HEADER - HEADER */
 
-
-.imgNavbar{
-    background-color: forestgreen;
-    border-bottom-right-radius: 10%;
-    transform: rotate(65deg);
-    height: 2000px;
-    position: absolute;
-    left: -260px;
-    top: -1663px;
-    width: 2000px;
-    overflow: hidden;
-    box-shadow: 0 12px 0 0 rgb(230, 186, 172);
-
-}
-
-.whiteveil{
-    background-color: rgba(108 ,167, 89, 0.3);
-    border-bottom-right-radius: 10%;
-    transform: rotate(65deg);
-    height: 2000px;
-    position: absolute;
-    left: -260px;
-    top: -1663px;
-    width: 2000px;
-
-}
-
-.img {
-    width: 2000px;
-    transform: rotate(-65deg);
-    position: absolute;
-    top: 1000px;
-    left: 600px;
-
-}.arrowdown{margin: 0 auto;}
-
-.cadrearrowdown{width: 100%;}
-
-.retour{
-    width: 100%;
-    position: fixed;
-    bottom: 20px;
-    cursor: pointer;
-    transition: all linear 0.2s;
-    fill: rgb(230, 186, 172);
-    transform: rotate(180deg);
-}
-*/
-
-.text{text-align: center;}
-
-.bigtitle{
-    color: #0A5524;
-    font-size: 21px;
-    padding-left: 15px;
-    margin-top: 30px;
-}
-
-
-.bouton{
-    text-underline: none;
-    transform: rotate(90deg);
-    color: rgb(230, 186, 172);
-    display: inline-block;
-    width: 100%;
-    font-size: 100px;
-    margin-top: -200px;
-}
-
-
-.barrerose{
-    margin:  20px auto;
-    border-bottom: rgb(230, 186, 172) solid 3px;
-    width: 60%;
-}
-
-
-.imgarticle{
-    border-radius: 5%;
-}
-
-.article1{
-    width: 95%;
-    display: flex;
-    margin-top: 30px;}
-
-.infos{
-    color: rgb(230, 186, 172);
-    font-size: 14px;
-    font-weight: bold;
-    justify-content: space-around;
-}
-
-.listinfo{margin-top: 20px;}
-
-.cadreimg1{
-    height: 250px;
-    position: absolute;
-    text-align: right;
-}
-
-.cadreimg2{
-    height: 250px;
-    position: absolute;
-    text-align: left;
-}
-
-.section1{margin-top: 50px;}
-
-.gradient1{
-    padding: 3% 3% 0 0;
-    height: 60px;
-    font-size: 20px;
-    top: -15%;
-    text-align: right;
-    position: relative;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.87718837535014) 20%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 100%);}
-
-.gradient2 {
-    padding: 2% 0 0 2%;
-    height: 60px;
-    top: -18%;
-    position: relative;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0.87718837535014) 78%, rgba(2, 0, 36, 0) 100%);
-}
-
-.etang {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;}
-
-.barrerosebot{
-    margin:  50px;
-    border-bottom: rgb(230, 186, 172) solid 3px;
-    width: 60%;
-}
-
-@media screen and (max-width: 1000px){
-    .barrerosebot{
-        margin: 0 auto;
+    .headerAccueil{ /* IMAGE DE FOND DU HEADER*/
+        background-image: url("../../img/emplacement_header-01.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
+
+    main{ /* BG DU MAIN AVEC LES CARRÉS ET L'IMAGE */
+        background-image: url("../../img/bg_main-01-01.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 990px){ /* CACHE LE BG SUR TEL/IPAD */
+        main{background: none;}
+    }
+
+    /* LOGO ET MESSAGE DE BIENVENUE HEADER */
+
+    .absolutebienvenue{  /* PLACE LE LOGO ET LE TEXTE SOUS L'ANGLE DU HEADER */
+        position: absolute;
+        left: 0;
+        top: 370px;
+    }
+    @media screen and (min-width: 1700px ){
+        .absolutebienvenue{top: 430px;}
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1325px){
+        .absolutebienvenue{top: 300px;}
+    }
+
+    @media screen and (max-width: 1024px){
+        .absolutebienvenue{top: 260px;}
+    }
+
+    @media screen and (max-width: 767px){
+        .absolutebienvenue{position: initial;}
+    }
+
+    @media screen and (max-width: 576px){ /* ADAPTE LA TAILLE DU TEXTE EN RESPONSIVE*/
+        .text{font-size: 0.7em;margin-top: 20px;}
+    }
+
+    @media screen and (max-width: 768px){
+        .text{margin-top: 10%;font-size: 13px;}
+    }
+    /* FIN LOGO ET MESSAGE DE BIENVENUE HEADER */
+
+    .greensquare{ /* GÈRE LA DIV CARRÉE VERTE DU CÔTÉ DU HEADER*/
+        background-color: #0A5524;
+        width: 450px;
+        height: 500px;
+        border-radius: 25%;
+        transform: rotate(39deg);
+        position: absolute;
+        right: -30%;
+        top: 50%;
+    }
+
+    @media screen and (max-width: 1024px){ /* FAIS DISPARAITRE LA DIV VERTE EN RESPONSIVE */
+        .greensquare{display:none;}
 }
 
-.contact{
-    margin: 30px;
-    padding: 0;
-    margin-left: 0;
-}
+    .barrerose{ /* BARRE ROSE BAS DU HEADER */
+        margin:  10px auto;
+        border-bottom: rgb(230, 186, 172) solid 3px;
+        width: 60%;
+        margin-top: 20px;
+    }
 
-.greensquare{
-    background-color: #0A5524;
-    width: 500px;
-    height: 500px;
-    border-radius: 25%;
-    transform: rotate(39deg);
-    position: absolute;
-    right: -30%;
-    top: 60%;
-}
-
-/*   img side  */
-
-.imgSide{
-    background-color: forestgreen;
-    border-radius: 25%;
-    transform: rotate(142deg);
-    height: 800px;
-    position: absolute;
-    left: 890px;
-    top: 1210px;
-    width: 800px;
-    overflow: hidden;
-
-}
-
-.whiteveilside{
-    background-color: rgba(108 ,167, 89, 0.3);
-    border-radius: 25%;
-    transform: rotate(142deg);
-    height: 800px;
-    position: absolute;
-    left: 890px;
-    top: 1210px;
-    width: 800px;
-}
+    .cadrebarre{width: 100%;} /* PERMET DE CENTRER LA BARRE ROSE */
 
 
-.imgbot{
-    width: 2000px;
-    transform: rotate(-142deg);
-    position: absolute;
-    top: 0;
-    left: -207px;
-    text-decoration: none;
-}
-
-.bouton:hover{
-    text-decoration: none;
-    color: #0A5524;
-}
+/* FIN HEADER - FIN HEADER - FIN HEADER - FIN HEADER */
 
 
-.pinksquaremain{
-    background-color: rgba(230, 186, 172, 0.5);
-    width: 500px;
-    height: 500px;
-    border-radius: 25%;
-    transform: rotate(55deg);
-    position: absolute;
-    left: -30%;
-    top: 160%;
-}
 
-.new{font-size: 20px;
-    border-radius: 50px;
-    height: 40px;
-    position: absolute;
-    top: 91px;
-    right: 87px;
-    color: white;
-    font-weight: lighter;
-    background-color: rgb(230, 186, 172);
-}
+/* MAIN - MAIN - MAIN - MAIN - MAIN */
+
+    /* GESTION DES ARTICLES */
+
+    .bigtitle{ /* GÈRE LES TITRES DES ARTICLES DU MAIN (INFOS GÉNÉRALES) */
+        color: #0A5524;
+        font-size: 21px;
+        padding-left: 15px;
+        margin-top: 30px;
+    }
+
+    .imgarticle{ /* ARRONI LES IMAGES DES ARTICLES DU MAIN */
+        border-radius: 5%;
+    }
+
+    .infos{ /* MET LES INFOS COMPLÉMENTAIRES EN PETIT ET ROSE */
+        color: rgb(230, 186, 172);
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .listinfo{margin-top: 20px;} /* ENCADRE L'ENSEMBLE DES INFOS LISTÉES */
+
+    .cadreimg1{ /* CADRE IMAGE PECHEURS / INFOS GÉNÉRALES */
+        height: 250px;
+        position: absolute;
+        text-align: right;
+    }
+
+    .gradient1{ /* GÈRE LE DÉGRADÉ SUPPERPOSÉ À L'IMAGE DES PECHEURS */
+        padding: 3% 3% 0 0;
+        height: 60px;
+        font-size: 20px;
+        top: -15%;
+        text-align: right;
+        position: relative;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.87718837535014) 20%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 100%);}
+
+    .cadreimg2{ /* CADRE IMAGE BARQUES / SITE */
+        height: 250px;
+        position: absolute;
+        text-align: left;
+    }
+
+    .gradient2 { /* GÈRE LE DÉGRADÉ SUPPERPOSÉ À L'IMAGE DES BARQUES */
+        padding: 2% 0 0 2%;
+        height: 60px;
+        top: -17%;
+        position: relative;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0.87718837535014) 78%, rgba(2, 0, 36, 0) 100%);
+    }
+
+    .etang { /* GÈRE LA FONT SIZE DU TEXT SUPPERPOSÉ À L'IMAGE*/
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 576px){ /* GÈRE LA TYPO DES IMAGES EN RESPONSIVE */
+        .parc, .etang{font-size: 17px;}
+    }
+
+    /* GESTION DES ARTICLES */
+
+
+    .barrerosebot{ /* PLACE LA 2ND BARRE ROSE DU BAS DE LA PAGE */
+        margin:  50px;
+        border-bottom: rgb(230, 186, 172) solid 3px;
+        width: 60%;
+    }
+
+    @media screen and (max-width: 1000px){ /* CENTRE LA BARRE ROSE DU BAS EN RESPONSIVE*/
+        .barrerosebot{
+            margin: 0 auto;
+        }
+    }
+
+    .contact{ /* GÈRE LA ZONE D'INFORMATIONS DE CONTACT */
+        margin: 30px;
+        padding: 0;
+        margin-left: 0;
+    }
+
+
+    @media screen and (min-width: 768px){ /* GÈRE LA LIGNE D'IMAGES */
+        .picline{margin-top: 100px}
+    }
+
+
+/* MAIN - MAIN - MAIN - MAIN - MAIN */
+
+
 
 
 

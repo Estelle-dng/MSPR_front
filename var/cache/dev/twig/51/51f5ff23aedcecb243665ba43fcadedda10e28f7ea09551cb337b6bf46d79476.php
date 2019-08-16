@@ -68,7 +68,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
         // line 4
         echo "    <link href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/vitrine/accueil.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/reservation/choixemplacement.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
 ";
         
@@ -79,7 +79,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
     }
 
-    // line 8
+    // line 7
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -89,15 +89,14 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
+        // line 8
+        echo "        <div class=\"headerAccueil d-md-block d-none\">
+            ";
         // line 9
-        echo "        <div class=\"imgNavbar\">
-            <img src=\"";
+        echo " ";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/emplacement.png"), "html", null, true);
-        echo "\" alt=\"emplacement\" class=\"img\">
+        echo "            <svg class=\"mt-5\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1365 637.14\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f8a39d;opacity:0.49;}</style></defs><title>test_svg_header</title><g id=\"Calque_blanc\"><path id=\"Tracé_blanc\" class=\"cls-1\" d=\"M1365,74.41v561L0,637.14V0L196.66,391.49l12.67,25.22s23.44,42.46,54.24,68.27c48,40.19,106.14,48.63,106.14,48.63h0s55.31,7.85,112.39-20.4S1365,74.41,1365,74.41Z\"/></g><g id=\"Calque_rose\"><path id=\"Tracé_rose\" class=\"cls-2\" d=\"M0,0,209.33,416.71s3.42,5.71,4.25,7c5.94,9.37,28.8,50.24,69.76,75.74,20.87,13,39.24,24,86.38,34.15l-22.36-1.44a144.55,144.55,0,0,1-32.93-6l-20.57-6.28s-38.73-14.11-76.33-57.46a252.87,252.87,0,0,1-20.88-27.74C146.55,357.78,0,44.78,0,44.78Z\"/></g></svg>
         </div>
-
-        <div class=\"whiteveil\"></div>
     ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -107,7 +106,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
     }
 
-    // line 17
+    // line 15
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -117,69 +116,69 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
-        // line 18
+        // line 16
+        echo "    ";
+        // line 17
         echo "
+    ";
+        // line 19
+        echo "    <main class=\"bloc\">
+        <div class=\"container-fluid\">
+            <div class=\"row\">
+                <hgroup class=\"hgroupaccueil d-md-block d-none col-md-5 offset-md-1 offset-xl-1\">
+                    <h1 class=\"campinglajam\">CAMPING<br>LA  JAMONIÈRE</h1>
+                    <h2 class=\"mervent\">MERVENT</h2>
+                    <h3 class=\"mobilhomes\">Mobil-homes, chalets, tentes, camping-car</h3>
+                    <h4 class=\"vendee\">V  e  n  d  é  e</h4>
+                </hgroup>
+            </div>
+        </div>
         ";
-        // line 20
-        echo "
-        <hgroup class=\"hgroupaccueil\">
-            <h1 style=\"font-weight: bold; font-size: 60px\">CAMPING <br> LA  JAMONIÈRE</h1>
-            <h2 style=\"font-weight: lighter; font-size: 3rem;\">MERVENT</h2>
-            <h3 style=\"font-size: 25px; font-weight:lighter;\">Mobil-homes, chalets, tentes, camping-car</h3>
-            <h4 style=\"font-weight: bolder\">V  e  n  d  é  e</h4>
-        </hgroup>
-
-        <main>
-            ";
-        // line 30
-        echo "            <div class=\"bienvenue container\">
-                <div class=\"row\">
-                    <div class=\"col-4 offset-1 col-md-3 offset-md-7 logomain\">
-                        <img src=\"";
-        // line 33
+        // line 31
+        echo "        <div class=\"bienvenue container-fluid absolutebienvenue\">
+            <div class=\"row\">
+                <div class=\"col-5 offset-1 col-md-2 offset-md-8 pl-0\">
+                    <img src=\"";
+        // line 34
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/logo-02.png"), "html", null, true);
         echo "\" alt=\"logo\" class=\"img-fluid\">
-                    </div>
-                    <div class=\"col-6 col-md-4 offset-md-7\">
-                        <p class=\"text\">Bienvenue au camping de la Jamonière à Mervent !
-                            <br>
-                            Ouverture le 6 Avril 2019 !
-                            Jusqu’au 30 Septembre 2019
-                        </p>
-                    </div>
+                </div>
+                <div class=\"col-6 col-md-4 offset-md-7 text-center\">
+                    <p class=\"text\">Bienvenue au camping de la Jamonière à Mervent !
+                        <br>
+                        Ouverture le 6 Avril 2019 !
+                        Jusqu’au 30 Septembre 2019
+                    </p>
                 </div>
             </div>
+        </div>
 
+        <div class=\"greensquare\"></div>
 
-            ";
-        // line 49
-        echo "
-            <div class=\"greensquare\"></div>
-
-
-
-            <div>
-                <div class=\"barrerose mb-5 pb-5\" id=\"article1\"></div>
+        <div class=\"relative\">
+            <div class=\"cadrebarre\">
+                <div class=\"barrerose\"></div>
             </div>
 
             ";
-        // line 59
+        // line 54
         echo "
             <section>
                 <article class=\"container-fluid my-4\">
                     <h1 class=\"bigtitle offset-1\"><b>INFORMATIONS</b> GÉNÉRALES</h1>
 
                     <div class=\"row\">
-                        <div class=\"col-md-5 offset-md-1 col-10 offset-1 cadreimg\">
+                        <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-1 cadreimg\">
                             <img alt=\"pêcheurs\" class=\"img-fluid imgarticle\"
                                  src=\"";
-        // line 67
+        // line 62
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/pecheur.png"), "html", null, true);
         echo "\">
-                            <h2 class=\"gradient1\">À 50 MIN DU PUY DU FOU</h2>
+                            <h2 class=\"gradient1 parc\">À 50 MIN DU PUY DU FOU</h2>
                         </div>
-                        <div class=\"col-md-5 offset-md-0 col-10 offset-1\">
-                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met à
+                        <div class=\"col-lg-5 offset-lg-0 col-10 offset-1 col-md-10 offset-md-1\">
+                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met
+                                à
                                 votre disposition:</h2>
                             <ul class=\"listinfo\">
                                 <li>30 emplacements de camping</li>
@@ -197,17 +196,15 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                     </div>
                 </article>
 
-                <div class=\"pinksquaremain\"></div>
-
 
                 <article class=\"container-fluid my-4\">
-                    <h1 class=\"bigtitle offset-2\" id=\"article1\"><b>7 HA DE SITE</b> dont:</h1>
+                    <h1 class=\"bigtitle offset-2\"><b>7 HA DE SITE</b> dont:</h1>
 
                     <div class=\"row\">
-                        <div class=\"col-md-4 offset-md-2 col-10 offset-1 cadreimg\">
+                        <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-2 cadreimg\">
                             <img alt=\"lac\" class=\"img-fluid imgarticle\"
                                  src=\"";
-        // line 98
+        // line 92
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/lac_barques.jpg"), "html", null, true);
         echo "\">
                             <div class=\"gradient2\">
@@ -217,12 +214,12 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                         </div>
                     </div>
 
-                    ";
-        // line 109
-        echo "
+
                     <div class=\"row\">
-                        <div class=\"col-md-4 offset-md-2 col-10 offset-1\" id=\"slide2\">
-                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met à votre
+                        <div class=\"col-lg-4 offset-lg-2 col-10 offset-1 col-md-10 offset-md-1\" id=\"slide2\">
+                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met
+                                à
+                                votre
                                 disposition:</h2>
                             <ul class=\"listinfo\">
                                 <li>Un snack bar (repas de groupe sur commande et location de salle possible)</li>
@@ -230,7 +227,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                                 <li>L'éco-musée \"Les amis de la forêt\" avec visites guidées sur réservation</li>
                             </ul>
                             <a href=\"";
-        // line 119
+        // line 112
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Proximité");
         echo "\"><span class=\"infos\">Plus d'infos &#x2794;</span></a>
                         </div>
@@ -238,20 +235,12 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                 </article>
             </section>
 
-            <div class=\"imgSide\">
-                <img src=\"";
-        // line 126
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/pecheur.png"), "html", null, true);
-        echo "\" alt=\"emplacement\" class=\"imgbot\">
-            </div>
-            <div class=\"whiteveilside\"></div>
-
             <div>
                 <div class=\"barrerosebot\"></div>
             </div>
 
             ";
-        // line 135
+        // line 123
         echo "
             <section class=\"container mt-5\">
 
@@ -280,46 +269,47 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
                         <div class=\"col-md-6\"></div>
 
-                ";
-        // line 168
+                        ";
+        // line 156
         echo "
                         <h2 class=\"bigtitle contact mt-0\" id=\"slide3\">E-mail :</h2>
-                        <p>contact@camping-jamoniere.com</p>
+                        <p class=\"mail\">contact@camping-jamoniere.com</p>
                     </div>
                 </article>
             </section>
 
             ";
-        // line 176
+        // line 164
         echo "
-            <section style=\"margin-top: 100px\">
+            <section class=\"picline\">
                 <div class=\"container-fluid\">
                     <div class=\"row\">
                         <img src=\"";
-        // line 180
+        // line 168
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/lac2.png"), "html", null, true);
         echo "\" alt=\"lac\" class=\"imgfluid  p-0 col-3\">
                         <img src=\"";
-        // line 181
+        // line 169
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/mobilhome_interieur.png"), "html", null, true);
         echo "\" alt=\"interieur de mobil-home\"
                              class=\"imgfluid p-0 col-3\">
                         <img src=\"";
-        // line 183
+        // line 171
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/sanitaires.png"), "html", null, true);
         echo "\" alt=\"sanitaires\"
                              class=\"imgfluid  p-0 col-3\">
                         <img src=\"";
-        // line 185
+        // line 173
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tentes.png"), "html", null, true);
         echo "\" alt=\"tentes\" class=\"imgfluid  p-0 col-3\">
                     </div>
                 </div>
             </section>
             ";
-        // line 190
-        echo "        </main>
-    ";
+        // line 178
+        echo "        </div>
+    </main>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -340,7 +330,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
     public function getDebugInfo()
     {
-        return array (  321 => 190,  314 => 185,  309 => 183,  304 => 181,  300 => 180,  294 => 176,  285 => 168,  255 => 135,  244 => 126,  234 => 119,  222 => 109,  211 => 98,  177 => 67,  167 => 59,  156 => 49,  140 => 33,  135 => 30,  124 => 20,  121 => 18,  111 => 17,  96 => 10,  93 => 9,  83 => 8,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  310 => 178,  303 => 173,  298 => 171,  293 => 169,  289 => 168,  283 => 164,  274 => 156,  244 => 123,  231 => 112,  208 => 92,  175 => 62,  165 => 54,  143 => 34,  138 => 31,  125 => 19,  122 => 17,  120 => 16,  110 => 15,  98 => 10,  96 => 9,  93 => 8,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -348,58 +338,53 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
         return new Source("{% extends ('base.html.twig') %}
 
 {% block stylesheets %}
-    <link href=\"{{ asset ('assets/css/vitrine/accueil.css') }}\" rel=\"stylesheet\" type=\"text/css\">
+    <link href=\"{{ asset ('assets/css/reservation/choixemplacement.css') }}\" rel=\"stylesheet\" type=\"text/css\">
 {% endblock %}
 
-    {#HEADER#}
     {% block header %}
-        <div class=\"imgNavbar\">
-            <img src=\"{{ asset ('assets/img/emplacement.png') }}\" alt=\"emplacement\" class=\"img\">
+        <div class=\"headerAccueil d-md-block d-none\">
+            {# SVG #} {# CACHE POUR LA WAVE #}
+            <svg class=\"mt-5\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1365 637.14\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f8a39d;opacity:0.49;}</style></defs><title>test_svg_header</title><g id=\"Calque_blanc\"><path id=\"Tracé_blanc\" class=\"cls-1\" d=\"M1365,74.41v561L0,637.14V0L196.66,391.49l12.67,25.22s23.44,42.46,54.24,68.27c48,40.19,106.14,48.63,106.14,48.63h0s55.31,7.85,112.39-20.4S1365,74.41,1365,74.41Z\"/></g><g id=\"Calque_rose\"><path id=\"Tracé_rose\" class=\"cls-2\" d=\"M0,0,209.33,416.71s3.42,5.71,4.25,7c5.94,9.37,28.8,50.24,69.76,75.74,20.87,13,39.24,24,86.38,34.15l-22.36-1.44a144.55,144.55,0,0,1-32.93-6l-20.57-6.28s-38.73-14.11-76.33-57.46a252.87,252.87,0,0,1-20.88-27.74C146.55,357.78,0,44.78,0,44.78Z\"/></g></svg>
         </div>
-
-        <div class=\"whiteveil\"></div>
     {% endblock %}
-    {#/HEADER#}
 
-    {% block main %}
 
-        {#HEADER ACCUEIL - HEADER ACCUEIL - HEADER ACCUEIL#}
+{% block main %}
+    {#HEADER ACCUEIL - HEADER ACCUEIL - HEADER ACCUEIL#}
 
-        <hgroup class=\"hgroupaccueil\">
-            <h1 style=\"font-weight: bold; font-size: 60px\">CAMPING <br> LA  JAMONIÈRE</h1>
-            <h2 style=\"font-weight: lighter; font-size: 3rem;\">MERVENT</h2>
-            <h3 style=\"font-size: 25px; font-weight:lighter;\">Mobil-homes, chalets, tentes, camping-car</h3>
-            <h4 style=\"font-weight: bolder\">V  e  n  d  é  e</h4>
-        </hgroup>
-
-        <main>
-            {#MAIN#}
-            <div class=\"bienvenue container\">
-                <div class=\"row\">
-                    <div class=\"col-4 offset-1 col-md-3 offset-md-7 logomain\">
-                        <img src=\"{{ asset ('assets/img/logo-02.png') }}\" alt=\"logo\" class=\"img-fluid\">
-                    </div>
-                    <div class=\"col-6 col-md-4 offset-md-7\">
-                        <p class=\"text\">Bienvenue au camping de la Jamonière à Mervent !
-                            <br>
-                            Ouverture le 6 Avril 2019 !
-                            Jusqu’au 30 Septembre 2019
-                        </p>
-                    </div>
+    {# FIN HEADER ACCUEIL - FIN HEADER ACCUEIL - FIN HEADER ACCUEIL#}
+    <main class=\"bloc\">
+        <div class=\"container-fluid\">
+            <div class=\"row\">
+                <hgroup class=\"hgroupaccueil d-md-block d-none col-md-5 offset-md-1 offset-xl-1\">
+                    <h1 class=\"campinglajam\">CAMPING<br>LA  JAMONIÈRE</h1>
+                    <h2 class=\"mervent\">MERVENT</h2>
+                    <h3 class=\"mobilhomes\">Mobil-homes, chalets, tentes, camping-car</h3>
+                    <h4 class=\"vendee\">V  e  n  d  é  e</h4>
+                </hgroup>
+            </div>
+        </div>
+        {#MAIN#}
+        <div class=\"bienvenue container-fluid absolutebienvenue\">
+            <div class=\"row\">
+                <div class=\"col-5 offset-1 col-md-2 offset-md-8 pl-0\">
+                    <img src=\"{{ asset ('assets/img/logo-02.png') }}\" alt=\"logo\" class=\"img-fluid\">
+                </div>
+                <div class=\"col-6 col-md-4 offset-md-7 text-center\">
+                    <p class=\"text\">Bienvenue au camping de la Jamonière à Mervent !
+                        <br>
+                        Ouverture le 6 Avril 2019 !
+                        Jusqu’au 30 Septembre 2019
+                    </p>
                 </div>
             </div>
+        </div>
 
+        <div class=\"greensquare\"></div>
 
-            {#<div style=\"width: 10%; margin: 0 auto;\">
-                <a class=\"bouton\" href=\"#article1\">&raquo;</a>
-            </div>#}
-
-            <div class=\"greensquare\"></div>
-
-
-
-            <div>
-                <div class=\"barrerose mb-5 pb-5\" id=\"article1\"></div>
+        <div class=\"relative\">
+            <div class=\"cadrebarre\">
+                <div class=\"barrerose\"></div>
             </div>
 
             {#PARTIE INFO - PARTIE INFOS - PARTIE INFOS#}
@@ -409,13 +394,14 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                     <h1 class=\"bigtitle offset-1\"><b>INFORMATIONS</b> GÉNÉRALES</h1>
 
                     <div class=\"row\">
-                        <div class=\"col-md-5 offset-md-1 col-10 offset-1 cadreimg\">
+                        <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-1 cadreimg\">
                             <img alt=\"pêcheurs\" class=\"img-fluid imgarticle\"
                                  src=\"{{ asset ('assets/img/pecheur.png') }}\">
-                            <h2 class=\"gradient1\">À 50 MIN DU PUY DU FOU</h2>
+                            <h2 class=\"gradient1 parc\">À 50 MIN DU PUY DU FOU</h2>
                         </div>
-                        <div class=\"col-md-5 offset-md-0 col-10 offset-1\">
-                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met à
+                        <div class=\"col-lg-5 offset-lg-0 col-10 offset-1 col-md-10 offset-md-1\">
+                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met
+                                à
                                 votre disposition:</h2>
                             <ul class=\"listinfo\">
                                 <li>30 emplacements de camping</li>
@@ -433,14 +419,12 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                     </div>
                 </article>
 
-                <div class=\"pinksquaremain\"></div>
-
 
                 <article class=\"container-fluid my-4\">
-                    <h1 class=\"bigtitle offset-2\" id=\"article1\"><b>7 HA DE SITE</b> dont:</h1>
+                    <h1 class=\"bigtitle offset-2\"><b>7 HA DE SITE</b> dont:</h1>
 
                     <div class=\"row\">
-                        <div class=\"col-md-4 offset-md-2 col-10 offset-1 cadreimg\">
+                        <div class=\"col-sm-5 offset-sm-1 col-md-8 offset-md-2 col-10 offset-1 col-lg-5 offset-lg-2 cadreimg\">
                             <img alt=\"lac\" class=\"img-fluid imgarticle\"
                                  src=\"{{ asset ('assets/img/lac_barques.jpg') }}\">
                             <div class=\"gradient2\">
@@ -450,13 +434,12 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                         </div>
                     </div>
 
-                    {#<div class=\"row\" style=\"width: 10%; margin: 0 auto;\">
-                        <a class=\"bouton\" href=\"#slide2\">&raquo;</a>
-                    </div>#}
 
                     <div class=\"row\">
-                        <div class=\"col-md-4 offset-md-2 col-10 offset-1\" id=\"slide2\">
-                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met à votre
+                        <div class=\"col-lg-4 offset-lg-2 col-10 offset-1 col-md-10 offset-md-1\" id=\"slide2\">
+                            <h2 class=\"smalltitle\">En bordure d'étang et semi-obragé, le camping de la Jamonière met
+                                à
+                                votre
                                 disposition:</h2>
                             <ul class=\"listinfo\">
                                 <li>Un snack bar (repas de groupe sur commande et location de salle possible)</li>
@@ -468,11 +451,6 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                     </div>
                 </article>
             </section>
-
-            <div class=\"imgSide\">
-                <img src=\"{{ asset ('assets/img/pecheur.png') }}\" alt=\"emplacement\" class=\"imgbot\">
-            </div>
-            <div class=\"whiteveilside\"></div>
 
             <div>
                 <div class=\"barrerosebot\"></div>
@@ -507,21 +485,21 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
                         <div class=\"col-md-6\"></div>
 
-                {#<div class=\"row\" style=\"height: 10px\">
-                    <div style=\"width: 10%; margin: 0 auto;\">
-                        <a class=\"bouton\" href=\"#slide3\">&raquo;</a>
-                    </div>
-                </div>#}
+                        {#<div class=\"row\" style=\"height: 10px\">
+                            <div style=\"width: 10%; margin: 0 auto;\">
+                                <a class=\"bouton\" href=\"#slide3\">&raquo;</a>
+                            </div>
+                        </div>#}
 
                         <h2 class=\"bigtitle contact mt-0\" id=\"slide3\">E-mail :</h2>
-                        <p>contact@camping-jamoniere.com</p>
+                        <p class=\"mail\">contact@camping-jamoniere.com</p>
                     </div>
                 </article>
             </section>
 
             {#PARTIE IMAGES - PARTIE IMAGES - PARTIE IMAGES#}
 
-            <section style=\"margin-top: 100px\">
+            <section class=\"picline\">
                 <div class=\"container-fluid\">
                     <div class=\"row\">
                         <img src=\"{{ asset ('assets/img/lac2.png') }}\" alt=\"lac\" class=\"imgfluid  p-0 col-3\">
@@ -534,7 +512,9 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
                 </div>
             </section>
             {#/MAIN#}
-        </main>
-    {% endblock %}", "vitrine/accueil.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/vitrine/accueil.html.twig");
+        </div>
+    </main>
+{% endblock %}
+", "vitrine/accueil.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/vitrine/accueil.html.twig");
     }
 }

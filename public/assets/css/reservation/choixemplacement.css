@@ -6,7 +6,7 @@
 }
 
 main{
-    background-image: url("../../img/bg_main-01.png");
+    background-image: url("../../img/bg_main-01-01.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -170,4 +170,19 @@ main{
 
 @media screen and (min-width: 768px){
     .picline{margin-top: 100px}
+}
+
+.greensquare{
+    background-color: #0A5524;
+    width: 450px;
+    height: 500px;
+    border-radius: 25%;
+    transform: rotate(39deg);
+    position: absolute;
+    right: -30%;
+    top: 50%;
+}
+
+@media screen and (max-width: 1024px){
+    .greensquare{display:none;}
 }
