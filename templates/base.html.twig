@@ -19,19 +19,21 @@
 
     </head>
     <body>
-        <header>
+    <div class="wrap test">
+        <header class="position-relative">
             {#HEADER#}
             {% block header %}
-                <div class="imgNavbarbase">
-                    <img src="{{ asset ('assets/img/emplacement.png') }}" alt="emplacement" class="imgbase">
+                <div class="header d-md-block d-none mb-md-5">
+                    {# SVG #} {# CACHE POUR LA WAVE #}
+                    <svg class="mt-5" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1264.27 162.13"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#e5baad;opacity:0.5;}</style></defs><title>Capture d’écran 2019-08-15 à 03.33.38</title><path class="cls-1" d="M0,54.07S61.89,176.8,224.09,146.76L1264.27,0V162.13L0,162.08Z"/><path class="cls-2" d="M0,54.68s46.8,88.2,156.49,96.12a246.5,246.5,0,0,0,29.19.54s-54.9,13.13-111.59-16.71S0,72.58,0,72.58Z"/></svg>
+                    {# /SVG #} {# /CACHE POUR LA WAVE #}
                 </div>
-                <div class="whiteveilbase"></div>
             {% endblock %}
 
             {# Navbar #}
-            <nav class="navbar navbar-expand-lg navbar-dark gradientnavbar" id="mainNav">
+            <nav class="navbar navbar-expand-md navbar-dark gradientnavbar absolutenavbar textnav" id="mainNav">
 
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../public/assets/img/logo-02.png" alt="logo" class="img-fluid" style="height: 50px;">Camping la Jamonière</a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">{#<img src="../public/assets/img/logo-02.png" alt="logo" class="img-fluid" style="height: 50px;">#}Camping la Jamonière</a>
                 <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -64,7 +66,7 @@
                             <a class="nav-link js-scroll-trigger text-white" href="{{ path ('Contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn p-0" style="background-color: darkgreen;"><a class="nav-link js-scroll-trigger text-white" href="{{ path ('Choix') }}">RÉSERVATION</a></button>
+                            <button type="button" class="btn p-0 btn-default"><a class="nav-link js-scroll-trigger text-white" href="{{ path ('Choix') }}">RÉSERVATION</a></button>
                         </li>
                     </ul>
                 </div>
@@ -77,67 +79,67 @@
 
 
         {#FOOTER#}
+
+
         <footer>
-            <div>
-                <div class="pinksquare"></div>
-            </div>
-
-            <div class="container mt-5">
-                <div class="row">
-                    <h1 class="resa col-md-6 offset-md-1 col-6 offset-0">Réservation et paiement en ligne ou sur place. CB, chèques et chèques
-                        vacances acceptés.
-                    </h1>
-                    <div class="col-6 offset-0 col-md-5 offset-md-2 mt-3">
-                        <a class="buttonresa" href="{{ path ('Choix') }}">RÉSERVEZ DÈS MAINTENANT</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-fluid botlogoinfos">
-                <div class="row">
-                    <div class="col-md-2 offset-md-10">
-                        <img class="img-fluid" src="../public/assets/img/logo-02.png" alt="logo">
-                    </div>
-                    <p class="col-md-6 offset-md-6" style="color: white; text-align: right">
-                        Camping la Jamonière - Mervent - Vendée
-                        <br>
-                        Mobil-homes, chalets, tentes, camping-cars
-                    </p>
-                </div>
-            </div>
-
-            <div class="container-fluid navbot mt-md-5 mt-0">
-                <div class="row">
-                    <div class="offset-md-5 col-md-2 col-5 offset-1">
-                        <nav>
-                            <a href="{{ path ('Accueil') }}">Accueil</a>
-                            <br>
-                            <a href="{{ path ('Photos') }}">Photos</a>
-                            <br>
-                            <a href="{{ path ('Proximité') }}">À proximité</a>
-                        </nav>
-                    </div>
-                    <div class="col-md-2 col-5">
-                        <nav>
-                            <a href="#">Tarifs</a>
-                            <br>
-                            <a href="{{ path ('FAQ') }}">FAQ</a>
-                            <br>
-                            <a href="{{ path ('Contact') }}">Contact</a>
-                        </nav>
-                    </div>
-                    <div class="col-md-3 mb-5 newsletter text-white">
-                        <p>
-                            Inscrivez vous à la new-letter pour connaître les
-                            dernières actualités du camping :
-                        </p>
-                        <div class="newsletterdnone">
-                            <input class="button" type="text" placeholder="Votre Email" style="font-weight: lighter; width: 265px;">
-                            <button type="submit" class="button new">Submit</button>
+                    <div class="container mt-5 mb-2">
+                        <div class="row">
+                            <h1 class="resa col-md-5 offset-md-1 col-6 offset-0 mt-3">Réservation et paiement en ligne ou sur
+                                place. CB, chèques et chèques
+                                vacances acceptés.
+                            </h1>
+                            <div class="col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5">
+                                <a class="buttonresa" href="{{ path ('Choix') }}">RÉSERVEZ DÈS MAINTENANT</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                    <div class="container-fluid botlogoinfos">
+                        <div class="row">
+                            <div class="col-md-2 offset-md-10">
+                                <img class="img-fluid" src="../public/assets/img/logo-02.png" alt="logo">
+                            </div>
+                            <p class="col-md-6 offset-md-6" style="color: white; text-align: right">
+                                Camping la Jamonière - Mervent - Vendée
+                                <br>
+                                Mobil-homes, chalets, tentes, camping-cars
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid navbot mt-md-0 mt-lg-5 mt-0">
+                        <div class="row justify-content-around">
+                            <div class="col-md-2 col-5 offset-1 offset-lg-6 col-lg-3">
+                                <nav>
+                                    <a href="{{ path ('Accueil') }}">Accueil</a>
+                                    <br>
+                                    <a href="{{ path ('Photos') }}">Photos</a>
+                                    <br>
+                                    <a href="{{ path ('Proximité') }}">À proximité</a>
+                                </nav>
+                            </div>
+                            <div class="col-md-2 col-5 col-lg-3">
+                                <nav>
+                                    <a href="#">Tarifs</a>
+                                    <br>
+                                    <a href="{{ path ('FAQ') }}">FAQ</a>
+                                    <br>
+                                    <a href="{{ path ('Contact') }}">Contact</a>
+                                </nav>
+                            </div>
+                            {#<div class="col-md-3 mb-5 newsletter text-white">
+                                <p>
+                                    Inscrivez vous à la new-letter pour connaître les
+                                    dernières actualités du camping :
+                                </p>
+                                <div class="newsletterdnone">
+                                    <input class="button" type="text" placeholder="Votre Email"
+                                           style="font-weight: lighter; width: 265px;">
+                                    <button type="submit" class="button new">Submit</button>
+                                </div>
+                            </div>#}
+                        </div>
+                    </div>
         </footer>
         {#/FOOTER #}
 
@@ -156,6 +158,6 @@
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                 src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         {#Jquery#}
-
+        </div>
     </body>
 </html>

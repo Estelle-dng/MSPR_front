@@ -124,7 +124,8 @@ class __TwigTemplate_de17e90e97bb13dfedb11f87932f9f20190df93906c49bcd27282492a17
                         <li>Le marais Poitevin<span class=\"infos\">(env. 30min</span></li>
                         <li>Le par du Futuroscope<span class=\"infos\">(env. 1h15)</span></li>
                     </ul>
-                    <iframe class=\"d-none d-md-block\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.5909340516955!2d-0.7345560488431175!3d46.5359959790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4806e73faa2891c9%3A0x9446fbf7d12eed92!2sCamping+de+la+Jamoni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1563906386289!5m2!1sfr!2sfr\" width=\"400\" height=\"400\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>        </div>
+                    <iframe class=\"proximite d-none d-md-block\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.5909340516955!2d-0.7345560488431175!3d46.5359959790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4806e73faa2891c9%3A0x9446fbf7d12eed92!2sCamping+de+la+Jamoni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1563906386289!5m2!1sfr!2sfr\" width=\"400\" height=\"400\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>
+                </div>
 
             </div>
         </div>
@@ -196,10 +197,11 @@ class __TwigTemplate_de17e90e97bb13dfedb11f87932f9f20190df93906c49bcd27282492a17
                         <li>Le marais Poitevin<span class=\"infos\">(env. 30min</span></li>
                         <li>Le par du Futuroscope<span class=\"infos\">(env. 1h15)</span></li>
                     </ul>
-                    <iframe class=\"d-none d-md-block\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.5909340516955!2d-0.7345560488431175!3d46.5359959790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4806e73faa2891c9%3A0x9446fbf7d12eed92!2sCamping+de+la+Jamoni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1563906386289!5m2!1sfr!2sfr\" width=\"400\" height=\"400\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>        </div>
+                    <iframe class=\"proximite d-none d-md-block\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.5909340516955!2d-0.7345560488431175!3d46.5359959790258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4806e73faa2891c9%3A0x9446fbf7d12eed92!2sCamping+de+la+Jamoni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1563906386289!5m2!1sfr!2sfr\" width=\"400\" height=\"400\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>
+                </div>
 
             </div>
         </div>
-    {% endblock %}", "vitrine/proximite.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/templates/vitrine/proximite.html.twig");
+    {% endblock %}", "vitrine/proximite.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/vitrine/proximite.html.twig");
     }
 }
