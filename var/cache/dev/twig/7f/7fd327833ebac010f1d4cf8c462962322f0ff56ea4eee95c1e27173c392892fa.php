@@ -80,19 +80,20 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         echo "
     </head>
     <body >
+    <div class=\"wrap\">
         <header class=\"position-relative\">
             ";
-        // line 24
+        // line 25
         echo "            ";
         $this->displayBlock('header', $context, $blocks);
-        // line 31
+        // line 32
         echo "
             ";
-        // line 33
+        // line 34
         echo "            <nav class=\"navbar navbar-expand-md navbar-dark gradientnavbar absolutenavbar textnav\" id=\"mainNav\">
 
                 <a class=\"navbar-brand js-scroll-trigger\" href=\"#page-top\">";
-        // line 35
+        // line 36
         echo "Camping la Jamonière</a>
                 <button class=\"navbar-toggler navbar-toggler-right text-white\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     Menu
@@ -102,19 +103,19 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                     <ul class=\"navbar-nav text-uppercase ml-auto\">
                         <li class=\"nav-item\">
                             <a class=\"nav-link js-scroll-trigger text-white\" href=\"";
-        // line 43
+        // line 44
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Accueil");
         echo "\">Accueil</a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link js-scroll-trigger text-white\" href=\"";
-        // line 46
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Photos");
         echo "\">Photos</a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link js-scroll-trigger text-white\" href=\"";
-        // line 49
+        // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Proximité");
         echo "\">A proximité</a>
                         </li>
@@ -130,19 +131,19 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link js-scroll-trigger text-white\" href=\"";
-        // line 62
+        // line 63
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("FAQ");
         echo "\">F.A.Q</a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link js-scroll-trigger text-white\" href=\"";
-        // line 65
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Contact");
         echo "\">Contact</a>
                         </li>
                         <li class=\"nav-item\">
                             <button type=\"button\" class=\"btn p-0 btn-default\"><a class=\"nav-link js-scroll-trigger text-white\" href=\"";
-        // line 68
+        // line 69
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Choix");
         echo "\">RÉSERVATION</a></button>
                         </li>
@@ -150,19 +151,19 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                 </div>
             </nav>
             ";
-        // line 74
+        // line 75
         echo "        </header>
         ";
-        // line 76
+        // line 77
         echo "
         ";
-        // line 77
-        $this->displayBlock('main', $context, $blocks);
         // line 78
+        $this->displayBlock('main', $context, $blocks);
+        // line 79
         echo "
 
         ";
-        // line 81
+        // line 82
         echo "
 
         <footer>
@@ -174,7 +175,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                             </h1>
                             <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5\">
                                 <a class=\"buttonresa\" href=\"";
-        // line 91
+        // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Choix");
         echo "\">RÉSERVEZ DÈS MAINTENANT</a>
                             </div>
@@ -199,17 +200,17 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                             <div class=\"col-md-2 col-5 offset-1 offset-lg-6 col-lg-3\">
                                 <nav>
                                     <a href=\"";
-        // line 113
+        // line 114
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Accueil");
         echo "\">Accueil</a>
                                     <br>
                                     <a href=\"";
-        // line 115
+        // line 116
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Photos");
         echo "\">Photos</a>
                                     <br>
                                     <a href=\"";
-        // line 117
+        // line 118
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Proximité");
         echo "\">À proximité</a>
                                 </nav>
@@ -219,31 +220,31 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                                     <a href=\"#\">Tarifs</a>
                                     <br>
                                     <a href=\"";
-        // line 124
+        // line 125
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("FAQ");
         echo "\">FAQ</a>
                                     <br>
                                     <a href=\"";
-        // line 126
+        // line 127
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Contact");
         echo "\">Contact</a>
                                 </nav>
                             </div>
                             ";
-        // line 140
+        // line 141
         echo "                        </div>
                     </div>
         </footer>
         ";
-        // line 144
+        // line 145
         echo "
 
 
         ";
-        // line 148
+        // line 149
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 149
+        // line 150
         echo "
         <script crossorigin=\"anonymous\"
                 integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\"
@@ -255,8 +256,8 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                 integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\"
                 src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         ";
-        // line 160
-        echo "
+        // line 161
+        echo "        </div>
     </body>
 </html>
 ";
@@ -305,7 +306,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     }
 
-    // line 24
+    // line 25
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -315,17 +316,17 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 25
+        // line 26
         echo "                <div class=\"header d-md-block d-none mb-md-5\">
                     ";
-        // line 26
-        echo " ";
         // line 27
+        echo " ";
+        // line 28
         echo "                    <svg class=\"mt-5\" id=\"Calque_1\" data-name=\"Calque 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1264.27 162.13\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#e5baad;opacity:0.5;}</style></defs><title>Capture d’écran 2019-08-15 à 03.33.38</title><path class=\"cls-1\" d=\"M0,54.07S61.89,176.8,224.09,146.76L1264.27,0V162.13L0,162.08Z\"/><path class=\"cls-2\" d=\"M0,54.68s46.8,88.2,156.49,96.12a246.5,246.5,0,0,0,29.19.54s-54.9,13.13-111.59-16.71S0,72.58,0,72.58Z\"/></svg>
                     ";
-        // line 28
-        echo " ";
         // line 29
+        echo " ";
+        // line 30
         echo "                </div>
             ";
         
@@ -336,7 +337,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     }
 
-    // line 77
+    // line 78
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -354,7 +355,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     }
 
-    // line 148
+    // line 149
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -384,7 +385,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     public function getDebugInfo()
     {
-        return array (  358 => 148,  340 => 77,  329 => 29,  327 => 28,  324 => 27,  322 => 26,  319 => 25,  309 => 24,  291 => 18,  272 => 10,  259 => 160,  247 => 149,  244 => 148,  239 => 144,  234 => 140,  228 => 126,  223 => 124,  213 => 117,  208 => 115,  203 => 113,  178 => 91,  166 => 81,  162 => 78,  160 => 77,  157 => 76,  154 => 74,  146 => 68,  140 => 65,  134 => 62,  118 => 49,  112 => 46,  106 => 43,  96 => 35,  92 => 33,  89 => 31,  86 => 24,  80 => 19,  78 => 18,  74 => 17,  70 => 15,  63 => 10,  58 => 9,  53 => 5,  48 => 1,);
+        return array (  359 => 149,  341 => 78,  330 => 30,  328 => 29,  325 => 28,  323 => 27,  320 => 26,  310 => 25,  292 => 18,  273 => 10,  260 => 161,  248 => 150,  245 => 149,  240 => 145,  235 => 141,  229 => 127,  224 => 125,  214 => 118,  209 => 116,  204 => 114,  179 => 92,  167 => 82,  163 => 79,  161 => 78,  158 => 77,  155 => 75,  147 => 69,  141 => 66,  135 => 63,  119 => 50,  113 => 47,  107 => 44,  97 => 36,  93 => 34,  90 => 32,  87 => 25,  80 => 19,  78 => 18,  74 => 17,  70 => 15,  63 => 10,  58 => 9,  53 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -410,6 +411,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     </head>
     <body >
+    <div class=\"wrap\">
         <header class=\"position-relative\">
             {#HEADER#}
             {% block header %}
@@ -548,7 +550,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                 integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\"
                 src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
         {#Jquery#}
-
+        </div>
     </body>
 </html>
 ", "base.html.twig", "/Applications/MAMP/htdocs/camping_project/templates/base.html.twig");

@@ -5,7 +5,8 @@
 body{box-sizing:border-box; /* Évite les espaces natifs de la page */
     padding: 0;
     margin: 0;
-    overflow-X: hidden;}
+    overflow-X: hidden;
+}
 
 a{color: white;}
 
@@ -154,7 +155,7 @@ footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
 }
 
 @media screen and (max-width: 1000px) { /* CACHE L'ANGLE VERT ET MET UN BG-GREEN*/
-    footer{background-image: none; background-color: #0A5524;}
+    footer{background-image: none; background-color: #0A5524; height: 160px;}
 }
 
     /* ZONE RÉSA DU FOOTER */
@@ -212,3 +213,34 @@ footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
 }
 
 /* FIN DU FOOTER */
+
+/* TEST FOOTER STICKY */
+
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+    position: relative;
+}
+
+.wrap{
+    min-height:100%;
+    position: relative;
+}
+
+header{
+    position: relative;
+}
+main{
+    position relative;
+    padding-bottom: 100px;
+}
+footer{
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* FIN TEST FOOTER STICKY */

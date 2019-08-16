@@ -2,213 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161dd569-468a-45e1-8bc7-ccc04556801b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/bg_main-01-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/footer-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/globalheader-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/00/13/211300" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/00/2f/f82f00" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/00/86/bc8600" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/00/f2/bef200" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/00/fb/59fb00" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/01/b4/cbb401" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/06/92/5b9206" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/08/25/af2508" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/09/66/696609" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/0b/c4/f6c40b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/0d/13/56130d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/0d/e9/d0e90d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/0e/dd/07dd0e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/10/62/d46210" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/12/cb/76cb12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/12/e0/91e012" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/13/32/2a3213" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/14/58/035814" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/14/e3/fae314" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/17/2e/812e17" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/19/0b/f70b19" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/1a/74/03741a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/1a/f1/ccf11a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/1c/d2/5cd21c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/1d/9d/809d1d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/1f/94/e2941f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/20/0d/7b0d20" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/20/17/371720" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/20/f7/b5f720" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/21/ea/adea21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/21/eb/baeb21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/22/7f/757f22" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/22/b3/fcb322" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/25/f7/35f725" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/27/2a/d52a27" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/27/5d/b75d27" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/28/cf/d8cf28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/2c/89/45892c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/2d/7c/d67c2d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/32/fe/6afe32" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/33/f6/85f633" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/34/07/ab0734" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/35/84/af8435" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/35/85/bd8535" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/36/8e/908e36" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/37/86/b08637" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/37/9a/c29a37" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/38/3b/dd3b38" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/39/56/c85639" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/39/8e/728e39" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/3d/32/6a323d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/3e/05/a5053e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/42/b0/7db042" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/47/08/db0847" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/48/d0/b3d048" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/49/86/2d8649" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/49/99/c99949" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/49/a8/31a849" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/49/ba/c1ba49" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/4a/3c/4e3c4a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/4a/c1/7bc14a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/4b/7d/ae7d4b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/4c/9b/7a9b4c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/4d/a4/d7a44d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/4f/e0/36e04f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/52/0a/780a52" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/56/ea/e8ea56" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/56/ef/55ef56" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/59/96/5a9659" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/5d/e2/39e25d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/5e/8d/aa8d5e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/5f/0a/e90a5f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/60/b0/a1b060" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/60/ef/dcef60" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/61/f5/41f561" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/63/22/e52263" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/64/2f/da2f64" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/64/4c/d84c64" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/65/15/e31565" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/66/79/377966" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/68/d3/45d368" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/69/37/de3769" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6b/f9/f7f96b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6c/a6/caa66c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6c/fe/f1fe6c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6d/74/00746d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6d/8d/7f8d6d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6e/19/63196e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/6e/c5/d5c56e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/70/d8/1ad870" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/71/09/a70971" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/71/34/1a3471" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/76/1a/371a76" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7a/41/6e417a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7b/ca/d2ca7b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7e/e6/2be67e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7f/29/2e297f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/81/ff/b0ff81" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/83/9f/e69f83" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/84/26/d02684" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/87/ac/6fac87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/8b/30/7b308b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/8b/35/92358b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/8e/13/6e138e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/8e/e1/25e18e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/8f/07/a4078f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/8f/63/75638f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/92/57/955792" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/92/8a/a08a92" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/93/15/ed1593" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/93/c4/6ec493" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/94/9f/4a9f94" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/95/39/7d3995" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/95/53/cd5395" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9a/8a/6e8a9a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9a/ce/2ece9a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9b/48/ff489b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9e/07/62079e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9e/64/d4649e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9f/18/73189f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/9f/6f/4b6f9f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a2/d4/1cd4a2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a5/41/5041a5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a5/7a/497aa5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a5/83/0f83a5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a6/57/7d57a6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a8/5c/4f5ca8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/a9/2c/2c2ca9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/aa/76/a176aa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/aa/ca/e0caaa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ae/24/6c24ae" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ae/d0/add0ae" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/b0/26/1c26b0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/b8/05/f105b8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/b9/e0/afe0b9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ba/34/ca34ba" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/bc/51/7c51bc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/bc/c8/94c8bc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/be/0c/f60cbe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/be/23/cc23be" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/be/4a/994abe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/be/89/4789be" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/bf/3d/be3dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c0/58/f158c0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c1/90/d990c1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c2/e8/a6e8c2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c4/12/9312c4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c5/b9/e4b9c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c6/ae/03aec6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c6/c4/00c4c6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c7/45/4445c7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c9/6e/936ec9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c9/fc/05fcc9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ca/e3/99e3ca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/cd/73/af73cd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/cf/94/6e94cf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d1/31/9431d1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d1/6a/7d6ad1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d1/b4/17b4d1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d3/50/7d50d3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d4/49/8949d4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d4/80/9b80d4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d6/b9/c5b9d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/d8/01/d801d8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/de/2b/8e2bde" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/df/fa/aefadf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/e0/d5/90d5e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/e3/43/9843e3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/e3/58/0758e3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/e5/94/5f94e5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/e5/c6/e1c6e5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/e7/70/0d70e7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/eb/bd/92bdeb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ed/0b/760bed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ef/56/4056ef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f0/f3/50f3f0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f1/dc/7adcf1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f2/a3/a1a3f2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f3/89/9389f3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f3/95/ef95f3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f4/ea/eceaf4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f5/26/0c26f5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f5/9f/299ff5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f6/db/b9dbf6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/f9/bf/f9bff9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/fb/58/6258fb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/fb/b1/3bb1fb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/styleBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/styleBase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/vitrine/accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/vitrine/accueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/bg_main-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/footer-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/footer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/test_svg_header-01.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vitrine/accueil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vitrine/accueil.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vitrine/proximite.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vitrine/proximite.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/09/0973d4291445aa98ba0f99203b5d393927f3c66554093dedebf77e826c95fb14.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/09/0973d4291445aa98ba0f99203b5d393927f3c66554093dedebf77e826c95fb14.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/2c/2c5102dd62e5095a86c780b1678e18d713f73b5ca03eae62ff62c6eb57dc4398.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/2c/2c5102dd62e5095a86c780b1678e18d713f73b5ca03eae62ff62c6eb57dc4398.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/51/51f5ff23aedcecb243665ba43fcadedda10e28f7ea09551cb337b6bf46d79476.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/51/51f5ff23aedcecb243665ba43fcadedda10e28f7ea09551cb337b6bf46d79476.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/76/762c149ebc05f3ab679170278d37acf6f56db9df293ab9abe85a988dbbb6f7bb.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/76/762c149ebc05f3ab679170278d37acf6f56db9df293ab9abe85a988dbbb6f7bb.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/7f/7fd327833ebac010f1d4cf8c462962322f0ff56ea4eee95c1e27173c392892fa.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/7f/7fd327833ebac010f1d4cf8c462962322f0ff56ea4eee95c1e27173c392892fa.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
@@ -231,7 +28,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/vitrine/accueil.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1154">
+                <state relative-caret-position="-1913">
                   <caret line="65" column="44" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="44" />
                 </state>
               </provider>
@@ -240,8 +37,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="183">
-                  <caret line="82" column="15" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
+                <state relative-caret-position="424">
+                  <caret line="160" column="14" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
                   <folding>
                     <element signature="n#head#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -266,8 +63,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/assets/css/styleBase.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="212" selection-start-line="212" selection-end-line="212" />
+                <state relative-caret-position="494">
+                  <caret line="242" column="14" lean-forward="true" selection-start-line="242" selection-start-column="14" selection-end-line="242" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -339,8 +136,8 @@
         <option value="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" />
         <option value="$PROJECT_DIR$/templates/vitrine/proximite.html.twig" />
         <option value="$PROJECT_DIR$/templates/vitrine/accueil.html.twig" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/vitrine/accueil.css" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/styleBase.css" />
       </list>
     </option>
@@ -578,12 +375,12 @@
       <workItem from="1565284082808" duration="32499000" />
       <workItem from="1565699844160" duration="24000" />
       <workItem from="1565699916046" duration="1070000" />
-      <workItem from="1565702136091" duration="36959000" />
+      <workItem from="1565702136091" duration="37748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124955000" />
+    <option name="totallyTimeSpent" value="125744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -783,15 +580,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/vitrine/accueil.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1154">
+        <state relative-caret-position="-1913">
           <caret line="65" column="44" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="82" column="15" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
+        <state relative-caret-position="424">
+          <caret line="160" column="14" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -801,8 +598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/styleBase.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        <state relative-caret-position="494">
+          <caret line="242" column="14" lean-forward="true" selection-start-line="242" selection-start-column="14" selection-end-line="242" selection-end-column="14" />
         </state>
       </provider>
     </entry>
