@@ -79,7 +79,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         // line 19
         echo "
     </head>
-    <body >
+    <body>
     <div class=\"wrap\">
         <header class=\"position-relative\">
             ";
@@ -167,7 +167,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         echo "
 
         <footer>
-                    <div class=\"container mt-5 mb-2\">
+                    <div class=\"container mt-md-2 mb-2\">
                         <div class=\"row\">
                             <h1 class=\"resa col-md-5 offset-md-1 col-6 offset-0 mt-3\">Réservation et paiement en ligne ou sur
                                 place. CB, chèques et chèques
@@ -410,7 +410,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         {% block stylesheets %}{% endblock %}
 
     </head>
-    <body >
+    <body>
     <div class=\"wrap\">
         <header class=\"position-relative\">
             {#HEADER#}
@@ -474,7 +474,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
 
         <footer>
-                    <div class=\"container mt-5 mb-2\">
+                    <div class=\"container mt-md-2 mb-2\">
                         <div class=\"row\">
                             <h1 class=\"resa col-md-5 offset-md-1 col-6 offset-0 mt-3\">Réservation et paiement en ligne ou sur
                                 place. CB, chèques et chèques

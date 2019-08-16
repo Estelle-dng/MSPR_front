@@ -2129,3 +2129,8 @@ a2c147,::1,GET,http://localhost/camping_project/public/FAQ,1565956951,,200
 41a7ce,::1,GET,http://localhost/camping_project/public/Contact,1565957050,,200
 64db6b,::1,GET,http://localhost/camping_project/public/assets/css/vitrine/contact.css,1565957051,b91d85,200
 b91d85,::1,GET,http://localhost/camping_project/public/assets/css/vitrine/contact.css,1565957051,,404
+a8a9af,::1,GET,http://localhost/camping_project/public/FAQ,1565957361,,200
+b59d2c,::1,GET,http://localhost/camping_project/public/FAQ,1565957565,,200
+daf93d,::1,GET,http://localhost/camping_project/public/FAQ,1565957915,,200
+766ec1,::1,GET,http://localhost/camping_project/public/FAQ,1565958011,,200
+bd47c0,::1,GET,http://localhost/camping_project/public/Accueil,1565958024,,200
