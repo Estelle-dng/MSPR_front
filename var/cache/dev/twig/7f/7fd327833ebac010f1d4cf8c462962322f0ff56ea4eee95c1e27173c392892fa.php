@@ -80,7 +80,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         echo "
     </head>
     <body>
-    <div class=\"wrap\">
+    <div class=\"wrap test\">
         <header class=\"position-relative\">
             ";
         // line 25
@@ -411,7 +411,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     </head>
     <body>
-    <div class=\"wrap\">
+    <div class=\"wrap test\">
         <header class=\"position-relative\">
             {#HEADER#}
             {% block header %}
