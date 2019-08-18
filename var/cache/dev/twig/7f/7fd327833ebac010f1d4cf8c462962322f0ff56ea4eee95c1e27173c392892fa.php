@@ -80,7 +80,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
         echo "
     </head>
     <body>
-    <div class=\"wrap test\">
+    <div class=\"wrap stickyfooter\">
         <header class=\"position-relative\">
             ";
         // line 25
@@ -173,7 +173,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                                 place. CB, chèques et chèques
                                 vacances acceptés.
                             </h1>
-                            <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5\">
+                            <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5 offset-lg-2 cadrebtnresa\">
                                 <a class=\"buttonresa\" href=\"";
         // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Choix");
@@ -411,7 +411,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
 
     </head>
     <body>
-    <div class=\"wrap test\">
+    <div class=\"wrap stickyfooter\">
         <header class=\"position-relative\">
             {#HEADER#}
             {% block header %}
@@ -480,7 +480,7 @@ class __TwigTemplate_0b5c35090fe633f34af78715b4f73e93218fa1e1dc6b15c754dcadb3bfa
                                 place. CB, chèques et chèques
                                 vacances acceptés.
                             </h1>
-                            <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5\">
+                            <div class=\"col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5 offset-lg-2 cadrebtnresa\">
                                 <a class=\"buttonresa\" href=\"{{ path ('Choix') }}\">RÉSERVEZ DÈS MAINTENANT</a>
                             </div>
                         </div>

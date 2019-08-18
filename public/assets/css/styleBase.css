@@ -23,48 +23,48 @@ a{color: white;}
 }
 
 
- /* GESTION DE LA NAVBAR */
+/* GESTION DE LA NAVBAR */
 
-    .absolutenavbar{ /* PLACE LA NAVBAR PAR DESSUS LE SVG DU HEADER */
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
+.absolutenavbar{ /* PLACE LA NAVBAR PAR DESSUS LE SVG DU HEADER */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px){ /* REMET LA NAVBAR À SA POSITION DE BASE LORSQUE L'IMAGE DU HEADER DISPARAÎT EN RESPONSIVE*/
+    .absolutenavbar{position: initial;}
+}
+
+.navbar-brand{font-weight: lighter;} /* REND "CAMPING DE LA JAM" LIGHTER */
+
+.btn-default{ /* BOUTON RÉSERVER DE LA NAVBAR */
+    background-color: darkgreen;
+    height: 38px;
+}
+
+@media screen and (max-width: 915px){ /* ADAPTATION DE LA NAVBAR EN SM*/
+    .textnav{font-size: 10px;}
+    .btn-default{
+        height: 30px;
+        font-size: 10px;}
+}
+
+/* BACKGROUND DE LA NAVBAR*/
+
+@media screen and (max-width: 768px){ /* NAVBAR VERTE FONCÉ EN XS */
+    .gradientnavbar{background: darkgreen;}
+}
+
+@media screen and (min-width: 768px){  /* BG NAVBAR DÉGRADÉ EN NORMAL */
+    .gradientnavbar{
+        background: rgb(108 ,167, 89);
+        background: linear-gradient(0deg, rgba(108 ,167, 89, 0) 0%,
+        rgba(108 ,167, 89, 0.25) 22%, rgba(108 ,167, 89, 0.35) 46%,
+        rgba(108 ,167, 89, 0.5) 100%);
     }
-
-    @media screen and (max-width: 767px){ /* REMET LA NAVBAR À SA POSITION DE BASE LORSQUE L'IMAGE DU HEADER DISPARAÎT EN RESPONSIVE*/
-        .absolutenavbar{position: initial;}
-    }
-
-    .navbar-brand{font-weight: lighter;} /* REND "CAMPING DE LA JAM" LIGHTER */
-
-    .btn-default{ /* BOUTON RÉSERVER DE LA NAVBAR */
-        background-color: darkgreen;
-        height: 38px;
-    }
-
-   @media screen and (max-width: 915px){ /* ADAPTATION DE LA NAVBAR EN SM*/
-        .textnav{font-size: 10px;}
-        .btn-default{
-           height: 30px;
-           font-size: 10px;}
-    }
-
-    /* BACKGROUND DE LA NAVBAR*/
-
-    @media screen and (max-width: 768px){ /* NAVBAR VERTE FONCÉ EN XS */
-        .gradientnavbar{background: darkgreen;}
-    }
-
-    @media screen and (min-width: 768px){  /* BG NAVBAR DÉGRADÉ EN NORMAL */
-        .gradientnavbar{
-            background: rgb(108 ,167, 89);
-            background: linear-gradient(0deg, rgba(108 ,167, 89, 0) 0%,
-            rgba(108 ,167, 89, 0.25) 22%, rgba(108 ,167, 89, 0.35) 46%,
-            rgba(108 ,167, 89, 0.5) 100%);
-        }
-    }
-    /* FIN BACKGROUND DE LA NAVBAR*/
+}
+/* FIN BACKGROUND DE LA NAVBAR*/
 
 /* FIN GESTION DE LA NAVBAR */
 
@@ -72,46 +72,46 @@ a{color: white;}
 
 /* GROUPE DE TITRES DE L'ACCUEIL*/
 
-    .hgroupaccueil{ /* GÈRE LES TITRES DU HEADER DE L'ACCUEIL */
-        left: 110px;
-        top: 150px;
-        position: absolute;
-        color: white;
-        z-index: 98;
-    }
+.hgroupaccueil{ /* GÈRE LES TITRES DU HEADER DE L'ACCUEIL */
+    left: 110px;
+    top: 150px;
+    position: absolute;
+    color: white;
+    z-index: 98;
+}
 
-    @media screen and (max-width: 768px){ /* PLACE LES TITRES EN REPSONSIVE */
-        .hgroupaccueil{left: 75px;}
-    }
+@media screen and (max-width: 768px){ /* PLACE LES TITRES EN REPSONSIVE */
+    .hgroupaccueil{left: 75px;}
+}
 
-        /* GESTION INDIVIDUELLE DES TITRES DE HEADER */
+/* GESTION INDIVIDUELLE DES TITRES DE HEADER */
 
-        .campinglajam{
-            font-size: 5vw;
-            font-weight: bold;
-        }
+.campinglajam{
+    font-size: 5vw;
+    font-weight: bold;
+}
 
-        .mervent{
-            font-size: 3vw;
-            font-weight: lighter;
-        }
+.mervent{
+    font-size: 3vw;
+    font-weight: lighter;
+}
 
-        .mobilhomes{
-            font-size: 1.5vw;
-        }
+.mobilhomes{
+    font-size: 1.5vw;
+}
 
-        @media screen and (max-width: 1050px){
-            .mobilhomes{font-size: 1vw;}
-        }
+@media screen and (max-width: 1050px){
+    .mobilhomes{font-size: 1vw;}
+}
 
-        .vendee{
-            font-size: 2vw;
-            font-weight: bolder;
-        }
+.vendee{
+    font-size: 2vw;
+    font-weight: bolder;
+}
 
-        /* GESTION INDIVIDUELLE DES TITRES DE HEADER */
+/* GESTION INDIVIDUELLE DES TITRES DE HEADER */
 
-    /* FIN GROUPE DE TITRES DE L'ACCUEIL*/
+/* FIN GROUPE DE TITRES DE L'ACCUEIL*/
 
 /* FIN DU /HEADER */
 
@@ -119,23 +119,23 @@ a{color: white;}
 
 /* MAIN */
 
-    /* PAGE D'ACCUEIL */
-    .smalltitle{ /* SOUS-TITRES DES INFOS GÉNÉRALES DU CAMPING */
-        color: #565656;
-        font-size: 20px;
-        font-weight: bolder;
-    }
+/* PAGE D'ACCUEIL */
+.smalltitle{ /* SOUS-TITRES DES INFOS GÉNÉRALES DU CAMPING */
+    color: #565656;
+    font-size: 20px;
+    font-weight: bolder;
+}
 
-    @media screen and (max-width: 576px){ /* GÈRE LA TAILLE DU MAIL EN RESPONSIVE*/
-        .mail{font-size: 14px;}
-    }
-    /* FIN PAGE D'ACCUEIL */
+@media screen and (max-width: 576px){ /* GÈRE LA TAILLE DU MAIL EN RESPONSIVE*/
+    .mail{font-size: 14px;}
+}
+/* FIN PAGE D'ACCUEIL */
 
-    /* PAGE À PROXIMITÉ */
-    @media screen and (width: 768px){ /* RÉDUIT LA MAP GOOGLE EN RESPONSIVE*/
-        .proximite{width: 250px}
-    }
-    /* FIN PAGE À PROXIMITÉ */
+/* PAGE À PROXIMITÉ */
+@media screen and (width: 768px){ /* RÉDUIT LA MAP GOOGLE EN RESPONSIVE*/
+    .proximite{width: 250px}
+}
+/* FIN PAGE À PROXIMITÉ */
 
 /* FIN DU MAIN*/
 
@@ -150,46 +150,71 @@ footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
     background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 1000px){ /* DONNE UNE HEIGHT CORRECTE À L'ANGLE VERT*/
+@media screen and (min-width: 1024px){ /* DONNE UNE HEIGHT CORRECTE À L'ANGLE VERT*/
     footer{height: 550px;}
 }
 
-@media screen and (max-width: 1000px) { /* CACHE L'ANGLE VERT ET MET UN BG-GREEN*/
-    footer{background-image: none; background-color: #0A5524;}
+@media screen and (width: 1024px){ /* LAISSE LE FOOTER ORIGINAL EN IPAD PRO */
+    footer{
+        margin-top: auto;
+    }
+    .stickyfooter { /* COLLE LE FOOTER EN BAS DE LA PAGE */
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+        padding: 0;
+        margin: 0;
+    }
+    .cadrebtnresa{margin-left: 150px;}
 }
 
-    /* ZONE RÉSA DU FOOTER */
-
-    .buttonresa{ /* BOUTON "Reservez dès maintenant" */
-        padding: 6px;
-        font-size: 20px;
-        color: rgb(230, 186, 172);
-        border-radius: 50px;
-        border: rgb(230, 186, 172) solid 2px;
-        font-weight: bolder;
-        text-decoration: none;
+@media screen and (max-width: 1023px) { /* CACHE L'ANGLE VERT ET MET UN BG-GREEN*/
+    .stickyfooter { /* COLLE LE FOOTER EN BAS DE LA PAGE */
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+        padding: 0;
+        margin: 0;
     }
-
-    @media screen and (max-width: 1000px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
-        .buttonresa{font-size: 8px;}
-        .buttonresa:hover{color: white;}
+    footer {
+        margin-top: auto;
+        background-image: none;
+        background-color: #0A5524;
     }
+}
 
-    @media screen and (width: 768px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
-        .buttonresa{font-size: 14px}
-    }
+/* ZONE RÉSA DU FOOTER */
+
+.buttonresa{ /* BOUTON "Reservez dès maintenant" */
+    padding: 6px;
+    font-size: 20px;
+    color: rgb(230, 186, 172);
+    border-radius: 50px;
+    border: rgb(230, 186, 172) solid 2px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
+    .buttonresa{font-size: 8px;}
+    .buttonresa:hover{color: white;}
+}
+
+@media screen and (width: 768px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
+    .buttonresa{font-size: 14px}
+}
 
 
-    .resa{font-size: 21px;} /* TEXTE "resa en ligne et cheques acceptés" */
-    @media screen and (max-width: 576px){
-        .resa{font-size: 9px;}
-    }
+.resa{font-size: 21px;} /* TEXTE "resa en ligne et cheques acceptés" */
+@media screen and (max-width: 576px){
+    .resa{font-size: 9px;}
+}
 
-    @media screen and (max-width: 1000px){ /* RÉDUIT LE TEXTE RÉSA EN RESPONSIVE*/
-        .resa{margin-top: 5px; color: white; font-weight: normal;}
-    }
+@media screen and (max-width: 1000px){ /* RÉDUIT LE TEXTE RÉSA EN RESPONSIVE*/
+    .resa{margin-top: 5px; color: white; font-weight: normal;}
+}
 
-    /* ZONE RÉSA DU FOOTER */
+/* ZONE RÉSA DU FOOTER */
 
 
 .navbot{ /* CONTIENT LES LIENS DU FOOTER*/
