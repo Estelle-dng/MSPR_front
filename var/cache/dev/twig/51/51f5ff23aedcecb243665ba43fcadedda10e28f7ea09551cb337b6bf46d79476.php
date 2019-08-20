@@ -68,7 +68,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
 
         // line 4
         echo "    <link href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/reservation/choixemplacement.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/vitrine/accueil.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
 ";
         
@@ -338,7 +338,7 @@ class __TwigTemplate_91c26d196740e025d65ca76adefad72a7c389a4b9db86b33a08615df657
         return new Source("{% extends ('base.html.twig') %}
 
 {% block stylesheets %}
-    <link href=\"{{ asset ('assets/css/reservation/choixemplacement.css') }}\" rel=\"stylesheet\" type=\"text/css\">
+    <link href=\"{{ asset ('assets/css/vitrine/accueil.css') }}\" rel=\"stylesheet\" type=\"text/css\">
 {% endblock %}
 
     {% block header %}
