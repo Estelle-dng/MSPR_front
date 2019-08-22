@@ -37,8 +37,10 @@
 
 
 /* Position the "next button" to the right */
+.prev{left: 12px;}
+
 .next {
-    right: 15px;
+    right: 12px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -815,3 +817,6 @@ h2.heading {
     box-shadow: 0 0 20px rgba(33,33,33,.2);
 }
 
+.paddingtext{padding: 25px;}
+
+.border-success{margin: 2px;}

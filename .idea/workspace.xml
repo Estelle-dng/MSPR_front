@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161dd569-468a-45e1-8bc7-ccc04556801b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/reservation/article.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/vitrine/photos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reservation/article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vitrine/photos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vitrine/photos.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/UrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/UrlGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/UrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/UrlMatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/7/B/xAKsfhDhUjyhyKAmjO-g" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/7/B/xAKsfhDhUjyhyKAmjO-g" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/9/P/uN9Q3GkEurNFQFRS6+pQ" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/9/P/uN9Q3GkEurNFQFRS6+pQ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/I/5/s+Vw3s95mgMVE1rD8Obg" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/I/5/s+Vw3s95mgMVE1rD8Obg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/5/GScLE0oRRlVZnZMrNM5g" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/5/GScLE0oRRlVZnZMrNM5g" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/K/DMY0c56HxPxhGjBl8KGA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/K/DMY0c56HxPxhGjBl8KGA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/U/X/NLGQYN0+ULFd-EweSgoA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/U/X/NLGQYN0+ULFd-EweSgoA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/W/L/tqgBMaxB5pKoIpOchpiw" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/W/L/tqgBMaxB5pKoIpOchpiw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/reservation/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/reservation/article.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reservation/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/76/762c149ebc05f3ab679170278d37acf6f56db9df293ab9abe85a988dbbb6f7bb.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/76/762c149ebc05f3ab679170278d37acf6f56db9df293ab9abe85a988dbbb6f7bb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/fd/fdc4c79914610dd045b381ce85f91902acfdb5f7a8f5343b2eb2298720f2e710.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/fd/fdc4c79914610dd045b381ce85f91902acfdb5f7a8f5343b2eb2298720f2e710.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,23 +21,14 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6946688">
+    <splitter split-orientation="horizontal" split-proportion="0.4749596">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="859">
-                  <caret line="187" column="13" selection-start-line="154" selection-start-column="2" selection-end-line="187" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/reservation/article.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+                <state relative-caret-position="423">
+                  <caret line="199" column="58" selection-start-line="199" selection-start-column="58" selection-end-line="199" selection-end-column="58" />
                   <folding>
                     <element signature="e#766#784#0#HTML" expanded="true" />
                     <element signature="e#974#992#0#HTML" expanded="true" />
@@ -76,15 +48,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="406">
-                  <caret line="452" column="40" selection-start-line="452" selection-start-column="40" selection-end-line="452" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -92,8 +55,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/article.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="620" column="8" selection-start-line="620" selection-start-column="1" selection-end-line="620" selection-end-column="8" />
+                <state relative-caret-position="457">
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
                 </state>
               </provider>
             </entry>
@@ -104,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>absolutem</find>
       <find>absolutemain</find>
       <find>absolutef</find>
       <find>absolutefooter</find>
@@ -127,13 +89,14 @@
       <find>border</find>
       <find>reserva</find>
       <find>font</find>
-      <find>button</find>
       <find>heading</find>
       <find>h3</find>
       <find>mt-1</find>
       <find>caption</find>
       <find>headerAccueil</find>
       <find>form-gr</find>
+      <find>button</find>
+      <find>light</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -427,7 +390,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167796000" />
+    <option name="totallyTimeSpent" value="169201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -678,6 +641,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
@@ -687,29 +657,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="187" column="13" selection-start-line="154" selection-start-column="2" selection-end-line="187" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
+        <state relative-caret-position="641">
+          <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/article.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="620" column="8" selection-start-line="620" selection-start-column="1" selection-end-line="620" selection-end-column="8" />
+        <state relative-caret-position="457">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/reservation/article.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="423">
+          <caret line="199" column="58" selection-start-line="199" selection-start-column="58" selection-end-line="199" selection-end-column="58" />
           <folding>
             <element signature="e#766#784#0#HTML" expanded="true" />
             <element signature="e#974#992#0#HTML" expanded="true" />

@@ -8,15 +8,15 @@
     {# Titres #}
     <div class="container mb-5">
         <div class="row">
-            <h3 class="col-4 offset-1 text-success text-center">Mobil-Home 20m2</h3>
-            <a class="col-3 offset-3 btn btn-default text-white" href="#">TARIFS ET DISPOS</a>
+            <h3 class="col-md-4 offset-md-1 col-8 offset-2 text-success text-center">Mobil-Home 20m2</h3>
+            <a class="col-md-3 offset-md-3 col-4 offset-4 btn btn-default text-white" href="#choixdate">TARIFS ET DISPOS</a>
         </div>
     </div>
 
     {# <!-- Container for the image gallery --> #}
     <div class="container containerslide">
         <div class="row">
-            <div class="col-6"><!-- Full-width images with number text -->
+            <div class="col-md-6 col-12"><!-- Full-width images with number text -->
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
                     <img src="{{ asset ('assets/img/emplacement.png') }}" style="width:100%">
@@ -85,22 +85,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-12 paddingtext">
+
                 <div class="row mb-3">
-                    <button>2 chambres</button>
-                    <button>20 m2</button>
-                    <button>4 personnes</button>
-                    <button>1 douche</button>
+                    <button class="border-success rounded">2 chambres</button>
+                    <button class="border-success rounded">20 m2</button>
+                    <button class="border-success rounded">4 personnes</button>
+                    <button class="border-success rounded">1 douche</button>
                 </div>
                 <div class="row mb-3">
-                    <button>Chauffage</button>
-                    <button>Micro-Ondes</button>
-                    <button>Frigidaire</button>
-                    <button>Terrasse</button>
-                    <button>1 place de parking</button>
-                    <button>Électricité</button>
-                    <button>Wifi</button>
+                    <button class="border-success rounded">Chauffage</button>
+                    <button class="border-success rounded">Micro-Ondes</button>
+                    <button class="border-success rounded">Frigidaire</button>
+                    <button class="border-success rounded">Terrasse</button>
+                    <button class="border-success rounded">1 place de parking</button>
+                    <button class="border-success rounded">Électricité</button>
+                    <button class="border-success rounded">Wifi</button>
                 </div>
+
                 <div class="row mb-3">
                     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut distinctio minus rem
                         sapiente suscipit voluptate? Eaque illum iusto, laborum libero nam porro quia quidem repellat
@@ -124,7 +126,7 @@
     </div>
 
     {# DATES DE RÉSA #}
-    <div class="container mt-5">
+    <div class="container mt-5" id="choixdate">
         <div class="row">
             <div id="accordion" style="width: 100%;">
                 <div class="card">
@@ -163,7 +165,7 @@
                         <div class="card-body container">
 
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-md-2 col-4">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Mois</label>
                                         <select class="form-control" id="exampleFormControlSelect1">
@@ -177,7 +179,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-2">
+                                <div class="col-md-2 col-4">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Nb de nuits</label>
                                         <select class="form-control" id="exampleFormControlSelect1">
@@ -195,7 +197,7 @@
                                 </div>
 
 
-                                <div class="col-2">
+                                <div class="col-md-2 col-4">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Jour d'arrivée</label>
                                         <select class="form-control" id="exampleFormControlSelect1">
@@ -212,10 +214,10 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-3 border-right border-success">Dipso du 1 avril au 15 avril</div>
-                            <div class="col-3 border-right border-success">Dipso du 15 avril au 1er mai</div>
-                            <div class="col-3 border-right border-success">Dipso du 1er mai au 15 mai</div>
-                            <div class="col-3">Dipso du 15 mai au 1er juin</div>
+                            <div class="col-3 m-0 border-right border-success">Dipso du 1 avril au 15 avril</div>
+                            <div class="col-3 m-0 border-right border-success">Dipso du 15 avril au 1er mai</div>
+                            <div class="col-3 m-0 border-right border-success">Dipso du 1er mai au 15 mai</div>
+                            <div class="col-3 m-0">Dipso du 15 mai au 1er juin</div>
                         </div>
                     </div>
                 </div>
