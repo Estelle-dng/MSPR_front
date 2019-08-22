@@ -164,7 +164,10 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
+                        <a href=\"";
+        // line 79
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Article");
+        echo "\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
                             Réserver dès maintenant
                         </a>
                     </p>
@@ -189,7 +192,10 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
+                        <a href=\"";
+        // line 101
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Article");
+        echo "\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
                             Réserver dès maintenant
                         </a>
                 </div>
@@ -213,7 +219,10 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
+                        <a href=\"";
+        // line 122
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Article");
+        echo "\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
                             Réserver dès maintenant
                         </a>
                 </div>
@@ -237,7 +246,10 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
+                        <a href=\"";
+        // line 143
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Article");
+        echo "\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
                              Réserver dès maintenant
                         </a>
                 </div>
@@ -321,7 +333,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
 
     public function getDebugInfo()
     {
-        return array (  269 => 155,  259 => 154,  228 => 132,  204 => 111,  180 => 90,  155 => 68,  95 => 10,  85 => 9,  73 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  281 => 155,  271 => 154,  251 => 143,  237 => 132,  224 => 122,  210 => 111,  197 => 101,  183 => 90,  169 => 79,  155 => 68,  95 => 10,  85 => 9,  73 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -404,7 +416,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
+                        <a href=\"{{ path ('Article') }}\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
                             Réserver dès maintenant
                         </a>
                     </p>
@@ -426,7 +438,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
+                        <a href=\"{{ path ('Article') }}\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
                             Réserver dès maintenant
                         </a>
                 </div>
@@ -447,7 +459,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
+                        <a href=\"{{ path ('Article') }}\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenant\">
                             Réserver dès maintenant
                         </a>
                 </div>
@@ -468,7 +480,7 @@ class __TwigTemplate_ca54ef18cb66dfe12d40a74dc6ba147511825a4e05c5b12f64d7677a03e
                         quamquam
                         minim vidisse nescius.</p>
                     <p>
-                        <a href=\"#\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
+                        <a href=\"{{ path ('Article') }}\" class=\"btn btn-xs btn-success\" role=\"button\" title=\"Réserver dès maintenan\">
                              Réserver dès maintenant
                         </a>
                 </div>

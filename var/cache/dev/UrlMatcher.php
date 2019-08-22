@@ -19,6 +19,7 @@ return [
         '/FAQ' => [[['_route' => 'FAQ', '_controller' => 'App\\Controller\\HomeController::Faq'], null, null, null, false, false, null]],
         '/Contact' => [[['_route' => 'Contact', '_controller' => 'App\\Controller\\HomeController::Contact'], null, null, null, false, false, null]],
         '/ChoixEmplacement' => [[['_route' => 'Choix', '_controller' => 'App\\Controller\\HomeController::Choixemplacement'], null, null, null, false, false, null]],
+        '/Article' => [[['_route' => 'Article', '_controller' => 'App\\Controller\\HomeController::Article'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161dd569-468a-45e1-8bc7-ccc04556801b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/css/reservation/article.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/vitrine/photos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vitrine/photos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vitrine/photos.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/UrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/UrlGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/UrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/UrlMatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/7/B/xAKsfhDhUjyhyKAmjO-g" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/7/B/xAKsfhDhUjyhyKAmjO-g" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/9/P/uN9Q3GkEurNFQFRS6+pQ" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/9/P/uN9Q3GkEurNFQFRS6+pQ" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/I/5/s+Vw3s95mgMVE1rD8Obg" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/I/5/s+Vw3s95mgMVE1rD8Obg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/5/GScLE0oRRlVZnZMrNM5g" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/5/GScLE0oRRlVZnZMrNM5g" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/K/DMY0c56HxPxhGjBl8KGA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/Q/K/DMY0c56HxPxhGjBl8KGA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/U/X/NLGQYN0+ULFd-EweSgoA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/U/X/NLGQYN0+ULFd-EweSgoA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/W/L/tqgBMaxB5pKoIpOchpiw" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/nwMprT2TpH/W/L/tqgBMaxB5pKoIpOchpiw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/76/762c149ebc05f3ab679170278d37acf6f56db9df293ab9abe85a988dbbb6f7bb.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/76/762c149ebc05f3ab679170278d37acf6f56db9df293ab9abe85a988dbbb6f7bb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/fd/fdc4c79914610dd045b381ce85f91902acfdb5f7a8f5343b2eb2298720f2e710.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/fd/fdc4c79914610dd045b381ce85f91902acfdb5f7a8f5343b2eb2298720f2e710.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,23 +40,47 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42487884">
+    <splitter split-orientation="horizontal" split-proportion="0.6946688">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/assets/css/styleBase.css">
+            <entry file="file://$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="2" column="103" selection-start-line="2" selection-end-line="2" selection-end-column="103" />
+                <state relative-caret-position="859">
+                  <caret line="187" column="13" selection-start-line="154" selection-start-column="2" selection-end-line="187" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/reservation/article.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#766#784#0#HTML" expanded="true" />
+                    <element signature="e#974#992#0#HTML" expanded="true" />
+                    <element signature="e#1197#1215#0#HTML" expanded="true" />
+                    <element signature="e#1404#1422#0#HTML" expanded="true" />
+                    <element signature="e#1610#1628#0#HTML" expanded="true" />
+                    <element signature="e#1831#1849#0#HTML" expanded="true" />
+                    <element signature="e#2452#2470#0#HTML" expanded="true" />
+                    <element signature="e#2720#2738#0#HTML" expanded="true" />
+                    <element signature="e#3029#3047#0#HTML" expanded="true" />
+                    <element signature="e#3263#3281#0#HTML" expanded="true" />
+                    <element signature="e#3534#3552#0#HTML" expanded="true" />
+                    <element signature="e#3833#3851#0#HTML" expanded="true" />
+                    <element signature="e#5753#5773#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="681" selection-start-line="681" selection-end-line="681" />
+                <state relative-caret-position="406">
+                  <caret line="452" column="40" selection-start-line="452" selection-start-column="40" selection-end-line="452" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -45,33 +88,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig">
+            <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/article.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#3258#3264#0#HTML" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/vitrine/accueil.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="61" column="77" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="77" />
+                <state relative-caret-position="204">
+                  <caret line="620" column="8" selection-start-line="620" selection-start-column="1" selection-end-line="620" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -82,10 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.text</find>
-      <find>header</find>
-      <find>.header</find>
-      <find>absol</find>
       <find>absolutem</find>
       <find>absolutemain</find>
       <find>absolutef</find>
@@ -101,7 +119,6 @@
       <find>test</find>
       <find>.parc</find>
       <find>BTN</find>
-      <find>headerAccueil</find>
       <find>end-date</find>
       <find>in-range</find>
       <find>form</find>
@@ -112,6 +129,11 @@
       <find>font</find>
       <find>button</find>
       <find>heading</find>
+      <find>h3</find>
+      <find>mt-1</find>
+      <find>caption</find>
+      <find>headerAccueil</find>
+      <find>form-gr</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -128,7 +150,6 @@
       <list>
         <option value="$PROJECT_DIR$/.env" />
         <option value="$USER_HOME$/Downloads/camping.html" />
-        <option value="$PROJECT_DIR$/templates/vitrine/photos.html.twig" />
         <option value="$PROJECT_DIR$/../../Prestashop/modules/ModuleTest/views/templates/front/test.tpl" />
         <option value="$PROJECT_DIR$/../../Prestashop/modules/ModuleTest/controllers/front/test.php" />
         <option value="$USER_HOME$/Downloads/les-cagettes-gourmandes/style.css" />
@@ -136,7 +157,6 @@
         <option value="$PROJECT_DIR$/../../wordpress/wordpress/wp-content/themes/les-cagettes-gourmandes/functions.php" />
         <option value="$USER_HOME$/Downloads/Copy of modele-liste-producteurs.php" />
         <option value="$PROJECT_DIR$/public/assets/css/vitrine/faq.css" />
-        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" />
         <option value="$PROJECT_DIR$/templates/vitrine/faq.html.twig" />
         <option value="$PROJECT_DIR$/templates/vitrine/proximite.html.twig" />
@@ -145,8 +165,13 @@
         <option value="$PROJECT_DIR$/public/assets/css/vitrine/accueil.css" />
         <option value="$PROJECT_DIR$/templates/vitrine/accueil.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css" />
+        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/vitrine/photos.css" />
+        <option value="$PROJECT_DIR$/templates/vitrine/photos.html.twig" />
+        <option value="$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig" />
+        <option value="$PROJECT_DIR$/public/assets/css/reservation/article.css" />
+        <option value="$PROJECT_DIR$/templates/reservation/article.html.twig" />
       </list>
     </option>
   </component>
@@ -316,9 +341,13 @@
             <path>
               <item name="camping_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="camping_project" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camping_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camping_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="camping_project" type="b2602c69:ProjectViewProjectNode" />
@@ -346,20 +375,20 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/css/reservation" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/css/vitrine" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/assets/css/reservation" />
       <recent name="$PROJECT_DIR$/templates/reservation" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/../../wordpress/wordpress/wp-content/themes/les-cagettes-gourmandes" />
       <recent name="$PROJECT_DIR$/public/assets" />
-      <recent name="$PROJECT_DIR$/public/assets/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/css/vitrine" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -398,7 +427,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156701000" />
+    <option name="totallyTimeSpent" value="167796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -429,6 +458,66 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointLogExpression">
+      <expression>
+        <expression-string>&lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-2&quot;&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;label for=&quot;exampleFormControlSelect1&quot;&gt;Mois&lt;/label&gt;
+                                &lt;select class=&quot;form-control&quot; id=&quot;exampleFormControlSelect1&quot;&gt;
+                                    &lt;option&gt;Avril&lt;/option&gt;
+                                    &lt;option&gt;Mai&lt;/option&gt;
+                                    &lt;option&gt;Juin&lt;/option&gt;
+                                    &lt;option&gt;Juillet&lt;/option&gt;
+                                    &lt;option&gt;Aout&lt;/option&gt;
+                                    &lt;option&gt;Septembre&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-2&quot;&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;label for=&quot;exampleFormControlSelect1&quot;&gt;Nb de nuits&lt;/label&gt;
+                                &lt;select class=&quot;form-control&quot; id=&quot;exampleFormControlSelect1&quot;&gt;
+                                    &lt;option&gt;1 nuits&lt;/option&gt;
+                                    &lt;option&gt;2 nuits&lt;/option&gt;
+                                    &lt;option&gt;3 nuits&lt;/option&gt;
+                                    &lt;option&gt;4 nuits&lt;/option&gt;
+                                    &lt;option&gt;5 nuits&lt;/option&gt;
+                                    &lt;option&gt;6 nuits&lt;/option&gt;
+                                    &lt;option&gt;7 nuits&lt;/option&gt;
+                                    &lt;option&gt;10 nuits&lt;/option&gt;
+                                    &lt;option&gt;14 nuits&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-2&quot;&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;label for=&quot;exampleFormControlSelect1&quot;&gt;Jour d'arrivée&lt;/label&gt;
+                            &lt;select class=&quot;form-control&quot; id=&quot;exampleFormControlSelect1&quot;&gt;
+                                &lt;option&gt;Lundi&lt;/option&gt;
+                                &lt;option&gt;Mardi&lt;/option&gt;
+                                &lt;option&gt;Mercredi&lt;/option&gt;
+                                &lt;option&gt;Jeudi&lt;/option&gt;
+                                &lt;option&gt;Vendredi&lt;/option&gt;
+                                &lt;option&gt;Samedi&lt;/option&gt;
+                                &lt;option&gt;Dimanche&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;3 border-right border-success&quot;&gt;Dipso du 1 avril au 15 avril&lt;/div&gt;
+                        &lt;div class=&quot;3 border-right border-success&quot;&gt;Dipso du 15 avril au 1er mai&lt;/div&gt;
+                        &lt;div class=&quot;3 border-right border-success&quot;&gt;Dipso du 1er mai au 15 mai&lt;/div&gt;
+                        &lt;div class=&quot;3 border-right border-success&quot;&gt;Dipso du 15 mai au 1er juin&lt;/div&gt;
+                        &lt;div class=&quot;3 &quot;&gt;Dipso du 23 avril au 12 mai&lt;/div&gt;
+                    &lt;/div&gt;</expression-string>
+        <language-id>Twig</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env.test">
       <provider selected="true" editor-type-id="text-editor" />
@@ -451,13 +540,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Prestashop/modules/ModuleTest/views/templates/front/test.tpl" />
-    <entry file="file://$PROJECT_DIR$/templates/vitrine/photos.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../Prestashop/modules/ModuleTest/controllers/front/test.php" />
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
@@ -471,13 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-937">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -548,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/vitrine/accueil.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="61" column="77" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/img/emplacement_header-01.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -575,6 +643,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/vitrine/accueil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="61" column="77" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/styleBase.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -582,26 +657,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/vitrine/photos.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="455">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/vitrine/photos.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="73" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/choixemplacement.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="681" selection-start-line="681" selection-end-line="681" />
+        <state relative-caret-position="406">
+          <caret line="452" column="40" selection-start-line="452" selection-start-column="40" selection-end-line="452" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/reservation/choixemplacement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+        <state relative-caret-position="859">
+          <caret line="187" column="13" selection-start-line="154" selection-start-column="2" selection-end-line="187" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/reservation/article.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="620" column="8" selection-start-line="620" selection-start-column="1" selection-end-line="620" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reservation/article.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding>
-            <element signature="e#3258#3264#0#HTML" expanded="true" />
+            <element signature="e#766#784#0#HTML" expanded="true" />
+            <element signature="e#974#992#0#HTML" expanded="true" />
+            <element signature="e#1197#1215#0#HTML" expanded="true" />
+            <element signature="e#1404#1422#0#HTML" expanded="true" />
+            <element signature="e#1610#1628#0#HTML" expanded="true" />
+            <element signature="e#1831#1849#0#HTML" expanded="true" />
+            <element signature="e#2452#2470#0#HTML" expanded="true" />
+            <element signature="e#2720#2738#0#HTML" expanded="true" />
+            <element signature="e#3029#3047#0#HTML" expanded="true" />
+            <element signature="e#3263#3281#0#HTML" expanded="true" />
+            <element signature="e#3534#3552#0#HTML" expanded="true" />
+            <element signature="e#3833#3851#0#HTML" expanded="true" />
+            <element signature="e#5753#5773#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

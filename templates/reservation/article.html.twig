@@ -1,0 +1,300 @@
+{% extends ('base.html.twig') %}
+
+{% block stylesheets %}
+    <link href="{{ asset ('assets/css/reservation/article.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    {# Titres #}
+    <div class="container mb-5">
+        <div class="row">
+            <h3 class="col-4 offset-1 text-success text-center">Mobil-Home 20m2</h3>
+            <a class="col-3 offset-3 btn btn-default text-white" href="#">TARIFS ET DISPOS</a>
+        </div>
+    </div>
+
+    {# <!-- Container for the image gallery --> #}
+    <div class="container containerslide">
+        <div class="row">
+            <div class="col-6"><!-- Full-width images with number text -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="{{ asset ('assets/img/emplacement.png') }}" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="{{ asset ('assets/img/tentes.png') }}" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="{{ asset ('assets/img/emplacement_mobilhome.png') }}" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="{{ asset ('assets/img/resto.png') }}" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="{{ asset ('assets/img/lac2.png') }}" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="{{ asset ('assets/img/mobilhome_interieur.png') }}" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev text-white" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next text-white" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="row vignettes">
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset ('assets/img/emplacement.png') }}" style="width:100%"
+                             onclick="currentSlide(1)" alt="Les tentes en bord de lac">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset ('assets/img/tentes.png') }}" style="width:100%"
+                             onclick="currentSlide(2)" alt="Tentes sous les arbres">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset ('assets/img/emplacement_mobilhome.png') }}"
+                             style="width:100%" onclick="currentSlide(3)" alt="Mobil-home en famille">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset ('assets/img/resto.png') }}" style="width:100%"
+                             onclick="currentSlide(4)" alt="Snack-Bar Les amis de la forêt">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset ('assets/img/lac2.png') }}" style="width:100%"
+                             onclick="currentSlide(5)" alt="Étang de pêche">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset ('assets/img/mobilhome_interieur.png') }}"
+                             style="width:100%"
+                             onclick="currentSlide(6)" alt="Intérieur de nos mobil-home">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row mb-3">
+                    <button>2 chambres</button>
+                    <button>20 m2</button>
+                    <button>4 personnes</button>
+                    <button>1 douche</button>
+                </div>
+                <div class="row mb-3">
+                    <button>Chauffage</button>
+                    <button>Micro-Ondes</button>
+                    <button>Frigidaire</button>
+                    <button>Terrasse</button>
+                    <button>1 place de parking</button>
+                    <button>Électricité</button>
+                    <button>Wifi</button>
+                </div>
+                <div class="row mb-3">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut distinctio minus rem
+                        sapiente suscipit voluptate? Eaque illum iusto, laborum libero nam porro quia quidem repellat
+                        saepe suscipit vel voluptatem.
+                    </div>
+                    <div>Accusantium amet autem dolores, est, fugiat harum, in minus mollitia quam quibusdam quis
+                        ratione sed? Ad at expedita laborum nam quidem, reiciendis vel. Aspernatur, neque omnis quam
+                        quod recusandae voluptate.
+                    </div>
+                    <div>Ad adipisci consectetur delectus dolores enim error est et eum ex facere maiores maxime
+                        mollitia nam nobis nostrum porro praesentium provident qui ratione repudiandae, sunt temporibus
+                        voluptas voluptatibus. Explicabo, nihil.
+                    </div>
+                    <div>Accusantium aliquam atque aut beatae blanditiis, delectus deleniti doloremque eveniet excepturi
+                        facilis hic iure magni molestias neque nesciunt numquam odio optio quae quam quasi recusandae,
+                        sint sunt tempore unde voluptas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# DATES DE RÉSA #}
+    <div class="container mt-5">
+        <div class="row">
+            <div id="accordion" style="width: 100%;">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-success" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                Je veux choisir mes dates de séjour
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="controls col-md-6 col-lg-3">
+                                <i class="fa fa-sort flechedaterange"></i>
+                                <input type="text" class="floatLabel" id="reservation"
+                                       value="<?php echo date('Y-m-d');?>">
+                                <label for="reservation" class="label-date ml-2">
+                                    <i class="fa fa-calendar"></i> Date de séjour
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed text-success" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Je suis flexible sur mes dates de séjour
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body container">
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Mois</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Avril</option>
+                                            <option>Mai</option>
+                                            <option>Juin</option>
+                                            <option>Juillet</option>
+                                            <option>Aout</option>
+                                            <option>Septembre</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Nb de nuits</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1 nuit</option>
+                                            <option>2 nuits</option>
+                                            <option>3 nuits</option>
+                                            <option>4 nuits</option>
+                                            <option>5 nuits</option>
+                                            <option>6 nuits</option>
+                                            <option>7 nuits</option>
+                                            <option>10 nuits</option>
+                                            <option>14 nuits</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Jour d'arrivée</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Lundi</option>
+                                            <option>Mardi</option>
+                                            <option>Mercredi</option>
+                                            <option>Jeudi</option>
+                                            <option>Vendredi</option>
+                                            <option>Samedi</option>
+                                            <option>Dimanche</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 border-right border-success">Dipso du 1 avril au 15 avril</div>
+                            <div class="col-3 border-right border-success">Dipso du 15 avril au 1er mai</div>
+                            <div class="col-3 border-right border-success">Dipso du 1er mai au 15 mai</div>
+                            <div class="col-3">Dipso du 15 mai au 1er juin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {# JD SU SLIDE #}
+    <script>var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+    {# JS DU CALENDAR#}
+    <!-- jQuery 3 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script>
+        (function ($) {
+            function floatLabel(inputType) {
+                $(inputType).each(function () {
+                    var $this = $(this);
+                    // on focus add cladd active to label
+                    $this.focus(function () {
+                        $this.next().addClass("active");
+                    });
+                    //on blur check field and remove class if needed
+                    $this.blur(function () {
+                        if ($this.val() === '' || $this.val() === 'blank') {
+                            $this.next().removeClass();
+                        }
+                    });
+                });
+            }
+
+            // just add a class of "floatLabel to the input field!"
+            floatLabel(".floatLabel");
+        })(jQuery);
+    </script>
+    <script>
+        $(function () {
+
+            $('#reservation').daterangepicker()
+
+        });
+
+
+    </script>
+{% endblock %}

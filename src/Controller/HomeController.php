@@ -61,6 +61,12 @@ class HomeController extends AbstractController
         return $this->render('reservation/choixemplacement.html.twig');
     }
 
-
+    /**
+     * @Route ("/Article", name="Article")
+     */
+    public function Article()
+    {
+        return $this->render('reservation/article.html.twig');
+    }
 
 }

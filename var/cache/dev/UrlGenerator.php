@@ -21,4 +21,5 @@ return [
     'FAQ' => [[], ['_controller' => 'App\\Controller\\HomeController::Faq'], [], [['text', '/FAQ']], [], []],
     'Contact' => [[], ['_controller' => 'App\\Controller\\HomeController::Contact'], [], [['text', '/Contact']], [], []],
     'Choix' => [[], ['_controller' => 'App\\Controller\\HomeController::Choixemplacement'], [], [['text', '/ChoixEmplacement']], [], []],
+    'Article' => [[], ['_controller' => 'App\\Controller\\HomeController::Article'], [], [['text', '/Article']], [], []],
 ];
