@@ -69,4 +69,12 @@ class HomeController extends AbstractController
         return $this->render('reservation/article.html.twig');
     }
 
+    /**
+     * @Route ("TarifsMobilHome", name="TarifsMobilHome")
+     */
+    public function Tarifsmobilhome()
+    {
+        return $this->render('vitrine/tarifsmobilhome.html.twig');
+    }
+
 }

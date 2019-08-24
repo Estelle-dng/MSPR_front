@@ -89,110 +89,110 @@ class __TwigTemplate_5352fa66070d8a74c3c2bc39529c76e426b4a97d2ccbc314939ec60c851
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
-        // line 58
+        // line 8
         echo "
-        <!-- Container for the image gallery -->
-        <div class=\"container\">
+    <!-- Container for the image gallery -->
+    <div class=\"container\">
 
-            <!-- Full-width images with number text -->
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">1 / 6</div>
-                <img src=\"";
-        // line 65
+        <!-- Full-width images with number text -->
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">1 / 6</div>
+            <img src=\"";
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/emplacement.png"), "html", null, true);
         echo "\" style=\"width:100%\">
-            </div>
+        </div>
 
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">2 / 6</div>
-                <img src=\"";
-        // line 70
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">2 / 6</div>
+            <img src=\"";
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tentes.png"), "html", null, true);
         echo "\" style=\"width:100%\">
-            </div>
+        </div>
 
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">3 / 6</div>
-                <img src=\"";
-        // line 75
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">3 / 6</div>
+            <img src=\"";
+        // line 25
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/emplacement_mobilhome.png"), "html", null, true);
         echo "\" style=\"width:100%\">
-            </div>
+        </div>
 
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">4 / 6</div>
-                <img src=\"";
-        // line 80
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">4 / 6</div>
+            <img src=\"";
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/resto.png"), "html", null, true);
         echo "\" style=\"width:100%\">
-            </div>
+        </div>
 
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">5 / 6</div>
-                <img src=\"";
-        // line 85
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">5 / 6</div>
+            <img src=\"";
+        // line 35
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/lac2.png"), "html", null, true);
         echo "\" style=\"width:100%\">
-            </div>
+        </div>
 
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">6 / 6</div>
-                <img src=\"";
-        // line 90
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">6 / 6</div>
+            <img src=\"";
+        // line 40
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/mobilhome_interieur.png"), "html", null, true);
         echo "\" style=\"width:100%\">
-            </div>
+        </div>
 
-            <!-- Next and previous buttons -->
-            <a class=\"prev text-white\" onclick=\"plusSlides(-1)\">&#10094;</a>
-            <a class=\"next text-white\" onclick=\"plusSlides(1)\">&#10095;</a>
+        <!-- Next and previous buttons -->
+        <a class=\"prev text-white\" onclick=\"plusSlides(-1)\">&#10094;</a>
+        <a class=\"next text-white\" onclick=\"plusSlides(1)\">&#10095;</a>
 
-            <!-- Image text -->
-            <div class=\"caption-container\">
-                <p id=\"caption\"></p>
-            </div>
+        <!-- Image text -->
+        <div class=\"caption-container\">
+            <p id=\"caption\"></p>
+        </div>
 
-            <!-- Thumbnail images -->
-            <div class=\"row\">
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"";
-        // line 105
+        <!-- Thumbnail images -->
+        <div class=\"row\">
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"";
+        // line 55
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/emplacement.png"), "html", null, true);
         echo "\" style=\"width:100%\" onclick=\"currentSlide(1)\" alt=\"Les tentes en bord de lac\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"";
-        // line 108
+            </div>
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"";
+        // line 58
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tentes.png"), "html", null, true);
         echo "\" style=\"width:100%\" onclick=\"currentSlide(2)\" alt=\"Tentes sous les arbres\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"";
-        // line 111
+            </div>
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"";
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/emplacement_mobilhome.png"), "html", null, true);
         echo "\" style=\"width:100%\" onclick=\"currentSlide(3)\" alt=\"Mobil-home en famille\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"";
-        // line 114
+            </div>
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"";
+        // line 64
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/resto.png"), "html", null, true);
         echo "\" style=\"width:100%\" onclick=\"currentSlide(4)\" alt=\"Snack-Bar Les amis de la forêt\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"";
-        // line 117
+            </div>
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"";
+        // line 67
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/lac2.png"), "html", null, true);
         echo "\" style=\"width:100%\" onclick=\"currentSlide(5)\" alt=\"Étang de pêche\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"";
-        // line 120
+            </div>
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"";
+        // line 70
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/mobilhome_interieur.png"), "html", null, true);
         echo "\" style=\"width:100%\" onclick=\"currentSlide(6)\" alt=\"Intérieur de nos mobil-home\">
-                </div>
             </div>
         </div>
-    ";
+    </div>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -201,7 +201,7 @@ class __TwigTemplate_5352fa66070d8a74c3c2bc39529c76e426b4a97d2ccbc314939ec60c851
 
     }
 
-    // line 126
+    // line 76
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -211,7 +211,7 @@ class __TwigTemplate_5352fa66070d8a74c3c2bc39529c76e426b4a97d2ccbc314939ec60c851
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 127
+        // line 77
         echo "    <script>var slideIndex = 1;
         showSlides(slideIndex);
 
@@ -264,7 +264,7 @@ class __TwigTemplate_5352fa66070d8a74c3c2bc39529c76e426b4a97d2ccbc314939ec60c851
 
     public function getDebugInfo()
     {
-        return array (  215 => 127,  205 => 126,  190 => 120,  184 => 117,  178 => 114,  172 => 111,  166 => 108,  160 => 105,  142 => 90,  134 => 85,  126 => 80,  118 => 75,  110 => 70,  102 => 65,  93 => 58,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  215 => 77,  205 => 76,  190 => 70,  184 => 67,  178 => 64,  172 => 61,  166 => 58,  160 => 55,  142 => 40,  134 => 35,  126 => 30,  118 => 25,  110 => 20,  102 => 15,  93 => 8,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -275,124 +275,74 @@ class __TwigTemplate_5352fa66070d8a74c3c2bc39529c76e426b4a97d2ccbc314939ec60c851
     <link href=\"{{ asset ('assets/css/vitrine/photos.css') }}\" rel=\"stylesheet\" type=\"text/css\">
 {% endblock %}
 
-    {% block main %}
-{#        <div id=\"carouselExampleIndicators\" class=\"carousel slide container mb-5\" data-ride=\"carousel\">
-            <ol class=\"carousel-indicators\">
-                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>
-                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>
-                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>
-            </ol>
-            <div class=\"carousel-inner\">
-                <div class=\"carousel-item active\">
-                    <img class=\"d-block w-100\" src=\"{{ asset ('assets/img/emplacement.png')}}\" alt=\"First slide\">
-                </div>
-                <div class=\"carousel-item\">
-                    <img class=\"d-block w-100\" src=\"{{ asset ('assets/img/tentes.png')}}\" alt=\"Second slide\">
-                </div>
-                <div class=\"carousel-item\">
-                    <img class=\"d-block w-100\" src=\"{{ asset ('assets/img/lac_barques.jpg') }}\" alt=\"Third slide\">
-                </div>
-            </div>
-            <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
-                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Previous</span>
-            </a>
-            <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">
-                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Next</span>
-            </a>
+{% block main %}
+
+    <!-- Container for the image gallery -->
+    <div class=\"container\">
+
+        <!-- Full-width images with number text -->
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">1 / 6</div>
+            <img src=\"{{ asset ('assets/img/emplacement.png')}}\" style=\"width:100%\">
         </div>
 
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">2 / 6</div>
+            <img src=\"{{ asset ('assets/img/tentes.png')}}\" style=\"width:100%\">
+        </div>
 
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">3 / 6</div>
+            <img src=\"{{ asset ('assets/img/emplacement_mobilhome.png') }}\" style=\"width:100%\">
+        </div>
 
-        <section>
-            <div class=\"container-fluid\">
-                <div class=\"row\">
-                    <img src=\"{{ asset ('assets/img/barbecue.png') }}\" alt=\"barbecue\"
-                         class=\"imgfluid  p-0 col-3\">
-                    <img src=\"{{ asset ('assets/img/emplacement.png') }}\" alt=\"emplacement camping\"
-                         class=\"imgfluid p-0 col-3\">
-                    <img src=\"{{ asset ('assets/img/emplacement_mobilhome.png') }}\" alt=\"emplacement mobil-home\"
-                         class=\"imgfluid  p-0 col-3\">
-                    <img src=\"{{ asset ('assets/img/resto.png') }}\" alt=\"restaurant\" class=\"imgfluid  p-0 col-3\">
-                </div>
-                <div class=\"row\">
-                    <img src=\"{{ asset ('assets/img/lac2.png') }}\" alt=\"lac\" class=\"imgfluid  p-0 col-3\">
-                    <img src=\"{{ asset ('assets/img/mobilhome_interieur.png') }}\" alt=\"interieur de mobil-home\"
-                         class=\"imgfluid p-0 col-3\">
-                    <img src=\"{{ asset ('assets/img/sanitaires.png') }}\" alt=\"sanitaires\"
-                         class=\"imgfluid  p-0 col-3\">
-                    <img src=\"{{ asset ('assets/img/tentes.png') }}\" alt=\"tentes\" class=\"imgfluid  p-0 col-3\">
-                </div>
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">4 / 6</div>
+            <img src=\"{{ asset ('assets/img/resto.png') }}\" style=\"width:100%\">
+        </div>
+
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">5 / 6</div>
+            <img src=\"{{ asset ('assets/img/lac2.png') }}\" style=\"width:100%\">
+        </div>
+
+        <div class=\"mySlides\">
+            <div class=\"numbertext\">6 / 6</div>
+            <img src=\"{{ asset ('assets/img/mobilhome_interieur.png') }}\" style=\"width:100%\">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class=\"prev text-white\" onclick=\"plusSlides(-1)\">&#10094;</a>
+        <a class=\"next text-white\" onclick=\"plusSlides(1)\">&#10095;</a>
+
+        <!-- Image text -->
+        <div class=\"caption-container\">
+            <p id=\"caption\"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class=\"row\">
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"{{ asset ('assets/img/emplacement.png') }}\" style=\"width:100%\" onclick=\"currentSlide(1)\" alt=\"Les tentes en bord de lac\">
             </div>
-        </section>#}
-
-        <!-- Container for the image gallery -->
-        <div class=\"container\">
-
-            <!-- Full-width images with number text -->
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">1 / 6</div>
-                <img src=\"{{ asset ('assets/img/emplacement.png')}}\" style=\"width:100%\">
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"{{ asset ('assets/img/tentes.png') }}\" style=\"width:100%\" onclick=\"currentSlide(2)\" alt=\"Tentes sous les arbres\">
             </div>
-
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">2 / 6</div>
-                <img src=\"{{ asset ('assets/img/tentes.png')}}\" style=\"width:100%\">
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"{{ asset ('assets/img/emplacement_mobilhome.png') }}\" style=\"width:100%\" onclick=\"currentSlide(3)\" alt=\"Mobil-home en famille\">
             </div>
-
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">3 / 6</div>
-                <img src=\"{{ asset ('assets/img/emplacement_mobilhome.png') }}\" style=\"width:100%\">
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"{{ asset ('assets/img/resto.png') }}\" style=\"width:100%\" onclick=\"currentSlide(4)\" alt=\"Snack-Bar Les amis de la forêt\">
             </div>
-
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">4 / 6</div>
-                <img src=\"{{ asset ('assets/img/resto.png') }}\" style=\"width:100%\">
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"{{ asset ('assets/img/lac2.png') }}\" style=\"width:100%\" onclick=\"currentSlide(5)\" alt=\"Étang de pêche\">
             </div>
-
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">5 / 6</div>
-                <img src=\"{{ asset ('assets/img/lac2.png') }}\" style=\"width:100%\">
-            </div>
-
-            <div class=\"mySlides\">
-                <div class=\"numbertext\">6 / 6</div>
-                <img src=\"{{ asset ('assets/img/mobilhome_interieur.png') }}\" style=\"width:100%\">
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class=\"prev text-white\" onclick=\"plusSlides(-1)\">&#10094;</a>
-            <a class=\"next text-white\" onclick=\"plusSlides(1)\">&#10095;</a>
-
-            <!-- Image text -->
-            <div class=\"caption-container\">
-                <p id=\"caption\"></p>
-            </div>
-
-            <!-- Thumbnail images -->
-            <div class=\"row\">
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"{{ asset ('assets/img/emplacement.png') }}\" style=\"width:100%\" onclick=\"currentSlide(1)\" alt=\"Les tentes en bord de lac\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"{{ asset ('assets/img/tentes.png') }}\" style=\"width:100%\" onclick=\"currentSlide(2)\" alt=\"Tentes sous les arbres\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"{{ asset ('assets/img/emplacement_mobilhome.png') }}\" style=\"width:100%\" onclick=\"currentSlide(3)\" alt=\"Mobil-home en famille\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"{{ asset ('assets/img/resto.png') }}\" style=\"width:100%\" onclick=\"currentSlide(4)\" alt=\"Snack-Bar Les amis de la forêt\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"{{ asset ('assets/img/lac2.png') }}\" style=\"width:100%\" onclick=\"currentSlide(5)\" alt=\"Étang de pêche\">
-                </div>
-                <div class=\"column\">
-                    <img class=\"demo cursor\" src=\"{{ asset ('assets/img/mobilhome_interieur.png') }}\" style=\"width:100%\" onclick=\"currentSlide(6)\" alt=\"Intérieur de nos mobil-home\">
-                </div>
+            <div class=\"column\">
+                <img class=\"demo cursor\" src=\"{{ asset ('assets/img/mobilhome_interieur.png') }}\" style=\"width:100%\" onclick=\"currentSlide(6)\" alt=\"Intérieur de nos mobil-home\">
             </div>
         </div>
-    {% endblock %}
+    </div>
+{% endblock %}
 
 {% block javascripts %}
     <script>var slideIndex = 1;

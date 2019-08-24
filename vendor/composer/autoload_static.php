@@ -53,6 +53,7 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Validator\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Templating\\' => 29,
             'Symfony\\Component\\Stopwatch\\' => 28,
             'Symfony\\Component\\Serializer\\' => 29,
             'Symfony\\Component\\Security\\Http\\' => 32,
@@ -116,6 +117,7 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
         'F' => 
         array (
             'Fig\\Link\\' => 9,
+            'FOS\\UserBundle\\' => 15,
         ),
         'E' => 
         array (
@@ -231,6 +233,10 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\Templating\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/templating',
         ),
         'Symfony\\Component\\Stopwatch\\' => 
         array (
@@ -447,6 +453,10 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
         'Fig\\Link\\' => 
         array (
             0 => __DIR__ . '/..' . '/fig/link-util/src',
+        ),
+        'FOS\\UserBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/user-bundle',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

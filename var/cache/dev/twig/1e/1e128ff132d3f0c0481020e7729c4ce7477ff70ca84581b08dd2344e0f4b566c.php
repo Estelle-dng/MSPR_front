@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @WebProfiler/Collector/form.html.twig */
+/* WebProfilerBundle:Collector:form.html.twig */
 class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f03a686 extends \Twig\Template
 {
     private $source;
@@ -42,15 +42,15 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/form.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "WebProfilerBundle:Collector:form.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/form.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "WebProfilerBundle:Collector:form.html.twig"));
 
         // line 3
-        $macros["__internal_7345c8a14dbc8491be607d780a47d23cdaefafe8cd2cc12c16eeeb320a6c23d5"] = $this->macros["__internal_7345c8a14dbc8491be607d780a47d23cdaefafe8cd2cc12c16eeeb320a6c23d5"] = $this;
+        $macros["__internal_64045a5e39c43d9101a5f49b8737af8c0d4704966efd427279831461779a48b0"] = $this->macros["__internal_64045a5e39c43d9101a5f49b8737af8c0d4704966efd427279831461779a48b0"] = $this;
         // line 1
-        $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "@WebProfiler/Collector/form.html.twig", 1);
+        $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "WebProfilerBundle:Collector:form.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -384,7 +384,7 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
             foreach ($context['_seq'] as $context["formName"] => $context["formData"]) {
                 // line 213
                 echo "                ";
-                echo twig_call_macro($macros["__internal_7345c8a14dbc8491be607d780a47d23cdaefafe8cd2cc12c16eeeb320a6c23d5"], "macro_form_tree_entry", [$context["formName"], $context["formData"], true], 213, $context, $this->getSourceContext());
+                echo twig_call_macro($macros["__internal_64045a5e39c43d9101a5f49b8737af8c0d4704966efd427279831461779a48b0"], "macro_form_tree_entry", [$context["formName"], $context["formData"], true], 213, $context, $this->getSourceContext());
                 echo "
             ";
             }
@@ -416,7 +416,7 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
             foreach ($context['_seq'] as $context["formName"] => $context["formData"]) {
                 // line 220
                 echo "                ";
-                echo twig_call_macro($macros["__internal_7345c8a14dbc8491be607d780a47d23cdaefafe8cd2cc12c16eeeb320a6c23d5"], "macro_form_tree_details", [$context["formName"], $context["formData"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new RuntimeError('Variable "collector" does not exist.', 220, $this->source); })()), "data", [], "any", false, false, false, 220), "forms_by_hash", [], "any", false, false, false, 220), twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 220)], 220, $context, $this->getSourceContext());
+                echo twig_call_macro($macros["__internal_64045a5e39c43d9101a5f49b8737af8c0d4704966efd427279831461779a48b0"], "macro_form_tree_details", [$context["formName"], $context["formData"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new RuntimeError('Variable "collector" does not exist.', 220, $this->source); })()), "data", [], "any", false, false, false, 220), "forms_by_hash", [], "any", false, false, false, 220), twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 220)], 220, $context, $this->getSourceContext());
                 echo "
             ";
                 ++$context['loop']['index0'];
@@ -1187,7 +1187,7 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
                 } else {
                     // line 665
                     echo "                <div class=\"empty\">
-                    <p>No options where passed when constructing this form.</p>
+                    <p>No options were passed when constructing this form.</p>
                 </div>
             ";
                 }
@@ -1335,7 +1335,7 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Collector/form.html.twig";
+        return "WebProfilerBundle:Collector:form.html.twig";
     }
 
     public function isTraitable()
@@ -2015,7 +2015,7 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
             </table>
             {% else %}
                 <div class=\"empty\">
-                    <p>No options where passed when constructing this form.</p>
+                    <p>No options were passed when constructing this form.</p>
                 </div>
             {% endif %}
         </div>
@@ -2080,6 +2080,6 @@ class __TwigTemplate_0bad553453256b28c953eb06907f3297fc3b133a2e82ba4c06b6d4e43f0
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "WebProfilerBundle:Collector:form.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

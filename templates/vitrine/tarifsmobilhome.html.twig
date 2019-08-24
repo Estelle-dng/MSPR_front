@@ -1,0 +1,207 @@
+{% extends ('base.html.twig') %}
+
+{% block stylesheets %}
+    <link href="{{ asset ('assets/css/vitrine/tarifsmobilhome.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+    {% block main %}
+        {# TAB NAV #}
+        <div class="nav nav-pills border-success container">
+            <ul class="row">
+                <li class="col-2 m-1 active btn btn-success"><a data-toggle="pill" href="#home">Tarifs Haute Saison</a></li>
+                <li class="col-2 m-1 btn btn-success"><a data-toggle="pill" href="#menu1">Moyenne Saison</a></li>
+                <li class="col-2 m-1 btn btn-success"><a data-toggle="pill" href="#menu2">Basse saison</a></li>
+                <li class="col-4 m-1 color-light test-small saison">
+                    <p class="">Haute du 06/07 au 24/08</p>
+                    <p class="">Moyenne du 18/05 au 06/07 et 24/05 au 07/09</p>
+                    <p class="">Basse du 06/04 au 18/05 et 07/09 au 30/09</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade-in active">
+
+                <div class="container">
+                    <div class="row">
+                        <table class="table1 col-md-12">
+                            <thead>
+                            <tr class="text-center">
+                                <th></th>
+                                <th scope="col" abbr="Deluxe">1 nuit</th>
+                                <th scope="col" abbr="Deluxe">2 nuits</th>
+                                <th scope="col" abbr="Deluxe">3 nuits</th>
+                                <th scope="col" abbr="Deluxe">4 nuits</th>
+                                <th scope="col" abbr="Deluxe">5 nuits</th>
+                                <th scope="col" abbr="Deluxe">6 nuits</th>
+                                <th scope="col" abbr="Deluxe">Semaine</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th scope="row">Frais de dossier</th>
+                                <td>20 €</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Taxe de séjour</th>
+                                <td>0,22€/nuit/pers</td>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Mobil-home Confort</th>
+                                <td>77€</td>
+                                <td>132€</td>
+                                <td>197€</td>
+                                <td>254€</td>
+                                <td>312€</td>
+                                <td>368€</td>
+                                <td>426€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mobil-home Confort Luxe</th>
+                                <td>91€</td>
+                                <td>159€</td>
+                                <td>232€</td>
+                                <td>305€</td>
+                                <td>374€</td>
+                                <td>442€</td>
+                                <td>511€</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="menu1" class="tab-pane fade">
+
+                <div class="container">
+                    <div class="row">
+                        <table class="table1 col-md-12">
+                            <thead>
+                            <tr class="text-center">
+                                <th></th>
+                                <th scope="col" abbr="Deluxe">1 nuit</th>
+                                <th scope="col" abbr="Deluxe">2 nuits</th>
+                                <th scope="col" abbr="Deluxe">3 nuits</th>
+                                <th scope="col" abbr="Deluxe">4 nuits</th>
+                                <th scope="col" abbr="Deluxe">5 nuits</th>
+                                <th scope="col" abbr="Deluxe">6 nuits</th>
+                                <th scope="col" abbr="Deluxe">Semaine</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th scope="row">Frais de dossier</th>
+                                <td>20 €</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Taxe de séjour</th>
+                                <td>0,22€/nuit/pers</td>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Mobil-home Confort</th>
+                                <td>77€</td>
+                                <td>132€</td>
+                                <td>197€</td>
+                                <td>254€</td>
+                                <td>312€</td>
+                                <td>368€</td>
+                                <td>426€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mobil-home Confort Luxe</th>
+                                <td>91€</td>
+                                <td>159€</td>
+                                <td>232€</td>
+                                <td>305€</td>
+                                <td>374€</td>
+                                <td>442€</td>
+                                <td>511€</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="menu2" class="tab-pane fade">
+
+                <div class="container">
+                    <div class="row">
+                        <table class="table1 col-md-12">
+                            <thead>
+                            <tr class="text-center">
+                                <th></th>
+                                <th scope="col" abbr="Deluxe">1 nuit</th>
+                                <th scope="col" abbr="Deluxe">2 nuits</th>
+                                <th scope="col" abbr="Deluxe">3 nuits</th>
+                                <th scope="col" abbr="Deluxe">4 nuits</th>
+                                <th scope="col" abbr="Deluxe">5 nuits</th>
+                                <th scope="col" abbr="Deluxe">6 nuits</th>
+                                <th scope="col" abbr="Deluxe">Semaine</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th scope="row">Frais de dossier</th>
+                                <td>20 €</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Taxe de séjour</th>
+                                <td>0,22€/nuit/pers</td>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Mobil-home Confort</th>
+                                <td>77€</td>
+                                <td>132€</td>
+                                <td>197€</td>
+                                <td>254€</td>
+                                <td>312€</td>
+                                <td>368€</td>
+                                <td>426€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mobil-home Confort Luxe</th>
+                                <td>91€</td>
+                                <td>159€</td>
+                                <td>232€</td>
+                                <td>305€</td>
+                                <td>374€</td>
+                                <td>442€</td>
+                                <td>511€</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        {#  FIN DU TAB NAV #}
+
+    {% endblock %}
+
+    {% block javascripts %}
+    {#Script DropDown#}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $( document ).ready(function()
+            {
+                $('.faq li .question').click(function () {
+                    $(this).find('.plus-minus-toggle').toggleClass('collapsed');
+                    $(this).parent().toggleClass('active');
+                });
+            });
+        </script>
+    {#/Script Dropdown#}
+    {% endblock %}

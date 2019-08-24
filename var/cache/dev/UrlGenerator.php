@@ -22,4 +22,5 @@ return [
     'Contact' => [[], ['_controller' => 'App\\Controller\\HomeController::Contact'], [], [['text', '/Contact']], [], []],
     'Choix' => [[], ['_controller' => 'App\\Controller\\HomeController::Choixemplacement'], [], [['text', '/ChoixEmplacement']], [], []],
     'Article' => [[], ['_controller' => 'App\\Controller\\HomeController::Article'], [], [['text', '/Article']], [], []],
+    'TarifsMobilHome' => [[], ['_controller' => 'App\\Controller\\HomeController::Tarifsmobilhome'], [], [['text', '/TarifsMobilHome']], [], []],
 ];

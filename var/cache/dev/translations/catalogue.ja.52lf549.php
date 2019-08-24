@@ -212,6 +212,7 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This value should be either negative or zero.' => 'This value should be either negative or zero.',
     'This value is not a valid timezone.' => 'This value is not a valid timezone.',
     'This password has been leaked in a data breach, it must not be used. Please use another password.' => 'This password has been leaked in a data breach, it must not be used. Please use another password.',
+    'This value should be between {{ min }} and {{ max }}.' => 'This value should be between {{ min }} and {{ max }}.',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',

@@ -20,6 +20,7 @@ return [
         '/Contact' => [[['_route' => 'Contact', '_controller' => 'App\\Controller\\HomeController::Contact'], null, null, null, false, false, null]],
         '/ChoixEmplacement' => [[['_route' => 'Choix', '_controller' => 'App\\Controller\\HomeController::Choixemplacement'], null, null, null, false, false, null]],
         '/Article' => [[['_route' => 'Article', '_controller' => 'App\\Controller\\HomeController::Article'], null, null, null, false, false, null]],
+        '/TarifsMobilHome' => [[['_route' => 'TarifsMobilHome', '_controller' => 'App\\Controller\\HomeController::Tarifsmobilhome'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
