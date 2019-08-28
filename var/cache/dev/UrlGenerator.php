@@ -15,6 +15,8 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception::showAction'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+    'Dashboard' => [[], ['_controller' => 'App\\Controller\\AdminHomeController::Dashboard'], [], [['text', '/TableauDeBord']], [], []],
+    'Listeresa' => [[], ['_controller' => 'App\\Controller\\AdminHomeController::ListeResa'], [], [['text', '/ListeRéservation']], [], []],
     'Accueil' => [[], ['_controller' => 'App\\Controller\\HomeController::Accueil'], [], [['text', '/Accueil']], [], []],
     'Photos' => [[], ['_controller' => 'App\\Controller\\HomeController::Photos'], [], [['text', '/Photos']], [], []],
     'Proximité' => [[], ['_controller' => 'App\\Controller\\HomeController::Proximite'], [], [['text', '/Proximité']], [], []],

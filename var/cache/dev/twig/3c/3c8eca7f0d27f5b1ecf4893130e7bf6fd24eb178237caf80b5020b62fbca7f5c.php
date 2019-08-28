@@ -413,6 +413,6 @@ class __TwigTemplate_7796b4bd925e5aaa561ad706a616e21c9a2ccd025df474313f210d4f24e
 {% block body %}
     {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
-", "@Twig/Exception/exception_full.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
+", "@Twig/Exception/exception_full.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
     }
 }

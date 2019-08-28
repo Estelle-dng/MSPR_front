@@ -227,6 +227,6 @@ class __TwigTemplate_1ac6ce2c20c8fae1ecaec71911bc2e5df205308e20a2c4e709aebc4f327
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

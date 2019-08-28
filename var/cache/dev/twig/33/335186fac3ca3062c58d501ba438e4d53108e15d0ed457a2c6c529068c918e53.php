@@ -104,6 +104,6 @@ class __TwigTemplate_ed1bcc6d714998ff48ea2c1cccc00cb55f6a54c42b6556dbd408f6296c7
   {{ include('@Twig/Exception/trace.txt.twig', { trace: trace }, with_context = false) }}
 {% endfor %}
 {% endif %}
-", "@Twig/Exception/traces.txt.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/twig-bundle/Resources/views/Exception/traces.txt.twig");
+", "@Twig/Exception/traces.txt.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/twig-bundle/Resources/views/Exception/traces.txt.twig");
     }
 }

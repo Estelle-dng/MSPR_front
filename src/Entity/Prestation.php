@@ -54,8 +54,27 @@ class Prestation
     private $reservationPrestation;
 
 
-    public function __construct()
-    {
+    /**
+     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
+     */
+    protected $createdAt;
+
+    /**
+     * @ORM\Column(name="editAt", type="datetime", nullable=false)
+     */
+    protected $editAt;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function autoUpdateDate() {
+        $this->editAt = new \DateTime();
+    }
+
+    public function __construct() {
+        $this->createdAt = new \DateTime();
+        $this->editAt = new \DateTime();
         $this->categories = new ArrayCollection();
     }
 
@@ -167,4 +186,42 @@ class Prestation
     {
         $this->reservationPrestation = $reservationPrestation;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param mixed $createdAt
+     * @return Prestation
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEditAt()
+    {
+        return $this->editAt;
+    }
+
+    /**
+     * @param mixed $editAt
+     * @return Prestation
+     */
+    public function setEditAt($editAt)
+    {
+        $this->editAt = $editAt;
+        return $this;
+    }
+
+
 }

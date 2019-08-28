@@ -204,6 +204,6 @@ class __TwigTemplate_d5b4c0e016a66f7432be5a6f102f95b3f9100e3f69f4329d82296111e4a
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

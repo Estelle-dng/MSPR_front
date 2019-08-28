@@ -13,6 +13,8 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/TableauDeBord' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\AdminHomeController::Dashboard'], null, null, null, false, false, null]],
+        '/ListeRéservation' => [[['_route' => 'Listeresa', '_controller' => 'App\\Controller\\AdminHomeController::ListeResa'], null, null, null, false, false, null]],
         '/Accueil' => [[['_route' => 'Accueil', '_controller' => 'App\\Controller\\HomeController::Accueil'], null, null, null, false, false, null]],
         '/Photos' => [[['_route' => 'Photos', '_controller' => 'App\\Controller\\HomeController::Photos'], null, null, null, false, false, null]],
         '/Proximité' => [[['_route' => 'Proximité', '_controller' => 'App\\Controller\\HomeController::Proximite'], null, null, null, false, false, null]],

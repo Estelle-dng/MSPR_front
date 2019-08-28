@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190824203506 extends AbstractMigration
+final class Version20190828153034 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,10 @@ final class Version20190824203506 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE user ADD city VARCHAR(255) NOT NULL, ADD country VARCHAR(255) NOT NULL, ADD postal_code VARCHAR(255) NOT NULL, ADD phone VARCHAR(255) DEFAULT NULL, ADD birthdate DATE NOT NULL');
+        $this->addSql('ALTER TABLE category ADD createdAt DATETIME NOT NULL, ADD editAt DATETIME NOT NULL');
+        $this->addSql('ALTER TABLE spot ADD createdAt DATETIME NOT NULL, ADD editAt DATETIME NOT NULL');
+        $this->addSql('ALTER TABLE prestation ADD createdAt DATETIME NOT NULL, ADD editAt DATETIME NOT NULL');
+        $this->addSql('ALTER TABLE availability ADD createdAt DATETIME NOT NULL, ADD editAt DATETIME NOT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +33,9 @@ final class Version20190824203506 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE user DROP city, DROP country, DROP postal_code, DROP phone, DROP birthdate');
+        $this->addSql('ALTER TABLE availability DROP createdAt, DROP editAt');
+        $this->addSql('ALTER TABLE category DROP createdAt, DROP editAt');
+        $this->addSql('ALTER TABLE prestation DROP createdAt, DROP editAt');
+        $this->addSql('ALTER TABLE spot DROP createdAt, DROP editAt');
     }
 }

@@ -39,11 +39,32 @@ class Spot
      */
     private $availabilities;
 
-    public function __construct()
-    {
+
+    /**
+     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
+     */
+    protected $createdAt;
+
+    /**
+     * @ORM\Column(name="editAt", type="datetime", nullable=false)
+     */
+    protected $editAt;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function autoUpdateDate() {
+        $this->editAt = new \DateTime();
+    }
+
+    public function __construct() {
+        $this->createdAt = new \DateTime();
+        $this->editAt = new \DateTime();
         $this->reservations = new ArrayCollection();
         $this->availabilities = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -77,6 +98,7 @@ class Spot
     /**
      * @return Collection|Reservation[]
      */
+
     public function getReservations(): Collection
     {
         return $this->reservations;
@@ -132,4 +154,42 @@ class Spot
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param mixed $createdAt
+     * @return Spot
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEditAt()
+    {
+        return $this->editAt;
+    }
+
+    /**
+     * @param mixed $editAt
+     * @return Spot
+     */
+    public function setEditAt($editAt)
+    {
+        $this->editAt = $editAt;
+        return $this;
+    }
+
+
 }

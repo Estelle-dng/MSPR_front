@@ -189,6 +189,6 @@ class __TwigTemplate_8217329caedf4652fef93bc46f5ab7a2e0a4ac8916fd108c84f762ba292
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
     }
 }
