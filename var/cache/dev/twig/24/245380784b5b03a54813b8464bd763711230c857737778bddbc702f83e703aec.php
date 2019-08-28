@@ -479,6 +479,6 @@ class __TwigTemplate_e13caa8e3752845363c3025ba9b6c7d4d8e19bac75b3170f90949a77c2b
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
     }
 }

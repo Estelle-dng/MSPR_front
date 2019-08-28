@@ -160,6 +160,6 @@ class __TwigTemplate_add2b0152612b4cf38d3b4ff5f7248b1be5440f1647a66f814dc633b003
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url, name: 'time', status: status_color }) }}
 {% endblock %}
-", "@WebProfiler/Collector/memory.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/memory.html.twig");
+", "@WebProfiler/Collector/memory.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/memory.html.twig");
     }
 }

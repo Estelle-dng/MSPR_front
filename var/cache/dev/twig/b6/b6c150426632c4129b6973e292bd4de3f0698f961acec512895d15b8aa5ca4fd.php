@@ -155,6 +155,6 @@ class __TwigTemplate_72ed9f63ca84bfed493c12b01bba98a7d0318ec621d006ee5340d7a0fd3
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
     }
 }

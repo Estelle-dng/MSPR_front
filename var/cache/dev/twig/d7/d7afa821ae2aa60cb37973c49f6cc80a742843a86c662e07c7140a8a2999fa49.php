@@ -222,6 +222,6 @@ class __TwigTemplate_7f608cb89869fc37b16abcabdf2cc95051cebd4a69070f78299155b7ef5
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

@@ -792,6 +792,6 @@ class __TwigTemplate_baf8f53edd827a5556637155ea81d458c59f9378fb0d3d8c8678c6b3dfb
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }

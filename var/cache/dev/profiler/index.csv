@@ -2851,3 +2851,8 @@ d01ef1,::1,GET,http://localhost/camping_project/public/assets/css/vitrine/contac
 bfd96c,::1,GET,http://localhost/camping_project/public/ChoixEmplacement,1566659982,,200
 e60450,::1,GET,http://localhost/camping_project/public/Accueil,1566662350,,200
 656139,::1,GET,http://localhost/camping_project/public/ChoixEmplacement,1566673447,,200
+d3db4e,::1,GET,http://localhost/camping_project/public/,1566822194,,404
+a9602e,::1,GET,http://localhost/camping_project/public/Accueil,1566822199,,200
+87e209,::1,GET,http://localhost/camping_project/public/Photos,1566822339,,200
+10b0ff,::1,GET,http://localhost/camping_project/public/FAQ,1566822371,,200
+49623c,::1,GET,http://localhost/camping_project/public/Accueil,1566846185,,200

@@ -909,6 +909,6 @@ class __TwigTemplate_448c7caf40bb439c714730a591fdcd77429c3faf47453ef2df4a9e6f02f
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "/Applications/MAMP/htdocs/Symfony/camping/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
+", "@WebProfiler/Collector/time.html.twig", "/Applications/MAMP/htdocs/camping_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
     }
 }
