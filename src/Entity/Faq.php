@@ -1,115 +1,108 @@
 <?php
 
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="faq")
+ * @ORM\Entity(repositoryClass="App\Repository\FaqRepository")
  */
 class Faq
 {
-
     /**
-     * @ORM\Id
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected $id;
+    private $id;
 
     /**
      * @ORM\Column(type="text")
      */
-    protected $title;
+    private $title;
 
     /**
      * @ORM\Column(type="text")
      */
-    protected $answer;
+    private $answer;
 
     /**
-     * @ORM\ManyToOne(targetEntity="user")
+     * @ORM\Column(type="datetime")
      */
-    protected $user;
+    private $created_at;
 
     /**
-     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
+     * @ORM\Column(type="datetime")
      */
-    protected $createdAt;
+    private $edited_at;
 
     /**
-     * @ORM\Column(name="editAt", type="datetime", nullable=false)
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="faqs")
      */
-    protected $editAt;
+    private $User;
 
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-    public function autoUpdateDate() {
-        $this->editAt = new \DateTime();
-    }
-
-    public function __construct() {
-        $this->createdAt = new \DateTime();
-        $this->editAt = new \DateTime();
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTitle()
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    /**
-     * @param mixed $title
-     */
-    public function setTitle($title): void
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
+        return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAnswer()
+    public function getAnswer(): ?string
     {
         return $this->answer;
     }
 
-    /**
-     * @param mixed $answer
-     */
-    public function setAnswer($answer): void
+    public function setAnswer(string $answer): self
     {
         $this->answer = $answer;
+
+        return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getUser()
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->user;
+        return $this->created_at;
     }
 
-    /**
-     * @param mixed $user
-     */
-    public function setUser($user): void
+    public function setCreatedAt(\DateTimeInterface $created_at): self
     {
-        $this->user = $user;
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getEditedAt(): ?\DateTimeInterface
+    {
+        return $this->edited_at;
+    }
+
+    public function setEditedAt(\DateTimeInterface $edited_at): self
+    {
+        $this->edited_at = $edited_at;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->User;
+    }
+
+    public function setUser(?User $User): self
+    {
+        $this->User = $User;
+
+        return $this;
     }
 }

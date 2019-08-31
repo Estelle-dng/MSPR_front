@@ -24,42 +24,19 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Spot", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="App\Entity\CategoryHasSeason", mappedBy="category")
+     */
+    private $CategorySeason;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Spot", mappedBy="Category")
      */
     private $spots;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\prestation", inversedBy="categories")
-     */
-    private $prestations;
-
-
-    /**
-     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
-     */
-    protected $createdAt;
-
-    /**
-     * @ORM\Column(name="editAt", type="datetime", nullable=false)
-     */
-    protected $editAt;
-
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-
-    public function autoUpdateDate() {
-        $this->editAt = new \DateTime();
-    }
-
-
     public function __construct()
     {
+        $this->CategorySeason = new ArrayCollection();
         $this->spots = new ArrayCollection();
-        $this->prestations = new ArrayCollection();
-        $this->createdAt = new \DateTime();
-        $this->editAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -75,6 +52,37 @@ class Category
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|CategoryHasSeason[]
+     */
+    public function getCategorySeason(): Collection
+    {
+        return $this->CategorySeason;
+    }
+
+    public function addCategorySeason(CategoryHasSeason $categorySeason): self
+    {
+        if (!$this->CategorySeason->contains($categorySeason)) {
+            $this->CategorySeason[] = $categorySeason;
+            $categorySeason->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategorySeason(CategoryHasSeason $categorySeason): self
+    {
+        if ($this->CategorySeason->contains($categorySeason)) {
+            $this->CategorySeason->removeElement($categorySeason);
+            // set the owning side to null (unless already changed)
+            if ($categorySeason->getCategory() === $this) {
+                $categorySeason->setCategory(null);
+            }
+        }
 
         return $this;
     }
@@ -109,68 +117,4 @@ class Category
 
         return $this;
     }
-
-    /**
-     * @return Collection|prestation[]
-     */
-    public function getPrestations(): Collection
-    {
-        return $this->prestations;
-    }
-
-    public function addPrestation(prestation $prestation): self
-    {
-        if (!$this->prestations->contains($prestation)) {
-            $this->prestations[] = $prestation;
-        }
-
-        return $this;
-    }
-
-    public function removePrestation(prestation $prestation): self
-    {
-        if ($this->prestations->contains($prestation)) {
-            $this->prestations->removeElement($prestation);
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * @param mixed $createdAt
-     * @return Category
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEditAt()
-    {
-        return $this->editAt;
-    }
-
-    /**
-     * @param mixed $editAt
-     * @return Category
-     */
-    public function setEditAt($editAt)
-    {
-        $this->editAt = $editAt;
-        return $this;
-    }
-
-
 }

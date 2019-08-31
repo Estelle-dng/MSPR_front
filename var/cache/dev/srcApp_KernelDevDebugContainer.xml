@@ -101,7 +101,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/Applications/MAMP/tmp/php</parameter>
+    <parameter key="session.save_path"></parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -284,6 +284,7 @@
     <parameter key="twig.exception_listener.controller">twig.controller.exception::showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_4_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">/Applications/MAMP/htdocs/camping_project/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
@@ -459,7 +460,11 @@
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\HomeController"/>
       </call>
     </service>
-    <service id="App\Repository\AvailabilityRepository" class="App\Repository\AvailabilityRepository" autowire="true" autoconfigure="true">
+    <service id="App\Repository\BillRepository" class="App\Repository\BillRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\CategoryHasSeasonRepository" class="App\Repository\CategoryHasSeasonRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -467,20 +472,32 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\CommandDetailsHasOptionRepository" class="App\Repository\CommandDetailsHasOptionRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\CommandDetailsRepository" class="App\Repository\CommandDetailsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\DiscountRepository" class="App\Repository\DiscountRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\FaqRepository" class="App\Repository\FaqRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\MediaRepository" class="App\Repository\MediaRepository" autowire="true" autoconfigure="true"/>
-    <service id="App\Repository\PaymentRepository" class="App\Repository\PaymentRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\PrestationRepository" class="App\Repository\PrestationRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\ReservationPrestationRepository" class="App\Repository\ReservationPrestationRepository" autowire="true" autoconfigure="true">
+    <service id="App\Repository\OptionRepository" class="App\Repository\OptionRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\ReservationRepository" class="App\Repository\ReservationRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\SeasonRepository" class="App\Repository\SeasonRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -489,6 +506,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\SpotRepository" class="App\Repository\SpotRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -1031,7 +1052,7 @@
       <deprecated>The "%service_id%" service is deprecated since Symfony 4.2, use "identity_translator" instead.</deprecated>
     </service>
     <service id=".1_NativeFileSessionHandler~cNDz.4o" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>/Applications/MAMP/tmp/php</argument>
+      <argument></argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -2491,6 +2512,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.exception</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
@@ -3420,7 +3449,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.ZXv9apF"/>
+      <argument type="service" id=".service_locator..KWGD8j"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4491,10 +4520,11 @@
         <argument key="default_path">/Applications/MAMP/htdocs/camping_project/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
-        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
+          <argument>bootstrap_4_layout.html.twig</argument>
         </argument>
+        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="autoescape">name</argument>
         <argument key="cache">/Applications/MAMP/htdocs/camping_project/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
@@ -5477,22 +5507,32 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AvailabilityRepository" class="App\Repository\AvailabilityRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\AvailabilityRepository" class="App\Repository\AvailabilityRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BillRepository" class="App\Repository\BillRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\BillRepository" class="App\Repository\BillRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryHasSeasonRepository" class="App\Repository\CategoryHasSeasonRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CategoryHasSeasonRepository" class="App\Repository\CategoryHasSeasonRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PaymentRepository" class="App\Repository\PaymentRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\PaymentRepository" class="App\Repository\PaymentRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PrestationRepository" class="App\Repository\PrestationRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\PrestationRepository" class="App\Repository\PrestationRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ReservationPrestationRepository" class="App\Repository\ReservationPrestationRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\ReservationPrestationRepository" class="App\Repository\ReservationPrestationRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommandDetailsHasOptionRepository" class="App\Repository\CommandDetailsHasOptionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CommandDetailsHasOptionRepository" class="App\Repository\CommandDetailsHasOptionRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommandDetailsRepository" class="App\Repository\CommandDetailsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CommandDetailsRepository" class="App\Repository\CommandDetailsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DiscountRepository" class="App\Repository\DiscountRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\DiscountRepository" class="App\Repository\DiscountRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\FaqRepository" class="App\Repository\FaqRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\FaqRepository" class="App\Repository\FaqRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OptionRepository" class="App\Repository\OptionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\OptionRepository" class="App\Repository\OptionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ReservationRepository" class="App\Repository\ReservationRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ReservationRepository" class="App\Repository\ReservationRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SeasonRepository" class="App\Repository\SeasonRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SeasonRepository" class="App\Repository\SeasonRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SliderRepository" class="App\Repository\SliderRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\SliderRepository" class="App\Repository\SliderRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SpotRepository" class="App\Repository\SpotRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\SpotRepository" class="App\Repository\SpotRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Validator\ConstraintValidatorInterface.0.App\Validator\MediaExtensionValidator" class="App\Validator\MediaExtensionValidator" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Validator\MediaExtensionValidator" class="App\Validator\MediaExtensionValidator" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
@@ -5741,17 +5781,22 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.ZXv9apF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator..KWGD8j" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Repository\AvailabilityRepository" type="service" id="App\Repository\AvailabilityRepository"/>
+        <argument key="App\Repository\BillRepository" type="service" id="App\Repository\BillRepository"/>
+        <argument key="App\Repository\CategoryHasSeasonRepository" type="service" id="App\Repository\CategoryHasSeasonRepository"/>
         <argument key="App\Repository\CategoryRepository" type="service" id="App\Repository\CategoryRepository"/>
-        <argument key="App\Repository\PaymentRepository" type="service" id="App\Repository\PaymentRepository"/>
-        <argument key="App\Repository\PrestationRepository" type="service" id="App\Repository\PrestationRepository"/>
-        <argument key="App\Repository\ReservationPrestationRepository" type="service" id="App\Repository\ReservationPrestationRepository"/>
+        <argument key="App\Repository\CommandDetailsHasOptionRepository" type="service" id="App\Repository\CommandDetailsHasOptionRepository"/>
+        <argument key="App\Repository\CommandDetailsRepository" type="service" id="App\Repository\CommandDetailsRepository"/>
+        <argument key="App\Repository\DiscountRepository" type="service" id="App\Repository\DiscountRepository"/>
+        <argument key="App\Repository\FaqRepository" type="service" id="App\Repository\FaqRepository"/>
+        <argument key="App\Repository\OptionRepository" type="service" id="App\Repository\OptionRepository"/>
         <argument key="App\Repository\ReservationRepository" type="service" id="App\Repository\ReservationRepository"/>
+        <argument key="App\Repository\SeasonRepository" type="service" id="App\Repository\SeasonRepository"/>
         <argument key="App\Repository\SliderRepository" type="service" id="App\Repository\SliderRepository"/>
         <argument key="App\Repository\SpotRepository" type="service" id="App\Repository\SpotRepository"/>
+        <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">

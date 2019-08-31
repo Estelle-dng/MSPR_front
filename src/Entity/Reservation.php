@@ -39,25 +39,26 @@ class Reservation
     private $is_cancelled;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\spot", inversedBy="reservations")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="Reservation")
+     */
+    private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\CommandDetails", inversedBy="Reservation")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $spot;
+    private $commandDetails;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Payment", mappedBy="reservation")
+     * @ORM\OneToMany(targetEntity="App\Entity\Bill", mappedBy="Reservation")
      */
-    private $payments;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\ReservationPrestation", mappedBy="reservation")
-     */
-    private $reservationPrestation;
+    private $bills;
 
     public function __construct()
     {
-        $this->payments = new ArrayCollection();
+        $this->bills = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -112,62 +113,61 @@ class Reservation
         return $this;
     }
 
-    public function getSpot(): ?spot
+    public function getUser(): ?User
     {
-        return $this->spot;
+        return $this->user;
     }
 
-    public function setSpot(?spot $spot): self
+    public function setUser(?User $user): self
     {
-        $this->spot = $spot;
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCommandDetails(): ?CommandDetails
+    {
+        return $this->commandDetails;
+    }
+
+    public function setCommandDetails(?CommandDetails $commandDetails): self
+    {
+        $this->commandDetails = $commandDetails;
 
         return $this;
     }
 
     /**
-     * @return Collection|Payment[]
+     * @return Collection|Bill[]
      */
-    public function getPayments(): Collection
+    public function getBills(): Collection
     {
-        return $this->payments;
+        return $this->bills;
     }
 
-    public function addPayment(Payment $payment): self
+    public function addBill(Bill $bill): self
     {
-        if (!$this->payments->contains($payment)) {
-            $this->payments[] = $payment;
-            $payment->setReservation($this);
+        if (!$this->bills->contains($bill)) {
+            $this->bills[] = $bill;
+            $bill->setReservation($this);
         }
 
         return $this;
     }
 
-    public function removePayment(Payment $payment): self
+    public function removeBill(Bill $bill): self
     {
-        if ($this->payments->contains($payment)) {
-            $this->payments->removeElement($payment);
+        if ($this->bills->contains($bill)) {
+            $this->bills->removeElement($bill);
             // set the owning side to null (unless already changed)
-            if ($payment->getReservation() === $this) {
-                $payment->setReservation(null);
+            if ($bill->getReservation() === $this) {
+                $bill->setReservation(null);
             }
         }
 
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getReservationPrestation()
-    {
-        return $this->reservationPrestation;
-    }
 
-    /**
-     * @param mixed $reservationPrestation
-     */
-    public function setReservationPrestation($reservationPrestation): void
-    {
-        $this->reservationPrestation = $reservationPrestation;
-    }
+
 }
