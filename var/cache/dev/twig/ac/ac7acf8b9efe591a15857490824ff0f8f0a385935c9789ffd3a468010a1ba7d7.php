@@ -92,38 +92,35 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
         // line 8
         echo "    <main>
         <div class=\"parent-container container\">
-            <ul class=\"faq\">
+            ";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["faqs"]) || array_key_exists("faqs", $context) ? $context["faqs"] : (function () { throw new RuntimeError('Variable "faqs" does not exist.', 10, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["faq"]) {
+            // line 11
+            echo "            <ul class=\"faq\">
                 <li>
-                    <h3 class=\"question\">Les animaux sont-ils acceptés dans le camping ?
+                    <h3 class=\"question\">";
+            // line 13
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["faq"], "title", [], "any", false, false, false, 13), "html", null, true);
+            echo "
                         <div class=\"plus-minus-toggle collapsed\"></div>
                     </h3>
                     <div class=\"answer\">
-                        Les animaux de compagnie sont acceptés à l'intérieur du camping. Ils doivent être vaccinés et
-                        tatoués (avec justificatifs), tenus en laisse et ne doivent pas être laissés seuls en absence de
-                        leur maître.
-                    </div>
-                </li>
-                <li>
-                    <h3 class=\"question\">Peut-on inviter des amis sur le site du camping ?
-                        <div class=\"plus-minus-toggle collapsed\"></div>
-                    </h3>
-                    <div class=\"answer\">
-                        Les campeurs recevant des visiteurs extérieurs doivent en informer la réception. Une redevance
-                        par visiteur pourra être facturée. Les visiteurs sont sous la responsabilité des campeurs qui
-                        les reçoivent.
-                    </div>
-                </li>
-                <li>
-                    <h3 class=\"question\">Où peut-on trouver une aire de vidange pour les camping-cars ?
-                        <div class=\"plus-minus-toggle collapsed\"></div>
-                    </h3>
-                    <div class=\"answer\">
-                        La commune de Mervent dispose d'une aire de service pour Camping-Car. Pour plus d'information,
-                        contactez la Mairie.
+                        ";
+            // line 17
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["faq"], "answer", [], "any", false, false, false, 17), "html", null, true);
+            echo "
                     </div>
                 </li>
             </ul>
-        </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['faq'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 22
+        echo "        </div>
     </main>
     ";
         
@@ -134,7 +131,7 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
 
     }
 
-    // line 45
+    // line 26
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -144,9 +141,9 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 46
+        // line 27
         echo "    ";
-        // line 47
+        // line 28
         echo "        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js\"></script>
         <script>
             \$( document ).ready(function()
@@ -158,7 +155,7 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
             });
         </script>
     ";
-        // line 58
+        // line 39
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -180,7 +177,7 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
 
     public function getDebugInfo()
     {
-        return array (  162 => 58,  150 => 47,  148 => 46,  138 => 45,  93 => 8,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  159 => 39,  147 => 28,  145 => 27,  135 => 26,  123 => 22,  112 => 17,  105 => 13,  101 => 11,  97 => 10,  93 => 8,  83 => 7,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -194,37 +191,18 @@ class __TwigTemplate_0504b5e2daa1afef04dd23a59a9082f2d589b40a2232bbcafd28a70361f
     {% block main %}
     <main>
         <div class=\"parent-container container\">
+            {% for faq in faqs %}
             <ul class=\"faq\">
                 <li>
-                    <h3 class=\"question\">Les animaux sont-ils acceptés dans le camping ?
+                    <h3 class=\"question\">{{ faq.title }}
                         <div class=\"plus-minus-toggle collapsed\"></div>
                     </h3>
                     <div class=\"answer\">
-                        Les animaux de compagnie sont acceptés à l'intérieur du camping. Ils doivent être vaccinés et
-                        tatoués (avec justificatifs), tenus en laisse et ne doivent pas être laissés seuls en absence de
-                        leur maître.
-                    </div>
-                </li>
-                <li>
-                    <h3 class=\"question\">Peut-on inviter des amis sur le site du camping ?
-                        <div class=\"plus-minus-toggle collapsed\"></div>
-                    </h3>
-                    <div class=\"answer\">
-                        Les campeurs recevant des visiteurs extérieurs doivent en informer la réception. Une redevance
-                        par visiteur pourra être facturée. Les visiteurs sont sous la responsabilité des campeurs qui
-                        les reçoivent.
-                    </div>
-                </li>
-                <li>
-                    <h3 class=\"question\">Où peut-on trouver une aire de vidange pour les camping-cars ?
-                        <div class=\"plus-minus-toggle collapsed\"></div>
-                    </h3>
-                    <div class=\"answer\">
-                        La commune de Mervent dispose d'une aire de service pour Camping-Car. Pour plus d'information,
-                        contactez la Mairie.
+                        {{ faq.answer }}
                     </div>
                 </li>
             </ul>
+            {% endfor %}
         </div>
     </main>
     {% endblock %}

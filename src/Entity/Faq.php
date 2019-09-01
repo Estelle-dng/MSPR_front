@@ -32,6 +32,7 @@ class Faq
     private $created_at;
 
     /**
+     *
      * @ORM\Column(type="datetime")
      */
     private $edited_at;
@@ -41,68 +42,119 @@ class Faq
      */
     private $User;
 
-    public function getId(): ?int
+    public function __construct()
+    {
+        $this->created_at = new \DateTime();
+        $this->edited_at = new \DateTime();
+
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    /**
+     * @param mixed $id
+     * @return Faq
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): self
+    /**
+     * @param mixed $title
+     * @return Faq
+     */
+    public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
 
-    public function getAnswer(): ?string
+    /**
+     * @return mixed
+     */
+    public function getAnswer()
     {
         return $this->answer;
     }
 
-    public function setAnswer(string $answer): self
+    /**
+     * @param mixed $answer
+     * @return Faq
+     */
+    public function setAnswer($answer)
     {
         $this->answer = $answer;
-
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
     {
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    /**
+     * @param mixed $created_at
+     * @return Faq
+     */
+    public function setCreatedAt($created_at)
     {
         $this->created_at = $created_at;
-
         return $this;
     }
 
-    public function getEditedAt(): ?\DateTimeInterface
+    /**
+     * @return mixed
+     */
+    public function getEditedAt()
     {
         return $this->edited_at;
     }
 
-    public function setEditedAt(\DateTimeInterface $edited_at): self
+    /**
+     * @param mixed $edited_at
+     * @return Faq
+     */
+    public function setEditedAt($edited_at)
     {
         $this->edited_at = $edited_at;
-
         return $this;
     }
 
-    public function getUser(): ?User
+    /**
+     * @return mixed
+     */
+    public function getUser()
     {
         return $this->User;
     }
 
-    public function setUser(?User $User): self
+    /**
+     * @param mixed $User
+     * @return Faq
+     */
+    public function setUser($User)
     {
         $this->User = $User;
-
         return $this;
     }
+
 }

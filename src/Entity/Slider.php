@@ -27,7 +27,7 @@ class Slider
     protected $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="media")
+     * @ORM\ManyToOne(targetEntity="Media")
      */
     protected $media;
 

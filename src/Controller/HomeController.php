@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\FaqRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -37,13 +38,35 @@ class HomeController extends AbstractController
         return $this->render('vitrine/proximite.html.twig');
     }
 
+
+
+
+    /**
+     * @var FaqRepository
+     */
+    private $repository;
+
+    public function __construct(FaqRepository $repository) /*Pour récupérer les infos j'ai besoin du repository*/
+    {
+        $this->repository = $repository;
+    }
+
     /**
      * @Route ("/FAQ", name="FAQ")
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function Faq()
     {
-        return $this->render('vitrine/faq.html.twig');
+        $faqs = $this->repository->findAll();
+        return $this->render('vitrine/faq.html.twig', compact('faqs'));
     }
+
+
+
+
+
+
+
 
     /**
      * @Route ("/Contact", name="Contact")

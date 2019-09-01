@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <link rel="icon" href="{{ asset ('assets/img/logo-02.png') }}" type="image/png">
     <title>Tableau de bord</title>
 
     {# Bootstrap #}
@@ -34,14 +35,14 @@
     {# HEADER #}
     <header class="main-header">
         <!-- Logo -->
-        <a href="" class="logo">
+        <a href="" class="logo" style="background-color: darkgreen;">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>Ad</b>min</span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>Admin</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
+        <nav class="navbar navbar-static-top" style="background-color: forestgreen;">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only"></span>
@@ -164,10 +165,10 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Page d'accueil</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Photo</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> A proximité</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Les logements</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Tarifs</a></li>
+                        <li><a href="{{ path('listeSlider') }}"><i class="fa fa-circle-o"></i> Photos du camping</a></li>
+                        <li><a href="{{ path ('listeFAQ') }}"><i class="fa fa-circle-o"></i> FAQ</a></li>
                     </ul>
                 </li>
                 <li>

@@ -1,0 +1,56 @@
+{% extends ('baseAdmin.html.twig') %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset ('assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+{% endblock %}
+
+    {% block main %}
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    Créer une question/réponse
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{{ path ('Dashboard') }}"><em class="fa fa-dashboard"></em> Accueil</a></li>
+                    <li><a href="#">Liste</a></li>
+                    <li><a href="{{ path ('listeFAQ') }}">FAQ</a></li>
+                    <li class="active">Créer</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h1>Créer les questions/réponses</h1>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                {{ form_start(form) }}
+                                    {{ form_widget(form) }}
+                                <button type="submit" class="btn btn-success">Créer</button>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    {% endblock %}
+
+{% block javascripts %}
+    <!-- DataTables -->
+    <script src="{{ asset ('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset ('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+    <script>
+        $('#table_faq').DataTable({
+            language: {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+            }
+        });
+    </script>
+    <!-- DataTables -->
+{% endblock %}

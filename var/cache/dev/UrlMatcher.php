@@ -13,8 +13,12 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/TableauDeBord' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\AdminHomeController::Dashboard'], null, null, null, false, false, null]],
-        '/ListeRéservation' => [[['_route' => 'Listeresa', '_controller' => 'App\\Controller\\AdminHomeController::ListeResa'], null, null, null, false, false, null]],
+        '/admin/listefaq' => [[['_route' => 'listeFAQ', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::listefaq'], null, null, null, false, false, null]],
+        '/admin/listefaq/create' => [[['_route' => 'admin.listefaq.create', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::create'], null, null, null, false, false, null]],
+        '/Admin/TableauDeBord' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\Admin\\AdminHomeController::Dashboard'], null, null, null, false, false, null]],
+        '/Admin/ListeRéservation' => [[['_route' => 'Listeresa', '_controller' => 'App\\Controller\\Admin\\AdminHomeController::ListeResa'], null, null, null, false, false, null]],
+        '/admin/listeslider' => [[['_route' => 'listeSlider', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::listeslider'], null, null, null, false, false, null]],
+        '/admin/listeslider/create' => [[['_route' => 'admin.listeslider.create', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::create'], null, null, null, false, false, null]],
         '/Accueil' => [[['_route' => 'Accueil', '_controller' => 'App\\Controller\\HomeController::Accueil'], null, null, null, false, false, null]],
         '/Photos' => [[['_route' => 'Photos', '_controller' => 'App\\Controller\\HomeController::Photos'], null, null, null, false, false, null]],
         '/Proximité' => [[['_route' => 'Proximité', '_controller' => 'App\\Controller\\HomeController::Proximite'], null, null, null, false, false, null]],
@@ -53,9 +57,17 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/admin/liste(?'
+                    .'|faq/([^/]++)(?'
+                        .'|(*:199)'
+                    .')'
+                    .'|slider/([^/]++)(?'
+                        .'|(*:226)'
+                    .')'
+                .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:198)'
-                    .'|setting/reset/([^/]++)(*:228)'
+                    .'|gister/confirm/([^/]++)(*:265)'
+                    .'|setting/reset/([^/]++)(*:295)'
                 .')'
             .')/?$}sDu',
     ],
@@ -67,8 +79,16 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        198 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        228 => [
+        199 => [
+            [['_route' => 'admin.faq.edit', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+            [['_route' => 'admin.faq.delete', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
+        ],
+        226 => [
+            [['_route' => 'admin.slider.edit', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+            [['_route' => 'admin.slider.delete', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
+        ],
+        265 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        295 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

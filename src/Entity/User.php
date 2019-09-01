@@ -27,17 +27,17 @@ class User extends BaseUser
     protected $address;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     protected $newsletter;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $city;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $country;
 
@@ -52,22 +52,22 @@ class User extends BaseUser
     private $phone;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $birthdate;
 
     /**
-     * @ORM\OneToMany(targetEntity="slider", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="Slider", mappedBy="user")
      */
     private $sliders;
 
     /**
-     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
+     * @ORM\Column(name="createdAt", type="datetime", nullable=true)
      */
     protected $createdAt;
 
     /**
-     * @ORM\Column(name="editAt", type="datetime", nullable=false)
+     * @ORM\Column(name="editAt", type="datetime", nullable=true)
      */
     protected $editAt;
 
