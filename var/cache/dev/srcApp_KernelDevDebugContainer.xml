@@ -497,6 +497,15 @@
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminMediaController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\AdminSeasonController" class="App\Controller\Admin\AdminSeasonController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\SeasonRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminSeasonController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -518,6 +527,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\MediaType" class="App\Form\MediaType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\SliderType" class="App\Form\SliderType" autowire="true" autoconfigure="true">
@@ -922,6 +934,7 @@
       <argument type="collection">
         <argument>App\Form\FaqType</argument>
         <argument>App\Form\MediaType</argument>
+        <argument>App\Form\SeasonType</argument>
         <argument>App\Form\SliderType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -1195,7 +1208,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.9RX8gQq"/>
+      <argument type="service" id=".service_locator.ZY1zaq_"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -5874,6 +5887,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminSeasonController" class="App\Controller\Admin\AdminSeasonController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminSeasonController" class="App\Controller\Admin\AdminSeasonController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminSeasonController" class="App\Controller\Admin\AdminSeasonController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5884,6 +5900,8 @@
     <service id=".abstract.instanceof.App\Form\FaqType" class="App\Form\FaqType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MediaType" class="App\Form\MediaType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MediaType" class="App\Form\MediaType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SliderType" class="App\Form\SliderType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\SliderType" class="App\Form\SliderType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BillRepository" class="App\Repository\BillRepository" autowire="true" abstract="true"/>
@@ -6090,25 +6108,35 @@
         <argument key="media" type="service" id=".errored..service_locator.HjgqwGL.App\Entity\Media"/>
       </argument>
     </service>
+    <service id=".service_locator.ADeF0mv" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="season" type="service" id=".errored..service_locator.ADeF0mv.App\Entity\Season"/>
+      </argument>
+    </service>
     <service id=".service_locator.Pvx5wm_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="slider" type="service" id=".errored..service_locator.Pvx5wm_.App\Entity\Slider"/>
       </argument>
     </service>
-    <service id=".service_locator.DyD11PG" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.gVkPBac" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\AdminFaqController::delete" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminFaqController::edit" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminMediaController::delete" type="service" id=".service_locator.HjgqwGL"/>
         <argument key="App\Controller\Admin\AdminMediaController::edit" type="service" id=".service_locator.HjgqwGL"/>
+        <argument key="App\Controller\Admin\AdminSeasonController::delete" type="service" id=".service_locator.ADeF0mv"/>
+        <argument key="App\Controller\Admin\AdminSeasonController::edit" type="service" id=".service_locator.ADeF0mv"/>
         <argument key="App\Controller\Admin\AdminSliderController::delete" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminSliderController::edit" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminFaqController:delete" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminFaqController:edit" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminMediaController:delete" type="service" id=".service_locator.HjgqwGL"/>
         <argument key="App\Controller\Admin\AdminMediaController:edit" type="service" id=".service_locator.HjgqwGL"/>
+        <argument key="App\Controller\Admin\AdminSeasonController:delete" type="service" id=".service_locator.ADeF0mv"/>
+        <argument key="App\Controller\Admin\AdminSeasonController:edit" type="service" id=".service_locator.ADeF0mv"/>
         <argument key="App\Controller\Admin\AdminSliderController:delete" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminSliderController:edit" type="service" id=".service_locator.Pvx5wm_"/>
       </argument>
@@ -6173,11 +6201,12 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.9RX8gQq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ZY1zaq_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\FaqType" type="service" id="App\Form\FaqType"/>
         <argument key="App\Form\MediaType" type="service" id="App\Form\MediaType"/>
+        <argument key="App\Form\SeasonType" type="service" id="App\Form\SeasonType"/>
         <argument key="App\Form\SliderType" type="service" id="App\Form\SliderType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
@@ -6467,6 +6496,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CDOTD6." method="withContext"/>
     </service>
+    <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminSeasonController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminSeasonController"/>
+      <argument>App\Controller\Admin\AdminSeasonController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
     <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminSliderController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Admin\AdminSliderController"/>
       <argument>App\Controller\Admin\AdminSliderController</argument>
@@ -6572,15 +6607,16 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.DyD11PG"/>
+      <argument type="service" id=".service_locator.gVkPBac"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.DyD11PG"/>
+      <argument type="service" id=".service_locator.gVkPBac"/>
     </service>
     <service id=".errored..service_locator.j9U_bzc.App\Entity\Faq" class="App\Entity\Faq"/>
     <service id=".errored..service_locator.HjgqwGL.App\Entity\Media" class="App\Entity\Media"/>
+    <service id=".errored..service_locator.ADeF0mv.App\Entity\Season" class="App\Entity\Season"/>
     <service id=".errored..service_locator.Pvx5wm_.App\Entity\Slider" class="App\Entity\Slider"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.9SP2Wcj"/>
@@ -6986,7 +7022,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" alias="vich_uploader.twig.extension.uploader" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.DyD11PG"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.gVkPBac"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

@@ -19,6 +19,13 @@ class SeasonRepository extends ServiceEntityRepository
         parent::__construct($registry, Season::class);
     }
 
+/*    public function findById(){
+        return $this->createQueryBuilder('i')
+            ->andWhere('i.id = 9')
+            ->getQuery()
+            ->getResult();
+    }*/
+
     // /**
     //  * @return Season[] Returns an array of Season objects
     //  */

@@ -12,7 +12,7 @@
         <!-- Full-width images with number text -->
         <div class="mySlides">
             <div class="numbertext">1 / 6</div>
-            <img src="{{ asset('assets/img/slider/' ~ slider.media) }}" alt="{{ slider.title }}" style="width:100%">
+            <img src="{{ asset('assets/img/slider/' ~ slider.media) }}" style="width:100%">
         </div>
 
         <!-- Next and previous buttons -->
@@ -21,11 +21,15 @@
 
         <!-- Image text -->
         <div class="caption-container">
-            <p id="caption">{{ slider.title }}</p>
+            <p id="caption"></p>
         </div>
 
         <!-- Thumbnail images -->
-
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="{{ asset('assets/img/slider/' ~ slider.media) }}" style="width:100%" onclick="currentSlide(1)" alt="{{ slider.title }}">
+            </div>
+        </div>
         {% endfor %}
     </div>
 {% endblock %}

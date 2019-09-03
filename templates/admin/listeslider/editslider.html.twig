@@ -1,9 +1,5 @@
 {% extends ('baseAdmin.html.twig') %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset ('assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
-{% endblock %}
-
     {% block main %}
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -40,17 +36,3 @@
             </section>
         </div>
     {% endblock %}
-
-{% block javascripts %}
-    <!-- DataTables -->
-    <script src="{{ asset ('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset ('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
-    <script>
-        $('#table_faq').DataTable({
-            language: {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
-            }
-        });
-    </script>
-    <!-- DataTables -->
-{% endblock %}

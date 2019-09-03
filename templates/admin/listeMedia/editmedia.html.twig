@@ -1,9 +1,5 @@
 {% extends ('baseAdmin.html.twig') %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset ('assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
-{% endblock %}
-
     {% block main %}
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -14,7 +10,7 @@
                 <ol class="breadcrumb">
                     <li><a href="{{ path ('Dashboard') }}"><em class="fa fa-dashboard"></em> Accueil</a></li>
                     <li><a href="#">Liste</a></li>
-                    <li><a href="{{ path ('listeFAQ') }}">FAQ</a></li>
+                    <li><a href="{{ path ('listeSaison') }}">Gérer les saisons</a></li>
                     <li class="active">Éditer</li>
                 </ol>
             </section>
@@ -41,16 +37,4 @@
         </div>
     {% endblock %}
 
-{% block javascripts %}
-    <!-- DataTables -->
-    <script src="{{ asset ('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset ('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
-    <script>
-        $('#table_media').DataTable({
-            language: {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
-            }
-        });
-    </script>
-    <!-- DataTables -->
-{% endblock %}
+

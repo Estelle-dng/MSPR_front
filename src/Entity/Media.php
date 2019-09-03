@@ -32,6 +32,9 @@ class Media {
 
     /**
      * @var File|null
+     * @Assert\Image(
+     *     mimeTypes="image/jpeg, image/png"
+     * )
      * @Vich\UploadableField(mapping="slider_image", fileNameProperty="filename")
      */
     private $imageFile;

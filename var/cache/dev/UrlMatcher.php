@@ -20,6 +20,8 @@ return [
         '/Admin/ListeRéservation' => [[['_route' => 'Listeresa', '_controller' => 'App\\Controller\\Admin\\AdminHomeController::ListeResa'], null, null, null, false, false, null]],
         '/admin/listemedia' => [[['_route' => 'listeMedia', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::listemedia'], null, null, null, false, false, null]],
         '/admin/listemedia/create' => [[['_route' => 'admin.listemedia.create', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::create'], null, null, null, false, false, null]],
+        '/admin/listeseason' => [[['_route' => 'listeSeason', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::listeseason'], null, null, null, false, false, null]],
+        '/admin/listeseason/create' => [[['_route' => 'admin.listeseason.create', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::create'], null, null, null, false, false, null]],
         '/admin/listeslider' => [[['_route' => 'listeSlider', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::listeslider'], null, null, null, false, false, null]],
         '/admin/listeslider/create' => [[['_route' => 'admin.listeslider.create', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::create'], null, null, null, false, false, null]],
         '/Accueil' => [[['_route' => 'Accueil', '_controller' => 'App\\Controller\\HomeController::Accueil'], null, null, null, false, false, null]],
@@ -66,13 +68,18 @@ return [
                     .'|media/([^/]++)(?'
                         .'|(*:225)'
                     .')'
-                    .'|slider/([^/]++)(?'
-                        .'|(*:252)'
+                    .'|s(?'
+                        .'|eason/([^/]++)(?'
+                            .'|(*:255)'
+                        .')'
+                        .'|lider/([^/]++)(?'
+                            .'|(*:281)'
+                        .')'
                     .')'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:291)'
-                    .'|setting/reset/([^/]++)(*:321)'
+                    .'|gister/confirm/([^/]++)(*:321)'
+                    .'|setting/reset/([^/]++)(*:351)'
                 .')'
             .')/?$}sDu',
     ],
@@ -92,12 +99,16 @@ return [
             [['_route' => 'admin.media.delete', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [['_route' => 'admin.media.edit', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
         ],
-        252 => [
+        255 => [
+            [['_route' => 'admin.season.edit', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+            [['_route' => 'admin.season.delete', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
+        ],
+        281 => [
             [['_route' => 'admin.slider.edit', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.slider.delete', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        291 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        321 => [
+        321 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        351 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

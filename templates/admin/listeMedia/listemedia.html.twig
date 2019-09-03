@@ -40,7 +40,7 @@
                                     {%  for media in medias %}
                                         <thead>
                                         <tr>
-                                            <th>{{ media.nom }}</th>
+                                            <th>{{ media.nom }} / {{ media.filename }}</th>
                                             <th>Actions</th>
                                         </tr>
                                         </thead>
@@ -49,7 +49,7 @@
                                             <td><img style="width:150px;" alt="mon image" src="{{ asset('assets/img/slider/' ~ media.filename) }}"></td>
                                             <td>
                                                 <a href="{{ path ('admin.media.edit', {id: media.id}) }}" class="btn btn-success">Editer</a>
-                                                <form method="post" action="{{ path ('admin.media.delete', {id: media.id}) }}" onsubmit="return confirm('Supprimer cette Q/R ?')" style="margin-top: 5%;">
+                                                <form method="post" action="{{ path ('admin.media.delete', {id: media.id}) }}" onsubmit="return confirm('Supprimer cette image ?')" style="margin-top: 5%;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ media.id) }}">
                                                     <button class="btn btn-danger">Supprimer</button>

@@ -65,7 +65,7 @@ class AdminFaqController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()){
             $this->em->flush();
-            $this->addFlash('success','Q/R modifiée avec succès');
+            $this->addFlash('success','Information modifiée avec succès');
             return $this->redirectToRoute('listeFAQ');
         }
 
