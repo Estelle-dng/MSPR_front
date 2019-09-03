@@ -43,6 +43,8 @@ class AdminFaqController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
+            $user = $this->getUser();
+            $faq->setUser($user);
             $this->em->persist($faq);// On enregistre l'entité créée avec persist
             $this->em->flush();
             return $this->redirectToRoute('listeFAQ');
@@ -63,6 +65,7 @@ class AdminFaqController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()){
             $this->em->flush();
+            $this->addFlash('success','Q/R modifiée avec succès');
             return $this->redirectToRoute('listeFAQ');
         }
 
@@ -82,5 +85,16 @@ class AdminFaqController extends AbstractController
         $this->em->flush();
         }
         return $this->redirectToRoute('listeFAQ');
+    }
+
+
+    /**
+     * @Route ("/FAQ", name="FAQ")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function Faq()
+    {
+        $faqs = $this->repository->findAll();
+        return $this->render('vitrine/faq.html.twig', compact('faqs'));
     }
 }

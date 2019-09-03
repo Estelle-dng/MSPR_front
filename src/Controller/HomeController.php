@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Slider;
 use App\Repository\FaqRepository;
+use App\Repository\SliderRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,12 +24,26 @@ class HomeController extends AbstractController
         return $this->render('vitrine/accueil.html.twig');
     }
 
+
+    /**
+     * @var SliderRepository
+     */
+    private $repository;
+
+    public function __construct(SliderRepository $repository) /*Pour récupérer les infos j'ai besoin du repository*/
+    {
+        $this->repository = $repository;
+    }
+
     /**
      * @Route ("/Photos", name="Photos")
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function Photos()
     {
-        return $this->render('vitrine/photos.html.twig');
+        $sliders = $this->repository->findAll();
+        return $this->render('vitrine/photos.html.twig', compact('sliders'));
+
     }
 
     /**
@@ -37,35 +53,6 @@ class HomeController extends AbstractController
     {
         return $this->render('vitrine/proximite.html.twig');
     }
-
-
-
-
-    /**
-     * @var FaqRepository
-     */
-    private $repository;
-
-    public function __construct(FaqRepository $repository) /*Pour récupérer les infos j'ai besoin du repository*/
-    {
-        $this->repository = $repository;
-    }
-
-    /**
-     * @Route ("/FAQ", name="FAQ")
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function Faq()
-    {
-        $faqs = $this->repository->findAll();
-        return $this->render('vitrine/faq.html.twig', compact('faqs'));
-    }
-
-
-
-
-
-
 
 
     /**

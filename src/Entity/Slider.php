@@ -79,5 +79,12 @@ class Slider
     {
         $this->media = $media;
     }
+
+    public function __toString(){
+        // to show the name of the Category/Media in the select
+        return $this->filename;
+        // to show the id of the Category/Media in the select
+        // return $this->id;
+    }
 }
 

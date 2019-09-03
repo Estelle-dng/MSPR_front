@@ -9,7 +9,7 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1>
-                    Liste des questions / réponses
+                    Liste des images du slider
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="{{ path ('Dashboard') }}"><em class="fa fa-dashboard"></em> Accueil</a></li>
@@ -39,12 +39,12 @@
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>{{ slide.media }}</td>
+                                            <td><img style="width:150px;" alt="mon image" src="{{ asset('assets/img/slider/' ~ slide.media) }}"></td>
                                             <td>
-                                                <a href="{{ path ('admin.slider.edit', {id: slider.id}) }}" class="btn btn-success">Editer</a>
-                                                <form method="post" action="{{ path ('admin.slide.delete', {id: slider.id}) }}" onsubmit="return confirm('Supprimer cette slide ?')" style="margin-top: 5%;">
+                                                <a href="{{ path ('admin.slider.edit', {id: slide.id}) }}" class="btn btn-success">Editer</a>
+                                                <form method="post" action="{{ path ('admin.slider.delete', {id: slide.id}) }}" onsubmit="return confirm('Supprimer cette slide ?')" style="margin-top: 5%;">
                                                     <input type="hidden" name="_method" value="DELETE">
-                                                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ slider.id) }}">
+                                                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ slide.id) }}">
                                                     <button class="btn btn-danger">Supprimer</button>
                                                 </form>
                                             </td>

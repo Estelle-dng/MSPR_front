@@ -25,6 +25,13 @@
                         <div class="box">
                             <div class="box-header">
                                 <h1>Gérer les questions/réponses</h1>
+
+                                {% for message in app.flashes('success') %}
+                                    <div class="alert alert-success">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+
                                 <a href="{{ path ('admin.listefaq.create')}}" class="btn btn-success">Créer une nouvelle Q/R</a>
                             </div>
                             <!-- /.box-header -->

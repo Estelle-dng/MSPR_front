@@ -8,36 +8,11 @@
 
     <!-- Container for the image gallery -->
     <div class="container">
-
+        {% for slider in sliders %}
         <!-- Full-width images with number text -->
         <div class="mySlides">
             <div class="numbertext">1 / 6</div>
-            <img src="{{ asset ('assets/img/emplacement.png')}}" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">2 / 6</div>
-            <img src="{{ asset ('assets/img/tentes.png')}}" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <img src="{{ asset ('assets/img/emplacement_mobilhome.png') }}" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <img src="{{ asset ('assets/img/resto.png') }}" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="{{ asset ('assets/img/lac2.png') }}" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <img src="{{ asset ('assets/img/mobilhome_interieur.png') }}" style="width:100%">
+            <img src="{{ asset('assets/img/slider/' ~ slider.media) }}" alt="{{ slider.title }}" style="width:100%">
         </div>
 
         <!-- Next and previous buttons -->
@@ -46,30 +21,12 @@
 
         <!-- Image text -->
         <div class="caption-container">
-            <p id="caption"></p>
+            <p id="caption">{{ slider.title }}</p>
         </div>
 
         <!-- Thumbnail images -->
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="{{ asset ('assets/img/emplacement.png') }}" style="width:100%" onclick="currentSlide(1)" alt="Les tentes en bord de lac">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="{{ asset ('assets/img/tentes.png') }}" style="width:100%" onclick="currentSlide(2)" alt="Tentes sous les arbres">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="{{ asset ('assets/img/emplacement_mobilhome.png') }}" style="width:100%" onclick="currentSlide(3)" alt="Mobil-home en famille">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="{{ asset ('assets/img/resto.png') }}" style="width:100%" onclick="currentSlide(4)" alt="Snack-Bar Les amis de la forêt">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="{{ asset ('assets/img/lac2.png') }}" style="width:100%" onclick="currentSlide(5)" alt="Étang de pêche">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="{{ asset ('assets/img/mobilhome_interieur.png') }}" style="width:100%" onclick="currentSlide(6)" alt="Intérieur de nos mobil-home">
-            </div>
-        </div>
+
+        {% endfor %}
     </div>
 {% endblock %}
 
