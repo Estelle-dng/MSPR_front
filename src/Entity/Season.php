@@ -44,6 +44,11 @@ class Season
         $this->CategoryHasSeason = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -116,10 +121,7 @@ class Season
         return $this;
     }
 
-/*    public function getOpenDate()
-    {
-        return $this->OpenDate;
-    }*/
+
 
 
 }

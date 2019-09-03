@@ -13,7 +13,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 class AdminSeasonController extends AbstractController
 {
-
     /**
      * @var SeasonRepository
      */
@@ -26,6 +25,20 @@ class AdminSeasonController extends AbstractController
     }
 
     /**
+     * @Route ("/Accueil", name="Accueil")
+     */
+
+    public function Accueil()
+    {
+        $season = $this->repository->findById(1);
+
+        return $this->render('vitrine/accueil.html.twig', [
+            'seasons' => $season
+        ]);
+    }
+
+
+    /**
      * @Route ("/admin/listeseason", name="listeSeason")
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -34,6 +47,7 @@ class AdminSeasonController extends AbstractController
         $seasons = $this->repository->findAll();
         return $this->render('admin/listeSeason/listeseason.html.twig', compact('seasons')); /*Compact renvoie un tableau*/
     }
+
 
     /**
      * @Route ("/admin/listeseason/create", name="admin.listeseason.create")
@@ -86,4 +100,6 @@ class AdminSeasonController extends AbstractController
         }
         return $this->redirectToRoute('listeSeason');
     }
+
+
 }

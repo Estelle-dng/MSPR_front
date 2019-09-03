@@ -11,6 +11,7 @@ return array(
     'Zend\\Code\\' => array($vendorDir . '/zendframework/zend-code/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Vich\\UploaderBundle\\' => array($vendorDir . '/vich/uploader-bundle'),
+    'Twig\\Extensions\\' => array($vendorDir . '/twig/extensions/src'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Php73\\' => array($vendorDir . '/symfony/polyfill-php73'),
     'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),

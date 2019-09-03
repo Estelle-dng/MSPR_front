@@ -33,7 +33,7 @@ class Media {
     /**
      * @var File|null
      * @Assert\Image(
-     *     mimeTypes="image/jpeg, image/png"
+     *     mimeTypes={"image/jpeg", "image/png"}
      * )
      * @Vich\UploadableField(mapping="slider_image", fileNameProperty="filename")
      */
@@ -52,6 +52,17 @@ class Media {
      * @var User $user
      */
     private $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Slider", mappedBy="media", cascade={"remove"})
+     */
+    private $sliders;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Category", mappedBy="media", cascade={"remove"})
+     */
+    private $categories;
+
 
     public function __toString()
     {
@@ -183,5 +194,44 @@ class Media {
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSliders()
+    {
+        return $this->sliders;
+    }
+
+    /**
+     * @param mixed $sliders
+     * @return Media
+     */
+    public function setSliders($sliders)
+    {
+        $this->sliders = $sliders;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     * @return Media
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+
+
 }
 

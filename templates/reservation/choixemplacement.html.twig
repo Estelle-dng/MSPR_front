@@ -61,91 +61,26 @@
 
 <div class="container">
     <div class="row">
+        {% for spot in spots %}
         <div class="col-sm-6 col-md-6">
             <div class="thumbnail">
-                <h3 class="thumbnailtitle">Emplacement tentes</h3>
+                <h3 class="thumbnailtitle">{{ spot.name }}</h3>
                 <div class="imgthumnail">
-                    <img class="img-fluid" src="{{ asset ('assets/img/emplacement.png') }}" alt="Nature">
+                    <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}" alt="Nature">
                 </div>
                 <div class="caption">
-                    <p>Hic dolore eram illum nescius, summis an nostrud ne varias. Ut quid dolore se
-                        deserunt se
-                        culpa
-                        doctrina possumus, irure distinguantur officia eram quamquam, ubi nam
-                        instituendarum,
-                        quamquam
-                        minim vidisse nescius.</p>
                     <p>
-                        <a href="{{ path ('Article') }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenan">
+                        {{ spot.info }}
+                    </p>
+                    <p>
+                        <a href="{{ path('Article', {'id': spot.id}) }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenan">
                             Réserver dès maintenant
                         </a>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-                <h3 class="thumbnailtitle">Mobil-home</h3>
-                <div class="imgthumnail">
-                    <img class="img-fluid" src="{{ asset ('assets/img/mobilhome.png') }}" alt="Nature">
-                </div>
-                <div class="caption">
-                    <p>Hic dolore eram illum nescius, summis an nostrud ne varias. Ut quid dolore se
-                        deserunt se
-                        culpa
-                        doctrina possumus, irure distinguantur officia eram quamquam, ubi nam
-                        instituendarum,
-                        quamquam
-                        minim vidisse nescius.</p>
-                    <p>
-                        <a href="{{ path ('Article') }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenant">
-                            Réserver dès maintenant
-                        </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-                <h3 class="thumbnailtitle">Mobil-home Luxe</h3>
-                <div class="imgthumnail">
-                    <img class="img-fluid" src="{{ asset ('assets/img/emplacement_mobilhome.png') }}" alt="Nature">
-                </div>
-                <div class="caption">
-                    <p>Hic dolore eram illum nescius, summis an nostrud ne varias. Ut quid dolore se
-                        deserunt se
-                        culpa
-                        doctrina possumus, irure distinguantur officia eram quamquam, ubi nam
-                        instituendarum,
-                        quamquam
-                        minim vidisse nescius.</p>
-                    <p>
-                        <a href="{{ path ('Article') }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenant">
-                            Réserver dès maintenant
-                        </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-                <h3 class="thumbnailtitle">Chalet</h3>
-                <div class="imgthumnail">
-                    <img class="img-fluid" src="{{ asset ('assets/img/mobilhome_interieur.png') }}" alt="Nature">
-                </div>
-                <div class="caption">
-                    <p>Hic dolore eram illum nescius, summis an nostrud ne varias. Ut quid dolore se
-                        deserunt se
-                        culpa
-                        doctrina possumus, irure distinguantur officia eram quamquam, ubi nam
-                        instituendarum,
-                        quamquam
-                        minim vidisse nescius.</p>
-                    <p>
-                        <a href="{{ path ('Article') }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenan">
-                             Réserver dès maintenant
-                        </a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 

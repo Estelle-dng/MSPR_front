@@ -8,7 +8,7 @@
     {# Titres #}
     <div class="container mb-5">
         <div class="row">
-            <h3 class="col-md-4 offset-md-1 col-8 offset-2 text-success text-center">Mobil-Home 20m2</h3>
+            <h3 class="col-md-4 offset-md-1 col-8 offset-2 text-success text-center">{{ spot.name }}</h3>
             <a class="col-md-3 offset-md-3 col-4 offset-4 btn btn-default text-white" href="#choixdate">TARIFS ET DISPOS</a>
         </div>
     </div>
@@ -19,7 +19,7 @@
             <div class="col-md-6 col-12"><!-- Full-width images with number text -->
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img src="{{ asset ('assets/img/emplacement.png') }}" style="width:100%">
+                    <img src="{{ asset('assets/img/slider/' ~ spot.media) }}" style="width:100%">
                 </div>
 
                 <div class="mySlides">
@@ -104,9 +104,8 @@
                 </div>
 
                 <div class="row mb-3">
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut distinctio minus rem
-                        sapiente suscipit voluptate? Eaque illum iusto, laborum libero nam porro quia quidem repellat
-                        saepe suscipit vel voluptatem.
+                    <div>
+                        {{ spot.info }}
                     </div>
                     <div>Accusantium amet autem dolores, est, fugiat harum, in minus mollitia quam quibusdam quis
                         ratione sed? Ad at expedita laborum nam quidem, reiciendis vel. Aspernatur, neque omnis quam

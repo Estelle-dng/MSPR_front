@@ -100,7 +100,7 @@
         <div class="container-fluid botlogoinfos">
             <div class="row">
                 <div class="col-md-2 offset-md-10">
-                    <img class="img-fluid" src="../public/assets/img/logo-02.png" alt="logo">
+                    <img class="img-fluid" src="{{ asset ('assets/img/logo-02.png') }}" alt="logo">
                 </div>
                 <p class="col-md-6 offset-md-6" style="color: white; text-align: right">
                     Camping la Jamonière - Mervent - Vendée
@@ -130,17 +130,6 @@
                         <a href="{{ path ('Contact') }}">Contact</a>
                     </nav>
                 </div>
-                {#<div class="col-md-3 mb-5 newsletter text-white">
-                    <p>
-                        Inscrivez vous à la new-letter pour connaître les
-                        dernières actualités du camping :
-                    </p>
-                    <div class="newsletterdnone">
-                        <input class="button" type="text" placeholder="Votre Email"
-                               style="font-weight: lighter; width: 265px;">
-                        <button type="submit" class="button new">Submit</button>
-                    </div>
-                </div>#}
             </div>
         </div>
     </footer>

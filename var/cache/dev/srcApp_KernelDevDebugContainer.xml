@@ -95,7 +95,7 @@
     <parameter key="kernel.secret">%env(APP_SECRET)%</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="templating.helper.code.file_link_format">null</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
@@ -472,6 +472,15 @@
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
       <argument>/Applications/MAMP/htdocs/camping_project/var/log/dev.log</argument>
     </service>
+    <service id="App\Controller\Admin\AdminCategoryController" class="App\Controller\Admin\AdminCategoryController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\CategoryRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminCategoryController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -515,13 +524,27 @@
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminSliderController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\CategoryHasSeasonRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminTarifController"/>
+      </call>
+    </service>
     <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
-      <argument type="service" id="App\Repository\SliderRepository"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\HomeController"/>
       </call>
+    </service>
+    <service id="App\Form\CategoryHasSeasonType" class="App\Form\CategoryHasSeasonType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Form\FaqType" class="App\Form\FaqType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -599,6 +622,9 @@
         <argument>PNG</argument>
       </argument>
     </service>
+    <service id="twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" autoconfigure="true">
+      <tag name="twig.extension"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -619,7 +645,7 @@
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
     </service>
     <service id="validate_request_listener" class="Symfony\Component\HttpKernel\EventListener\ValidateRequestListener" public="false">
@@ -894,7 +920,7 @@
       <argument type="service" id="translation.writer"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument>/Applications/MAMP/htdocs/camping_project/translations</argument>
       <argument>/Applications/MAMP/htdocs/camping_project/templates</argument>
       <argument type="collection">
@@ -932,6 +958,8 @@
         <argument>Vich\UploaderBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\CategoryHasSeasonType</argument>
+        <argument>App\Form\CategoryType</argument>
         <argument>App\Form\FaqType</argument>
         <argument>App\Form\MediaType</argument>
         <argument>App\Form\SeasonType</argument>
@@ -1208,7 +1236,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.ZY1zaq_"/>
+      <argument type="service" id=".service_locator.iD3592J"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1566,7 +1594,7 @@
       <tag name="kernel.locale_aware"/>
       <argument type="service" id=".service_locator.yQVjGlt"/>
       <argument type="service" id="translator.formatter.default"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -3067,7 +3095,7 @@
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="parameter_bag" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.router" on-invalid="ignore"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <call method="setConfigCacheFactory">
         <argument type="service" id="config_cache_factory"/>
       </call>
@@ -4701,6 +4729,9 @@
         <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.intl"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
@@ -5878,6 +5909,9 @@
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminCategoryController" class="App\Controller\Admin\AdminCategoryController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminCategoryController" class="App\Controller\Admin\AdminCategoryController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminCategoryController" class="App\Controller\Admin\AdminCategoryController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5893,9 +5927,16 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminSliderController" class="App\Controller\Admin\AdminSliderController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategoryHasSeasonType" class="App\Form\CategoryHasSeasonType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CategoryHasSeasonType" class="App\Form\CategoryHasSeasonType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\FaqType" class="App\Form\FaqType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\FaqType" class="App\Form\FaqType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MediaType" class="App\Form\MediaType" autowire="true" abstract="true"/>
@@ -5934,6 +5975,9 @@
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Validator\ConstraintValidatorInterface.0.App\Validator\MediaExtensionValidator" class="App\Validator\MediaExtensionValidator" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Validator\MediaExtensionValidator" class="App\Validator\MediaExtensionValidator" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Twig_ExtensionInterface.0.twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" abstract="true"/>
+    <service id=".instanceof.Twig\Extension\ExtensionInterface.0.twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -6096,6 +6140,18 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.a.laFVK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="categoryRepository" type="service" id="App\Repository\CategoryRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator..JzDQIR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="category" type="service" id=".errored..service_locator..JzDQIR.App\Entity\Category"/>
+      </argument>
+    </service>
     <service id=".service_locator.j9U_bzc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6120,9 +6176,18 @@
         <argument key="slider" type="service" id=".errored..service_locator.Pvx5wm_.App\Entity\Slider"/>
       </argument>
     </service>
-    <service id=".service_locator.gVkPBac" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.GEXp2bG" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="tarif" type="service" id=".errored..service_locator.GEXp2bG.App\Entity\CategoryHasSeason"/>
+      </argument>
+    </service>
+    <service id=".service_locator.lQ1TMvh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\Admin\AdminCategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\Admin\AdminCategoryController::edit" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\Admin\AdminCategoryController::index" type="service" id=".service_locator.a.laFVK"/>
         <argument key="App\Controller\Admin\AdminFaqController::delete" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminFaqController::edit" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminMediaController::delete" type="service" id=".service_locator.HjgqwGL"/>
@@ -6131,6 +6196,11 @@
         <argument key="App\Controller\Admin\AdminSeasonController::edit" type="service" id=".service_locator.ADeF0mv"/>
         <argument key="App\Controller\Admin\AdminSliderController::delete" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminSliderController::edit" type="service" id=".service_locator.Pvx5wm_"/>
+        <argument key="App\Controller\Admin\AdminTarifController::delete" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\AdminTarifController::edit" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\AdminCategoryController:delete" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\Admin\AdminCategoryController:edit" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\Admin\AdminCategoryController:index" type="service" id=".service_locator.a.laFVK"/>
         <argument key="App\Controller\Admin\AdminFaqController:delete" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminFaqController:edit" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminMediaController:delete" type="service" id=".service_locator.HjgqwGL"/>
@@ -6139,6 +6209,8 @@
         <argument key="App\Controller\Admin\AdminSeasonController:edit" type="service" id=".service_locator.ADeF0mv"/>
         <argument key="App\Controller\Admin\AdminSliderController:delete" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminSliderController:edit" type="service" id=".service_locator.Pvx5wm_"/>
+        <argument key="App\Controller\Admin\AdminTarifController:delete" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\AdminTarifController:edit" type="service" id=".service_locator.GEXp2bG"/>
       </argument>
     </service>
     <service id=".service_locator._G1LKqm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -6201,9 +6273,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.ZY1zaq_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.iD3592J" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\CategoryHasSeasonType" type="service" id="App\Form\CategoryHasSeasonType"/>
+        <argument key="App\Form\CategoryType" type="service" id="App\Form\CategoryType"/>
         <argument key="App\Form\FaqType" type="service" id="App\Form\FaqType"/>
         <argument key="App\Form\MediaType" type="service" id="App\Form\MediaType"/>
         <argument key="App\Form\SeasonType" type="service" id="App\Form\SeasonType"/>
@@ -6478,6 +6552,12 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminCategoryController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminCategoryController"/>
+      <argument>App\Controller\Admin\AdminCategoryController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
     <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminFaqController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Admin\AdminFaqController"/>
       <argument>App\Controller\Admin\AdminFaqController</argument>
@@ -6505,6 +6585,12 @@
     <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminSliderController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Admin\AdminSliderController"/>
       <argument>App\Controller\Admin\AdminSliderController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
+    <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminTarifController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminTarifController"/>
+      <argument>App\Controller\Admin\AdminTarifController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CDOTD6." method="withContext"/>
     </service>
@@ -6607,17 +6693,19 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.gVkPBac"/>
+      <argument type="service" id=".service_locator.lQ1TMvh"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.gVkPBac"/>
+      <argument type="service" id=".service_locator.lQ1TMvh"/>
     </service>
+    <service id=".errored..service_locator..JzDQIR.App\Entity\Category" class="App\Entity\Category"/>
     <service id=".errored..service_locator.j9U_bzc.App\Entity\Faq" class="App\Entity\Faq"/>
     <service id=".errored..service_locator.HjgqwGL.App\Entity\Media" class="App\Entity\Media"/>
     <service id=".errored..service_locator.ADeF0mv.App\Entity\Season" class="App\Entity\Season"/>
     <service id=".errored..service_locator.Pvx5wm_.App\Entity\Slider" class="App\Entity\Slider"/>
+    <service id=".errored..service_locator.GEXp2bG.App\Entity\CategoryHasSeason" class="App\Entity\CategoryHasSeason"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.9SP2Wcj"/>
       <argument type="collection">
@@ -7022,7 +7110,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" alias="vich_uploader.twig.extension.uploader" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.gVkPBac"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.lQ1TMvh"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

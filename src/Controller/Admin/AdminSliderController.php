@@ -26,12 +26,22 @@ class AdminSliderController extends AbstractController
     }
 
     /**
+     * @Route ("/Photos", name="Photos")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function Photos()
+    {
+        $sliders = $this->repository->findAll();
+        return $this->render('vitrine/photos.html.twig', compact('sliders'));
+
+    }
+    /**
      * @Route ("/admin/listeslider", name="listeSlider")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function listeslider(){ /* Méthode qui récupère l'ensemble des biens */
         $sliders = $this->repository->findAll();
-        return $this->render('admin/listeSlider/listeslider.html.twig', compact('sliders')); /*Compact renvoie un tableau*/
+        return $this->render('admin/listeslider/listeslider.html.twig', compact('sliders')); /*Compact renvoie un tableau*/
     }
 
     /**
@@ -81,6 +91,6 @@ class AdminSliderController extends AbstractController
             $this->em->remove($slider);
             $this->em->flush();
         }
-        return $this->redirectToRoute('listeslider');
+        return $this->redirectToRoute('listeSlider');
     }
 }

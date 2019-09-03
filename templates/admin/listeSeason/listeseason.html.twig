@@ -52,7 +52,7 @@
                                                 <form method="post" action="{{ path ('admin.season.delete', {id: season.id}) }}" onsubmit="return confirm('Supprimer cette saison ?')" style="margin-top: 5%;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ season.id) }}">
-                                                    <button class="btn btn-danger">Supprimer</button>
+                                                    <button {% if season.id == 1 %} style="display: none" {% endif %} class="btn btn-danger">Supprimer</button>
                                                 </form>
                                             </td>
                                         </tr>

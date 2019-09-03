@@ -65,16 +65,16 @@
 
 .faq .plus-minus-toggle.collapsed:after {
     transform: rotate(90deg);
-    background: darkgreen; /*Background de la croix en before*/
+    background: forestgreen; /*Background de la croix en before*/
 }
 
 .faq .plus-minus-toggle.collapsed:before {
     transform: rotate(180deg);
-    background: darkgreen; /*Background de la croix en before*/
+    background: forestgreen; /*Background de la croix en before*/
 }
 
 .faq .question {
-    color: darkgreen; /*Color de la question en before*/
+    color: forestgreen; /*Color de la question en before*/
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 800;

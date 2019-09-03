@@ -1,36 +1,42 @@
 {% extends ('base.html.twig') %}
 
 {% block stylesheets %}
+    {# MON CSS #}
     <link href="{{ asset ('assets/css/vitrine/photos.css') }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block main %}
 
-    <!-- Container for the image gallery -->
     <div class="container">
-        {% for slider in sliders %}
-        <!-- Full-width images with number text -->
-        <div class="mySlides">
-            <div class="numbertext">1 / 6</div>
-            <img src="{{ asset('assets/img/slider/' ~ slider.media) }}" style="width:100%">
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev text-white" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next text-white" onclick="plusSlides(1)">&#10095;</a>
-
-        <!-- Image text -->
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-
-        <!-- Thumbnail images -->
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="{{ asset('assets/img/slider/' ~ slider.media) }}" style="width:100%" onclick="currentSlide(1)" alt="{{ slider.title }}">
+        <div class="bd-example col-lg-8 offset-lg-2
+">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    {% for slider in sliders %}
+                        <div class="carousel-item {% if loop.index == 1 %} active {% endif %}" >
+                            <img src="{{ asset('assets/img/slider/' ~ slider.media) }}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="slidertitle">{{ slider.title }}</h5>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
             </div>
         </div>
-        {% endfor %}
     </div>
 {% endblock %}
 
@@ -66,4 +72,6 @@
         captionText.innerHTML = dots[slideIndex-1].alt;
         }
     </script>
+    {#Jquery#}
+
 {% endblock %}

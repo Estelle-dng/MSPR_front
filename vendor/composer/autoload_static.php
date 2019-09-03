@@ -37,6 +37,7 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
         ),
         'T' => 
         array (
+            'Twig\\Extensions\\' => 16,
             'Twig\\' => 5,
         ),
         'S' => 
@@ -173,6 +174,10 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
         'Vich\\UploaderBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/vich/uploader-bundle',
+        ),
+        'Twig\\Extensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/extensions/src',
         ),
         'Twig\\' => 
         array (
@@ -542,6 +547,10 @@ class ComposerStaticInit55c3b4c61b5520ea49d743dbbe8d6cb0
     public static $prefixesPsr0 = array (
         'T' => 
         array (
+            'Twig_Extensions_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/extensions/lib',
+            ),
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',

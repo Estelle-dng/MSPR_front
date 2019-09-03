@@ -34,11 +34,13 @@
                     <img src="{{ asset ('assets/img/logo-02.png') }}" alt="logo" class="img-fluid">
                 </div>
                 <div class="col-6 col-md-4 offset-md-7 text-center">
+                    {%  for season in seasons %}
                     <p class="text">Bienvenue au camping de la Jamonière à Mervent !
                         <br>
-                        Ouverture le 6 Avril 2019 !
-                        Jusqu’au 30 Septembre 2019
+                        Ouverture le {{ season.dateStart|localizeddate('none', 'none', null, null, 'dd MMMM Y')}} !
+                        Jusqu’au {{ season.dateEnd|localizeddate('none', 'none', null, null, 'dd MMMM Y')}}.
                     </p>
+                    {%  endfor %}
                 </div>
             </div>
         </div>

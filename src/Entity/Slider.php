@@ -22,12 +22,12 @@ class Slider
     private $title;
 
     /**
-     * @ORM\ManyToOne(targetEntity="user")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="sliders")
      */
     protected $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Media")
+     * @ORM\ManyToOne(targetEntity="Media", inversedBy="sliders")
      */
     protected $media;
 

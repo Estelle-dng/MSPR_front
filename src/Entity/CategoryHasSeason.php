@@ -38,6 +38,11 @@ class CategoryHasSeason
      */
     private $commandDetails;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name;
+
     public function __construct()
     {
         $this->commandDetails = new ArrayCollection();
@@ -107,4 +112,36 @@ class CategoryHasSeason
 
         return $this;
     }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSeason()
+    {
+        return $this->season;
+    }
+
+    /**
+     * @param mixed $season
+     * @return CategoryHasSeason
+     */
+    public function setSeason($season)
+    {
+        $this->season = $season;
+        return $this;
+    }
+
+
 }

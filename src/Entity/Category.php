@@ -33,10 +33,26 @@ class Category
      */
     private $spots;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $info;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Media", inversedBy="categories")
+     */
+    protected $media;
+
+
     public function __construct()
     {
         $this->CategorySeason = new ArrayCollection();
         $this->spots = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 
     public function getId(): ?int
@@ -117,4 +133,36 @@ class Category
 
         return $this;
     }
+
+    public function getInfo(): ?string
+    {
+        return $this->info;
+    }
+
+    public function setInfo(string $info): self
+    {
+        $this->info = $info;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMedia()
+    {
+        return $this->media;
+    }
+
+    /**
+     * @param mixed $media
+     * @return Category
+     */
+    public function setMedia($media)
+    {
+        $this->media = $media;
+        return $this;
+    }
+
+
 }
