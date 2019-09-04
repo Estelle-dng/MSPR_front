@@ -4120,3 +4120,12 @@ bcd4f2,::1,GET,http://localhost/camping_project/public/admin/listediscount,15675
 263b33,::1,GET,http://localhost/camping_project/public/admin/listediscount/1,1567598887,,200
 5e5645,::1,POST,http://localhost/camping_project/public/admin/listediscount/1,1567598895,,302
 40a20b,::1,GET,http://localhost/camping_project/public/admin/listediscount,1567598895,,200
+6e6fc3,::1,GET,http://localhost/camping_project/public/Accueil,1567603389,,200
+f0241a,::1,GET,http://localhost/camping_project/public/ChoixEmplacement,1567603391,,200
+20aa31,::1,GET,http://localhost/camping_project/public/admin/listeCategory/Article/2,1567603397,,200
+e1d86f,::1,GET,http://localhost/camping_project/public/admin/listeCategory/Article/1,1567603400,,200
+6dc260,::1,GET,http://localhost/camping_project/public/admin/listeCategory/Article/3,1567603404,,200
+96f2b5,::1,GET,http://localhost/camping_project/public/TarifsMobilHome,1567603767,,200
+dfd712,::1,GET,http://localhost/camping_project/public/TarifsMobilHome,1567605487,,200
+300122,::1,GET,http://localhost/camping_project/public/TarifsMobilHome,1567606279,,200
+d60ee5,::1,GET,http://localhost/camping_project/public/TarifsMobilHome,1567606370,,200

@@ -11,9 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Common\Persistence\ObjectManager;
 
-/**
- * @Route("admin/listeCategory")
- */
 class AdminCategoryController extends AbstractController
 {
 
@@ -35,7 +32,7 @@ class AdminCategoryController extends AbstractController
     }
 
     /**
-     * @Route ("/Article/{id}", name="Article")
+     * @Route ("admin/listeCategory/Article/{id}", name="Article")
      */
     public function Article($id)
     {
@@ -46,7 +43,7 @@ class AdminCategoryController extends AbstractController
     }
 
     /**
-     * @Route("/", name="listeCategory", methods={"GET"})
+     * @Route("admin/listeCategory", name="listeCategory", methods={"GET"})
      */
     public function index(CategoryRepository $categoryRepository): Response
     {
@@ -56,7 +53,7 @@ class AdminCategoryController extends AbstractController
     }
 
     /**
-     * @Route("/create", name="admin.category.create", methods={"GET","POST"})
+     * @Route("admin/listeCategory/create", name="admin.category.create", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -80,7 +77,7 @@ class AdminCategoryController extends AbstractController
 
 
     /**
-     * @Route("/{id}/edit", name="admin.category.edit", methods={"GET","POST"})
+     * @Route("admin/listeCategory/{id}/edit", name="admin.category.edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Category $category): Response
     {
@@ -100,7 +97,7 @@ class AdminCategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.category.delete", methods={"DELETE"})
+     * @Route("admin/listeCategory/{id}", name="admin.category.delete", methods={"DELETE"})
      */
     public function delete(Request $request, Category $category): Response
     {
