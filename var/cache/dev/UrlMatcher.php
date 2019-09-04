@@ -16,6 +16,8 @@ return [
         '/admin/listeCategory/ChoixEmplacement' => [[['_route' => 'Choix', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::Choixemplacement'], null, null, null, false, false, null]],
         '/admin/listeCategory' => [[['_route' => 'listeCategory', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/listeCategory/create' => [[['_route' => 'admin.category.create', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/listediscount' => [[['_route' => 'listeDiscount', '_controller' => 'App\\Controller\\Admin\\AdminDiscountController::listediscount'], null, null, null, false, false, null]],
+        '/admin/listediscount/create' => [[['_route' => 'admin.listediscount.create', '_controller' => 'App\\Controller\\Admin\\AdminDiscountController::create'], null, null, null, false, false, null]],
         '/admin/listefaq' => [[['_route' => 'listeFAQ', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::listefaq'], null, null, null, false, false, null]],
         '/admin/listefaq/create' => [[['_route' => 'admin.listefaq.create', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::create'], null, null, null, false, false, null]],
         '/FAQ' => [[['_route' => 'FAQ', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::Faq'], null, null, null, false, false, null]],
@@ -72,27 +74,30 @@ return [
                             .'|(*:244)'
                         .')'
                     .')'
+                    .'|discount/([^/]++)(?'
+                        .'|(*:274)'
+                    .')'
                     .'|faq/([^/]++)(?'
-                        .'|(*:269)'
+                        .'|(*:298)'
                     .')'
                     .'|media/([^/]++)(?'
-                        .'|(*:295)'
+                        .'|(*:324)'
                     .')'
                     .'|s(?'
                         .'|eason/([^/]++)(?'
-                            .'|(*:325)'
+                            .'|(*:354)'
                         .')'
                         .'|lider/([^/]++)(?'
-                            .'|(*:351)'
+                            .'|(*:380)'
                         .')'
                     .')'
                     .'|tarif/([^/]++)(?'
-                        .'|(*:378)'
+                        .'|(*:407)'
                     .')'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:417)'
-                    .'|setting/reset/([^/]++)(*:447)'
+                    .'|gister/confirm/([^/]++)(*:446)'
+                    .'|setting/reset/([^/]++)(*:476)'
                 .')'
             .')/?$}sDu',
     ],
@@ -107,28 +112,32 @@ return [
         212 => [[['_route' => 'Article', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::Article'], ['id'], null, null, false, true, null]],
         236 => [[['_route' => 'admin.category.edit', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         244 => [[['_route' => 'admin.category.delete', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        269 => [
+        274 => [
+            [['_route' => 'admin.discount.edit', '_controller' => 'App\\Controller\\Admin\\AdminDiscountController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+            [['_route' => 'admin.discount.delete', '_controller' => 'App\\Controller\\Admin\\AdminDiscountController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
+        ],
+        298 => [
             [['_route' => 'admin.faq.edit', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.faq.delete', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        295 => [
+        324 => [
             [['_route' => 'admin.media.delete', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [['_route' => 'admin.media.edit', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
         ],
-        325 => [
+        354 => [
             [['_route' => 'admin.season.edit', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.season.delete', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        351 => [
+        380 => [
             [['_route' => 'admin.slider.edit', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.slider.delete', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        378 => [
+        407 => [
             [['_route' => 'admin.tarif.edit', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.tarif.delete', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        417 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        447 => [
+        446 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        476 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

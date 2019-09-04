@@ -40,7 +40,7 @@ class AdminTarifController extends AbstractController
      */
     public function listetarif(){
         $tarifs = $this->repository->findAll();
-        return $this->render('admin/listeTarif/listetarif.html.twig',[
+        return $this->render('admin/listeTarif/listediscount.html.twig',[
             "tarifs" => $tarifs
         ]);
     }
@@ -58,7 +58,7 @@ class AdminTarifController extends AbstractController
             $this->em->flush();
             return $this->redirectToRoute('listeTarif');
         }
-        return $this->render('admin/listeTarif/createtarif.html.twig', [
+        return $this->render('admin/listeTarif/creatediscount.html.twig', [
             'tarif' => $tarif,
             'form' => $form->createView()
         ]);
@@ -77,7 +77,7 @@ class AdminTarifController extends AbstractController
             return $this->redirectToRoute('listeTarif');
         }
 
-        return $this->render('admin/listeTarif/edittarif.html.twig', [
+        return $this->render('admin/listeTarif/editdiscount.html.twig', [
             'tarif' => $tarif,
             'form' => $form->createView()
         ]);
