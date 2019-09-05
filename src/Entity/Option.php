@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OptionRepository")
+ * @ORM\Table(name="`Option`")
  */
 class Option
 {
@@ -27,6 +28,11 @@ class Option
      * @ORM\OneToMany(targetEntity="App\Entity\CommandDetailsHasOption", mappedBy="Options")
      */
     private $Option_CommandDetails_has_option;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $price;
 
     public function __construct()
     {
@@ -77,6 +83,18 @@ class Option
                 $optionCommandDetailsHasOption->setOptions(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPrice(): ?float
+    {
+        return $this->price;
+    }
+
+    public function setPrice(float $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }

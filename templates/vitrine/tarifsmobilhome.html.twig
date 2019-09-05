@@ -6,58 +6,12 @@
 
     {% block main %}
 
-<div class="tabs">
-    <div class="tab">
-        <input class="tab-radio" type="radio" id="tab-1" name="tab-group-1" checked>
-        <label class="tab-label" for="tab-1"><span class="word-recipe">
-      Recipe</span> 1</label>
 
-        <div class="tab-panel">
-            <div class="tab-content">
-                <h2>BLIBBLOB</h3>
-                    <p>Combine milk with vinegar in a medium bowl and set aside for 5 minutes to "sour".</p>
-                    <p>Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.</p>
-                    <p>Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.</p>
-                </h2>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="tab">
-        <input class="tab-radio" type="radio" id="tab-4" name="tab-group-1" checked>
-        <label class="tab-label" for="tab-4"><span class="word-recipe">Recipe</span> 4</label>
-
-        <div class="tab-panel">
-            <div class="tab-content">
-                <h2>Fluffy Pancakes</h3>
-                    <p>Combine milk with vinegar in a medium bowl and set aside for 5 minutes to "sour".</p>
-                    <p>Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into "soured" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone.</p>
-                    <p>Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side.</p>
-                </h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="tab">
-        <input class="tab-radio" type="radio" id="tab-5" name="tab-group-1">
-        <label class="tab-label" for="tab-5"><span class="word-recipe">Recipe</span> 5</label>
-
-        <div class="tab-panel">
-            <div class="tab-content">
-                <h2>Best Brownies</h2>
-                <p>Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan.</p>
-                <p>In a large saucepan, melt 1/2 cup butter. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, 1/2 cup flour, salt, and baking powder. Spread batter into prepared pan.</p>
-                <p>Bake in preheated oven for 25 to 30 minutes. Do not overcook.</p>
-                <p>To Make Frosting: Combine 3 tablespoons softened butter, 3 tablespoons cocoa, honey, 1 teaspoon vanilla extract, and 1 cup confectioners' sugar. Stir until smooth. Frost brownies while they are still warm.</p>
-            </div>
-        </div>
-    </div>
 
     {# TAB NAV #}
-        <div class="nav nav-pills border-success container">
+        <div class="container">
             <ul class="row">
-                <li class="col-2 m-1 active btn btn-success"><a data-toggle="pill" href="#home">Tarifs Haute Saison</a></li>
+                <li class="col-2 m-1 btn btn-success"><a data-toggle="pill" href="#home">Tarifs Haute Saison</a></li>
                 <li class="col-2 m-1 btn btn-success"><a data-toggle="pill" href="#menu1">Moyenne Saison</a></li>
                 <li class="col-2 m-1 btn btn-success"><a data-toggle="pill" href="#menu2">Basse saison</a></li>
                 <li class="col-4 m-1 color-light test-small saison">
@@ -68,12 +22,65 @@
             </ul>
         </div>
 
-        <div class="tab-content">
-            <div id="home" class="tab-pane fade-in active">
+        <div class="">
+            <div id="" class="">
+                <div class="container">
+                    <div class="row">
+                        <table class="col-md-12">
+                            <thead>
+                            <tr class="text-center">
+                                <th></th>
+                                <th scope="col" abbr="Deluxe">1 nuit</th>
+                                <th scope="col" abbr="Deluxe">2 nuits</th>
+                                <th scope="col" abbr="Deluxe">3 nuits</th>
+                                <th scope="col" abbr="Deluxe">4 nuits</th>
+                                <th scope="col" abbr="Deluxe">5 nuits</th>
+                                <th scope="col" abbr="Deluxe">6 nuits</th>
+                                <th scope="col" abbr="Deluxe">Semaine</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th scope="row">Frais de dossier</th>
+                                <td>20 €</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Taxe de séjour</th>
+                                <td>0,22€/nuit/pers</td>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Mobil-home Confort</th>
+                                <td>77€</td>
+                                <td>132€</td>
+                                <td>197€</td>
+                                <td>254€</td>
+                                <td>312€</td>
+                                <td>368€</td>
+                                <td>426€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mobil-home Confort Luxe</th>
+                                <td>91€</td>
+                                <td>159€</td>
+                                <td>232€</td>
+                                <td>305€</td>
+                                <td>374€</td>
+                                <td>442€</td>
+                                <td>511€</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="" class="">
 
                 <div class="container">
                     <div class="row">
-                        <table class="table1 col-md-12">
+                        <table class="col-md-12">
                             <thead>
                             <tr class="text-center">
                                 <th></th>
@@ -124,11 +131,11 @@
 
             </div>
 
-            <div id="menu1" class="tab-pane fade">
+            <div id="" class="e">
 
                 <div class="container">
                     <div class="row">
-                        <table class="table1 col-md-12">
+                        <table class="col-md-12">
                             <thead>
                             <tr class="text-center">
                                 <th></th>
@@ -176,90 +183,16 @@
                         </table>
                     </div>
                 </div>
-
-            </div>
-
-            <div id="menu2" class="tab-pane fade">
-
-                <div class="container">
-                    <div class="row">
-                        <table class="table1 col-md-12">
-                            <thead>
-                            <tr class="text-center">
-                                <th></th>
-                                <th scope="col" abbr="Deluxe">1 nuit</th>
-                                <th scope="col" abbr="Deluxe">2 nuits</th>
-                                <th scope="col" abbr="Deluxe">3 nuits</th>
-                                <th scope="col" abbr="Deluxe">4 nuits</th>
-                                <th scope="col" abbr="Deluxe">5 nuits</th>
-                                <th scope="col" abbr="Deluxe">6 nuits</th>
-                                <th scope="col" abbr="Deluxe">Semaine</th>
-                            </tr>
-                            </thead>
-                            <tfoot>
-                            <tr>
-                                <th scope="row">Frais de dossier</th>
-                                <td>20 €</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Taxe de séjour</th>
-                                <td>0,22€/nuit/pers</td>
-                            </tr>
-                            </tfoot>
-                            <tbody>
-                            <tr>
-                                <th scope="row">Mobil-home Confort</th>
-                                <td>77€</td>
-                                <td>132€</td>
-                                <td>197€</td>
-                                <td>254€</td>
-                                <td>312€</td>
-                                <td>368€</td>
-                                <td>426€</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Mobil-home Confort Luxe</th>
-                                <td>91€</td>
-                                <td>159€</td>
-                                <td>232€</td>
-                                <td>305€</td>
-                                <td>374€</td>
-                                <td>442€</td>
-                                <td>511€</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
             </div>
         </div>
-</div>
 
-        {#  FIN DU TAB NAV #}
 
+        {#  FIN DU TAB NAV #}{#
+#}
     {% endblock %}
 
     {% block javascripts %}
 
-        <script>
-            $("li").click(function(e) {
-            e.preventDefault();
-            $("li").removeClass("selected");
-            $(this).addClass("selected");
-            });
-        </script>
 
-
-        {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-            <script>
-                $( document ).ready(function()
-                {
-                    $('.faq li .question').click(function () {
-                        $(this).find('.plus-minus-toggle').toggleClass('collapsed');
-                        $(this).parent().toggleClass('active');
-                    });
-                });
-            </script>#}
 
     {% endblock %}
