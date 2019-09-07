@@ -1,72 +1,6 @@
 
-
-/*
-table.table1{
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.4em;
-    font-style: normal;
-    border-collapse:separate;
-}
-
-.table1 thead th{
-    padding:15px;
-    color:#fff;
-    text-shadow:1px 1px 1px #568F23;
-    border:1px solid #93CE37;
-    border-bottom:3px solid #9ED929;
-    background-color:#9DD929;
-    background:-webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(0.02, rgb(123,192,67)),
-            color-stop(0.51, rgb(139,198,66)),
-            color-stop(0.87, rgb(158,217,41))
-    );
-    background: -moz-linear-gradient(
-            center bottom,
-            rgb(123,192,67) 2%,
-            rgb(139,198,66) 51%,
-            rgb(158,217,41) 87%
-    );
-
-}
-
-.table1 thead th:empty{
-    background:transparent;
-    border:none;
-}
-
-.table1 tfoot td{
-    color: #9CD009;
-    font-size:14px;
-    text-align:center;
-    padding:10px 0px;
-    text-shadow:1px 1px 1px #444;
-}
-.table1 tfoot th{
-    color:#666;
-}
-
-.table1 tbody td{
-    padding:10px;
-    text-align:center;
-    background-color:#DEF3CA;
-    border: 2px solid #E7EFE0;
-    color:#666;
-    text-shadow:1px 1px 1px #fff;
-}
-
-.table1 tbody span.check::before{
-    content : url(../../img/logo-02.png)
-}
-
-.row{width:100%}
-*/
 .saison{
-    top: 10px;
+    top: 5px;
     color: #9FB1C1;
     list-style: none;
     font-size: xx-small;
@@ -79,3 +13,70 @@ table.table1{
 }
  td{text-align: center;}
 
+.nav-tabs {
+    border-bottom: 1px solid forestgreen;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -5px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: darkgreen;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid forestgreen;
+    border-bottom-color: transparent;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border-radius: 4px 4px 0 0;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav>li>a {
+    color: forestgreen;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+h4{color: #0A5524;}
+h5{color: forestgreen;}
+
+.tableau{overflow: auto;}
+
+@media screen and (max-width: 767px){
+    table{font-size: 10px;}
+}

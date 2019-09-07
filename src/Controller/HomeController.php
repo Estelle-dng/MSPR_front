@@ -26,4 +26,19 @@ class HomeController extends AbstractController
         return $this->render('vitrine/contact.html.twig');
     }
 
+    /**
+     * @Route ("/TarifsTente", name="TarifsTente")
+     */
+    public function Tariftente()
+    {
+        return $this->render('vitrine/tarifstentes.html.twig');
+    }
+
+    /**
+     * @Route ("/Inscription", name="Inscription")
+     */
+    public function Inscription()
+    {
+        return $this->render('vitrine/inscription.html.twig');
+    }
 }

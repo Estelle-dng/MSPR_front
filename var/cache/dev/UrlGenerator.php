@@ -57,6 +57,8 @@ return [
     'admin.tarif.delete' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminTarifController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/listetarif']], [], []],
     'Proximité' => [[], ['_controller' => 'App\\Controller\\HomeController::Proximite'], [], [['text', '/Proximité']], [], []],
     'Contact' => [[], ['_controller' => 'App\\Controller\\HomeController::Contact'], [], [['text', '/Contact']], [], []],
+    'TarifsTente' => [[], ['_controller' => 'App\\Controller\\HomeController::Tariftente'], [], [['text', '/TarifsTente']], [], []],
+    'Article.Inscription' => [[], ['_controller' => 'App\\Controller\\HomeController::Inscription'], [], [['text', '/article/Inscription']], [], []],
     'fos_user_security_login' => [[], ['_controller' => 'fos_user.security.controller:loginAction'], [], [['text', '/login']], [], []],
     'fos_user_security_check' => [[], ['_controller' => 'fos_user.security.controller:checkAction'], [], [['text', '/login_check']], [], []],
     'fos_user_security_logout' => [[], ['_controller' => 'fos_user.security.controller:logoutAction'], [], [['text', '/logout']], [], []],

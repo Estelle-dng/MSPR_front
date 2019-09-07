@@ -1,0 +1,100 @@
+{% extends ('base.html.twig') %}
+
+{% block stylesheets %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="{{ asset ('assets/css/vitrine/tarifsmobilhome.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+    {% block main %}
+
+        <div class="container">
+            <div role="tabpanel" class="tab-pane" id="menu2">
+                <div class="row tableau">
+                    <table class="col-md-12">
+                        <thead>
+                        <tr class="text-center">
+                            <th></th>
+                            <th scope="col" abbr="Deluxe">Haute saison</th>
+                            <th scope="col" abbr="Deluxe">Moyenne et basse saison</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th scope="row">Frais de dossier</th>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Taxe de séjour</th>
+                            <td>0,22€/nuit/pers</td>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="titresaison">Emplacement / Nuit</th>
+                            <td>16€</td>
+                            <td>14€</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <h4>Emplacement:</h4>
+                        <p>Valable pour 2 personnes (tente, caravane, camping-car)</p>
+                        <p>Pour + de 2 personnes moyenner 4€/pers./nuit supplémentaire</p>
+                        <p>3€ pour les enfants de 2 à 10 ans / gratuit pour les - de 2ans</p>
+                        <p class="saison">La taxe de séjour est perçue du 1er mai au 30 septembre;</p>
+                        <p class="saison">Elle est due par les personnes de plus de 18 ans, moyennant 0,22ct par
+                            nuit.</p>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <h4>Informations générales :</h4>
+                        <p>Les locations sont disponibles dès 12h et les départs sont prévus avant 12H</p>
+                        <p>Les visiteurs seront les bienvenus</p>
+                        <p>Ils seront sous la responsabilité des campeurs qu’ils visitent, si leur visite dure + de 2h ils doivent acquitter obligatoirement la redevance ‘visiteur’ de 3.00 € par personne à leur arrivée;</p>
+                        <p class="saison">Leur véhicule stationnera hors du camping.</p>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <h4>Services en options :</h4>
+                        <ul>
+                            <li>
+                                <h5>Raccordement électrique :</h5>
+                                <p>4€</p>
+                            </li>
+                            <li>
+                                <h5>Machine à laver :</h5>
+                                <p>4€ la tournée</p>
+                            </li>
+                            <li>
+                                <h5>Animal de compagnie : </h5>
+                                <p class="saison">(1 seul animal, vacciné et identifié)</p>
+                                <p>2€ / jour</p>
+                            </li>
+                            <li>
+                                <h5>Voiture supplémentaire : </h5>
+                                <p>2€ / jour</p>
+                            </li>
+                            <li>
+                                <h5>Location frigo/congélateur : </h5>
+                                <p>9€</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+
+    {% block javascripts %}
+
+        <script>
+            var url = document.location.toString();
+            if (url.match('#')) {
+                $('.showtab a[href=#' + url.split('#')[1] + ']').tab('show');
+            }</script>
+    {% endblock %}
