@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerBStWdch\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'BStWdch',
-    'container.build_id' => 'b6b3c7ce',
-    'container.build_time' => 1567871038,
+    'container.build_id' => '6702c9c9',
+    'container.build_time' => 1567873463,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerBStWdch');
