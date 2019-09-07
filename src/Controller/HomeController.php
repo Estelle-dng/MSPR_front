@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -40,5 +41,17 @@ class HomeController extends AbstractController
     public function Inscription()
     {
         return $this->render('vitrine/inscription.html.twig');
+    }
+
+    /**
+     * @Route ("/mesreservations", name="mesreservations")
+     */
+    public function mesreservations()
+    {
+        $user = $this->getUser();
+        return $this->render('vitrine/mesreservations.html.twig',
+            [
+                'user' => $user
+            ]);
     }
 }
