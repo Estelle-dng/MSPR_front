@@ -2,30 +2,32 @@
 
     {% block main %}
         <div class="container">
+
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
             <div class="row">
                 <div class="col-md-6 col-12">
 
                     <h1 class="bigtitle">NOUS CONTACTER</h1>
 
-                    <form>
-                        <div class="form-group">
-                            <label for="mail">Email</label>
-                            <input class="form-control" type="email" id="mail" name="mail" placeholder="Votre Email">
+                    <div id="contactForm">
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col">{{ form_row(form.firstname) }}</div>
+                            <div class="col">{{ form_row(form.lastname) }}</div>
                         </div>
+                        {{form_row(form.phone)}}
+                        {{form_row(form.email)}}
+                        {{ form_row(form.message, { 'attr': {'rows': '10'} }) }}
                         <div class="form-group">
-                            <label for="pseudo">Username</label>
-                            <input  class="form-control" type="text" id="pseudo" name="pseudo" placeholder="Votre nom">
+                            <button class="btn btn-success">Envoyer</button>
                         </div>
-                        <div class="form-group">
-                            <label for="titre">Titre du mail</label><br>
-                            <input class="form-control" type="text" id="titre" name="titre" placeholder="Titre de votre mail">
-                        </div>
-                        <div class="form-group">
-                            <label for="mailcontent">Contenu de votre Email</label><br>
-                            <textarea class="form-control" rows="5" id="mailcontent" name="mailcontent" placeholder="Ecriver votre demande/remarque" style="width: 100%;"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Envoyer</button>
-                    </form>
+                        {{ form_end(form) }}
+                    </div>
 
 
                 </div>
