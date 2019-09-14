@@ -39,3 +39,6 @@ services:
 
     app.form.registration:
         class: App\Form\RegistrationFormType
+
+    app.form.profile:
+        class: App\Form\ProfileFormType

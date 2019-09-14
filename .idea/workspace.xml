@@ -2,31 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161dd569-468a-45e1-8bc7-ccc04556801b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/ChangePassword/change_password.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Resetting/check_email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Resetting/email.txt.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Resetting/request.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Resetting/request_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Resetting/reset.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Resetting/reset_content.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ProfileFormType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/fos_user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/fos_user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vitrine/mesreservations.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/UrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/UrlGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/UrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/UrlMatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
