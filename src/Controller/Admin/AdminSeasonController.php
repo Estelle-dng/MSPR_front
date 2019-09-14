@@ -25,7 +25,7 @@ class AdminSeasonController extends AbstractController
     }
 
     /**
-     * @Route ("/Accueil", name="Accueil")
+     * @Route ("/", name="Accueil")
      */
 
     public function Accueil()

@@ -19,8 +19,8 @@ class AdminFaqController extends AbstractController
      */
     private $repository;
 
-    public function __construct(FaqRepository $repository, ObjectManager $em) /*Pour récupérer les biens j'ai besoin du repository*/
-    {
+    public function __construct(FaqRepository $repository, ObjectManager $em)
+    { /*Pour récupérer les biens j'ai besoin du repository*/
         $this->repository = $repository;
         $this->em=$em;
     }
