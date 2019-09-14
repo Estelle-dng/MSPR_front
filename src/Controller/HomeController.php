@@ -2,8 +2,12 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+use App\Entity\Contact;
+use App\Form\ContactType;
+use App\Notification\ContactNotification;
+use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -22,9 +26,21 @@ class HomeController extends AbstractController
     /**
      * @Route ("/Contact", name="Contact")
      */
-    public function Contact()
+    public function Contact(Request $request, ContactNotification $notification)
     {
-        return $this->render('vitrine/contact.html.twig');
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $notification->notify($contact);
+            $this->addFlash('success', 'Mail envoyé avec succès');
+            return $this->redirectToRoute('Contact');
+        }
+
+        return $this->render('vitrine/contact.html.twig',[
+            'form' =>$form->createView()
+        ]);
     }
 
     /**
@@ -41,17 +57,5 @@ class HomeController extends AbstractController
     public function Inscription()
     {
         return $this->render('vitrine/inscription.html.twig');
-    }
-
-    /**
-     * @Route ("/mesreservations", name="mesreservations")
-     */
-    public function mesreservations()
-    {
-        $user = $this->getUser();
-        return $this->render('vitrine/mesreservations.html.twig',
-            [
-                'user' => $user
-            ]);
     }
 }

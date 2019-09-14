@@ -52,37 +52,37 @@
                 </div>
 
             <div class="col-md-6 col-lg-3 divrecherche">
-                <button class="p-2 rechercher rounded button" type="submit" value="Submit"><i class="fas fa-search"></i>   CHERCHER</button>
+                <button class="p-2 rechercher rounded button" type="submit" value="Submit"><i class="fas fa-search"></i>CHERCHER</button>
             </div>
         </form>
     </div>
 </div>
 
 
-<div class="container">
-    <div class="row">
-        {% for spot in spots %}
-        <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-                <h3 class="thumbnailtitle">{{ spot.name }}</h3>
-                <div class="imgthumnail">
-                    <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}" alt="Nature">
-                </div>
-                <div class="caption">
-                    <p>
-                        {{ spot.info }}
-                    </p>
-                    <p>
-                        <a href="{{ path('Article', {'id': spot.id}) }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenan">
-                            Réserver dès maintenant
-                        </a>
-                    </p>
+    <div class="container">
+        <div class="row">
+            {% for spot in spots %}
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail">
+                    <h3 class="thumbnailtitle">{{ spot.name }}</h3>
+                    <div class="imgthumnail">
+                        <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}" alt="Nature">
+                    </div>
+                    <div class="caption">
+                        <p>
+                            {{ spot.info }}
+                        </p>
+                        <p>
+                            <a href="{{ path('Article', {'id': spot.id}) }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenant">
+                                Réserver dès maintenant
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
 
 {% endblock %}
 
@@ -122,3 +122,5 @@
 
     </script>
 {% endblock %}
+
+

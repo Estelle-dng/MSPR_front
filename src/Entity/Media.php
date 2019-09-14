@@ -5,16 +5,18 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
-use App\Validator\Constraints\MediaExtension;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\MediaRepository")
  * @ORM\Table(name="media")
  * @Vich\Uploadable()
+ * @UniqueEntity("filename")
+ * @UniqueEntity("nom")
  */
- /*@ORM\HasLifecycleCallbacks*/
+
 class Media {
     /**
      * @ORM\Id
@@ -22,7 +24,6 @@ class Media {
      * @ORM\GeneratedValue(strategy="UUID")
      */
     private $id;
-
 
     /**
      * @var string|null
@@ -38,7 +39,6 @@ class Media {
      * @Vich\UploadableField(mapping="slider_image", fileNameProperty="filename")
      */
     private $imageFile;
-
 
     /**
      * @Assert\NotBlank(message="model.media.error.empty",groups={"all"})
@@ -63,12 +63,10 @@ class Media {
      */
     private $categories;
 
-
     public function __toString()
     {
         return $this->filename;
     }
-
     public function __construct()
     {
         $this->createdAt = new \DateTime();
@@ -77,12 +75,10 @@ class Media {
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
-
     /**
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
-
     /**
      * @return mixed
      */
@@ -90,7 +86,6 @@ class Media {
     {
         return $this->id;
     }
-
     /**
      * @param mixed $id
      */
@@ -98,7 +93,6 @@ class Media {
     {
         $this->id = $id;
     }
-
     /**
      * @return string|null
      */
@@ -106,7 +100,6 @@ class Media {
     {
         return $this->filename;
     }
-
     /**
      * @param string|null $filename
      * @return Media
@@ -116,7 +109,6 @@ class Media {
         $this->filename = $filename;
         return $this;
     }
-
     /**
      * @return File|null
      */
@@ -124,7 +116,6 @@ class Media {
     {
         return $this->imageFile;
     }
-
     /**
      * @param File|null $imageFile
      * @return Media
@@ -137,8 +128,6 @@ class Media {
         }
         return $this;
     }
-
-
     /**
      * @return mixed
      */
@@ -146,7 +135,6 @@ class Media {
     {
         return $this->nom;
     }
-
     /**
      * @param mixed $nom
      */
@@ -154,7 +142,6 @@ class Media {
     {
         $this->nom = $nom;
     }
-
     /**
      * @return User
      */
@@ -162,7 +149,6 @@ class Media {
     {
         return $this->user;
     }
-
     /**
      * @param User $user
      */
@@ -170,31 +156,24 @@ class Media {
     {
         $this->user = $user;
     }
-
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
-
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
-
         return $this;
     }
-
     public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
-
     public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
-
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -202,7 +181,6 @@ class Media {
     {
         return $this->sliders;
     }
-
     /**
      * @param mixed $sliders
      * @return Media
@@ -212,7 +190,6 @@ class Media {
         $this->sliders = $sliders;
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -220,7 +197,6 @@ class Media {
     {
         return $this->category;
     }
-
     /**
      * @param mixed $category
      * @return Media
@@ -231,6 +207,23 @@ class Media {
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param mixed $categories
+     * @return Media
+     */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
+        return $this;
+    }
 
 
 }

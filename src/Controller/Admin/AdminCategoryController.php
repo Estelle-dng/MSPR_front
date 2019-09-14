@@ -14,8 +14,8 @@ use Doctrine\Common\Persistence\ObjectManager;
 class AdminCategoryController extends AbstractController
 {
 
-    public function __construct(CategoryRepository $repository, ObjectManager $em) /*Pour récupérer les biens j'ai besoin du repository*/
-    {
+    public function __construct(CategoryRepository $repository, ObjectManager $em)
+    { /*Pour récupérer les biens j'ai besoin du repository*/
         $this->repository = $repository;
         $this->em=$em;
     }
@@ -32,7 +32,7 @@ class AdminCategoryController extends AbstractController
     }
 
     /**
-     * @Route ("admin/listeCategory/Article/{id}", name="Article")
+     * @Route ("listeCategory/Article/{id}", name="Article")
      */
     public function Article($id)
     {
@@ -57,21 +57,21 @@ class AdminCategoryController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $category = new Category();
-        $form = $this->createForm(CategoryType::class, $category);
+        $category = new Category(); /* Crée une nouvelle entité Category */
+        $form = $this->createForm(CategoryType::class, $category); /* Crée le formulaire correspondant à l'entité */
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($category);
-            $entityManager->flush();
+        if ($form->isSubmitted() && $form->isValid()) { /* Si le formulaire est soumis et valide */
 
-            return $this->redirectToRoute('listeCategory');
+            $this->em->persist($category);// On enregistre l'entité créée avec persist
+            $this->em->flush();
+
+            return $this->redirectToRoute('listeCategory'); /* on retourne à la liste des Category*/
         }
 
         return $this->render('admin/listeCategory/new.html.twig', [
             'listeCategory' => $category,
-            'form' => $form->createView(),
+            'form' => $form->createView(), /* On crée la vue du formulaire que l'on nomme from*/
         ]);
     }
 
@@ -81,15 +81,15 @@ class AdminCategoryController extends AbstractController
      */
     public function edit(Request $request, Category $category): Response
     {
-        $form = $this->createForm(CategoryType::class, $category);
+        $form = $this->createForm(CategoryType::class, $category); /* Crée le form correspondant à l'entité */
         $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) { /* Si le form est envoyé et valide */
+            $this->em->flush();
+            $this->addFlash('success','Information modifiée avec succès');
+            /* Si l'update est un succes on affiche ce message */
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('listeCategory');
+            return $this->redirectToRoute('listeCategory'); /* retour à la liste des Category*/
         }
-
         return $this->render('admin/listeCategory/edit.html.twig', [
             'listeCategory' => $category,
             'form' => $form->createView(),
@@ -102,11 +102,11 @@ class AdminCategoryController extends AbstractController
     public function delete(Request $request, Category $category): Response
     {
         if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($category);
-            $entityManager->flush();
-        }
+            /* Ce système de token permet d'éviter la suppression d'une donnée par une personne mal intentionnée */
 
+            $this->em->remove($category);
+            $this->em->flush();
+        }
         return $this->redirectToRoute('listeCategory');
     }
 }
