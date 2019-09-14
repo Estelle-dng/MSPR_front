@@ -106,7 +106,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/Applications/MAMP/tmp/php</parameter>
+    <parameter key="session.save_path"></parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -333,7 +333,7 @@
       <parameter key="estelle.denage@gmail.com">estelle.denage@gmail.com</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.enabled">false</parameter>
-    <parameter key="fos_user.registration.form.type">FOS\UserBundle\Form\Type\RegistrationFormType</parameter>
+    <parameter key="fos_user.registration.form.type">App\Form\RegistrationFormType</parameter>
     <parameter key="fos_user.registration.form.name">fos_user_registration_form</parameter>
     <parameter key="fos_user.registration.form.validation_groups" type="collection">
       <parameter>Registration</parameter>
@@ -577,6 +577,9 @@
     <service id="App\Form\OptionType" class="App\Form\OptionType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -653,6 +656,9 @@
     </service>
     <service id="twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" autoconfigure="true">
       <tag name="twig.extension"/>
+    </service>
+    <service id="app.form.registration" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -994,6 +1000,7 @@
         <argument>App\Form\FaqType</argument>
         <argument>App\Form\MediaType</argument>
         <argument>App\Form\OptionType</argument>
+        <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\SeasonType</argument>
         <argument>App\Form\SliderType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -1198,7 +1205,7 @@
       <deprecated>The "%service_id%" service is deprecated since Symfony 4.2, use "identity_translator" instead.</deprecated>
     </service>
     <service id=".1_NativeFileSessionHandler~THVGIex" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>/Applications/MAMP/tmp/php</argument>
+      <argument></argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -1268,7 +1275,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.PX.a3tX"/>
+      <argument type="service" id=".service_locator.hCx4H1v"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2670,6 +2677,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4878,6 +4893,10 @@
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/Camping_Project/templates/bundles/FOSUserBundle</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
         <argument>/Applications/MAMP/htdocs/Camping_Project/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
       </call>
@@ -5063,6 +5082,10 @@
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/Camping_Project/vendor/symfony/debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/Camping_Project/templates/bundles/FOSUserBundle</argument>
+        <argument>FOSUser</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/Camping_Project/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
@@ -5635,7 +5658,7 @@
     <service id="fos_user.registration.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
       <argument type="service" id="form.factory"/>
       <argument>fos_user_registration_form</argument>
-      <argument>FOS\UserBundle\Form\Type\RegistrationFormType</argument>
+      <argument>App\Form\RegistrationFormType</argument>
       <argument>%fos_user.registration.form.validation_groups%</argument>
     </service>
     <service id="fos_user.registration.form.type" class="FOS\UserBundle\Form\Type\RegistrationFormType">
@@ -5985,6 +6008,8 @@
     <service id=".abstract.instanceof.App\Form\MediaType" class="App\Form\MediaType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\OptionType" class="App\Form\OptionType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\OptionType" class="App\Form\OptionType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SliderType" class="App\Form\SliderType" autowire="true" abstract="true"/>
@@ -6022,6 +6047,8 @@
     <service id=".instanceof.Twig_ExtensionInterface.0.twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" abstract="true"/>
     <service id=".instanceof.Twig\Extension\ExtensionInterface.0.twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.twig.extension.intl" class="Twig_Extensions_Extension_Intl" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.app.form.registration" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.app.form.registration" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -6353,7 +6380,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.PX.a3tX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.hCx4H1v" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CategoryHasSeasonType" type="service" id="App\Form\CategoryHasSeasonType"/>
@@ -6363,6 +6390,7 @@
         <argument key="App\Form\FaqType" type="service" id="App\Form\FaqType"/>
         <argument key="App\Form\MediaType" type="service" id="App\Form\MediaType"/>
         <argument key="App\Form\OptionType" type="service" id="App\Form\OptionType"/>
+        <argument key="App\Form\RegistrationFormType" type="service" id="app.form.registration"/>
         <argument key="App\Form\SeasonType" type="service" id="App\Form\SeasonType"/>
         <argument key="App\Form\SliderType" type="service" id="App\Form\SliderType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>

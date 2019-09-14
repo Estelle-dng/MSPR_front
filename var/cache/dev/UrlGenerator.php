@@ -59,6 +59,7 @@ return [
     'Contact' => [[], ['_controller' => 'App\\Controller\\HomeController::Contact'], [], [['text', '/Contact']], [], []],
     'TarifsTente' => [[], ['_controller' => 'App\\Controller\\HomeController::Tariftente'], [], [['text', '/TarifsTente']], [], []],
     'Inscription' => [[], ['_controller' => 'App\\Controller\\HomeController::Inscription'], [], [['text', '/Inscription']], [], []],
+    'MesReservations' => [[], ['_controller' => 'App\\Controller\\HomeController::mesreservations'], [], [['text', '/MesReservations']], [], []],
     'fos_user_security_login' => [[], ['_controller' => 'fos_user.security.controller:loginAction'], [], [['text', '/login']], [], []],
     'fos_user_security_check' => [[], ['_controller' => 'fos_user.security.controller:checkAction'], [], [['text', '/login_check']], [], []],
     'fos_user_security_logout' => [[], ['_controller' => 'fos_user.security.controller:logoutAction'], [], [['text', '/logout']], [], []],
