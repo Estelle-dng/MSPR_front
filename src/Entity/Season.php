@@ -37,7 +37,7 @@ class Season
     private $dateEnd;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\CategoryHasSeason", mappedBy="season")
+     * @ORM\OneToMany(targetEntity="App\Entity\CategoryHasSeason", mappedBy="season",  cascade={"remove"})
      */
     private $CategoryHasSeason;
 

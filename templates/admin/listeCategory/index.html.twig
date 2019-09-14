@@ -12,6 +12,7 @@
             <h1>
                Ajout / Modification catégorie de logement
             </h1>
+
             <ol class="breadcrumb">
                 <li><a href="{{ path ('Dashboard') }}"><em class="fa fa-dashboard"></em>Tableau de bord</a></li>
                 <li><a href="#">logement</a></li>
@@ -26,6 +27,11 @@
                     <div class="box">
                         <div class="box-header">
                             <h1>Ajout / Modification catégorie de logement</h1>
+                            {% for message in app.flashes('success') %}
+                                <div class="alert alert-success">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
                             <a href="{{ path ('admin.category.create')}}" class="btn btn-success"> Ajouter une catégorie </a>
                         </div>
                         <!-- /.box-header -->

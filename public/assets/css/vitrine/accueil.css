@@ -81,32 +81,25 @@ main{ /* BG DU MAIN AVEC LES CARRÉS ET L'IMAGE */
 /* MAIN - MAIN - MAIN - MAIN - MAIN */
 
 /* GESTION DES ARTICLES */
-
 .bigtitle{ /* GÈRE LES TITRES DES ARTICLES DU MAIN (INFOS GÉNÉRALES) */
     color: #0A5524;
     font-size: 21px;
     padding-left: 15px;
     margin-top: 30px;
 }
-
-.imgarticle{ /* ARRONI LES IMAGES DES ARTICLES DU MAIN */
-    border-radius: 5%;
-}
+.imgarticle{border-radius: 5%;} /* ARRONI LES IMAGES DES ARTICLES DU MAIN */
 
 .infos{ /* MET LES INFOS COMPLÉMENTAIRES EN PETIT ET ROSE */
     color: rgb(230, 186, 172);
     font-size: 14px;
     font-weight: bold;
 }
-
 .listinfo{margin-top: 20px;} /* ENCADRE L'ENSEMBLE DES INFOS LISTÉES */
-
 .cadreimg1{ /* CADRE IMAGE PECHEURS / INFOS GÉNÉRALES */
     height: 250px;
     position: absolute;
     text-align: right;
 }
-
 .gradient1{ /* GÈRE LE DÉGRADÉ SUPPERPOSÉ À L'IMAGE DES PECHEURS */
     padding: 3% 3% 0 0;
     height: 60px;
