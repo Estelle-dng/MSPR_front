@@ -115,11 +115,6 @@ class User extends BaseUser
         $this->faqs = new ArrayCollection();
     }
 
-    public function __toString()
-    {
-        return $this->birthdate;
-    }
-
     /**
      * @return mixed
      */

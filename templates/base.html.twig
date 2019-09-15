@@ -59,7 +59,7 @@
         <nav class="navbar navbar-expand-md navbar-dark gradientnavbar absolutenavbar textnav" id="mainNav">
 
             <a class="navbar-brand js-scroll-trigger"
-               href="#page-top">{#<img src="../public/assets/img/logo-02.png" alt="logo" class="img-fluid" style="height: 50px;">#}
+               href="{{ path('Accueil') }}">{#<img src="../public/assets/img/logo-02.png" alt="logo" class="img-fluid" style="height: 50px;">#}
                 Camping la Jamonière</a>
             <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -95,12 +95,14 @@
                     </li>
                     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-white" href="{{ path ('MesReservations') }}">Mon
+                            <a class="nav-link js-scroll-trigger text-white"
+                               href="{{ path ('fos_user_profile_show') }}">Mon
                                 profil</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-white" href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                            <a class="nav-link js-scroll-trigger text-white"
+                               href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
                         </li>
                     {% endif %}
                     <li class="nav-item">
@@ -115,7 +117,21 @@
     </header>
     {#/HEADER#}
 
-    {% block main %}{% endblock %}
+    {% block main %}
+        {#FOSUser message#}
+        {% if app.request.hasPreviousSession %}
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                    <div class="container">
+                        <div class="alert alert-success flash-{{ type }}">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        {% block fos_user_content %}{% endblock fos_user_content %}
+    {% endblock %}
 
 
     {#FOOTER#}

@@ -58,13 +58,4 @@ class HomeController extends AbstractController
         return $this->render('vitrine/inscription.html.twig');
     }
 
-    /**
-     * @Route ("/MesReservations", name="MesReservations")
-     */
-    public function mesreservations()
-    {
-        $user = $this->getUser();
-        return $this->render('vitrine/mesreservations.html.twig',[
-            'user' => $user]);
-    }
 }
