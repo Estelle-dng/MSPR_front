@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Category;
+use App\Entity\CategorySearch;
+use App\Form\CategorySearchType;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,11 +24,15 @@ class AdminCategoryController extends AbstractController
     /**
      * @Route ("/ChoixEmplacement", name="Choix")
      */
-    public function Choixemplacement()
+    public function Choixemplacement(Request $request)
     {
-        $spots = $this->repository->findAll();
+        $search = new CategorySearch();
+        $form = $this->createForm(CategorySearchType::class, $search);
+        $form->handleRequest($request);
+        $spots = $this->repository->findAll($search);
         return $this->render('reservation/choixemplacement.html.twig', [
-            'spots' => $spots
+            'spots' => $spots,
+            'form' => $form->createView()
         ]);
 
     }

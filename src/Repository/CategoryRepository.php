@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Category;
+use App\Entity\CategorySearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query;
 
 /**
  * @method Category|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,6 +19,16 @@ class CategoryRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Category::class);
+    }
+
+    /**
+     * @return Query
+     */
+    public function findVisibleQuery(CategorySearch $search) : Query {
+        $query = $this->findVisibleQuery();
+        if($search->getMinCapacity()){
+            $query = $query->where(category.)
+        }
     }
 
     // /**

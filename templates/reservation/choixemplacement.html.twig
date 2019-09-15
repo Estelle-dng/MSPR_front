@@ -12,6 +12,25 @@
     <div class="container mt-4">
         <h2 class="heading">Details</h2>
     </div>
+    {# filtre #}
+    <div class="jumbotron">
+        <div class="container">
+            {{ form_start(form) }}
+            <div class="form-row">
+                <div class="col">
+                    {{ form_row(form.category) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.minCapacity) }}
+                </div>
+                <div class="col">
+                    <button class="btn btn-success">Rechercher</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+    {# filtre #}
     <div class="container-fluid mt-md-5 mt-2">
         <form class="row p-5">
 
