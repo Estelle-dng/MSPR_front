@@ -1,0 +1,61 @@
+{% extends ('base.html.twig') %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <h1 class="col text-success">Nos emplacements :</h1>
+        </div>
+        <div class="jumbotron">
+            {{ form_start(search_form) }}
+            <div class="form-row align-items-end">
+                <div class="col">
+                    {{ form_row(search_form.typeCategory) }}
+                </div>
+                <div class="col">
+                    {{ form_row(search_form.minCapacity) }}
+                </div>
+                <div class="col form-group">
+                    <button type="submit" class="btn btn-success">Chercher</button>
+                </div>
+            </div>
+            {{ form_end(search_form) }}
+        </div>
+    </div>
+
+    {% if app.request.method == 'POST' %}
+        <div class="container">
+        {% if categories |length == 0 %}
+            <h2>Aucun résultat pour votre recherche</h2>
+        {% else %}
+            {% for category in categories %}
+                <div class="col-md-4 card">
+                    <div class="row p-2">
+                        <div>
+                            <h2>{{ category.name }}</h2>
+                            <h2>{{ category.capacity }} personnes</h2>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <div class="imgthumnail p-2">
+                            <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ category.media) }}" alt="Nature">
+                        </div>
+                        <div class="caption">
+                            <p>
+                                {{ category.info }}
+                            </p>
+                            <p>
+                                <a href="{{ path('Article', {'id': category.id}) }}" class="btn btn-xs btn-success"
+                                   role="button" title="Réserver dès maintenant">
+                                    Réserver dès maintenant
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    {% endif %}
+
+
+{% endblock %}

@@ -195,6 +195,8 @@ footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
     text-decoration: none;
 }
 
+.buttonresa:hover{color: rgb(230, 186, 172)}
+
 @media screen and (max-width: 1000px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
     .buttonresa{font-size: 8px;}
     .buttonresa:hover{color: white;}

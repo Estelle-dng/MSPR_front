@@ -6,6 +6,7 @@ use App\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
+
 /**
  * @method Category|null find($id, $lockMode = null, $lockVersion = null)
  * @method Category|null findOneBy(array $criteria, array $orderBy = null)
@@ -18,6 +19,22 @@ class CategoryRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Category::class);
     }
+
+
+   public function searchCategory($criteria = null)  {
+
+        $query = $this->createQueryBuilder('c');
+            if ($criteria !== null) {
+                $query->andWhere('c.name = :categoryName')
+                    ->setParameter("categoryName", $criteria['typeCategory']->getName())
+                    ->andWhere('c.capacity >= :capacity')
+                    ->setParameter('capacity', $criteria['minCapacity']->getCapacity())
+                    ;
+            }
+            return $query->getQuery()->getResult();
+    }
+
+
 
     // /**
     //  * @return Category[] Returns an array of Category objects
