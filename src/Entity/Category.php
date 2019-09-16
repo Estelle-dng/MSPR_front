@@ -45,6 +45,11 @@ class Category
      */
     protected $media;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $capacity;
+
 
     public function __construct()
     {
@@ -163,6 +168,18 @@ class Category
     public function setMedia($media)
     {
         $this->media = $media;
+        return $this;
+    }
+
+    public function getCapacity(): ?int
+    {
+        return $this->capacity;
+    }
+
+    public function setCapacity(int $capacity): self
+    {
+        $this->capacity = $capacity;
+
         return $this;
     }
 

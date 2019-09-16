@@ -3,10 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Category;
-use App\Entity\CategorySearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
-use Doctrine\ORM\Query;
+
 
 /**
  * @method Category|null find($id, $lockMode = null, $lockVersion = null)
@@ -21,15 +20,21 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
-    /**
-     * @return Query
-     */
-    public function findVisibleQuery(CategorySearch $search) : Query {
-        $query = $this->findVisibleQuery();
-        if($search->getMinCapacity()){
-            $query = $query->where(category.)
-        }
+
+   public function searchCategory($criteria = null)  {
+
+        $query = $this->createQueryBuilder('c');
+            if ($criteria !== null) {
+                $query->andWhere('c.name = :categoryName')
+                    ->setParameter("categoryName", $criteria['typeCategory']->getName())
+                    ->andWhere('c.capacity >= :capacity')
+                    ->setParameter('capacity', $criteria['minCapacity']->getCapacity())
+                    ;
+            }
+            return $query->getQuery()->getResult();
     }
+
+
 
     // /**
     //  * @return Category[] Returns an array of Category objects

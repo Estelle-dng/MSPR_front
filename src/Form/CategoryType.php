@@ -3,18 +3,22 @@
 namespace App\Form;
 
 use App\Entity\Category;
+use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
 
 class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', null, [ 'label' => "Nom"])
+            ->add('name', TextType::class, [ 'label' => "Nom"])
             ->add('info')
             ->add('media')
+            ->add('capacity',null, [ 'label' => "Capacité d'accueil"])
         ;
     }
 
@@ -23,10 +27,5 @@ class CategoryType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Category::class,
         ]);
-    }
-
-    public function getBlockPrefix()
-    {
-        return ' ';
     }
 }
