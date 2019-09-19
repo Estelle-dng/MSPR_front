@@ -41,12 +41,12 @@ class Reservation
     private $is_cancelled;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="Reservation")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="Reservation", fetch="EAGER")
      */
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\CommandDetails", inversedBy="Reservation")
+     * @ORM\ManyToOne(targetEntity="App\Entity\CommandDetails", inversedBy="Reservation", fetch="EAGER")
      * @ORM\JoinColumn(nullable=false)
      */
     private $commandDetails;

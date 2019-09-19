@@ -20,8 +20,6 @@ return [
         '/admin/listefaq' => [[['_route' => 'listeFAQ', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::listefaq'], null, null, null, false, false, null]],
         '/admin/listefaq/create' => [[['_route' => 'admin.listefaq.create', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::create'], null, null, null, false, false, null]],
         '/FAQ' => [[['_route' => 'FAQ', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::Faq'], null, null, null, false, false, null]],
-        '/Admin/TableauDeBord' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\Admin\\AdminHomeController::Dashboard'], null, null, null, false, false, null]],
-        '/Admin/ListeRéservation' => [[['_route' => 'Listeresa', '_controller' => 'App\\Controller\\Admin\\AdminHomeController::ListeResa'], null, null, null, false, false, null]],
         '/admin/listemedia' => [[['_route' => 'listeMedia', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::listemedia'], null, null, null, false, false, null]],
         '/admin/listemedia/create' => [[['_route' => 'admin.listemedia.create', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::create'], null, null, null, false, false, null]],
         '/admin/listeOption' => [[['_route' => 'listeOption', '_controller' => 'App\\Controller\\Admin\\AdminOptionController::index'], null, ['GET' => 0], null, false, false, null]],
@@ -35,11 +33,12 @@ return [
         '/TarifsMobilHome' => [[['_route' => 'TarifsMobilHome', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::Tarifsmobilhome'], null, null, null, false, false, null]],
         '/admin/listetarif' => [[['_route' => 'listeTarif', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::listetarif'], null, null, null, false, false, null]],
         '/admin/listetarif/create' => [[['_route' => 'admin.listetarif.create', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::create'], null, null, null, false, false, null]],
+        '/admin/Dashboard' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\Admin\\HomeController::Dashboard'], null, null, null, false, false, null]],
+        '/admin/ListeReservation' => [[['_route' => 'ListeResa', '_controller' => 'App\\Controller\\Admin\\HomeController::ListResa'], null, null, null, false, false, null]],
         '/Proximité' => [[['_route' => 'Proximité', '_controller' => 'App\\Controller\\HomeController::Proximite'], null, null, null, false, false, null]],
         '/Contact' => [[['_route' => 'Contact', '_controller' => 'App\\Controller\\HomeController::Contact'], null, null, null, false, false, null]],
         '/TarifsTente' => [[['_route' => 'TarifsTente', '_controller' => 'App\\Controller\\HomeController::Tariftente'], null, null, null, false, false, null]],
         '/Inscription' => [[['_route' => 'Inscription', '_controller' => 'App\\Controller\\HomeController::Inscription'], null, null, null, false, false, null]],
-        '/recherche' => [[['_route' => 'recherche', '_controller' => 'App\\Controller\\SearchController::searchCategory'], null, null, null, false, false, null]],
         '/Reserver' => [[['_route' => 'Reserver', '_controller' => 'App\\Controller\\SearchController::Choixemplacement'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'fos_user_security_login', '_controller' => 'fos_user.security.controller:loginAction'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login_check' => [[['_route' => 'fos_user_security_check', '_controller' => 'fos_user.security.controller:checkAction'], null, ['POST' => 0], null, false, false, null]],
@@ -98,13 +97,17 @@ return [
                             .'|(*:431)'
                         .')'
                     .')'
-                    .'|tarif/([^/]++)(?'
-                        .'|(*:458)'
+                    .'|t(?'
+                        .'|arif/([^/]++)(?'
+                            .'|(*:461)'
+                        .')'
+                        .'|Reservation/([^/]++)(*:490)'
                     .')'
+                    .'|Reservation/([^/]++)(*:519)'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:497)'
-                    .'|setting/reset/([^/]++)(*:527)'
+                    .'|gister/confirm/([^/]++)(*:557)'
+                    .'|setting/reset/([^/]++)(*:587)'
                 .')'
             .')/?$}sDu',
     ],
@@ -141,12 +144,14 @@ return [
             [['_route' => 'admin.slider.edit', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.slider.delete', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        458 => [
+        461 => [
             [['_route' => 'admin.tarif.edit', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.tarif.delete', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        497 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        527 => [
+        490 => [[['_route' => 'admin.resa.edit', '_controller' => 'App\\Controller\\Admin\\HomeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        519 => [[['_route' => 'admin.resa.delete', '_controller' => 'App\\Controller\\Admin\\HomeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        557 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        587 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

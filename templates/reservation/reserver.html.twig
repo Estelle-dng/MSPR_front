@@ -1,13 +1,14 @@
 {% extends ('base.html.twig') %}
 
 {% block stylesheets %}
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
     <link href="{{ asset ('assets/css/reservation/reserver.css') }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 
 {% block main %}
-<!--  Details -->
+    <!--  Details -->
 
     {#vrai filtre#}
     <div class="container">
@@ -15,97 +16,66 @@
             <h1 class="col text-success">Nos emplacements :</h1>
         </div>
         <div class="jumbotron">
-            {{ form_start(search_form) }}
+            {{ form_start(form) }}
             <div class="form-row align-items-end">
 
                 {# faux filtre #}
-                <div class=" form-group controls col-md-6 col-lg-3">
+                {#<div class=" form-group controls col-md-6 col-lg-3">
                     <label for="reservation" class="label-date ml-2">
                         <i class="fa fa-calendar"></i> Date de séjour
                     </label>
-                    {#<i class="fa fa-sort flechedaterange"></i>#}
+                    #}{#<i class="fa fa-sort flechedaterange"></i>#}{#
                     <input type="text" class="floatLabel rounded border-light w-100" id="reservation" value="<?php echo date('Y-m-d');?>">
-                </div>
+                </div>#}
                 {# faux filtre#}
 
-                <div class="col">
-                    {{ form_row(search_form.typeCategory) }}
+                <div class="offset-md-2 col">
+                    {{ form_row(form.Name) }}
                 </div>
                 <div class="col">
-                    {{ form_row(search_form.minCapacity) }}
+                    {{ form_row(form.minCapacity) }}
                 </div>
                 <div class="col form-group">
                     <button type="submit" class="btn btn-success">Chercher</button>
                 </div>
             </div>
-            {{ form_end(search_form) }}
+            {{ form_end(form) }}
         </div>
     </div>
-
-    {% if app.request.method == 'POST' %}
-        <div class="container">
-            {% if categories |length == 0 %}
-                <h2>Aucun résultat pour votre recherche</h2>
-            {% else %}
-                {% for category in categories %}
-                    <div class="col-md-4 card">
-                        <div class="row p-2">
-                            <div>
-                                <h2>{{ category.name }}</h2>
-                                <h2>{{ category.capacity }} personnes</h2>
-                            </div>
-                        </div>
-                        <div class="row p-2">
-                            <div>
-                                <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ category.media) }}" alt="Nature">
-                            </div>
-                            <div class="caption">
-                                <p>
-                                    {{ category.info }}
-                                </p>
-                                <p>
-                                    <a href="{{ path('Article', {'id': category.id}) }}" class="btn btn-xs btn-success"
-                                       role="button" title="Réserver dès maintenant">
-                                        Réserver dès maintenant
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        </div>
-    {% endif %}
-    {#vrai filtre #}
-
-{# les emplacements #}
     <div class="container">
         <div class="row mt-4">
             <h1 class="heading">Tout les emplacements</h1>
         </div>
-        <div class="row">
-            {% for spot in spots %}
-            <div class="col-sm-4 col-md-4">
-                <div class="thumbnail">
-                    <h3 class="thumbnailtitle">{{ spot.name }}</h3>
-                    <div>
-                        <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}" alt="Nature">
-                    </div>
-                    <div class="caption">
-                        <p>
-                            {{ spot.info }}
-                        </p>
-                        <p>
-                            <a href="{{ path('Article', {'id': spot.id}) }}" class="btn btn-xs btn-success" role="button" title="Réserver dès maintenant">
-                                Réserver dès maintenant
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
     </div>
+        <div class="container">
+            <div class="row">
+                {% for spot in spots %}
+                    <div class="col-md-4 card m-1">
+                        <div class="row">
+                            <div>
+                                <h2 class="thumbnailtitle">{{ spot.name }}</h2>
+                                <h6 class="text-success">{{ spot.capacity }} personnes</h6>
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}" alt="Nature">
+                            </div>
+                            <div class="caption">
+                                <p>{{ spot.info }}</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-xs btn-success" role="button"
+                                    title="Réserver dès maintenant">
+                                <a href="{{ path('Article', {'id': spot.id}) }}">Réserver dès maintenant</a>
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {#vrai filtre #}
+
+
     {# tout les emplacements #}
 {% endblock %}
 
@@ -115,22 +85,23 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script>
-        (function($){
-            function floatLabel(inputType){
-                $(inputType).each(function(){
+        (function ($) {
+            function floatLabel(inputType) {
+                $(inputType).each(function () {
                     var $this = $(this);
                     // on focus add cladd active to label
-                    $this.focus(function(){
+                    $this.focus(function () {
                         $this.next().addClass("active");
                     });
                     //on blur check field and remove class if needed
-                    $this.blur(function(){
-                        if($this.val() === '' || $this.val() === 'blank'){
+                    $this.blur(function () {
+                        if ($this.val() === '' || $this.val() === 'blank') {
                             $this.next().removeClass();
                         }
                     });
                 });
             }
+
             // just add a class of "floatLabel to the input field!"
             floatLabel(".floatLabel");
         })(jQuery);

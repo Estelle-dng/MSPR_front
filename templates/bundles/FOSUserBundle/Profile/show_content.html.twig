@@ -3,12 +3,24 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="jumbotron">
-                        <h4>Hello, world!</h4>
-                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <h4>Mes réservations</h4>
+                        <p class="lead">Ici vous trouverez vos réservations. Attention, toute anulation est irréversible.</p>
                         <hr class="my-4">
-                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                        {% for resa in user.reservation %}
+                        <p>
+                            {{ resa.commandDetails.categoryHasSeason.name}}
+                        </p>
+                        <p>{{ resa.reservationStart | date }}</p>
+                        <p>{{ resa.reservationEnd | date }}</p>
+                        <h5>Prix total : {{ resa.totalPrice }} €</h5>
                         <a class="btn btn-success" href="#" role="button">Télécharger le PDF</a>
                         <a class="btn btn-danger" href="#" role="button">Annuler la réservation</a>
+                        <form method="post" action="{{ path ('resa.annuation', {id: resa.id}) }}" onsubmit="return confirm('MODIFIER ?')" style="margin-top: 5px;">
+                            <input type="hidden" name="_method" value="SUBMIT">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ resa.id) }}">
+                            <button class="btn btn-danger btn-xs">EDIT</button>
+                        </form>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="offset-md-1 col-md-3">

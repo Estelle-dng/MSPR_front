@@ -1,7 +1,5 @@
 {% extends ('baseAdmin.html.twig') %}
 
-{% block stylesheets %}
-{% endblock %}
 
     {% block main %}
         <!-- Content Wrapper. Contains page content -->
@@ -9,39 +7,96 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Ton titre de boubou
-                    <small>On écrit des infos comme une boubou</small>
+                    Bonjour Madé
+                    <small>Voici ton tableau de bord</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
-                    <li><a href="#">Chemin</a></li>
-                    <li class="active">Plus loin le chemin</li>
+                    <li class="active">Tableau de bord</li>
                 </ol>
             </section>
 
             <!-- Main content -->
             <section class="content">
-                <div class="callout callout-info">
-                    <h4>Olala</h4>
-
-                    <p>Tu peux utiliser ça comme base c'est cool</p>
+                <div class="callout callout-success">
+                    <h4 class="text-white">Ici se trouvent les explications sur comment gérer le site</h4>
                 </div>
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Un autre titre de boubou</h3>
+                        <h3 class="box-title">Pour rajouter une image ou que ce soit dans le site tu dois d'abord l'ajouter dans
+                            <a href="{{ path ('listeMedia') }}">ta banque d'images.</a></h3>
                     </div>
                     <div class="box-body">
-                        Kamoulox
+                        Puis tu pourras aller l'ajouter dans <a href="{{ path ('listeSlider') }}">ton carousel</a> de photos ou
+                        <a href="{{ path ('listeCategory') }}">tes logements</a>.
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        Un footer pour jouer au foot
+                        Attention, si tu supprimes une image dans la banque d'images elle sera supprimée du slider et du logement où tu l'a utilisée.
                     </div>
                     <!-- /.box-footer-->
                 </div>
                 <!-- /.box -->
-
+                <!-- Default box -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Attention, tout les ans tu devras mettre à jour tes dates d'ouvertures et de fermeture affichées sur la page d'accueil.</h3>
+                    </div>
+                    <div class="box-body">
+                        Pour cela tu devras aller dans la <a href="{{ path ('listeSeason') }}">gestion de tes saisons</a> et remplir le premier champ aux dates que tu auras choisies.
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        Cette page te permettra aussi de mettre à jour tes dates de haute, moyenne et basse saison si tu le souhaites.
+                    </div>
+                    <!-- /.box-footer-->
+                </div>
+                <!-- /.box -->
+                <!-- Default box -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Tu as un formulaire de contact sur ton site qui de transmettra les questions des utilisateurs sur campinglajamoniere@gmail.com</h3>
+                    </div>
+                    <div class="box-body">
+                        Si une question est récurente n'hésite pas à la rajouter à la <a href="{{ path ('listeFAQ') }}">page F.A.Q</a> en en créant une nouvelle !
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                    </div>
+                    <!-- /.box-footer-->
+                </div>
+                <!-- /.box -->
+                <!-- Default box -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Tu peux aussi voir qui a fait une <a href="{{ path ('ListeResa') }}">demande de réservation</a> et voir si elle a été annulée</h3>
+                    </div>
+                    <div class="box-body">
+                        <p>les informations données te permettrons d'entrer en contact avec le client et d'accepter ou non auprés de lui la demande</p>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                    </div>
+                    <!-- /.box-footer-->
+                </div>
+                <!-- /.box -->
+                <!-- Default box -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Pour finir, tu as différentes page te permettant de <a href="{{ path ('listeTarif') }}">gérer tes tarifs</a></h3>
+                    </div>
+                    <div class="box-body">
+                        La page des <a href="{{ path ('listeOption') }}">options</a> (campeur supplémentaire, chien, raccordement EDF,..), la page des
+                        <a href="{{ path ('listeTarif') }}">tarifs à la journée</a> qui donneront le prix à la nuit selon les saisons et les logements, et
+                        <a href="{{ path ('listeDiscount') }}">la page des réductions</a> à appliquer selon si la personne reste 2 nuits ou 1 semaine !
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                    </div>
+                    <!-- /.box-footer-->
+                </div>
+                <!-- /.box -->
             </section>
             <!-- /.content -->
         </div>
@@ -49,5 +104,3 @@
 
     {% endblock %}
 
-{% block javascripts %}
-{% endblock %}

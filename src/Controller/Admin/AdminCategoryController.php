@@ -35,7 +35,7 @@ class AdminCategoryController extends AbstractController
     /**
      * @Route("admin/listeCategory", name="listeCategory", methods={"GET"})
      */
-    public function index(CategoryRepository $categoryRepository, Request $request): Response
+    public function index(CategoryRepository $categoryRepository): Response
     {
 
         return $this->render('admin/listeCategory/index.html.twig', [

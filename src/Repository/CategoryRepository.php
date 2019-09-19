@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Category;
+use App\Entity\CategorySearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+
 
 
 /**
@@ -21,18 +23,24 @@ class CategoryRepository extends ServiceEntityRepository
     }
 
 
-   public function searchCategory($criteria = null)  {
+    public function findByFilter(CategorySearch $search)
+    {
+        $qb = $this->createQueryBuilder('c');
 
-        $query = $this->createQueryBuilder('c');
-            if ($criteria !== null) {
-                $query->andWhere('c.name = :categoryName')
-                    ->setParameter("categoryName", $criteria['typeCategory']->getName())
-                    ->andWhere('c.capacity >= :capacity')
-                    ->setParameter('capacity', $criteria['minCapacity']->getCapacity())
-                    ;
-            }
-            return $query->getQuery()->getResult();
+        if ($search->getMinCapacity())
+        {
+            $qb->andWhere('c.capacity >= :mincapacity')
+                ->setParameter('mincapacity', $search->getMinCapacity());
+        }
+        if ($search->getName())
+        {
+            $qb->andWhere('c.name = :name')
+                ->setParameter('name', $search->getName());
+        }
+
+        return $qb->getQuery()->getResult();
     }
+
 
 
 
