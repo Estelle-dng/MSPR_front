@@ -22,11 +22,11 @@ class Reservation
     /**
      * @ORM\Column(type="date")
      */
-    private $reservation_start;
+    public $reservation_start;
 
     /**
      * @ORM\Column(type="date")
-     * @Assert\Expression("value >= this.dateStart")
+     * @Assert\Expression("value >= this.reservation_start")
      */
     private $reservation_end;
 

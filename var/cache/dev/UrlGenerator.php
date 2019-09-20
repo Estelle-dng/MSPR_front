@@ -56,6 +56,7 @@ return [
     'ListeResa' => [[], ['_controller' => 'App\\Controller\\Admin\\HomeController::ListResa'], [], [['text', '/admin/ListeReservation']], [], []],
     'admin.resa.edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\HomeController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/listetReservation']], [], []],
     'admin.resa.delete' => [['id'], ['_controller' => 'App\\Controller\\Admin\\HomeController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/listeReservation']], [], []],
+    'resa.annulation' => [['id'], ['_controller' => 'App\\Controller\\Admin\\HomeController::Annulation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/annulerReservation']], [], []],
     'Proximité' => [[], ['_controller' => 'App\\Controller\\HomeController::Proximite'], [], [['text', '/Proximité']], [], []],
     'Contact' => [[], ['_controller' => 'App\\Controller\\HomeController::Contact'], [], [['text', '/Contact']], [], []],
     'TarifsTente' => [[], ['_controller' => 'App\\Controller\\HomeController::Tariftente'], [], [['text', '/TarifsTente']], [], []],

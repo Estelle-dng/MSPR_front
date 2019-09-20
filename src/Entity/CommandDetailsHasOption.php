@@ -24,9 +24,9 @@ class CommandDetailsHasOption
     private $price;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Option", inversedBy="Option_CommandDetails_has_option")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Option", inversedBy="Option_CommandDetails_has_option", fetch="EAGER")
      */
-    private $Options;
+    public $Options;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\CommandDetails", mappedBy="commandDetailsHasOption")

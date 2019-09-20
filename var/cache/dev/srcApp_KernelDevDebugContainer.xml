@@ -106,7 +106,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path"></parameter>
+    <parameter key="session.save_path">/Applications/MAMP/tmp/php</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -553,6 +553,7 @@
     <service id="App\Controller\Admin\HomeController" class="App\Controller\Admin\HomeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\HomeController"/>
       </call>
@@ -1243,7 +1244,7 @@
       <deprecated>The "%service_id%" service is deprecated since Symfony 4.2, use "identity_translator" instead.</deprecated>
     </service>
     <service id=".1_NativeFileSessionHandler~cNDz.4o" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument></argument>
+      <argument>/Applications/MAMP/tmp/php</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -2715,14 +2716,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -6344,7 +6337,7 @@
         <argument key="notification" type="service" id="App\Notification\ContactNotification"/>
       </argument>
     </service>
-    <service id=".service_locator.cp0aHMx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.7_U.zJi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\AdminCategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
@@ -6365,6 +6358,7 @@
         <argument key="App\Controller\Admin\AdminSliderController::edit" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminTarifController::delete" type="service" id=".service_locator.GEXp2bG"/>
         <argument key="App\Controller\Admin\AdminTarifController::edit" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\HomeController::Annulation" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController::ListResa" type="service" id=".service_locator._yUaljH"/>
         <argument key="App\Controller\Admin\HomeController::delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController::edit" type="service" id=".service_locator.eH1R0Zw"/>
@@ -6388,6 +6382,7 @@
         <argument key="App\Controller\Admin\AdminSliderController:edit" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminTarifController:delete" type="service" id=".service_locator.GEXp2bG"/>
         <argument key="App\Controller\Admin\AdminTarifController:edit" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\HomeController:Annulation" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController:ListResa" type="service" id=".service_locator._yUaljH"/>
         <argument key="App\Controller\Admin\HomeController:delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController:edit" type="service" id=".service_locator.eH1R0Zw"/>
@@ -6902,12 +6897,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.cp0aHMx"/>
+      <argument type="service" id=".service_locator.7_U.zJi"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.cp0aHMx"/>
+      <argument type="service" id=".service_locator.7_U.zJi"/>
     </service>
     <service id=".errored..service_locator..JzDQIR.App\Entity\Category" class="App\Entity\Category"/>
     <service id=".errored..service_locator.3nMqkMP.App\Entity\Discount" class="App\Entity\Discount"/>
@@ -7324,7 +7319,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" alias="vich_uploader.twig.extension.uploader" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.cp0aHMx"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.7_U.zJi"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

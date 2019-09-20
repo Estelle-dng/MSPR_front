@@ -71,43 +71,46 @@ return [
                     .')'
                 .')'
                 .'|/listeCategory/Article/([^/]++)(*:200)'
-                .'|/admin/liste(?'
-                    .'|Category/([^/]++)(?'
-                        .'|/edit(*:248)'
-                        .'|(*:256)'
-                    .')'
-                    .'|discount/([^/]++)(?'
-                        .'|(*:285)'
-                    .')'
-                    .'|faq/([^/]++)(?'
-                        .'|(*:309)'
-                    .')'
-                    .'|media/([^/]++)(?'
-                        .'|(*:335)'
-                    .')'
-                    .'|Option/([^/]++)(?'
-                        .'|/edit(*:367)'
-                        .'|(*:375)'
-                    .')'
-                    .'|s(?'
-                        .'|eason/([^/]++)(?'
-                            .'|(*:405)'
+                .'|/a(?'
+                    .'|dmin/liste(?'
+                        .'|Category/([^/]++)(?'
+                            .'|/edit(*:251)'
+                            .'|(*:259)'
                         .')'
-                        .'|lider/([^/]++)(?'
-                            .'|(*:431)'
+                        .'|discount/([^/]++)(?'
+                            .'|(*:288)'
                         .')'
-                    .')'
-                    .'|t(?'
-                        .'|arif/([^/]++)(?'
-                            .'|(*:461)'
+                        .'|faq/([^/]++)(?'
+                            .'|(*:312)'
                         .')'
-                        .'|Reservation/([^/]++)(*:490)'
+                        .'|media/([^/]++)(?'
+                            .'|(*:338)'
+                        .')'
+                        .'|Option/([^/]++)(?'
+                            .'|/edit(*:370)'
+                            .'|(*:378)'
+                        .')'
+                        .'|s(?'
+                            .'|eason/([^/]++)(?'
+                                .'|(*:408)'
+                            .')'
+                            .'|lider/([^/]++)(?'
+                                .'|(*:434)'
+                            .')'
+                        .')'
+                        .'|t(?'
+                            .'|arif/([^/]++)(?'
+                                .'|(*:464)'
+                            .')'
+                            .'|Reservation/([^/]++)(*:493)'
+                        .')'
+                        .'|Reservation/([^/]++)(*:522)'
                     .')'
-                    .'|Reservation/([^/]++)(*:519)'
+                    .'|nnulerReservation/([^/]++)(*:557)'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:557)'
-                    .'|setting/reset/([^/]++)(*:587)'
+                    .'|gister/confirm/([^/]++)(*:595)'
+                    .'|setting/reset/([^/]++)(*:625)'
                 .')'
             .')/?$}sDu',
     ],
@@ -120,38 +123,39 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         200 => [[['_route' => 'Article', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::Article'], ['id'], null, null, false, true, null]],
-        248 => [[['_route' => 'admin.category.edit', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        256 => [[['_route' => 'admin.category.delete', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        285 => [
+        251 => [[['_route' => 'admin.category.edit', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        259 => [[['_route' => 'admin.category.delete', '_controller' => 'App\\Controller\\Admin\\AdminCategoryController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        288 => [
             [['_route' => 'admin.discount.edit', '_controller' => 'App\\Controller\\Admin\\AdminDiscountController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.discount.delete', '_controller' => 'App\\Controller\\Admin\\AdminDiscountController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        309 => [
+        312 => [
             [['_route' => 'admin.faq.edit', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.faq.delete', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        335 => [
+        338 => [
             [['_route' => 'admin.media.delete', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [['_route' => 'admin.media.edit', '_controller' => 'App\\Controller\\Admin\\AdminMediaController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
         ],
-        367 => [[['_route' => 'admin.option.edit', '_controller' => 'App\\Controller\\Admin\\AdminOptionController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        375 => [[['_route' => 'admin.option.delete', '_controller' => 'App\\Controller\\Admin\\AdminOptionController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        405 => [
+        370 => [[['_route' => 'admin.option.edit', '_controller' => 'App\\Controller\\Admin\\AdminOptionController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        378 => [[['_route' => 'admin.option.delete', '_controller' => 'App\\Controller\\Admin\\AdminOptionController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        408 => [
             [['_route' => 'admin.season.edit', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.season.delete', '_controller' => 'App\\Controller\\Admin\\AdminSeasonController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        431 => [
+        434 => [
             [['_route' => 'admin.slider.edit', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.slider.delete', '_controller' => 'App\\Controller\\Admin\\AdminSliderController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        461 => [
+        464 => [
             [['_route' => 'admin.tarif.edit', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'admin.tarif.delete', '_controller' => 'App\\Controller\\Admin\\AdminTarifController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
         ],
-        490 => [[['_route' => 'admin.resa.edit', '_controller' => 'App\\Controller\\Admin\\HomeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        519 => [[['_route' => 'admin.resa.delete', '_controller' => 'App\\Controller\\Admin\\HomeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        557 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        587 => [
+        493 => [[['_route' => 'admin.resa.edit', '_controller' => 'App\\Controller\\Admin\\HomeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        522 => [[['_route' => 'admin.resa.delete', '_controller' => 'App\\Controller\\Admin\\HomeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        557 => [[['_route' => 'resa.annulation', '_controller' => 'App\\Controller\\Admin\\HomeController::Annulation'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        595 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        625 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

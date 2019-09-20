@@ -45,8 +45,8 @@
                                             <td>
                                                 {{ resa.commandDetails.categoryHasSeason.name}}
                                             </td>
-                                            <td>{{ resa.reservationStart | date }}</td>
-                                            <td>{{ resa.reservationEnd | date }}</td>
+                                            <td>{{ resa.reservationStart |date('d/m/Y') }}</td>
+                                            <td>{{ resa.reservationEnd |date('d/m/Y') }}</td>
                                             <td>{{ resa.user }}</td>
                                             <td>{% if resa.isCancelled == false %}
                                                     <span class="text-success">En cours</span>

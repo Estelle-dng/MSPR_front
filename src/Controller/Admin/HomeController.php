@@ -10,9 +10,15 @@ use http\Env\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Common\Persistence\ObjectManager;
 
 class HomeController extends AbstractController
 {
+    public function __construct(ObjectManager $em)
+    {
+        $this->em=$em;
+    }
+
     /**
      * @Route ("/admin/Dashboard", name="Dashboard")
      */
@@ -69,5 +75,27 @@ class HomeController extends AbstractController
             $this->em->flush();
         }
         return $this->redirectToRoute('ListeResa');
+    }
+
+    /**
+     * @Route ("/annulerReservation/{id}", name="resa.annulation", methods={"GET|POST"})
+     * @param Reservation $reservation
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function Annulation(Reservation $reservation, Request $request)
+    {
+        $form = $this->createForm(ReservationType::class, $reservation);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $this->em->flush();
+            return $this->redirectToRoute('fos_user_profile_show');
+        }
+
+        return $this->render('reservation/annulationreservation.html.twig', [
+            'reservation' => $reservation,
+            'form' => $form->createView()
+        ]);
     }
 }

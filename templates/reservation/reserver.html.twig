@@ -10,7 +10,7 @@
 {% block main %}
     <!--  Details -->
 
-    {#vrai filtre#}
+    {# filtre#}
     <div class="container">
         <div class="row">
             <h1 class="col text-success">Nos emplacements :</h1>
@@ -42,37 +42,42 @@
             {{ form_end(form) }}
         </div>
     </div>
+    {# FIN DU FILTRE #}
+
+    {# RÉSULTAT #}
     <div class="container">
         <div class="row mt-4">
-            <h1 class="heading">Tout les emplacements</h1>
+            <h1 class="heading text-success">Tout les emplacements</h1>
         </div>
-    </div>
-        <div class="container">
-            <div class="row">
-                {% for spot in spots %}
-                    <div class="col-md-4 card m-1">
+        <div class="row">
+            {% for spot in spots %}
+                <div class="col-md-4 card p-4">
+                    <div style="height: 450px;">
                         <div class="row">
                             <div>
-                                <h2 class="thumbnailtitle">{{ spot.name }}</h2>
+                                <h3 class="thumbnailtitle">{{ spot.name }}</h3>
                                 <h6 class="text-success">{{ spot.capacity }} personnes</h6>
                             </div>
+                        </div>
+                        <div class="row">
                             <div>
-                                <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}" alt="Nature">
+                                <img class="img-fluid" src="{{ asset('assets/img/slider/' ~ spot.media) }}"
+                                     alt="Nature">
                             </div>
                             <div class="caption">
                                 <p>{{ spot.info }}</p>
                             </div>
                         </div>
-                        <div class="text-center">
-                            <button class="btn btn-xs btn-success" role="button"
-                                    title="Réserver dès maintenant">
-                                <a href="{{ path('Article', {'id': spot.id}) }}">Réserver dès maintenant</a>
-                            </button>
-                        </div>
                     </div>
-                {% endfor %}
-            </div>
+                    <div class="text-center mb-3">
+                        <button class="btn btn-xs btn-success" role="button" title="Réserver dès maintenant">
+                            <a href="{{ path('Article', {'id': spot.id}) }}">Réserver dès maintenant</a>
+                        </button>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
+    </div>
     {#vrai filtre #}
 
 
@@ -80,7 +85,7 @@
 {% endblock %}
 
 {% block javascripts %}
-    <!-- jQuery 3 -->
+   {# <!-- jQuery 3 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -105,8 +110,8 @@
             // just add a class of "floatLabel to the input field!"
             floatLabel(".floatLabel");
         })(jQuery);
-    </script>
-    <script>
+    </script>#}
+    {#<script>
         $(function () {
 
             $('#reservation').daterangepicker()
@@ -114,7 +119,7 @@
         });
 
 
-    </script>
+    </script>#}
 {% endblock %}
 
 

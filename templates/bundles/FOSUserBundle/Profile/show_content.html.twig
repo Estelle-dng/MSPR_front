@@ -4,25 +4,36 @@
                 <div class="col-md-8">
                     <div class="jumbotron">
                         <h4>Mes réservations</h4>
-                        <p class="lead">Ici vous trouverez vos réservations. Attention, toute anulation est irréversible.</p>
+                        <p class="lead">Ici vous trouverez vos réservations.<br> Attention, toute anulation est irréversible.</p>
                         <hr class="my-4">
                         {% for resa in user.reservation %}
-                        <p>
-                            {{ resa.commandDetails.categoryHasSeason.name}}
-                        </p>
-                        <p>{{ resa.reservationStart | date }}</p>
-                        <p>{{ resa.reservationEnd | date }}</p>
-                        <h5>Prix total : {{ resa.totalPrice }} €</h5>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <p class="mt-2">
+                                        {{ resa.commandDetails.categoryHasSeason.name }}
+                                    </p>
+                                    <p>Date de début : {{ resa.reservationStart|date('d/m/Y') }}</p>
+                                    <p>Date de fin : {{ resa.reservationEnd |date('d/m/Y') }}</p>
+                                    <p>Option(s) :{{ resa.commandDetails.CommandDetailsHasOption.Options.name }} :{{ resa.commandDetails.CommandDetailsHasOption.price }}€</p>
+                                    <h5>Prix total : {{ resa.totalPrice }} €</h5>
+                                </div>
+                                <div class="col-md-3 offset-md-4">
+                                    <img src="{{ asset('assets/img/slider/' ~ resa.commandDetails.categoryHasSeason.category.media) }}"
+                                         alt="emplacement" class="img-fluid mt-2">
+                                </div>
+                            </div>
                         <a class="btn btn-success" href="#" role="button">Télécharger le PDF</a>
-                        <a class="btn btn-danger" href="#" role="button">Annuler la réservation</a>
-                        <form method="post" action="{{ path ('resa.annuation', {id: resa.id}) }}" onsubmit="return confirm('MODIFIER ?')" style="margin-top: 5px;">
-                            <input type="hidden" name="_method" value="SUBMIT">
-                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ resa.id) }}">
-                            <button class="btn btn-danger btn-xs">EDIT</button>
-                        </form>
+                        {% if resa.isCancelled == false %}
+                            <a class="btn btn-danger" href="{{ path ('resa.annulation', {id: resa.id})}}" role="button">Annuler la réservation</a>
+                            {% else %}
+                            <button class="btn btn-secondary" href="#">Réservation annulée</button>
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>
+
+
                 <div class="offset-md-1 col-md-3">
                     <div class="jumbotron">
                         <h4>Mes infos</h4>
