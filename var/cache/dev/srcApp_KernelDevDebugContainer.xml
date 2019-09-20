@@ -605,6 +605,9 @@
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\ReservationAnnulationType" class="App\Form\ReservationAnnulationType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -1038,6 +1041,7 @@
         <argument>App\Form\OptionType</argument>
         <argument>App\Form\ProfileFormType</argument>
         <argument>App\Form\RegistrationFormType</argument>
+        <argument>App\Form\ReservationAnnulationType</argument>
         <argument>App\Form\ReservationType</argument>
         <argument>App\Form\SearchCategoryType</argument>
         <argument>App\Form\SeasonType</argument>
@@ -1314,7 +1318,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.bef6XSu"/>
+      <argument type="service" id=".service_locator.Ab4yUAz"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -6052,6 +6056,8 @@
     <service id=".abstract.instanceof.App\Form\ProfileFormType" class="App\Form\ProfileFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ReservationAnnulationType" class="App\Form\ReservationAnnulationType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ReservationAnnulationType" class="App\Form\ReservationAnnulationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SearchCategoryType" class="App\Form\SearchCategoryType" autowire="true" abstract="true"/>
@@ -6450,7 +6456,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.bef6XSu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Ab4yUAz" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CategoryHasSeasonType" type="service" id="App\Form\CategoryHasSeasonType"/>
@@ -6464,6 +6470,7 @@
         <argument key="App\Form\OptionType" type="service" id="App\Form\OptionType"/>
         <argument key="App\Form\ProfileFormType" type="service" id="app.form.profile"/>
         <argument key="App\Form\RegistrationFormType" type="service" id="app.form.registration"/>
+        <argument key="App\Form\ReservationAnnulationType" type="service" id="App\Form\ReservationAnnulationType"/>
         <argument key="App\Form\ReservationType" type="service" id="App\Form\ReservationType"/>
         <argument key="App\Form\SearchCategoryType" type="service" id="App\Form\SearchCategoryType"/>
         <argument key="App\Form\SeasonType" type="service" id="App\Form\SeasonType"/>

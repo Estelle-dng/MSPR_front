@@ -4,6 +4,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Reservation;
+use App\Form\ReservationAnnulationType;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
 use http\Env\Response;
@@ -85,7 +86,7 @@ class HomeController extends AbstractController
      */
     public function Annulation(Reservation $reservation, Request $request)
     {
-        $form = $this->createForm(ReservationType::class, $reservation);
+        $form = $this->createForm(ReservationAnnulationType::class, $reservation);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
