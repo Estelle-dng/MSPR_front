@@ -25,7 +25,7 @@ class  ContactNotification {
 
     public function notify (Contact $contact){ /* Permet d'envoyer les mails */
         $message = (new \Swift_Message('Question Camping :')) /* Nouvelle instance de swift message*/
-            ->setFrom('$contact->getEmail()') /* On met l'adresse de l'user pour bien pouvoir répondre au mail*/
+            ->setFrom($contact->getEmail()) /* On met l'adresse de l'user pour bien pouvoir répondre au mail*/
             ->setTo('campinglajamoniere@gmail.com') /* A qui est envoyé l'email */
             ->setReplyTo($contact->getEmail()) /* A qui on va répondre */
             ->setBody($this->renderer->render('emails/contact.html.twig', [ /* Contenu de notre email */

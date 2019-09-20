@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Reservation;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class ReservationType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('reservation_start', null, [
+                'label' => "Date de début"
+            ])
+            ->add('reservation_end', null, [
+                'label' => "Date de fin"
+            ])
+            ->add('total_price', null, [
+                'label' => "Prix total"
+            ])
+            ->add('is_cancelled', null, [
+                'label' => "Annuler la réservation"
+            ])
+            /*->add('commandDetails')*/
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => Reservation::class,
+        ]);
+    }
+}

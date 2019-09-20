@@ -34,7 +34,7 @@ class CommandDetails
     private $Reservation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Discount", inversedBy="command_details")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Discount", inversedBy="command_details", fetch="EAGER")
      */
     private $discount;
 
@@ -49,12 +49,12 @@ class CommandDetails
     private $reservation_end;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\CommandDetailsHasOption", inversedBy="CommandDetails")
+     * @ORM\ManyToOne(targetEntity="App\Entity\CommandDetailsHasOption", inversedBy="CommandDetails", fetch="EAGER")
      */
     private $commandDetailsHasOption;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\CategoryHasSeason", inversedBy="commandDetails")
+     * @ORM\ManyToOne(targetEntity="App\Entity\CategoryHasSeason", inversedBy="commandDetails", fetch="EAGER")
      */
     private $Category_has_season;
 
@@ -180,4 +180,5 @@ class CommandDetails
 
         return $this;
     }
+
 }

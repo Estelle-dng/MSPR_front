@@ -102,7 +102,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
-                            <li class="user-header">
+                            <li class="user-header" style="background-color: #0A5524">
                                 <img src="{{ asset ('assets/img/logo-02.jpg') }}" class="img-circle" alt="User Image">
 
                                 <p>
@@ -112,11 +112,8 @@
 
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Déconnecter</a>
+                                    <a href="{{ path('fos_user_security_logout') }}" class="btn btn-default btn-flat">Déconnecter</a>
                                 </div>
                             </li>
                         </ul>
@@ -147,47 +144,64 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">TABLEAU DE BORD</li>
-                <li><a href="#"><i class="fa fa-book"></i> <span>Général</span></a></li>
                 <li>
-                    <a href="#">
+                    <a href="{{ path ('Dashboard') }}">
+                        <i class="fa fa-book"></i> <span>Général</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ path ('listeFAQ') }}">
                         <i class="fa fa-dashboard"></i>
-                        <span>Gérer les demandes de réservations</span>
+                        <span>Gérer la FAQ</span>
                         <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ path ('ListeResa') }}">
+                        <i class="fa fa-calendar"></i> <span>Liste des réservations</span>
                     </a>
                 </li>
 
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-files-o"></i>
-                        <span>Gérer les images et les articles</span>
+                        <span>Gérer les images et les infos logement</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-              </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{ path ('listeCategory') }}"><i class="fa fa-circle-o"></i>Gérer les logements</a></li>
+                        <li><a href="{{ path('listeSlider') }}"><i class="fa fa-circle-o"></i>Gérer le slider de photos</a></li>
+                        <li><a href="{{ path('listeMedia') }}"><i class="fa fa-circle-o"></i>Gérer la banque d'image</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-files-o"></i>
+                        <span>Gérer les tarifs et saisons</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
                         <li><a href="{{ path ('listeTarif') }}"><i class="fa fa-circle-o"></i>Gérer les tarifs journaliers</a></li>
                         <li><a href="{{ path ('listeDiscount') }}"><i class="fa fa-circle-o"></i>Gérer les réductions journalières</a></li>
                         <li><a href="{{ path ('listeOption') }}"><i class="fa fa-circle-o"></i>Gérer les options</a></li>
-                        <li><a href="{{ path('listeSlider') }}"><i class="fa fa-circle-o"></i>Gérer le slider de photos</a></li>
-                        <li><a href="{{ path('listeMedia') }}"><i class="fa fa-circle-o"></i>Gérer la banque d'image</a></li>
-                        <li><a href="{{ path ('listeFAQ') }}"><i class="fa fa-circle-o"></i>Gérer la FAQ</a></li>
                         <li><a href="{{ path ('listeSeason') }}"><i class="fa fa-circle-o"></i>Gérer les saisons</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i>Éditer une newsletter</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="">
 
-                        <i class="fa fa-th"></i> <span>Liste des emplacements</span>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-th"></i> <span>Éditer une newsletter</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="{{ path ('Listeresa') }}">
-                        <i class="fa fa-calendar"></i> <span>Liste des réservations</span>
-                    </a>
-                </li>
+
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -207,7 +221,7 @@
         <div class="pull-right hidden-xs">
             Version 1
         </div>
-        <strong>Copyright &copy; Estelle Denage et Christophe Lorenzato<a href=""></a>.</strong> All rights
+        <strong>Copyright &copy; Estelle Denage<a href=""></a>.</strong> All rights
         reserved.
     </footer>
     {# FIN FOOTER #}

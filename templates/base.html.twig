@@ -93,11 +93,14 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger text-white" href="{{ path ('Contact') }}">Contact</a>
                     </li>
-                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and is_granted('ROLE_ADMIN')%}
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger text-white" href="{{ path ('listeCategory') }}">Tableau de bord</a>
+                        </li>
+                    {% elseif is_granted('ROLE_USER') and is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger text-white"
-                               href="{{ path ('fos_user_profile_show') }}">Mon
-                                profil</a>
+                               href="{{ path ('fos_user_profile_show') }}">Mon profil</a>
                         </li>
                     {% else %}
                         <li class="nav-item">

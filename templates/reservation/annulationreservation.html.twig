@@ -1,0 +1,18 @@
+{% extends ('base.html.twig') %}
+
+    {% block main %}
+
+
+                            <div class="container mb-5">
+                                {{ form_start(form) }}
+                                    {{ form_row(form.is_cancelled) }} <p>Êtes vous sûr de vouloir annuler cette réservation ?</p>
+                                    {{ form_widget(form.total_price, {'attr': {'class': 'd-none'}}) }}
+                                    {{ form_widget(form.reservation_start, {'attr': {'class': 'd-none'}}) }}
+                                    {{ form_widget(form.reservation_end, {'attr': {'class': 'd-none'}}) }}
+                                    <button type="submit" class="btn btn-danger">Annuler</button>
+                                {{ form_end(form) }}
+                            </div>
+
+    {% endblock %}
+
+

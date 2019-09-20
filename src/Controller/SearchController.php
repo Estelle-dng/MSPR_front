@@ -2,7 +2,10 @@
 
 namespace App\Controller;
 
-use App\Form\SearchCategoryType;
+
+use App\Entity\Category;
+use App\Entity\CategorySearch;
+use App\Form\CategorySearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,49 +13,25 @@ use App\Repository\CategoryRepository;
 
 class SearchController extends AbstractController
 {
-    /**
-     * @Route("/recherche", name="recherche")
-     */
-    public function searchCategory(Request $request, CategoryRepository $categoryRepository)
-    {
-        $category = [];
-        $searchCategoryForm = $this->createForm(SearchCategoryType::class);
-
-
-
-        if ($searchCategoryForm->handleRequest($request)->isSubmitted() && $searchCategoryForm->isValid()) {
-
-            $criteria = $searchCategoryForm->getData();
-            $category = $categoryRepository->searchCategory($criteria);
-
-        }
-        return $this->render('reservation/search.html.twig', [
-            'search_form' => $searchCategoryForm->createView(),
-            'categories' => $category,
-        ]);
-    }
 
     /**
      * @Route ("/Reserver", name="Reserver")
+     * @param CategoryRepository $categoryRepository
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function Choixemplacement(CategoryRepository $categoryRepository, Request $request)
     {
-        $spots =$categoryRepository->findAll();
-        $category = [];
-        $searchCategoryForm = $this->createForm(SearchCategoryType::class);
+        $search = new CategorySearch();
 
-        if ($searchCategoryForm->handleRequest($request)->isSubmitted() && $searchCategoryForm->isValid()) {
+        $form = $this->createForm(CategorySearchType::class, $search);
+        $form->handleRequest($request);
+        $spots =$categoryRepository->findByFilter($search);
 
-            $criteria = $searchCategoryForm->getData();
-            $category = $categoryRepository->searchCategory($criteria);
-
-        }
         return $this->render('reservation/reserver.html.twig', [
             'spots' => $spots,
-            'search_form' => $searchCategoryForm->createView(),
-            'categories' => $category
+            'form' => $form->createView(),
         ]);
-
     }
 
 }
