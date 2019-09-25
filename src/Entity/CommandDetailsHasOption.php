@@ -25,6 +25,7 @@ class CommandDetailsHasOption
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Option", inversedBy="Option_CommandDetails_has_option", fetch="EAGER")
+     *
      */
     public $Options;
 

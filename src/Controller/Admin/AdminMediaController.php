@@ -2,12 +2,13 @@
 
 
 namespace App\Controller\Admin;
+
 use App\Entity\Media;
 use App\Form\MediaType;
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\MediaRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 class AdminMediaController extends AbstractController
@@ -79,6 +80,9 @@ class AdminMediaController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            /*if($media->getImageFile() instanceof UploadedFile){
+
+            }*/
             $this->em->flush();
             return $this->redirectToRoute('listeMedia');
         }

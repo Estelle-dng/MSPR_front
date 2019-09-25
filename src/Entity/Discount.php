@@ -35,6 +35,11 @@ class Discount
      */
     private $name;
 
+    /*public function __toString()
+    {
+        return $this->discount_value;
+    }*/
+
     public function __construct()
     {
         $this->command_details = new ArrayCollection();
@@ -45,7 +50,10 @@ class Discount
         return $this->id;
     }
 
-    public function getDiscountValue(): ?float
+    /**
+     * @return string|null
+     */
+    public function getDiscountValue(): ?string
     {
         return $this->discount_value;
     }
