@@ -23,6 +23,7 @@ class Option
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $name;
 
@@ -35,6 +36,11 @@ class Option
      * @ORM\Column(type="float")
      */
     private $price;
+
+    public function __toString(){
+        // to show the name of the Option in the select
+        return $this->name;
+    }
 
     public function __construct()
     {

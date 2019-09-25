@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Entity;
-
 
 class CategorySearch
 {
@@ -15,23 +13,23 @@ class CategorySearch
    /**
     * @var string|null
     */
-    private $Name;
+    private $name;
 
     /**
      * @return string|null
      */
-    public function getName(): ?string
+    public function getname(): ?string
     {
-        return $this->Name;
+        return $this->name;
     }
 
     /**
      * @param string|null $Name
      * @return CategorySearch
      */
-    public function setName(?string $Name): CategorySearch
+    public function setname(?string $name): CategorySearch
     {
-        $this->Name = $Name;
+        $this->name = $name;
         return $this;
     }
 

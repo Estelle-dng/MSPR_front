@@ -2,8 +2,6 @@
 
 namespace App\Controller;
 
-
-use App\Entity\Category;
 use App\Entity\CategorySearch;
 use App\Form\CategorySearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,25 +11,24 @@ use App\Repository\CategoryRepository;
 
 class SearchController extends AbstractController
 {
-
     /**
      * @Route ("/Reserver", name="Reserver")
-     * @param CategoryRepository $categoryRepository
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function Choixemplacement(CategoryRepository $categoryRepository, Request $request)
+    public function choixemplacement(CategoryRepository $categoryRepository, Request $request)
     {
-        $search = new CategorySearch();
+        $search = new CategorySearch(); /* Je crée une nouvelle recherche qui contient une entité vide */
 
-        $form = $this->createForm(CategorySearchType::class, $search);
-        $form->handleRequest($request);
+        $form = $this->createForm(CategorySearchType::class, $search); /* Je lui passe le Form à utiliser et l'entité vide */
+        $form->handleRequest($request); /* Je récupère la variable $request, qui contient les données de la requête *//* Gère la requête */
+
+        /* J'execute ma requête avec la méthode "findByFilter" en lui donnant en paramètre la variable $search préalablement créée.
+        Cette méthode "findByFilter" contient la requête en BDD et se situe dans mon CategoryRepository */
         $spots =$categoryRepository->findByFilter($search);
 
         return $this->render('reservation/reserver.html.twig', [
             'spots' => $spots,
-            'form' => $form->createView(),
+            'form' => $form->createView(), /* On envoie notre form à la vue */
         ]);
     }
-
 }
+

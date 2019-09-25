@@ -74,6 +74,7 @@ class AdminCategoryController extends AbstractController
     {
         $form = $this->createForm(CategoryType::class, $category); /* Crée le form correspondant à l'entité */
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) { /* Si le form est envoyé et valide */
             $this->em->flush();
             $this->addFlash('success','Information modifiée avec succès');

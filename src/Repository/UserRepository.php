@@ -19,6 +19,16 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
+    public function findByNewsletter()
+    {
+        return $this->createQueryBuilder('n')
+            ->where('n.newsletter = :val')
+            ->setParameter('val', 1)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return User[] Returns an array of User objects
     //  */

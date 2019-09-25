@@ -1,0 +1,169 @@
+{% extends ('base.html.twig') %}
+
+    {% block main %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    <h1 style="color: #0A5524;">Mobil-Home Luxe</h1>
+                    <h3 class="text-success">du 03/08/2020 au 10/08/2020</h3>
+                    <h6>Cette réservation comprend :</h6>
+                    <ul>
+                        <li>1 mobil-home pour 4 personnes</li>
+                        <li>Une place de stationnement</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-12">
+                    <img class="img-fluid rounded" alt="mobilhome" src="{{ asset ('assets/img/mobilhome.png') }}">
+                </div>
+                <div class="col-md-4 col-12 bg-light rounded p-2">
+                    <h3>Panier</h3>
+                    <ul>
+                        <li>Prix de la location : 423 €</li>
+                        <li>Frais de dossier : 10 €</li>
+                        <li>Taxe de séjour : 6,16 €</li>
+                    </ul>
+                    <h3>Options</h3>
+                    <ul>
+                        <li>Chien : 14 €</li>
+                        <li>Draps : 10 €</li>
+                        <li>Forfait ménage : 50 €</li>
+                    </ul>
+                    <hr>
+                    <p class="text-right">513,16 €</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h2 class="mb-4" style="color: #0A5524;">Choisissez vos options:</h2>
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <h5 class="text-success">Pour les mobil-homes</h5>
+                        <div>
+                            <input type="checkbox" id="PersonneSupp" name="PersonneSupp">
+                            <label for="PersonneSupp">Personne supplémentaire : 10€ / nuit</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="PersonneSupp2" name="PersonneSupp2">
+                            <label for="PersonneSupp2">Deuxième personne supplémentaire : 10€ / nuit</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Draps" name="Draps" checked>
+                            <label for="Draps">Draps : 10 € / lit</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Menage" name="Menage" checked>
+                            <label for="Menage">Forfait ménage : 50€ / semaine
+                                <span style="color: #9FB1C1;font-size: xx-small;margin-left: 20px">(85€ + d'une semaine)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-12">
+                        <h5 class="text-success">Pour les tentes, caravanes et camping-cars</h5>
+                        <div>
+                            <input type="checkbox" id="PersonneSupptente" name="PersonneSupptente">
+                            <label for="PersonneSupptente">Personne supplémentaire : 4€ / nuit</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="PersonneSupptente2" name="PersonneSupptente2">
+                            <label for="PersonneSupptente2">Deuxième personne supplémentaire : 4€ / nuit</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Raccordement" name="Raccordement">
+                            <label for="Raccordement">Raccordement électrique : 4€ </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Frigo" name="Frigo">
+                            <label for="Frigo">Location Frigo/Congélateur : 9€</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-12">
+                        <h5 class="text-success">Options générales</h5>
+                        <div>
+                            <input type="checkbox" id="Machine" name="Machine">
+                            <label for="Machine">Machine à laver : 4€ / tournée</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Animal" name="Animal" checked>
+                            <label for="Animal">Animal de compagnie : 2€ / jour</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Voiture" name="Voiture">
+                            <label for="Voiture">Voiture supplémentaire :Personne supplémentaire : 2€ / nuit</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+            <hr>
+            <div class="row">
+                <h1 class="col-12 text-center" style="color: #0A5524;">Formulaire d'inscription</h1>
+                <p class="mb-5 col-12 text-success text-center">Ce formulaire vous permettra de consulter et d'annuler votre réservation</p>
+                <form class="col-12 text-center">
+                    <div class="col-sm-12">
+
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="prenom">First Name</label>
+                                <input id="prenom" type="text" placeholder="Votre prénom.."
+                                       class="form-control">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="nom">Nom</label>
+                                <input id="nom" type="text" placeholder="Votre nom.." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-sm-8">
+                                <label for="adresse">Adresse</label>
+                                <textarea id="adresse" placeholder="Entrez votre adresse ici.." rows="2"
+                                          class="form-control"></textarea>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label for="ville">Ville</label>
+                                <input id="ville" type="text" placeholder="Entrez votre ville.." class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="pays">Pays</label>
+                                <input id="pays" type="text" placeholder="Entrez votre pays.." class="form-control">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="postal">Code postal</label>
+                                <input id="postal" type="text" placeholder="Entrez votre code postal.."
+                                       class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="numero">Numéro de téléphone</label>
+                                <input id="numero" type="text" placeholder="Entrez votre numéro.." class="form-control">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="date">Date de naissance</label>
+                                <input id="date" type="date" placeholder="Entrez votre date de naissance.." class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="mail">Email</label>
+                                <input id="mail" type="text" placeholder="Entrez votre Email.." class="form-control">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="pass">Mot de passe</label>
+                                <input id="pass" type="password" placeholder="Choisissez un mot de passe..." class="form-control">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-lg btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endblock %}

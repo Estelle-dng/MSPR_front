@@ -89,12 +89,21 @@ main{ /* BG DU MAIN AVEC LES CARRÉS ET L'IMAGE */
 }
 .imgarticle{border-radius: 5%;} /* ARRONI LES IMAGES DES ARTICLES DU MAIN */
 
-.infos{ /* MET LES INFOS COMPLÉMENTAIRES EN PETIT ET ROSE */
+.infos { /* MET LES INFOS COMPLÉMENTAIRES EN PETIT ET ROSE */
+    text-decoration: none;
     color: rgb(230, 186, 172);
     font-size: 14px;
     font-weight: bold;
 }
+
+.infos:hover{text-decoration: none;
+    color: rgb(230, 186, 172);
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .listinfo{margin-top: 20px;} /* ENCADRE L'ENSEMBLE DES INFOS LISTÉES */
+
 .cadreimg1{ /* CADRE IMAGE PECHEURS / INFOS GÉNÉRALES */
     height: 250px;
     position: absolute;

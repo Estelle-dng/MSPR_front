@@ -27,15 +27,15 @@ class CategoryRepository extends ServiceEntityRepository
     {
         $qb = $this->createQueryBuilder('c');
 
-        if ($search->getMinCapacity())
+        if ($search->getMinCapacity()) /* Si j'ai un getMinCapacity je lui rajoute un where */
         {
-            $qb->andWhere('c.capacity >= :mincapacity')
-                ->setParameter('mincapacity', $search->getMinCapacity());
+            $qb->andWhere('c.capacity >= :mincapacity') /* je veux que c.capacity/la capacité de mon bien soit >= à celle donnée */
+                ->setParameter('mincapacity', $search->getMinCapacity()); /* Le paramètre minCapacity aura la valeur de la recherche*/
         }
-        if ($search->getName())
+        if ($search->getname()) /* Si j'ai un getName je lui rajoute un where */
         {
-            $qb->andWhere('c.name = :name')
-                ->setParameter('name', $search->getName());
+            $qb->andWhere('c.name = :name') /* je veux que c.name/le nom de mon bien soit = à celui donné */
+                ->setParameter('name', $search->getname());  /* Le paramètre Name aura la valeur de la recherche*/
         }
 
         return $qb->getQuery()->getResult();

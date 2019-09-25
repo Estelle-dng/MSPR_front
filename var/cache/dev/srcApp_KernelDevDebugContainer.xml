@@ -584,6 +584,9 @@
     <service id="App\Form\CommandDetailsHasOptionsType" class="App\Form\CommandDetailsHasOptionsType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\CommandDetailsType" class="App\Form\CommandDetailsType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -1034,6 +1037,7 @@
         <argument>App\Form\CategorySearchType</argument>
         <argument>App\Form\CategoryType</argument>
         <argument>App\Form\CommandDetailsHasOptionsType</argument>
+        <argument>App\Form\CommandDetailsType</argument>
         <argument>App\Form\ContactType</argument>
         <argument>App\Form\DiscountType</argument>
         <argument>App\Form\FaqType</argument>
@@ -1318,7 +1322,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.Ab4yUAz"/>
+      <argument type="service" id=".service_locator.jeotvRa"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -6042,6 +6046,8 @@
     <service id=".abstract.instanceof.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommandDetailsHasOptionsType" class="App\Form\CommandDetailsHasOptionsType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CommandDetailsHasOptionsType" class="App\Form\CommandDetailsHasOptionsType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommandDetailsType" class="App\Form\CommandDetailsType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CommandDetailsType" class="App\Form\CommandDetailsType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DiscountType" class="App\Form\DiscountType" autowire="true" abstract="true"/>
@@ -6343,7 +6349,13 @@
         <argument key="notification" type="service" id="App\Notification\ContactNotification"/>
       </argument>
     </service>
-    <service id=".service_locator.7_U.zJi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.JkextnA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.W8xiHw1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\AdminCategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
@@ -6369,7 +6381,8 @@
         <argument key="App\Controller\Admin\HomeController::delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController::edit" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\HomeController::Contact" type="service" id=".service_locator.QdSwBri"/>
-        <argument key="App\Controller\SearchController::Choixemplacement" type="service" id=".service_locator.a.laFVK"/>
+        <argument key="App\Controller\HomeController::newsletter" type="service" id=".service_locator.JkextnA"/>
+        <argument key="App\Controller\SearchController::choixemplacement" type="service" id=".service_locator.a.laFVK"/>
         <argument key="App\Controller\Admin\AdminCategoryController:delete" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\Admin\AdminCategoryController:edit" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\Admin\AdminCategoryController:index" type="service" id=".service_locator.a.laFVK"/>
@@ -6393,7 +6406,8 @@
         <argument key="App\Controller\Admin\HomeController:delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController:edit" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\HomeController:Contact" type="service" id=".service_locator.QdSwBri"/>
-        <argument key="App\Controller\SearchController:Choixemplacement" type="service" id=".service_locator.a.laFVK"/>
+        <argument key="App\Controller\HomeController:newsletter" type="service" id=".service_locator.JkextnA"/>
+        <argument key="App\Controller\SearchController:choixemplacement" type="service" id=".service_locator.a.laFVK"/>
       </argument>
     </service>
     <service id=".service_locator._G1LKqm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -6456,13 +6470,14 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.Ab4yUAz" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.jeotvRa" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CategoryHasSeasonType" type="service" id="App\Form\CategoryHasSeasonType"/>
         <argument key="App\Form\CategorySearchType" type="service" id="App\Form\CategorySearchType"/>
         <argument key="App\Form\CategoryType" type="service" id="App\Form\CategoryType"/>
         <argument key="App\Form\CommandDetailsHasOptionsType" type="service" id="App\Form\CommandDetailsHasOptionsType"/>
+        <argument key="App\Form\CommandDetailsType" type="service" id="App\Form\CommandDetailsType"/>
         <argument key="App\Form\ContactType" type="service" id="App\Form\ContactType"/>
         <argument key="App\Form\DiscountType" type="service" id="App\Form\DiscountType"/>
         <argument key="App\Form\FaqType" type="service" id="App\Form\FaqType"/>
@@ -6904,12 +6919,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.7_U.zJi"/>
+      <argument type="service" id=".service_locator.W8xiHw1"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.7_U.zJi"/>
+      <argument type="service" id=".service_locator.W8xiHw1"/>
     </service>
     <service id=".errored..service_locator..JzDQIR.App\Entity\Category" class="App\Entity\Category"/>
     <service id=".errored..service_locator.3nMqkMP.App\Entity\Discount" class="App\Entity\Discount"/>
@@ -7326,7 +7341,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" alias="vich_uploader.twig.extension.uploader" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.7_U.zJi"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.W8xiHw1"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

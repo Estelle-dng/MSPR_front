@@ -195,7 +195,7 @@ footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
     text-decoration: none;
 }
 
-.buttonresa:hover{color: rgb(230, 186, 172)}
+.buttonresa:hover{color: rgb(230, 186, 172)} /* HOVER DE "RESERVEZ DES MAINTENANT" */
 
 @media screen and (max-width: 1000px){ /* ADAPTE LE BOUTON RESA EN RESPONSIVE*/
     .buttonresa{font-size: 8px;}
@@ -239,7 +239,9 @@ footer{ /* MET L'IMAGE DE L'ANGLE VERT EN BACKGROUND */
     .newsletter, .botlogoinfos, .newsletterdnone {display: none;}
 }
 
-.bigtitle{color: darkgreen;}
+.linkbot:hover{color: white;} /* LIENS DU FOOTER */
+
+.bigtitle{color: darkgreen;} /* TITRES DES ARTICLES */
 /* FIN DU FOOTER */
 
 
