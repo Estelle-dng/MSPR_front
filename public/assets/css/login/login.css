@@ -1,5 +1,5 @@
 html,body{
-    background-image: url('../../img/emplacement.png');
+    background-image: url('../../img/Festival-blog.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -25,7 +25,7 @@ html,body{
 
 .input-group-prepend span{
     width: 50px;
-    background-color: forestgreen;
+    background-color: #006A73;
     color: black;
     border:0 !important;
 }
@@ -48,6 +48,8 @@ input:focus{
     margin-right: 5px;
 }
 
-a{color: forestgreen;}
+a{color: #006A73;}
 
 a:hover{color:lightpink;}
+
+.btn-login{color: #006A73;}

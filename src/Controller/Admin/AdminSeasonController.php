@@ -24,19 +24,6 @@ class AdminSeasonController extends AbstractController
         $this->em = $em;
     }
 
-    /**
-     * @Route ("/", name="Accueil")
-     */
-
-    public function Accueil()
-    {
-        $season = $this->repository->findById(1);
-
-        return $this->render('vitrine/accueil.html.twig', [
-            'seasons' => $season
-        ]);
-    }
-
 
     /**
      * @Route ("/admin/listeseason", name="listeSeason")

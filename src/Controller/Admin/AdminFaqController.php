@@ -22,14 +22,15 @@ class AdminFaqController extends AbstractController
     public function __construct(FaqRepository $repository, ObjectManager $em)
     { /*Pour récupérer les biens j'ai besoin du repository*/
         $this->repository = $repository;
-        $this->em=$em;
+        $this->em = $em;
     }
 
     /**
      * @Route ("/admin/listefaq", name="listeFAQ")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function listefaq(){ /* Méthode qui récupère l'ensemble des biens */
+    public function listefaq()
+    { /* Méthode qui récupère l'ensemble des biens */
         $faqs = $this->repository->findAll();
         return $this->render('admin/listeFAQ/listefaq.html.twig', compact('faqs')); /*Compact renvoie un tableau*/
     }
@@ -37,12 +38,13 @@ class AdminFaqController extends AbstractController
     /**
      * @Route ("/admin/listefaq/create", name="admin.listefaq.create")
      */
-    public function create(Request $request){
+    public function create(Request $request)
+    {
         $faq = new Faq(); // Utilisation du fichier FaqType pour créer le formulaire
         $form = $this->createForm(FaqType::class, $faq); // (ne contient pas encore de html)
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             $user = $this->getUser();
             $faq->setUser($user);
             $this->em->persist($faq);// On enregistre l'entité créée avec persist
@@ -63,9 +65,9 @@ class AdminFaqController extends AbstractController
         $form = $this->createForm(FaqType::class, $faq);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             $this->em->flush();
-            $this->addFlash('success','Information modifiée avec succès');
+            $this->addFlash('success', 'Information modifiée avec succès');
             return $this->redirectToRoute('listeFAQ');
         }
 
@@ -80,9 +82,9 @@ class AdminFaqController extends AbstractController
      */
     public function delete(Faq $faq, Request $request)
     {
-        if ($this->isCsrfTokenValid('delete' . $faq->getId(), $request->get('_token'))){
-        $this->em->remove($faq);
-        $this->em->flush();
+        if ($this->isCsrfTokenValid('delete' . $faq->getId(), $request->get('_token'))) {
+            $this->em->remove($faq);
+            $this->em->flush();
         }
         return $this->redirectToRoute('listeFAQ');
     }
@@ -97,4 +99,18 @@ class AdminFaqController extends AbstractController
         $faqs = $this->repository->findAll();
         return $this->render('vitrine/faq.html.twig', compact('faqs'));
     }
+
+    /**
+     * @Route ("/", name="Accueil")
+     */
+
+    public function Accueil()
+    {
+        $faqs = $this->repository->findAll();
+
+        return $this->render('vitrine/accueil.html.twig', [
+            'faqs' => $faqs
+        ]);
+    }
+
 }

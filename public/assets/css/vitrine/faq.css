@@ -13,7 +13,7 @@
 }
 
 .faq li {
-    border-bottom: 1px solid #999999;
+    border-bottom: 1px solid #88e6d4;
     margin-bottom: 15px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .faq li.active .question {
-    color: rgb(230, 186, 172); /*Color de la question en after*/
+    color: rgb(136, 230, 212); /*Color de la question en after*/
     transition: color 0.5s ease;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
-    background: rgb(230, 186, 172); /*Background de la croix en after*/
+    background: rgb(136, 230, 212); /*Background de la croix en after*/
     content: '';
     height: 5px;
     left: 0;
@@ -65,16 +65,16 @@
 
 .faq .plus-minus-toggle.collapsed:after {
     transform: rotate(90deg);
-    background: forestgreen; /*Background de la croix en before*/
+    background: #88e6d4; /*Background de la croix en before*/
 }
 
 .faq .plus-minus-toggle.collapsed:before {
     transform: rotate(180deg);
-    background: forestgreen; /*Background de la croix en before*/
+    background: #88e6d4; /*Background de la croix en before*/
 }
 
 .faq .question {
-    color: forestgreen; /*Color de la question en before*/
+    color: #88e6d4; /*Color de la question en before*/
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 800;
