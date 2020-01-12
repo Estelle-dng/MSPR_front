@@ -6,6 +6,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Slider;
 use App\Form\SliderType;
+use App\Repository\UrgencesRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\SliderRepository;
@@ -29,10 +30,13 @@ class AdminSliderController extends AbstractController
      * @Route ("/Photos", name="Photos")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function Photos()
+    public function Photos(UrgencesRepository $urgencesRepository)
     {
         $sliders = $this->repository->findAll();
-        return $this->render('vitrine/photos.html.twig', compact('sliders'));
+        return $this->render('vitrine/photos.html.twig', [
+            'sliders' => $sliders,
+            'urgences' =>$urgencesRepository->findAll()
+        ]);
 
     }
     /**

@@ -507,6 +507,15 @@
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminFaqController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\AdminInfosController" class="App\Controller\Admin\AdminInfosController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\InfosRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminInfosController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -548,6 +557,15 @@
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminTarifController"/>
+      </call>
+    </service>
+    <service id="App\Controller\Admin\AdminUrgencesController" class="App\Controller\Admin\AdminUrgencesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\UrgencesRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\Admin\AdminUrgencesController"/>
       </call>
     </service>
     <service id="App\Controller\Admin\HomeController" class="App\Controller\Admin\HomeController" public="true" autowire="true" autoconfigure="true">
@@ -596,6 +614,9 @@
     <service id="App\Form\FaqType" class="App\Form\FaqType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\InfosType" class="App\Form\InfosType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\MediaType" class="App\Form\MediaType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -621,6 +642,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\SliderType" class="App\Form\SliderType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\UrgencesType" class="App\Form\UrgencesType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Notification\ContactNotification" class="App\Notification\ContactNotification" autowire="true" autoconfigure="true">
@@ -655,6 +679,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\InfosRepository" class="App\Repository\InfosRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\MediaRepository" class="App\Repository\MediaRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -676,6 +704,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\SpotRepository" class="App\Repository\SpotRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UrgencesRepository" class="App\Repository\UrgencesRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -1041,6 +1073,7 @@
         <argument>App\Form\ContactType</argument>
         <argument>App\Form\DiscountType</argument>
         <argument>App\Form\FaqType</argument>
+        <argument>App\Form\InfosType</argument>
         <argument>App\Form\MediaType</argument>
         <argument>App\Form\OptionType</argument>
         <argument>App\Form\ProfileFormType</argument>
@@ -1050,6 +1083,7 @@
         <argument>App\Form\SearchCategoryType</argument>
         <argument>App\Form\SeasonType</argument>
         <argument>App\Form\SliderType</argument>
+        <argument>App\Form\UrgencesType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1322,7 +1356,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.jeotvRa"/>
+      <argument type="service" id=".service_locator.HRGp7Jb"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3669,7 +3703,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.bFFyZrr"/>
+      <argument type="service" id=".service_locator.Dt3YzwM"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6014,6 +6048,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminFaqController" class="App\Controller\Admin\AdminFaqController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminInfosController" class="App\Controller\Admin\AdminInfosController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminInfosController" class="App\Controller\Admin\AdminInfosController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminInfosController" class="App\Controller\Admin\AdminInfosController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminMediaController" class="App\Controller\Admin\AdminMediaController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6029,6 +6066,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminTarifController" class="App\Controller\Admin\AdminTarifController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminUrgencesController" class="App\Controller\Admin\AdminUrgencesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminUrgencesController" class="App\Controller\Admin\AdminUrgencesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminUrgencesController" class="App\Controller\Admin\AdminUrgencesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\HomeController" class="App\Controller\Admin\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\HomeController" class="App\Controller\Admin\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\HomeController" class="App\Controller\Admin\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6054,6 +6094,8 @@
     <service id=".abstract.instanceof.App\Form\DiscountType" class="App\Form\DiscountType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\FaqType" class="App\Form\FaqType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\FaqType" class="App\Form\FaqType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\InfosType" class="App\Form\InfosType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\InfosType" class="App\Form\InfosType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MediaType" class="App\Form\MediaType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MediaType" class="App\Form\MediaType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\OptionType" class="App\Form\OptionType" autowire="true" abstract="true"/>
@@ -6072,6 +6114,8 @@
     <service id=".abstract.instanceof.App\Form\SeasonType" class="App\Form\SeasonType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SliderType" class="App\Form\SliderType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\SliderType" class="App\Form\SliderType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UrgencesType" class="App\Form\UrgencesType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\UrgencesType" class="App\Form\UrgencesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BillRepository" class="App\Repository\BillRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\BillRepository" class="App\Repository\BillRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryHasSeasonRepository" class="App\Repository\CategoryHasSeasonRepository" autowire="true" abstract="true"/>
@@ -6086,6 +6130,8 @@
     <service id=".abstract.instanceof.App\Repository\DiscountRepository" class="App\Repository\DiscountRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\FaqRepository" class="App\Repository\FaqRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\FaqRepository" class="App\Repository\FaqRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\InfosRepository" class="App\Repository\InfosRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\InfosRepository" class="App\Repository\InfosRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MediaRepository" class="App\Repository\MediaRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\MediaRepository" class="App\Repository\MediaRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OptionRepository" class="App\Repository\OptionRepository" autowire="true" abstract="true"/>
@@ -6098,6 +6144,8 @@
     <service id=".abstract.instanceof.App\Repository\SliderRepository" class="App\Repository\SliderRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SpotRepository" class="App\Repository\SpotRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\SpotRepository" class="App\Repository\SpotRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UrgencesRepository" class="App\Repository\UrgencesRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UrgencesRepository" class="App\Repository\UrgencesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Validator\ConstraintValidatorInterface.0.App\Validator\MediaExtensionValidator" class="App\Validator\MediaExtensionValidator" autowire="true" abstract="true"/>
@@ -6295,6 +6343,18 @@
         <argument key="faq" type="service" id=".errored..service_locator.j9U_bzc.App\Entity\Faq"/>
       </argument>
     </service>
+    <service id=".service_locator.K3phaPf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="urgencesRepository" type="service" id="App\Repository\UrgencesRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.8uoYDaz" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="infos" type="service" id=".errored..service_locator.8uoYDaz.App\Entity\Infos"/>
+      </argument>
+    </service>
     <service id=".service_locator.HjgqwGL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6331,6 +6391,12 @@
         <argument key="tarif" type="service" id=".errored..service_locator.GEXp2bG.App\Entity\CategoryHasSeason"/>
       </argument>
     </service>
+    <service id=".service_locator.ikkEcxf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="urgences" type="service" id=".errored..service_locator.ikkEcxf.App\Entity\Urgences"/>
+      </argument>
+    </service>
     <service id=".service_locator._yUaljH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6343,10 +6409,19 @@
         <argument key="reservation" type="service" id=".errored..service_locator.eH1R0Zw.App\Entity\Reservation"/>
       </argument>
     </service>
-    <service id=".service_locator.QdSwBri" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.nwKxCtu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="faqRepository" type="service" id="App\Repository\FaqRepository"/>
+        <argument key="infosRepository" type="service" id="App\Repository\InfosRepository"/>
+        <argument key="urgencesRepository" type="service" id="App\Repository\UrgencesRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.uFUDydG" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="notification" type="service" id="App\Notification\ContactNotification"/>
+        <argument key="urgencesRepository" type="service" id="App\Repository\UrgencesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.JkextnA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -6355,7 +6430,7 @@
         <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.W8xiHw1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.UIH9dYC" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\AdminCategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
@@ -6363,8 +6438,11 @@
         <argument key="App\Controller\Admin\AdminCategoryController::index" type="service" id=".service_locator.a.laFVK"/>
         <argument key="App\Controller\Admin\AdminDiscountController::delete" type="service" id=".service_locator.3nMqkMP"/>
         <argument key="App\Controller\Admin\AdminDiscountController::edit" type="service" id=".service_locator.3nMqkMP"/>
+        <argument key="App\Controller\Admin\AdminFaqController::Faq" type="service" id=".service_locator.K3phaPf"/>
         <argument key="App\Controller\Admin\AdminFaqController::delete" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminFaqController::edit" type="service" id=".service_locator.j9U_bzc"/>
+        <argument key="App\Controller\Admin\AdminInfosController::delete" type="service" id=".service_locator.8uoYDaz"/>
+        <argument key="App\Controller\Admin\AdminInfosController::edit" type="service" id=".service_locator.8uoYDaz"/>
         <argument key="App\Controller\Admin\AdminMediaController::delete" type="service" id=".service_locator.HjgqwGL"/>
         <argument key="App\Controller\Admin\AdminMediaController::edit" type="service" id=".service_locator.HjgqwGL"/>
         <argument key="App\Controller\Admin\AdminOptionController::delete" type="service" id=".service_locator.rq32Uw1"/>
@@ -6372,15 +6450,20 @@
         <argument key="App\Controller\Admin\AdminOptionController::index" type="service" id=".service_locator.WStrAY3"/>
         <argument key="App\Controller\Admin\AdminSeasonController::delete" type="service" id=".service_locator.ADeF0mv"/>
         <argument key="App\Controller\Admin\AdminSeasonController::edit" type="service" id=".service_locator.ADeF0mv"/>
+        <argument key="App\Controller\Admin\AdminSliderController::Photos" type="service" id=".service_locator.K3phaPf"/>
         <argument key="App\Controller\Admin\AdminSliderController::delete" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminSliderController::edit" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminTarifController::delete" type="service" id=".service_locator.GEXp2bG"/>
         <argument key="App\Controller\Admin\AdminTarifController::edit" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\AdminUrgencesController::delete" type="service" id=".service_locator.ikkEcxf"/>
+        <argument key="App\Controller\Admin\AdminUrgencesController::edit" type="service" id=".service_locator.ikkEcxf"/>
+        <argument key="App\Controller\Admin\HomeController::Addphoto" type="service" id=".service_locator.K3phaPf"/>
         <argument key="App\Controller\Admin\HomeController::Annulation" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController::ListResa" type="service" id=".service_locator._yUaljH"/>
         <argument key="App\Controller\Admin\HomeController::delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController::edit" type="service" id=".service_locator.eH1R0Zw"/>
-        <argument key="App\Controller\HomeController::Contact" type="service" id=".service_locator.QdSwBri"/>
+        <argument key="App\Controller\HomeController::Accueil" type="service" id=".service_locator.nwKxCtu"/>
+        <argument key="App\Controller\HomeController::Contact" type="service" id=".service_locator.uFUDydG"/>
         <argument key="App\Controller\HomeController::newsletter" type="service" id=".service_locator.JkextnA"/>
         <argument key="App\Controller\SearchController::choixemplacement" type="service" id=".service_locator.a.laFVK"/>
         <argument key="App\Controller\Admin\AdminCategoryController:delete" type="service" id=".service_locator..JzDQIR"/>
@@ -6388,8 +6471,11 @@
         <argument key="App\Controller\Admin\AdminCategoryController:index" type="service" id=".service_locator.a.laFVK"/>
         <argument key="App\Controller\Admin\AdminDiscountController:delete" type="service" id=".service_locator.3nMqkMP"/>
         <argument key="App\Controller\Admin\AdminDiscountController:edit" type="service" id=".service_locator.3nMqkMP"/>
+        <argument key="App\Controller\Admin\AdminFaqController:Faq" type="service" id=".service_locator.K3phaPf"/>
         <argument key="App\Controller\Admin\AdminFaqController:delete" type="service" id=".service_locator.j9U_bzc"/>
         <argument key="App\Controller\Admin\AdminFaqController:edit" type="service" id=".service_locator.j9U_bzc"/>
+        <argument key="App\Controller\Admin\AdminInfosController:delete" type="service" id=".service_locator.8uoYDaz"/>
+        <argument key="App\Controller\Admin\AdminInfosController:edit" type="service" id=".service_locator.8uoYDaz"/>
         <argument key="App\Controller\Admin\AdminMediaController:delete" type="service" id=".service_locator.HjgqwGL"/>
         <argument key="App\Controller\Admin\AdminMediaController:edit" type="service" id=".service_locator.HjgqwGL"/>
         <argument key="App\Controller\Admin\AdminOptionController:delete" type="service" id=".service_locator.rq32Uw1"/>
@@ -6397,15 +6483,20 @@
         <argument key="App\Controller\Admin\AdminOptionController:index" type="service" id=".service_locator.WStrAY3"/>
         <argument key="App\Controller\Admin\AdminSeasonController:delete" type="service" id=".service_locator.ADeF0mv"/>
         <argument key="App\Controller\Admin\AdminSeasonController:edit" type="service" id=".service_locator.ADeF0mv"/>
+        <argument key="App\Controller\Admin\AdminSliderController:Photos" type="service" id=".service_locator.K3phaPf"/>
         <argument key="App\Controller\Admin\AdminSliderController:delete" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminSliderController:edit" type="service" id=".service_locator.Pvx5wm_"/>
         <argument key="App\Controller\Admin\AdminTarifController:delete" type="service" id=".service_locator.GEXp2bG"/>
         <argument key="App\Controller\Admin\AdminTarifController:edit" type="service" id=".service_locator.GEXp2bG"/>
+        <argument key="App\Controller\Admin\AdminUrgencesController:delete" type="service" id=".service_locator.ikkEcxf"/>
+        <argument key="App\Controller\Admin\AdminUrgencesController:edit" type="service" id=".service_locator.ikkEcxf"/>
+        <argument key="App\Controller\Admin\HomeController:Addphoto" type="service" id=".service_locator.K3phaPf"/>
         <argument key="App\Controller\Admin\HomeController:Annulation" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController:ListResa" type="service" id=".service_locator._yUaljH"/>
         <argument key="App\Controller\Admin\HomeController:delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\Admin\HomeController:edit" type="service" id=".service_locator.eH1R0Zw"/>
-        <argument key="App\Controller\HomeController:Contact" type="service" id=".service_locator.QdSwBri"/>
+        <argument key="App\Controller\HomeController:Accueil" type="service" id=".service_locator.nwKxCtu"/>
+        <argument key="App\Controller\HomeController:Contact" type="service" id=".service_locator.uFUDydG"/>
         <argument key="App\Controller\HomeController:newsletter" type="service" id=".service_locator.JkextnA"/>
         <argument key="App\Controller\SearchController:choixemplacement" type="service" id=".service_locator.a.laFVK"/>
       </argument>
@@ -6470,7 +6561,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.jeotvRa" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.HRGp7Jb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CategoryHasSeasonType" type="service" id="App\Form\CategoryHasSeasonType"/>
@@ -6481,6 +6572,7 @@
         <argument key="App\Form\ContactType" type="service" id="App\Form\ContactType"/>
         <argument key="App\Form\DiscountType" type="service" id="App\Form\DiscountType"/>
         <argument key="App\Form\FaqType" type="service" id="App\Form\FaqType"/>
+        <argument key="App\Form\InfosType" type="service" id="App\Form\InfosType"/>
         <argument key="App\Form\MediaType" type="service" id="App\Form\MediaType"/>
         <argument key="App\Form\OptionType" type="service" id="App\Form\OptionType"/>
         <argument key="App\Form\ProfileFormType" type="service" id="app.form.profile"/>
@@ -6490,6 +6582,7 @@
         <argument key="App\Form\SearchCategoryType" type="service" id="App\Form\SearchCategoryType"/>
         <argument key="App\Form\SeasonType" type="service" id="App\Form\SeasonType"/>
         <argument key="App\Form\SliderType" type="service" id="App\Form\SliderType"/>
+        <argument key="App\Form\UrgencesType" type="service" id="App\Form\UrgencesType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
@@ -6509,7 +6602,7 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.bFFyZrr" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Dt3YzwM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BillRepository" type="service" id="App\Repository\BillRepository"/>
@@ -6519,12 +6612,14 @@
         <argument key="App\Repository\CommandDetailsRepository" type="service" id="App\Repository\CommandDetailsRepository"/>
         <argument key="App\Repository\DiscountRepository" type="service" id="App\Repository\DiscountRepository"/>
         <argument key="App\Repository\FaqRepository" type="service" id="App\Repository\FaqRepository"/>
+        <argument key="App\Repository\InfosRepository" type="service" id="App\Repository\InfosRepository"/>
         <argument key="App\Repository\MediaRepository" type="service" id="App\Repository\MediaRepository"/>
         <argument key="App\Repository\OptionRepository" type="service" id="App\Repository\OptionRepository"/>
         <argument key="App\Repository\ReservationRepository" type="service" id="App\Repository\ReservationRepository"/>
         <argument key="App\Repository\SeasonRepository" type="service" id="App\Repository\SeasonRepository"/>
         <argument key="App\Repository\SliderRepository" type="service" id="App\Repository\SliderRepository"/>
         <argument key="App\Repository\SpotRepository" type="service" id="App\Repository\SpotRepository"/>
+        <argument key="App\Repository\UrgencesRepository" type="service" id="App\Repository\UrgencesRepository"/>
         <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
@@ -6778,6 +6873,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CDOTD6." method="withContext"/>
     </service>
+    <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminInfosController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminInfosController"/>
+      <argument>App\Controller\Admin\AdminInfosController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
     <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminMediaController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Admin\AdminMediaController"/>
       <argument>App\Controller\Admin\AdminMediaController</argument>
@@ -6805,6 +6906,12 @@
     <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminTarifController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Admin\AdminTarifController"/>
       <argument>App\Controller\Admin\AdminTarifController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
+    <service id=".service_locator.CDOTD6..App\Controller\Admin\AdminUrgencesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminUrgencesController"/>
+      <argument>App\Controller\Admin\AdminUrgencesController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CDOTD6." method="withContext"/>
     </service>
@@ -6919,21 +7026,23 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.W8xiHw1"/>
+      <argument type="service" id=".service_locator.UIH9dYC"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.W8xiHw1"/>
+      <argument type="service" id=".service_locator.UIH9dYC"/>
     </service>
     <service id=".errored..service_locator..JzDQIR.App\Entity\Category" class="App\Entity\Category"/>
     <service id=".errored..service_locator.3nMqkMP.App\Entity\Discount" class="App\Entity\Discount"/>
     <service id=".errored..service_locator.j9U_bzc.App\Entity\Faq" class="App\Entity\Faq"/>
+    <service id=".errored..service_locator.8uoYDaz.App\Entity\Infos" class="App\Entity\Infos"/>
     <service id=".errored..service_locator.HjgqwGL.App\Entity\Media" class="App\Entity\Media"/>
     <service id=".errored..service_locator.rq32Uw1.App\Entity\Option" class="App\Entity\Option"/>
     <service id=".errored..service_locator.ADeF0mv.App\Entity\Season" class="App\Entity\Season"/>
     <service id=".errored..service_locator.Pvx5wm_.App\Entity\Slider" class="App\Entity\Slider"/>
     <service id=".errored..service_locator.GEXp2bG.App\Entity\CategoryHasSeason" class="App\Entity\CategoryHasSeason"/>
+    <service id=".errored..service_locator.ikkEcxf.App\Entity\Urgences" class="App\Entity\Urgences"/>
     <service id=".errored..service_locator.eH1R0Zw.App\Entity\Reservation" class="App\Entity\Reservation"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.gNmUlti"/>
@@ -7341,7 +7450,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" alias="vich_uploader.twig.extension.uploader" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.W8xiHw1"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.UIH9dYC"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

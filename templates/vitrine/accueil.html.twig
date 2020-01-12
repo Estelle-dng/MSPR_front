@@ -2,6 +2,8 @@
 
 {% block stylesheets %}
     <link href="{{ asset ('assets/css/vitrine/faq.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+
 {% endblock %}
 
 {% block main %}
@@ -31,14 +33,14 @@
                                 <div class="col-4">Koba LaD</div>
                             </div>
                             <div class="row text-center">
-                                <div class="col-4">Baby Metal</div>
-                                <div class="col-4">Yannick noah</div>
-                                <div class="col-4">Koba LaD</div>
+                                <div class="col-4">Christophe Maé</div>
+                                <div class="col-4">Aya Nakamura</div>
+                                <div class="col-4">AC/DC</div>
                             </div>
                             <div class="row text-center">
-                                <div class="col-4">Baby Metal</div>
-                                <div class="col-4">Yannick noah</div>
-                                <div class="col-4">Koba LaD</div>
+                                <div class="col-4">BigFlo et Oli</div>
+                                <div class="col-4">Coopex</div>
+                                <div class="col-4">Gambi</div>
                             </div>
                         </div>
                     </div>
@@ -50,19 +52,19 @@
                             <div class="col-4 pb-3" style="font-size: large; font-weight: bolder">Temple</div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-4">Baby Metal</div>
-                            <div class="col-4">Yannick noah</div>
-                            <div class="col-4">Koba LaD</div>
+                            <div class="col-4">Bon Jovi</div>
+                            <div class="col-4">Vald</div>
+                            <div class="col-4">Lorenzo</div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-4">Baby Metal</div>
-                            <div class="col-4">Yannick noah</div>
-                            <div class="col-4">Koba LaD</div>
+                            <div class="col-4">Lomepal</div>
+                            <div class="col-4">Orelsan</div>
+                            <div class="col-4">Kikesa</div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-4">Baby Metal</div>
-                            <div class="col-4">Yannick noah</div>
-                            <div class="col-4">Koba LaD</div>
+                            <div class="col-4">ManuChao</div>
+                            <div class="col-4">Céline Dion</div>
+                            <div class="col-4">Mireille Mathieu</div>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -73,19 +75,19 @@
                             <div class="col-4 pb-3" style="font-size: large; font-weight: bolder">Temple</div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-4">Baby Metal</div>
-                            <div class="col-4">Yannick noah</div>
-                            <div class="col-4">Koba LaD</div>
+                            <div class="col-4">Spice Girls</div>
+                            <div class="col-4">Abba</div>
+                            <div class="col-4">Ghost</div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-4">Baby Metal</div>
-                            <div class="col-4">Yannick noah</div>
-                            <div class="col-4">Koba LaD</div>
+                            <div class="col-4">Salut c'est cool</div>
+                            <div class="col-4">Zazie</div>
+                            <div class="col-4">Therapie Taxi</div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-4">Baby Metal</div>
-                            <div class="col-4">Yannick noah</div>
-                            <div class="col-4">Koba LaD</div>
+                            <div class="col-4">Booba</div>
+                            <div class="col-4">Alkpote</div>
+                            <div class="col-4">David Guetta</div>
                         </div>
                     </div>
                 </div>
@@ -114,7 +116,7 @@
                 <div class="container">
                     <h2 class="col-12 text-center text-white">Billetterie</h2>
                     <div class="row pb-5">
-                        <a class="col-12 text-center text-white text-lighter" href="https://www.livenation.fr/"
+                        <a class="col-12 text-center text-white text-lighter" href="https://billetto.fr/e/nation-sounds-festival-2020-billets-395081"
                            style="text-decoration: underline">Places restantes</a>
                     </div>
                     <div class="row text-white">
@@ -163,7 +165,7 @@
                             <div class="row text-white pt-5">
                                 <div class="col-3 offset-2">
                                     <div class="row">
-                                        <div class="offset-3"></div>
+                                        <div class="{#offset-3#}"></div>
                                         <!--<div class="col-3 bg-dark border border-secondary">3</div>
                                         <div class="col-3 bg-dark border border-secondary">4</div>-->
                                         <div class="col-3 text-right" style="font-size: xx-large; font-weight: bolder">
@@ -179,7 +181,7 @@
                                 </div>
                                 <div class="col-3 offset-1">
                                     <div class="row">
-                                        <div class="offset-3"></div>
+                                        <div class="{#offset-3#}"></div>
                                         <!--<div class="col-3 bg-dark border border-secondary">3</div>
                                         <div class="col-3 bg-dark border border-secondary">4</div>-->
                                         <div class="col-3 text-right" style="font-size: xx-large; font-weight: bolder">
@@ -201,12 +203,16 @@
             <!-- /Block Billeterie -->
 
             <!-- Block Alerte -->
-            <div class="container-fluid" style="background-color: #cac7c6;">
+            <div class="container-fluid" style="/*background-color: #cac7c6;*/background-image: url('../public/assets/img/Festival-blog.png')">
                 <div class="row">
                     <div class="col-8 offset-2 bg-white mt-3 mb-3 rounded">
                         <div class="carousel slide" data-ride="carousel" id="carousel">
-
-                            <div class="carousel-inner">
+                            {% for info in infos %}
+                                <div class="carousel-item {% if info.id == 3 %}active{% endif %}" >
+                                    <p class="text-center text-dark">{{ info.text}}</p>
+                                </div>
+                            {% endfor %}
+                            {#<div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <p class="text-center ">Alerte ! Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit.</p>
@@ -219,8 +225,8 @@
                                     <p class="text-center ">Alerte ! Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit.</p>
                                 </div>
-                            </div>
-                            <ol class="carousel-indicators" style="top: 20px">
+                            </div>#}
+                            <ol class="carousel-indicators" {#style="top: 20px"#}>
                                 <li class="active" data-slide-to="0" data-target="#carousel"
                                     style="background-color: black"></li>
                                 <li data-slide-to="1" data-target="#carousel"
@@ -246,24 +252,31 @@
             <div class="container-fluid">
                 <img class="img-fluid" alt="" src="{{ asset('assets/img/map.png') }}">
             </div>
+
+            {#<div id="map_container">
+                <div id="mapid" ></div>
+                <span id="fs_btn" onclick="fullscreen(this)">FullScreen</span>
+            </div>
+            <p id="infoposition"></p>
+#}
             <div class="container-fluid shadow-lg">
                 <div class="container">
                     <div class="row pt-2 pb-2">
-                        <button class="col-2 btn btn-dark ml-5 shadow">Scènes</button>
-                        <button class="col-2 offset-1 btn btn-dark shadow">Buvette</button>
-                        <button class="col-2 offset-1 btn btn-dark shadow">Commodités</button>
-                        <button class="col-2 offset-1 btn btn-dark shadow">Point WiFi</button>
+                        <button class="col-2 btn btn-dark shadow" style="font-size: 12px;">Scènes</button>
+                        <button class="col-2 offset-1 btn btn-dark shadow" style="font-size: 12px;">Buvette</button>
+                        <button class="col-3 offset-1 btn btn-dark shadow" style="font-size: 12px;">Commodités</button>
+                        <button class="col-2 offset-1 btn btn-dark shadow" style="font-size: 12px;">Point WiFi</button>
                     </div>
                 </div>
             </div>
             <!-- /Block Map -->
 
             <!-- Block Partenaires -->
-            <div class="container-fluid pl-5 pr-5">
-                <div class="row p-5">
+            <div class="container-fluid pl-3 pr-3">
+                <div class="row">
                     <h1 class="text-center col-12" style="color: #006A77">Nos partenaires</h1>
                 </div>
-                <div class="row p-5">
+                <div class="row">
                     <div class="col-3"><img alt="" class="img-fluid" src="{{ asset('assets/img/logo-unicef-1.png')}}"
                                             style="height: 150px; object-fit: contain;"></div>
                     <div class="col-3"><img alt="" class="img-fluid" src="{{ asset('assets/img/actioncontrelafaim.png') }}"
@@ -273,7 +286,7 @@
                     <div class="col-3"><img alt="" class="img-fluid" src="{{ asset('assets/img/images.png') }}"
                                             style="height: 150px; object-fit: contain;"></div>
                 </div>
-                <div class="row pt-0 p-5">
+                <div class="row pt-0">
                     <div class="col-3"><img alt="" class="img-fluid" src="{{ asset('assets/img/logo.png') }}"
                                             style="height: 150px; object-fit: contain;"></div>
                     <div class="col-3"><img alt="" class="img-fluid" src="{{ asset('assets/img/logo_mh.jpg') }}"
@@ -318,6 +331,121 @@
                     $(this).parent().toggleClass('active');
                 });
             });
+        </script>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                crossorigin="">
+
+        </script>
+
+        <script>
+            function init() {
+
+                var icon_concert = L.icon({
+                    iconUrl: '/img/icon_concert.png'
+                });
+
+                var icon_beer = L.icon({
+                    iconUrl: '/img/icon_beer.png'
+                });
+
+                var icon_sac = L.icon({
+                    iconUrl: '/img/icon_sac.png'
+                });
+
+
+                var concert = L.layerGroup();
+
+                L.marker([51.5, -0.04], {icon: icon_concert}).bindPopup('Cypresshill').addTo(concert),
+                    L.marker([51.509, -0.08], {icon: icon_concert}).bindPopup('Hippocampe Fou').addTo(concert),
+                    L.marker([51.503, -0.06], {icon: icon_concert}).bindPopup('Yaniss Odua').addTo(concert),
+                    L.marker([51.5, -0.09], {icon: icon_concert}).bindPopup('Ludovico Einodi').addTo(concert),
+                    L.marker([51.502, -0.05], {icon: icon_concert}).bindPopup('Georges Williams').addTo(concert);
+
+                var buvette = L.layerGroup();
+
+                L.marker([51.504, -0.09], {icon: icon_beer}).bindPopup('Café des loisirs').addTo(buvette),
+                    L.marker([51.503, -0.04], {icon: icon_beer}).bindPopup('Coucous Tajine').addTo(buvette),
+                    L.marker([51.508, -0.07], {icon: icon_beer}).bindPopup('Buffet Asiatique').addTo(buvette),
+                    L.marker([51.507, -0.06], {icon: icon_beer}).bindPopup('Le Symbiose').addTo(buvette);
+
+                var shop = L.layerGroup();
+
+                L.marker([51.502, -0.08], {icon: icon_sac}).bindPopup('Boutique Souvenir').addTo(shop),
+                    L.marker([51.506, -0.06], {icon: icon_sac}).bindPopup('HappyShop').addTo(shop),
+                    L.marker([51.501, -0.04], {icon: icon_sac}).bindPopup('Achète sinon ça se vendra pas').addTo(shop),
+                    L.marker([51.502, -0.025], {icon: icon_sac}).bindPopup('TitouShopping').addTo(shop);
+
+
+                var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+
+                var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', attribution: mbAttr}),
+                    streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr});
+
+
+                var map = L.map('mapid', {
+                    center: [51.505, -0.07],
+                    zoom: 14,
+                    layers: [grayscale, concert, buvette, shop]
+                });
+
+                var baseLayers = {
+                    "Grayscale": grayscale,
+                    "Streets": streets
+                };
+
+
+                var overlays = {
+                    "Concert": concert,
+                    "Buvette": buvette,
+                    "shop" : shop
+                };
+
+                L.control.layers(baseLayers, overlays).addTo(map);
+            }
+
+            // Fonction de callback en cas de succès
+            function maPosition(position) {
+
+                var icon_localisation = L.icon({
+                    iconUrl: '/img/icon_localisation.png'
+                });
+
+                var infopos = "Position déterminée :\n";
+                infopos += "Latitude : "+position.coords.latitude +"\n";
+                infopos += "Longitude: "+position.coords.longitude+"\n";
+                infopos += "Altitude : "+position.coords.altitude +"\n";
+                infopos += "Vitesse  : "+position.coords.speed +"\n";
+                document.getElementById("infoposition").innerHTML = infopos;
+            }
+
+            // On déclare la variable survId afin de pouvoir par la suite annuler le suivi de la position
+            navigator.geolocation.getCurrentPosition(maPosition);
+            if(navigator.geolocation) {
+                console.log(navigator.geolocation.getCurrentPosition(maPosition));
+            } else {
+                console.log('raté');
+            }
+
+            maPosition(position, navigator.geolocation).addTo(map);
+
+            function fullscreen(elmt) {
+
+                var parent = elmt.parentElement;
+                if (!parent.classList.contains('fullscreen')) {
+
+                    parent.classList.add('fullscreen');
+
+                } else {
+
+                    parent.classList.remove('fullscreen');
+                }
+            }
+
         </script>
         {#/Script Dropdown#}
     {% endblock %}

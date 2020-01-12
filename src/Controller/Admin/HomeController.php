@@ -7,6 +7,7 @@ use App\Entity\Reservation;
 use App\Form\ReservationAnnulationType;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
+use App\Repository\UrgencesRepository;
 use http\Env\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,6 +28,17 @@ class HomeController extends AbstractController
     public function Dashboard()
     {
         return $this->render('admin/dashboard.html.twig');
+    }
+
+    /**
+     * @Route ("/addphoto", name="addphoto")
+     */
+
+    public function Addphoto(UrgencesRepository $urgencesRepository)
+    {
+        return $this->render('vitrine/addphoto.html.twig', [
+        'urgences' => $urgencesRepository->findAll()
+    ]);
     }
 
     /**

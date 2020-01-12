@@ -1,0 +1,10 @@
+{% extends ('base.html.twig') %}
+{% block stylesheets %}
+    <style>
+        .container-fluid{display: none}
+        .carousel-inner{display: none;}
+    </style>
+{% endblock %}
+{% block main %}
+    <img src="{{ asset ('assets/img/photo_romain.png') }}" alt="" style="height: 100%;">
+{% endblock %}

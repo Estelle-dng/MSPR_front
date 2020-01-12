@@ -4,9 +4,8 @@
     {# Required meta tags #}
     <meta charset="UTF-8">
 
-    {#
-        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    #}
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
 
     {# Onglet #}
     <link rel="icon" type="img/png" href="../public/assets/img/logoMSPR.png">
@@ -32,6 +31,18 @@
             background-color: #006A77 !important;
             border: transparent;
         }
+
+        .stickyfooter { /* COLLE LE FOOTER EN BAS DE LA PAGE */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer {
+            margin-top: auto;
+        }
     </style>
     {# MON CSS #}
     {#
@@ -46,146 +57,165 @@
 </head>
 
 <body>
-{#<div class="wrap stickyfooter">#}
-{#HEADER#}
-<header>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-        <a class="navbar-brand col-4" href="{{ path ('Accueil') }}">
-            <img class="img-fluid" src="{{ asset ('assets/img/logoMSPR.png') }}">
-        </a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler"
-                data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="wrap stickyfooter">
+    {#HEADER#}
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <a class="navbar-brand col-4" href="{{ path ('Accueil') }}">
+                <img class="img-fluid" src="{{ asset ('assets/img/logoMSPR.png') }}">
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <div class="dropdown-divider"></div>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ path ('Accueil') }}">Accueil
-                        <!--<span class="sr-only">(current)</span>--></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.livenation.fr/">Billetterie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path ('FAQ') }}">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path ('Photos') }}">Photos</a>
-                </li>
-                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and is_granted('ROLE_ADMIN') %}
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{{ path ('Dashboard') }}">Tableau de bord</a>
-                </li>
-                {% elseif is_granted('ROLE_USER') and is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger"
-                       href="{{ path ('fos_user_profile_show') }}">Mon profil</a>
-                </li>
-                {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger"
-                           href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <div class="dropdown-divider"></div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path ('Accueil') }}">Accueil
+                            <!--<span class="sr-only">(current)</span>--></a>
                     </li>
-                {% endif %}
-                <!--<li class="nav-item dropdown">
-                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-                       data-toggle="dropdown"
-                       href="#" id="navbarDropdown" role="button">
-                        Voir plus
-                    </a>
-                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Photo</a>
-                        <a class="dropdown-item" href="#">FAQ</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Nos partenaires</a>
-                    </div>
-                </li>-->
-            </ul>
-            <!--<form class="form-inline my-2 my-lg-0">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>-->
-        </div>
-    </nav>
-    <!--/.Navbar-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://billetto.fr/e/nation-sounds-festival-2020-billets-395081">Billetterie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path ('FAQ') }}">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path ('Photos') }}">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path ('Contact') }}">Contact</a>
+                    </li>
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="{{ path ('Dashboard') }}">Tableau de bord</a>
+                        </li>
+                    {% elseif is_granted('ROLE_USER') and is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger"
+                               href="{{ path ('fos_user_profile_show') }}">Mon profil</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger"
+                               href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                        </li>
+                    {% endif %}
+                    <!--<li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#" id="navbarDropdown" role="button">
+                            Voir plus
+                        </a>
+                        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Photo</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Nos partenaires</a>
+                        </div>
+                    </li>-->
+                </ul>
+                <!--<form class="form-inline my-2 my-lg-0">
+                    <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>-->
+            </div>
+        </nav>
+        <!--/.Navbar-->
 
-    <!-- Block Alerte -->
-    <div class="container-fluid" style="background-color: #cac7c6;">
-        <div class="row">
-            <div class="col-8 offset-2 bg-white mt-3 mb-3 rounded">
-                <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
+        <!-- Block Alerte -->
+        <div class="container-fluid" style="background-color: #cac7c6;">
+            <div class="row">
+                <div class="col-8 offset-2 bg-white mt-3 mb-3 rounded">
+                    <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.</p>
+                        <div class="carousel-inner">
+                            {% for urgence in urgences %}
+                                <div class="carousel-item {% if urgence.id == 3 %}active{% endif %}">
+                                    <p class="text-center text-danger">{{ urgence.text }}</p>
+                                </div>
+                            {% endfor %}
+                            {#<div class="carousel-item active">
+                                <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                            </div>#}
                         </div>
-                        <div class="carousel-item">
-                            <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.</p>
-                        </div>
-                        <div class="carousel-item">
-                            <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.</p>
-                        </div>
+                        <ol class="carousel-indicators" style="top: 40px">
+                            <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"
+                                style="background-color: red"></li>
+                            <li data-slide-to="1" data-target="#carouselExampleIndicators"
+                                style="background-color: red"></li>
+                            <li data-slide-to="2" data-target="#carouselExampleIndicators"
+                                style="background-color: red"></li>
+                        </ol>
+                        <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>-->
                     </div>
-                    <ol class="carousel-indicators" style="top: 20px">
-                        <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"
-                            style="background-color: red"></li>
-                        <li data-slide-to="1" data-target="#carouselExampleIndicators"
-                            style="background-color: red"></li>
-                        <li data-slide-to="2" data-target="#carouselExampleIndicators"
-                            style="background-color: red"></li>
-                    </ol>
-                    <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>-->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /Block Alerte -->
-</header>
-{#/HEADER#}
+        <!-- /Block Alerte -->
+    </header>
+    {#/HEADER#}
 
-{% block main %}
-{% endblock %}
+    {% block main %}
+    {% endblock %}
 
-{#/FOOTER #}
-<footer class="container-fluid" style="background-color: #006A77;box-shadow: 0 -1rem 3rem rgba(0,0,0,.175)!important;">
-    <div class="row" style="padding: 5px; align-items: center;">
-        <div class="col-5">
-            <div class="container-fluid">
-                <ul class="text-white row text-center pt-3" style="list-style: none">
-                    <li class="col-3"><a href="https://www.livenation.fr/" style="text-decoration: none;color: white;">Billetterie</a>
-                    </li>
-                    <li class="col-3"><a href="{{ path ('FAQ') }}" style="text-decoration: none;color: white;">FAQ</a>
-                    </li>
-                    <li class="col-3"><a href="{{ path ('Photos') }}"
-                                         style="text-decoration: none;color: white;">Photos</a></li>
-                    <li class="col-3"><a href="{{ path ('Contact') }}" style="text-decoration: none;color: white;">Contact</a>
-                    </li>
-                </ul>
+    {#/FOOTER #}
+    <footer class="container-fluid"
+            style="background-color: #006A77;box-shadow: 0 -1rem 3rem rgba(0,0,0,.175)!important;">
+        <div class="row" style="padding: 5px; align-items: center;">
+            <div class="col-5">
+                <div class="container-fluid">
+                    <ul class="text-white row text-center pt-3" style="list-style: none">
+                        <div class="col-8">
+                            <li><a href="https://billetto.fr/e/nation-sounds-festival-2020-billets-395081"
+                                   style="text-decoration: none;color: white;">Billetterie</a>
+                            </li>
+                            <li><a href="{{ path ('FAQ') }}"
+                                   style="text-decoration: none;color: white;">FAQ</a>
+                            </li>
+                            <li><a href="{{ path ('Photos') }}"
+                                   style="text-decoration: none;color: white;">Photos</a></li>
+                            <li><a href="{{ path ('Contact') }}" style="text-decoration: none;color: white;">Contact</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="offset-2 col-2">
+                <div class="row">
+                    <div style="width: 30px;" class="pt-0">
+                        <img class="img-fluid" src="{{ asset('assets/img/logo-instagram-blue.svg') }}" alt=""></div>
+                    <div style="width: 30px;" class="pt-0">
+                        <img src="{{ asset('assets/img/logo-facebook-blue.svg') }}" alt=""></div>
+                    <div style="width: 30px;" class="pt-0">
+                        <img src="{{ asset('assets/img/logo-twitter-blue.svg') }}" alt="">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class=" offset-3 col-1"><img src="{{ asset('assets/img/logo-instagram-blue.svg') }}" alt=""></div>
-        <div class="col-1"><img src="{{ asset('assets/img/logo-facebook-blue.svg') }}" alt=""></div>
-        <div class="col-1"><img src="{{ asset('assets/img/logo-twitter-blue.svg') }}" alt=""></div>
-    </div>
-</footer>
+    </footer>
 
-{#</div>#}
-
-
+</div>
 
 
 <script src="https://kit.fontawesome.com/75abba9047.js"></script>

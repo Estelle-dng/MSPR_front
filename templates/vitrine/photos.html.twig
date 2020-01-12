@@ -6,15 +6,16 @@
 {% endblock %}
 
 {% block main %}
+    <main class="">
     <div class="container">
         <div class="bd-example col-lg-8 offset-lg-2">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                {#<ol class="carousel-indicators-2">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-                </ol>
+                </ol>#}
                 <div class="carousel-inner">
                     {% for slider in sliders %}
                         <div class="carousel-item {% if loop.index == 1 %} active {% endif %}" >
@@ -36,6 +37,9 @@
             </div>
         </div>
     </div>
+
+        <div class="row pt-3"><a href="{{ path('addphoto') }}" class="text-center offset-3 col-6" style="color: #006A73">AJOUTEZ VOS PHOTOS !</a></div>
+    </main>
 {% endblock %}
 
 {% block javascripts %}

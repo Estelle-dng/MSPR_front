@@ -3,9 +3,10 @@
 
 namespace App\Controller\Admin;
 
-
+use App\Entity\Urgences;
 use App\Entity\Faq;
 use App\Form\FaqType;
+use App\Repository\UrgencesRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\FaqRepository;
@@ -94,23 +95,16 @@ class AdminFaqController extends AbstractController
      * @Route ("/FAQ", name="FAQ")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function Faq()
+    public function Faq(UrgencesRepository $urgencesRepository)
     {
         $faqs = $this->repository->findAll();
-        return $this->render('vitrine/faq.html.twig', compact('faqs'));
-    }
-
-    /**
-     * @Route ("/", name="Accueil")
-     */
-
-    public function Accueil()
-    {
-        $faqs = $this->repository->findAll();
-
-        return $this->render('vitrine/accueil.html.twig', [
+        return $this->render('vitrine/faq.html.twig', [
+            'urgences' => $urgencesRepository->findAll(),
             'faqs' => $faqs
         ]);
+
     }
+
+
 
 }
