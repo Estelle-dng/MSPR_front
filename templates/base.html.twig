@@ -3,209 +3,235 @@
 <head>
     {# Required meta tags #}
     <meta charset="UTF-8">
+
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
+
     {# Onglet #}
-    <link rel="icon" href="{{ asset ('assets/img/logo-02.png') }}" type="image/png">
-    <title>{% block title %}Camping la Jamonière{% endblock %}</title>
+    <link rel="icon" type="img/png" href="../public/assets/img/logoMSPR.png">
+
+    <title>{% block title %}Nation Sound{% endblock %}</title>
 
     {# TYPO #}
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
           rel="stylesheet">
 
     {# Bootstrap #}
-    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
 
+    <style type="text/css">
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn-dark {
+            background-color: #006A77 !important;
+            border: transparent;
+        }
+
+        .stickyfooter { /* COLLE LE FOOTER EN BAS DE LA PAGE */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+    </style>
     {# MON CSS #}
-    <link href="{{ asset ('assets/css/styleBase.css') }}" rel="stylesheet" type="text/css">
+    {#
+        <link href="{{ asset ('assets/css/styleBase.css') }}" rel="stylesheet" type="text/css">
+    #}
 
     {# META INFORMATIFS #}
     <meta name="author" content="Estelle DENAGE">
-    <meta name="description" content="Site du Camping de la Jamonière en Vendée à Mervent">
+    <meta name="description" content="Site du Festival Nation Sound">
 
     {% block stylesheets %}{% endblock %}
 </head>
 
 <body>
 <div class="wrap stickyfooter">
-    <header class="position-relative">
-        {#HEADER#}
-        {% block header %}
-            <div class="header d-md-block d-none mb-md-5">
-                {# SVG #} {# CACHE POUR LA WAVE #}
-                <svg class="mt-5" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 1264.27 162.13">
-                    <defs>
-                        <style>.cls-1 {
-                                fill: #fff;
-                            }
-
-                            .cls-2 {
-                                fill: #e5baad;
-                                opacity: 0.5;
-                            }</style>
-                    </defs>
-                    <title>Capture d’écran 2019-08-15 à 03.33.38</title>
-                    <path class="cls-1" d="M0,54.07S61.89,176.8,224.09,146.76L1264.27,0V162.13L0,162.08Z"/>
-                    <path class="cls-2"
-                          d="M0,54.68s46.8,88.2,156.49,96.12a246.5,246.5,0,0,0,29.19.54s-54.9,13.13-111.59-16.71S0,72.58,0,72.58Z"/>
-                </svg>
-                {# /SVG #} {# /CACHE POUR LA WAVE #}
-            </div>
-        {% endblock %}
-
-        {# Navbar #}
-        <nav class="navbar navbar-expand-md navbar-dark gradientnavbar absolutenavbar textnav" id="mainNav">
-
-            <a class="navbar-brand js-scroll-trigger"
-               href="{{ path('Accueil') }}">{#<img src="../public/assets/img/logo-02.png" alt="logo" class="img-fluid" style="height: 50px;">#}
-                Camping la Jamonière</a>
-            <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+    {#HEADER#}
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <a class="navbar-brand col-4" href="{{ path ('Accueil') }}">
+                <img class="img-fluid" src="{{ asset ('assets/img/logoMSPR.png') }}">
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger text-white" href="{{ path('Accueil') }}">Accueil</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <div class="dropdown-divider"></div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path ('Accueil') }}">Accueil
+                            <!--<span class="sr-only">(current)</span>--></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger text-white" href="{{ path('Photos') }}">Photos</a>
+                        <a class="nav-link" href="https://billetto.fr/e/nation-sounds-festival-2020-billets-395081">Billetterie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger text-white" href="{{ path('Proximité') }}">A proximité</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tarifs
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ path ('TarifsMobilHome') }}">Mobil-Homes</a>
-                            <a class="dropdown-item" href="{{ path ('TarifsTente') }}">Tente / Camping-Cars</a>
-                        </div>
+                        <a class="nav-link" href="{{ path ('FAQ') }}">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger text-white" href="{{ path('FAQ') }}">F.A.Q</a>
+                        <a class="nav-link" href="{{ path ('Photos') }}">Photos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger text-white" href="{{ path ('Contact') }}">Contact</a>
+                        <a class="nav-link" href="{{ path ('Contact') }}">Contact</a>
                     </li>
-                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and is_granted('ROLE_ADMIN')%}
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and is_granted('ROLE_ADMIN') %}
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-white" href="{{ path ('Dashboard') }}">Tableau de bord</a>
+                            <a class="nav-link js-scroll-trigger" href="{{ path ('Dashboard') }}">Tableau de bord</a>
                         </li>
                     {% elseif is_granted('ROLE_USER') and is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-white"
+                            <a class="nav-link js-scroll-trigger"
                                href="{{ path ('fos_user_profile_show') }}">Mon profil</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-white"
+                            <a class="nav-link js-scroll-trigger"
                                href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
                         </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <button type="button" class="btn p-0 btn-default"><a
-                                    class="nav-link js-scroll-trigger text-white"
-                                    href="{{ path ('Reserver') }}">RÉSERVER</a></button>
-                    </li>
+                    <!--<li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#" id="navbarDropdown" role="button">
+                            Voir plus
+                        </a>
+                        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Photo</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Nos partenaires</a>
+                        </div>
+                    </li>-->
                 </ul>
+                <!--<form class="form-inline my-2 my-lg-0">
+                    <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>-->
             </div>
         </nav>
-        {#/Navbar#}
+        <!--/.Navbar-->
+
+        <!-- Block Alerte -->
+        <div class="container-fluid" style="background-color: #cac7c6;">
+            <div class="row">
+                <div class="col-8 offset-2 bg-white mt-3 mb-3 rounded">
+                    <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
+
+                        <div class="carousel-inner">
+                            {% for urgence in urgences %}
+                                <div class="carousel-item {% if urgence.id == 3 %}active{% endif %}">
+                                    <p class="text-center text-danger">{{ urgence.text }}</p>
+                                </div>
+                            {% endfor %}
+                            {#<div class="carousel-item active">
+                                <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="text-center text-danger">Alerte ! Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                            </div>#}
+                        </div>
+                        <ol class="carousel-indicators" style="top: 40px">
+                            <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"
+                                style="background-color: red"></li>
+                            <li data-slide-to="1" data-target="#carouselExampleIndicators"
+                                style="background-color: red"></li>
+                            <li data-slide-to="2" data-target="#carouselExampleIndicators"
+                                style="background-color: red"></li>
+                        </ol>
+                        <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Block Alerte -->
     </header>
     {#/HEADER#}
 
     {% block main %}
-        {#FOSUser message#}
-        {% if app.request.hasPreviousSession %}
-            {% for type, messages in app.session.flashbag.all() %}
-                {% for message in messages %}
-                    <div class="container">
-                        <div class="alert alert-success flash-{{ type }}">
-                            {{ message }}
-                        </div>
-                    </div>
-                {% endfor %}
-            {% endfor %}
-        {% endif %}
-        {% block fos_user_content %}{% endblock fos_user_content %}
     {% endblock %}
 
-
-    {#FOOTER#}
-    <footer>
-        <div class="container mb-2">
-            <div class="row">
-                <h1 class="resa col-md-5 offset-md-1 col-6 offset-0 mt-3">Réservation et paiement en ligne ou sur
-                    place. CB, chèques et chèques
-                    vacances acceptés.
-                </h1>
-                <div class="col-6 offset-0 col-md-5 offset-md-1 mt-3 mt-md-5 offset-lg-2 cadrebtnresa">
-                    <a class="buttonresa" href="{{ path ('Reserver') }}">RÉSERVEZ DÈS MAINTENANT</a>
+    {#/FOOTER #}
+    <footer class="container-fluid"
+            style="background-color: #006A77;box-shadow: 0 -1rem 3rem rgba(0,0,0,.175)!important;">
+        <div class="row" style="padding: 5px; align-items: center;">
+            <div class="col-5">
+                <div class="container-fluid">
+                    <ul class="text-white row text-center pt-3" style="list-style: none">
+                        <div class="col-8">
+                            <li><a href="https://billetto.fr/e/nation-sounds-festival-2020-billets-395081"
+                                   style="text-decoration: none;color: white;">Billetterie</a>
+                            </li>
+                            <li><a href="{{ path ('FAQ') }}"
+                                   style="text-decoration: none;color: white;">FAQ</a>
+                            </li>
+                            <li><a href="{{ path ('Photos') }}"
+                                   style="text-decoration: none;color: white;">Photos</a></li>
+                            <li><a href="{{ path ('Contact') }}" style="text-decoration: none;color: white;">Contact</a>
+                            </li>
+                        </div>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="container-fluid botlogoinfos">
-            <div class="row">
-                <div class="col-md-2 offset-md-10">
-                    <img class="img-fluid" src="{{ asset ('assets/img/logo-02.png') }}" alt="logo">
-                </div>
-                <p class="col-md-6 offset-md-6" style="color: white; text-align: right">
-                    Camping la Jamonière - Mervent - Vendée
-                    <br>
-                    Mobil-homes, chalets, tentes, camping-cars
-                </p>
-            </div>
-        </div>
-
-        <div class="container-fluid navbot mt-md-0 mt-lg-5 mt-0">
-            <div class="row justify-content-around">
-                <div class="col-md-2 col-5 offset-1 offset-lg-6 col-lg-3">
-                    <nav>
-                        <a class="linkbot" href="{{ path ('Accueil') }}">Accueil</a>
-                        <br>
-                        <a class="linkbot" href="{{ path ('Photos') }}">Photos</a>
-                        <br>
-                        <a class="linkbot" href="{{ path ('Proximité') }}">À proximité</a>
-                    </nav>
-                </div>
-                <div class="col-md-2 col-5 col-lg-3">
-                    <nav>
-                        <a class="linkbot" href="{{ path ('TarifsTente') }}">Tarifs</a>
-                        <br>
-                        <a class="linkbot" href="{{ path ('FAQ') }}">FAQ</a>
-                        <br>
-                        <a class="linkbot" href="{{ path ('Contact') }}">Contact</a>
-                    </nav>
+            <div class="offset-2 col-2">
+                <div class="row">
+                    <div style="width: 30px;" class="pt-0">
+                        <img class="img-fluid" src="{{ asset('assets/img/logo-instagram-blue.svg') }}" alt=""></div>
+                    <div style="width: 30px;" class="pt-0">
+                        <img src="{{ asset('assets/img/logo-facebook-blue.svg') }}" alt=""></div>
+                    <div style="width: 30px;" class="pt-0">
+                        <img src="{{ asset('assets/img/logo-twitter-blue.svg') }}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    {#/FOOTER #}
 
 </div>
 
 
-{#Jquery#}
-
 <script src="https://kit.fontawesome.com/75abba9047.js"></script>
+
+
 <script crossorigin="anonymous"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script crossorigin="anonymous"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script crossorigin="anonymous"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 {% block javascripts %}{% endblock %}
-{#Jquery#}
 
 </body>
 </html>

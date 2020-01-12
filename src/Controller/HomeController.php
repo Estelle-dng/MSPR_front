@@ -4,6 +4,12 @@ namespace App\Controller;
 
 use App\Entity\CommandDetails;
 use App\Entity\Contact;
+use App\Entity\Faq;
+use App\Entity\Urgences;
+use App\Form\UrgencesType;
+use App\Repository\InfosRepository;
+use App\Repository\UrgencesRepository;
+use App\Repository\FaqRepository;
 use App\Entity\User;
 use App\Form\CategoryType;
 use App\Form\CommandDetailsType;
@@ -17,6 +23,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
 
+    /**
+     * @Route ("/", name="Accueil")
+     */
+
+    public function Accueil(FaqRepository $faqRepository, UrgencesRepository $urgencesRepository, InfosRepository $infosRepository)
+    {
+
+        return $this->render('vitrine/accueil.html.twig', [
+            'faqs' => $faqRepository->findAll(),
+            'urgences' => $urgencesRepository->findAll(),
+            'infos' => $infosRepository->findAll()
+        ]);
+    }
 
     /**
      * @Route ("/Proximité", name="Proximité")
@@ -30,7 +49,7 @@ class HomeController extends AbstractController
     /**
      * @Route ("/Contact", name="Contact")
      */
-    public function Contact(Request $request, ContactNotification $notification)
+    public function Contact(Request $request, ContactNotification $notification, UrgencesRepository $urgencesRepository)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
@@ -43,7 +62,8 @@ class HomeController extends AbstractController
         }
 
         return $this->render('vitrine/contact.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'urgences' =>$urgencesRepository->findAll()
         ]);
     }
 

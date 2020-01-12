@@ -2,14 +2,14 @@
 
 .slidertitle{background-color: rgba(0, 0, 0, 0.5);}
 
-.carousel-indicators{
+.carousel-indicators-2{
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
     height: 5%;
 }
 
 @media screen and (max-width: 767px){
-    .carousel-indicators{
+    .carousel-indicators-2{
         background-color: rgba(0, 0, 0, 0);
     }
     .container{margin-top: 10%}

@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="icon" href="{{ asset ('assets/img/logo-02.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset ('assets/img/logoMSPR.png') }}" type="image/png">
     <title>Tableau de bord</title>
 
     {# Bootstrap #}
@@ -97,16 +97,16 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{ asset ('assets/img/logo-02.jpg') }}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Madée</span>
+                            <img src="{{ asset ('assets/img/logoMSPR.png') }}" class="user-image" alt="User Image">
+                            <span class="hidden-xs">User</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header" style="background-color: #0A5524">
-                                <img src="{{ asset ('assets/img/logo-02.jpg') }}" class="img-circle" alt="User Image">
+                                <img src="{{ asset ('assets/img/logoMSPR.png') }}" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Madée
+                                    User
                                 </p>
                             </li>
 
@@ -134,10 +134,10 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{ asset ('assets/img/logo-02.jpg') }}" class="img-circle" alt="User Image">
+                    <img src="{{ asset ('assets/img/logoMSPR.png') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Madée</p>
+                    <p>User</p>
                 </div>
             </div>
 
@@ -158,22 +158,24 @@
                     </a>
                 </li>
 
-                <li>
+                {#<li>
                     <a href="{{ path ('ListeResa') }}">
                         <i class="fa fa-calendar"></i> <span>Liste des réservations</span>
                     </a>
-                </li>
+                </li>#}
 
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-files-o"></i>
-                        <span>Gérer les images et les infos logement</span>
+                        <span>Gérer les images</span>
                         <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
+{#
                         <li><a href="{{ path ('listeCategory') }}"><i class="fa fa-circle-o"></i>Gérer les logements</a></li>
+#}
                         <li><a href="{{ path('listeSlider') }}"><i class="fa fa-circle-o"></i>Gérer le slider de photos</a></li>
                         <li><a href="{{ path('listeMedia') }}"><i class="fa fa-circle-o"></i>Gérer la banque d'image</a></li>
                     </ul>
@@ -182,16 +184,31 @@
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-files-o"></i>
-                        <span>Gérer les tarifs et saisons</span>
+                        <span>Gérer les concerts et horaires</span>
                         <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ path ('listeTarif') }}"><i class="fa fa-circle-o"></i>Gérer les tarifs journaliers</a></li>
-                        <li><a href="{{ path ('listeDiscount') }}"><i class="fa fa-circle-o"></i>Gérer les réductions journalières</a></li>
-                        <li><a href="{{ path ('listeOption') }}"><i class="fa fa-circle-o"></i>Gérer les options</a></li>
-                        <li><a href="{{ path ('listeSeason') }}"><i class="fa fa-circle-o"></i>Gérer les saisons</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Gérer concerts</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Gérer les horaires</a></li>
+                        {#<li><a href="{{ path ('listeOption') }}"><i class="fa fa-circle-o"></i>Gérer les options</a></li>
+                        <li><a href="{{ path ('listeSeason') }}"><i class="fa fa-circle-o"></i>Gérer les saisons</a></li>#}
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-files-o"></i>
+                        <span>Gérer Alertes</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path ('listeUrgences') }}"><i class="fa fa-circle-o"></i>Gérer les urgences</a></li>
+                        <li><a href="{{ path ('listeInfos') }}"><i class="fa fa-circle-o"></i>Gérer les infos</a></li>
+                        {#<li><a href="{{ path ('listeOption') }}"><i class="fa fa-circle-o"></i>Gérer les options</a></li>
+                        <li><a href="{{ path ('listeSeason') }}"><i class="fa fa-circle-o"></i>Gérer les saisons</a></li>#}
                     </ul>
                 </li>
 
